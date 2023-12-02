@@ -4,14 +4,16 @@ export default class Muscle {
     #description;
     #origos;
     #insertions;
+    #functions;
     #image;
 
-    constructor({id, label, description = '', origos = [], insertions = [], image = ''}) {
+    constructor({id, label, description = '', origos = [], insertions = [], functions = [], image = ''}) {
         this.#id = id;
         this.#label = label;
         this.#description = description;
         this.#origos = origos;
         this.#insertions = insertions;
+        this.#functions = functions;
         this.#image = image;
     }
 
@@ -33,6 +35,10 @@ export default class Muscle {
 
     get insertions() {
         return this.#insertions;
+    }
+
+    get functions() {
+        return this.#functions;
     }
 
     get image() {

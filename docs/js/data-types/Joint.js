@@ -2,14 +2,16 @@ export default class Joint {
     #id;
     #label;
     #types;
+    #movements;
     #description;
     #image;
 
-    constructor({id, label, types, description = '', image = ''}) {
+    constructor({id, label, types, movements = [], description = '', image = ''}) {
         this.#id = id;
         this.#label = label;
         this.#types = types;
         this.#description = description;
+        this.#movements = movements;
         this.#image = image;
     }
 
@@ -23,6 +25,10 @@ export default class Joint {
 
     get types() {
         return this.#types;
+    }
+
+    get movements() {
+        return this.#movements;
     }
     
     get description() {
