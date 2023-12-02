@@ -1,15 +1,21 @@
 export default class Joint {
     #id;
+    #regionId;
     #label;
-    #types;
+    #typeIds;
+    #cpp;
+    #mlpp;
     #movements;
     #description;
     #image;
 
-    constructor({id, label, types, movements = [], description = '', image = ''}) {
+    constructor({id, regionId, label, typeIds, cpp = '', mlpp = '', movements = [], description = '', image = ''}) {
         this.#id = id;
+        this.#regionId = regionId;
         this.#label = label;
-        this.#types = types;
+        this.#typeIds = typeIds;
+        this.#cpp = cpp;
+        this.#mlpp = mlpp;
         this.#description = description;
         this.#movements = movements;
         this.#image = image;
@@ -19,12 +25,24 @@ export default class Joint {
         return this.#id;
     }
 
+    get regionId() {
+        return this.#regionId;
+    }
+
     get label() {
         return this.#label;
     }
 
-    get types() {
-        return this.#types;
+    get typeIds() {
+        return this.#typeIds;
+    }
+
+    get cpp() {
+        return this.#cpp;
+    }
+
+    get mlpp() {
+        return this.#mlpp;
     }
 
     get movements() {
