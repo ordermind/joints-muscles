@@ -9,7 +9,7 @@ export default {
         {
             id: "columna_vertebralis",
             regionId: "spine",
-            label: "columna vertebralis", 
+            label: "columna vertebralis (wervelkolom)",
             typeIds: ["art_complexa"],
             cpp: "maximale extensie",
             mlpp: "neutraal tot lichte flexie",
@@ -60,7 +60,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
         {
             id: "head_joints",
             regionId: "spine",
-            label: "art. atlantooccipitalis / artt. atlantoaxiales", 
+            label: "art. atlantooccipitalis / artt. atlantoaxiales (hoofdgewrichten)",
             typeIds: ["art_complexa"],
             movements: [
                 new Movement(
@@ -106,7 +106,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
         {
             id: "columna_vertebralis_cervicalis",
             regionId: "spine",
-            label: "columna vertebralis, pars cervicalis",
+            label: "columna vertebralis, pars cervicalis (CWK)",
             typeIds: ["art_complexa"],
             movements: [
                 new Movement(
@@ -152,7 +152,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
         {
             id: "columna_vertebralis_thoracalis",
             regionId: "spine",
-            label: "columna vertebralis, pars thoracalis",
+            label: "columna vertebralis, pars thoracalis (TWK)",
             typeIds: ["art_complexa"],
             movements: [
                 new Movement(
@@ -198,7 +198,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
         {
             id: "columna_vertebralis_lumbalis",
             regionId: "spine",
-            label: "columna vertebralis, pars lumbalis",
+            label: "columna vertebralis, pars lumbalis (LWK)",
             typeIds: ["art_complexa"],
             movements: [
                 new Movement(

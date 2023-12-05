@@ -10,8 +10,7 @@ export default {
             id: "shoulder_girdle",
             regionId: "upper_extremity",
             label: "schoudergordel",
-            cpp: "maximale elevatie",
-            mlpp: "anatomische positie",
+            typeIds: [],
             movements: [
                 new Movement(
                     {
@@ -77,7 +76,7 @@ Het glenohumerale systeem bestaat uit:
 Het primaire scapulothoracale systeem bestaat uit: 
 
 - de [Link type="Joint" targetId="art_acromioclavicularis" label="art. acromioclavicularis"] ( = het AC- gewicht)
-- de [Link type="Joint" targetId="art_sternoclaviculairs" label="art. sternoclaviculairs"] (= het SC-gewricht)
+- de [Link type="Joint" targetId="art_sternoclavicularis" label="art. sternoclavicularis"] (= het SC-gewricht)
 - de junctura scapulothoracalis (of junctura scapulocostalis genoemd)
 
 Het secundaire scapulothoracale systeem bestaande uit: 
@@ -87,14 +86,88 @@ Het secundaire scapulothoracale systeem bestaande uit:
             `,
         }
     ),
+    art_acromioclavicularis: new Joint(
+        {
+            id: "art_acromioclavicularis",
+            regionId: "upper_extremity",
+            label: "art. acromioclavicularis (het AC-gewricht)",
+            typeIds: ["art_simplex", "art_plana"],
+            cpp: "90° abductie van [Link type=\"Joint\" targetId=\"art_humeri\" label=\"art. humeri\"]",
+            mlpp: "anatomische positie",
+            description: "De bewegingen van dit gewricht zijn geringe translatie en rotatie rond de lengte-as van de clavicula."
+        }
+    ),
+    art_sternoclavicularis: new Joint(
+        {
+            id: "art_sternoclavicularis",
+            regionId: "upper_extremity",
+            label: "art. sternoclavicularis (het SC-gewricht)",
+            typeIds: ["art_complex", "art_sellaris"],
+            cpp: "maximale elevatie",
+            mlpp: "anatomische positie",
+            /**
+             * Movements are taken from https://www.kenhub.com/en/library/anatomy/sternoclavicular-joint
+             */
+            movements: [
+                new Movement(
+                    {
+                        id: "art_sternoclavicularis__protraction",
+                        jointId: "art_sternoclavicularis",
+                        label: "protractie",
+                        rom: "15°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_sternoclavicularis__retraction",
+                        jointId: "art_sternoclavicularis",
+                        label: "retractie",
+                        rom: "15°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_sternoclavicularis__elevation",
+                        jointId: "art_sternoclavicularis",
+                        label: "elevatie",
+                        rom: "20°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_sternoclavicularis__depression",
+                        jointId: "art_sternoclavicularis",
+                        label: "depressie (detractie)",
+                        rom: "20°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_sternoclavicularis__laterorotation",
+                        jointId: "art_sternoclavicularis",
+                        label: "laterorotatie (om de lengte-as van de clavicula)",
+                        rom: "10-20°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_sternoclavicularis__mediorotation",
+                        jointId: "art_sternoclavicularis",
+                        label: "mediorotatie (om de lengte-as van de clavicula)",
+                        rom: "10-20°",
+                    }
+                ),
+            ],
+        }
+    ),
     art_humeri: new Joint(
         {
             id: "art_humeri",
             regionId: "upper_extremity",
-            label: "art. humeri",
+            label: "art. humeri (schoudergewricht)",
             typeIds: ["art_simplex", "art_sphaeroidea"],
             cpp: "maximale abductie met maximale exorotatie",
-            mlpp: "55° abductie en 30° horizontale adductie",
+            mlpp: "30° anteflexie met 55° abductie",
             movements: [
                 new Movement(
                     {
@@ -157,10 +230,10 @@ Het secundaire scapulothoracale systeem bestaande uit:
         {
             id: "art_cubiti",
             regionId: "upper_extremity",
-            label: "art. cubiti",
+            label: "art. cubiti (ellebooggewricht)",
             typeIds: ["art_composita", "art_trochoidea", "art_ginglymus"],
             cpp: "maximale extensie met maximale supinatie",
-            mlpp: "70° flexie, 10-35° supinatie van [Link type=\"Joint\" targetId=\"art_humeroradialis\" label=\"art. humeroradialis\" / [Link type=\"Joint\" targetId=\"art_radioulnaris\" label=\"art. radioulnaris\"]",
+            mlpp: "70° flexie, 10-35° supinatie",
             movements: [
                 new Movement(
                     {
@@ -213,7 +286,7 @@ Het ellebooggewricht bestaat uit drie gewrichten:
             regionId: "upper_extremity",
             label: "art. humeroradialis",
             typeIds: ["art_simplex", "art_sphaeroidea"],
-            cpp: "90° flexie met 0-5° supinatie",
+            cpp: "90° flexie met lichte supinatie",
             mlpp: "Maximale extensie met maximale supinatie",
             movements: [
                 new Movement(
@@ -291,7 +364,7 @@ Het ellebooggewricht bestaat uit drie gewrichten:
             regionId: "upper_extremity",
             label: "art. radioulnaris",
             typeIds: ["art_duplex", "art_complexa", "art_trochoidea"],
-            cpp: "0-5° supinatie",
+            cpp: "lichte supinatie",
             mlpp: "10-35° supinatie",
             movements: [
                 new Movement(
@@ -313,6 +386,9 @@ Het ellebooggewricht bestaat uit drie gewrichten:
                     }
                 ),
             ],
+            description: `
+De art. radioulnaris is een duplexgewricht en bestaat uit twee subgewrichten die met elkaar samenwerken: art. radioulnaris proximalis en art. radioulnaris distalis.
+            `,
         }
     ),
     art_radiocarpalis: new Joint(

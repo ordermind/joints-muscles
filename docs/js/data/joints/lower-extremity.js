@@ -12,7 +12,7 @@ export default {
             label: "art. coxae (heupgewricht)",
             typeIds: ["art_simplex", "art_sphaeroidea"],
             cpp: "Maximale extensie met lichte endorotatie en lichte abductie",
-            mlpp: "30° flexie met 30° abductie en lichte exorotatie",
+            mlpp: "30° anteflexie met 30° abductie en lichte exorotatie",
             movements: [
                 new Movement(
                     {
@@ -75,7 +75,7 @@ export default {
         {
             id: "art_genus",
             regionId: "lower_extremity",
-            label: "art. genus",
+            label: "art. genus (kniegewricht)",
             typeIds: ["art_complexa", "art_ginglymus", "art_trochoidea"],
             cpp: "maximale extensie",
             mlpp: "30° flexie",
