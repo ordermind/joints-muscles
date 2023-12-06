@@ -1,16 +1,18 @@
-export default class Function {
+export default class MuscleFunction {
     #id;
     #jointId;
     #muscleId;
     #movementId;
     #isPrimeMover;
+    #notes;
 
-    constructor({id, jointId, muscleId, movementId, isPrimeMover = false}) {
+    constructor({id, jointId, muscleId, movementId, isPrimeMover, notes = []}) {
         this.#id = id;
         this.#jointId = jointId;
         this.#muscleId = muscleId;
         this.#movementId = movementId;
         this.#isPrimeMover = isPrimeMover;
+        this.#notes = notes;
     }
 
     get id() {
@@ -31,6 +33,10 @@ export default class Function {
 
     get isPrimeMover() {
         return this.#isPrimeMover;
+    }
+
+    get notes() {
+        return this.#notes;
     }
 }
 
