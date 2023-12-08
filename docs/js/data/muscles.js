@@ -4,6 +4,7 @@ export default await Promise.all(
         "MM.Interspinales.js",
         "MM.Intertransversarii.js",
         "M.LevatorScapulae.js",
+        "M.Longissimus.js",
     ]
     .map(filename => import("./muscles/" + filename).then(module => module.default))
 );

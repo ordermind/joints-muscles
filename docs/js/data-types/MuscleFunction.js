@@ -38,5 +38,20 @@ export default class MuscleFunction {
     get notes() {
         return this.#notes;
     }
+
+    toJSON() {
+        return {
+            id: this.id,
+            jointId: this.jointId,
+            muscleId: this.muscleId,
+            movementId: this.movementId,
+            isPrimeMover: this.isPrimeMover,
+            notes: this.notes,
+        }
+    }
+
+    static fromJSON(json) {
+        return new MuscleFunction(JSON.parse(json));
+    }
 }
 

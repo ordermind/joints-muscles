@@ -4,7 +4,7 @@ import MuscleFunction from "../../data-types/MuscleFunction.js";
 export default new Muscle(
     {
         id: "m_levator_scapulae",
-        label: "m. levator_scapulae",
+        label: "m. levator scapulae",
         origos: [
             "processi transversi C1-C4",
         ],
@@ -50,6 +50,15 @@ export default new Muscle(
                     muscleId: "m_levator_scapulae",
                     movementId: "shoulder_girdle__elevation",
                     isPrimeMover: true,
+                }
+            ),
+            new MuscleFunction(
+                {
+                    id: "m_levator_scapulae__shoulder_girdle__mediorotation",
+                    jointId: "shoulder_girdle",
+                    muscleId: "m_levator_scapulae",
+                    movementId: "shoulder_girdle__mediorotation",
+                    isPrimeMover: false,
                 }
             ),
         ]
