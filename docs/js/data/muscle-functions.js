@@ -1,4 +1,4 @@
-import MuscleFunction from "../data-types/MuscleFunction.js";
+import JointMuscleFunction from "../data-types/JointMuscleFunction.js";
 import muscles from "./muscles.js";
 
 const muscleFunctions = muscles.flatMap(muscle => muscle.functions);
@@ -20,7 +20,7 @@ const wholeSpineFunctions = new Set(
         if(spineJoints.includes(muscleFunction.jointId)) {
             const jointId = muscleFunction.jointId;
 
-            return new MuscleFunction(
+            return new JointMuscleFunction(
                 {
                     id: muscleFunction.id.replace(jointId, "columna_vertebralis"),
                     jointId: "columna_vertebralis",
@@ -38,4 +38,4 @@ const wholeSpineFunctions = new Set(
     .map(element => JSON.stringify(element))
 );
 
-export default [...muscleFunctions, ...Array.from(wholeSpineFunctions).map(element => MuscleFunction.fromJSON(element))];
+export default [...muscleFunctions, ...Array.from(wholeSpineFunctions).map(element => JointMuscleFunction.fromJSON(element))];

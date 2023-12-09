@@ -1,4 +1,4 @@
-export default class MuscleFunction {
+export default class JointMuscleFunction {
     #id;
     #jointId;
     #muscleId;
@@ -51,7 +51,7 @@ export default class MuscleFunction {
     }
 
     static fromJSON(json) {
-        return new MuscleFunction(JSON.parse(json));
+        return new JointMuscleFunction(JSON.parse(json));
     }
 }
 

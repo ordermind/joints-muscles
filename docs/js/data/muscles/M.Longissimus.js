@@ -1,5 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
-import MuscleFunction from "../../data-types/MuscleFunction.js";
+import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -17,7 +17,7 @@ export default new Muscle(
             "processi transversi",
         ],
         functions: [
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__head_joints__extension",
                     jointId: "head_joints",
@@ -26,7 +26,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__head_joints__lateroflexion",
                     jointId: "head_joints",
@@ -35,7 +35,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__head_joints__rotation",
                     jointId: "head_joints",
@@ -45,7 +45,7 @@ export default new Muscle(
                     notes: ["ipsilaterale rotatie"],
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__columna_vertebralis_cervicalis__extension",
                     jointId: "columna_vertebralis_cervicalis",
@@ -54,7 +54,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__columna_vertebralis_cervicalis__lateroflexion",
                     jointId: "columna_vertebralis_cervicalis",
@@ -63,7 +63,17 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
+                {
+                    id: "m_longissimus__columna_vertebralis_cervicalis__rotation",
+                    jointId: "columna_vertebralis_cervicalis",
+                    muscleId: "m_longissimus",
+                    movementId: "columna_vertebralis_cervicalis__rotation",
+                    isPrimeMover: true,
+                    notes: ["wellicht contralaterale rotatie"],
+                }
+            ),
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__columna_vertebralis_thoracalis__extension",
                     jointId: "columna_vertebralis_thoracalis",
@@ -72,7 +82,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__columna_vertebralis_thoracalis__lateroflexion",
                     jointId: "columna_vertebralis_thoracalis",
@@ -81,7 +91,17 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
+                {
+                    id: "m_longissimus__columna_vertebralis_thoracalis__rotation",
+                    jointId: "columna_vertebralis_thoracalis",
+                    muscleId: "m_longissimus",
+                    movementId: "columna_vertebralis_thoracalis__rotation",
+                    isPrimeMover: true,
+                    notes: ["ipsilaterale rotatie"],
+                }
+            ),
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__columna_vertebralis_lumbalis__extension",
                     jointId: "columna_vertebralis_lumbalis",
@@ -90,13 +110,23 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_longissimus__columna_vertebralis_lumbalis__lateroflexion",
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "m_longissimus",
                     movementId: "columna_vertebralis_lumbalis__lateroflexion",
                     isPrimeMover: true,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_longissimus__columna_vertebralis_lumbalis__rotation",
+                    jointId: "columna_vertebralis_lumbalis",
+                    muscleId: "m_longissimus",
+                    movementId: "columna_vertebralis_lumbalis__rotation",
+                    isPrimeMover: true,
+                    notes: ["ipsilaterale rotatie"],
                 }
             ),
         ],

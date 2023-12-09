@@ -1,5 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
-import MuscleFunction from "../../data-types/MuscleFunction.js";
+import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -18,7 +18,7 @@ export default new Muscle(
             "processi transversi C4-C6",
         ],
         functions: [
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_iliocostalis__columna_vertebralis_cervicalis__extension",
                     jointId: "columna_vertebralis_cervicalis",
@@ -27,7 +27,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_iliocostalis__columna_vertebralis_cervicalis__lateroflexion",
                     jointId: "columna_vertebralis_cervicalis",
@@ -36,7 +36,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_iliocostalis__columna_vertebralis_thoracalis__extension",
                     jointId: "columna_vertebralis_thoracalis",
@@ -45,7 +45,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_iliocostalis__columna_vertebralis_thoracalis__lateroflexion",
                     jointId: "columna_vertebralis_thoracalis",
@@ -54,7 +54,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_iliocostalis__columna_vertebralis_lumbalis__extension",
                     jointId: "columna_vertebralis_lumbalis",
@@ -63,7 +63,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_iliocostalis__columna_vertebralis_lumbalis__lateroflexion",
                     jointId: "columna_vertebralis_lumbalis",

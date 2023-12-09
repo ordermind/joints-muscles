@@ -1,5 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
-import MuscleFunction from "../../data-types/MuscleFunction.js";
+import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -12,7 +12,7 @@ export default new Muscle(
             
         ],
         functions: [
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "",
                     jointId: "",

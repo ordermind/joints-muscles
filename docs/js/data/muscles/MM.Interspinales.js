@@ -1,5 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
-import MuscleFunction from "../../data-types/MuscleFunction.js";
+import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -12,7 +12,7 @@ export default new Muscle(
             "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",
         ],
         functions: [
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "mm_interspinales__columna_vertebralis_cervicalis__extension",
                     jointId: "columna_vertebralis_cervicalis",
@@ -21,7 +21,7 @@ export default new Muscle(
                     isPrimeMover: false,
                 },
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "mm_interspinales__columna_vertebralis_lumbalis__extension",
                     jointId: "columna_vertebralis_lumbalis",

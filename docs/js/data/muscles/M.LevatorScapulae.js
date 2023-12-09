@@ -1,5 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
-import MuscleFunction from "../../data-types/MuscleFunction.js";
+import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -13,7 +13,7 @@ export default new Muscle(
             "margo medialis scapulae (craniaal)",
         ],
         functions: [
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_levator_scapulae__columna_vertebralis_cervicalis__extension",
                     jointId: "columna_vertebralis_cervicalis",
@@ -23,7 +23,7 @@ export default new Muscle(
                     notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_levator_scapulae__columna_vertebralis_cervicalis__lateroflexion",
                     jointId: "columna_vertebralis_cervicalis",
@@ -33,7 +33,7 @@ export default new Muscle(
                     notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_levator_scapulae__columna_vertebralis_cervicalis__rotation",
                     jointId: "columna_vertebralis_cervicalis",
@@ -43,7 +43,7 @@ export default new Muscle(
                     notes: ["ipsilaterale rotatie", "alleen bij gefixeerde insertie"],
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_levator_scapulae__shoulder_girdle__elevation",
                     jointId: "shoulder_girdle",
@@ -52,7 +52,7 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new MuscleFunction(
+            new JointMuscleFunction(
                 {
                     id: "m_levator_scapulae__shoulder_girdle__mediorotation",
                     jointId: "shoulder_girdle",
