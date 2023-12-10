@@ -9,6 +9,7 @@ export default await Promise.all(
         "M.ObliquusCapitisSuperior.js",
         "M.ObliquusExternusAbdominis.js",
         "M.ObliquusInternusAbdominis.js",
+        "M.QuadratusLumborum.js",
         "MM.Interspinales.js",
         "MM.Intertransversarii.js",
         "MM.Multifidi.js",
