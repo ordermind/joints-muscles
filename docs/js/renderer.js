@@ -6,7 +6,7 @@ function createPathFromInternalLink(link) {
   }
 
   if(link.type === 'Joint') {
-    return `joints/${link.targetId}`;
+    return `/joints/${link.targetId}`;
   }
 
   throw new Error(`The link type "${link.type}" is not supported.`);
