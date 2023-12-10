@@ -13,7 +13,7 @@ function createPathFromInternalLink(link) {
 }
 
 function replaceLinks(html) {
-    return html.replaceAll(/\[Link (type|targetId|label)="([^"]+)" (type|targetId|label)="([^"]+)" (type|targetId|label)="([^"]+)"[^\]]*\]/g, (_, group1Attribute, group1Value, group2Attribute, group2Value, group3Attribute, group3Value) => {
+    return html.replaceAll(/\[Link[\s]+(type|targetId|label)="([^"]+)"[\s]+(type|targetId|label)="([^"]+)"[\s]+(type|targetId|label)="([^"]+)"[^\]]*\]/g, (_, group1Attribute, group1Value, group2Attribute, group2Value, group3Attribute, group3Value) => {
         const internalLink = new InternalLink({
             [group1Attribute]: group1Value,
             [group2Attribute]: group2Value,
