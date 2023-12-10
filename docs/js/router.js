@@ -7,7 +7,7 @@ import muscleFunctions from "./data/muscle-functions.js";
 
 const router = new Navigo("/", { hash: true });
 
-router.on("/", () => {
+router.on("/joints-muscles/", () => {
     console.log("render home page");
 });
 
