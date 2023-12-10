@@ -5,10 +5,14 @@ import joints from "./data/joints.js";
 import muscles from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
 
-const router = new Navigo("/joints-muscles/", { hash: true });
+const router = new Navigo("/", { hash: true });
 
 router.on("/", () => {
     console.log("render home page");
+});
+
+router.on("/joints-muscles/", () => {
+    console.log("render home page on Github");
 });
 
 router.on("/joints", () => {
