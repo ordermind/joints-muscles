@@ -1,5 +1,5 @@
 import renderJointsList from "./pages/joints-list.js";
-import Navigo from "./navigo.min.js";
+import Navigo from "../vendor/navigo/js/navigo.min.js";
 import { render } from "./renderer.js";
 import joints from "./data/joints.js";
 import muscles from "./data/muscles.js";
