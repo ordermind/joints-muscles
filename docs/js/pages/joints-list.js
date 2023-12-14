@@ -8,7 +8,7 @@ function renderMuscleFunction(muscles, muscleFunction) {
         const notesTag = hasMultipleNotes ? "ul" : "span";
         notesTooltip = `
 <div class="tooltip-wrapper">
-    <i class="tooltip-trigger star"></i>
+    <i class="tooltip-trigger">ⓘ</i>
     <div class="tooltip-content">
         <div class="tooltip-content-bg"></div>
         <${notesTag} class="tooltip-content-inner">

@@ -3,6 +3,12 @@
     display: inline-block;
 }
 
+.tooltip-trigger {
+    cursor: default;
+    color: #D53C00;
+    font-weight: bold;
+}
+
 .tooltip-content {
     position: absolute;
     right: 0.5rem;
@@ -48,41 +54,4 @@
 ul.tooltip-content-inner {
     list-style: square;
     padding-left: 1rem;
-}
-
-.star {
-    position: relative;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 0.9em;
-    margin-right: 0.9em;
-    margin-bottom: 1.2em;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0.7em solid #D53C00;
-    border-left: 0.3em solid transparent;
-
-    /* Controls the size of the stars. */
-    font-size: 0.4rem;
-}
-  
-.star::before,
-.star::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0.6em;
-    left: -1em;
-    border-right: 1em solid transparent;
-    border-bottom: 0.7em solid #D53C00;
-    border-left: 1em solid transparent;
-    transform: rotate(-35deg);
-    box-sizing: inherit;
-    -webkit-font-smoothing: antialiased;
-}
-
-.star::after {
-  transform: rotate(35deg);
 }
