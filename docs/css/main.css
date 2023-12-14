@@ -3,6 +3,10 @@ img {
     height: auto;
 }
 
+ul {
+    padding-left: 1rem;
+}
+
 @media (min-width: 576px) {
     .container, .container-sm {
         max-width: 100%;
