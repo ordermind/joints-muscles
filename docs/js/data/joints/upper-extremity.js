@@ -145,7 +145,8 @@ Het secundaire scapulothoracale systeem bestaande uit:
                     {
                         id: "art_sternoclavicularis__laterorotation",
                         jointId: "art_sternoclavicularis",
-                        label: "laterorotatie (om de lengte-as van de clavicula)",
+                        label: "laterorotatie",
+                        labelNotes: ["om de lengte-as van de clavicula"],
                         rom: "10-20°",
                     }
                 ),
@@ -153,7 +154,8 @@ Het secundaire scapulothoracale systeem bestaande uit:
                     {
                         id: "art_sternoclavicularis__mediorotation",
                         jointId: "art_sternoclavicularis",
-                        label: "mediorotatie (om de lengte-as van de clavicula)",
+                        label: "mediorotatie",
+                        labelNotes: ["om de lengte-as van de clavicula"],
                         rom: "10-20°",
                     }
                 ),
@@ -174,7 +176,8 @@ Het secundaire scapulothoracale systeem bestaande uit:
                         id: "art_humeri__anteflexion",
                         jointId: "art_humeri",
                         label: "anteflexie",
-                        rom: "90° (180° incl. schoudergordel)",
+                        rom: "90°",
+                        romNotes: ["180° incl. schoudergordel"],
                         endFeel: "capsulair",
                     }
                 ),
@@ -192,7 +195,8 @@ Het secundaire scapulothoracale systeem bestaande uit:
                         id: "art_humeri__abduction",
                         jointId: "art_humeri",
                         label: "abductie",
-                        rom: "90° (180° incl. schoudergordel)",
+                        rom: "90°",
+                        romNotes: ["180° incl. schoudergordel"],
                         endFeel: "capsulair",
                     }
                 ),

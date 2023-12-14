@@ -2,15 +2,19 @@ export default class Movement {
     #id;
     #jointId;
     #label;
+    #labelNotes;
     #rom;
+    #romNotes;
     #endFeel;
     #description;
 
-    constructor({id, jointId, label, rom, endFeel = '', description = ''}) {
+    constructor({id, jointId, label, labelNotes = [], rom, romNotes = [], endFeel = '', description = ''}) {
         this.#id = id;
         this.#jointId = jointId;
         this.#label = label;
+        this.#labelNotes = labelNotes;
         this.#rom = rom;
+        this.#romNotes = romNotes;
         this.#endFeel = endFeel;
         this.#description = description;
     }
@@ -27,8 +31,16 @@ export default class Movement {
         return this.#label;
     }
 
+    get labelNotes() {
+        return this.#labelNotes;
+    }
+
     get rom() {
         return this.#rom;
+    }
+
+    get romNotes() {
+        return this.#romNotes;
     }
 
     get endFeel() {

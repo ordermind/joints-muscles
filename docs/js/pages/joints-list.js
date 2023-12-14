@@ -1,34 +1,40 @@
-function renderMuscleFunction(muscles, muscleFunction) {
-    const muscle = muscles.find(muscle => muscle.id === muscleFunction.muscleId);
+function renderNotesTooltip(notes) {
+    if(!notes.length) {
+        return "";
+    }
 
     let notesTooltip = "";
 
-    if(muscleFunction.notes.length) {
-        const hasMultipleNotes = muscleFunction.notes.length > 1;
-        const notesTag = hasMultipleNotes ? "ul" : "span";
-        notesTooltip = `
+    const hasMultipleNotes = notes.length > 1;
+    const notesTag = hasMultipleNotes ? "ul" : "span";
+    notesTooltip = `
 <div class="tooltip-wrapper">
     <i class="tooltip-trigger">ⓘ</i>
     <div class="tooltip-content">
         <div class="tooltip-content-bg"></div>
         <${notesTag} class="tooltip-content-inner">
-    `;
-        if(hasMultipleNotes) {
-            for(const note of muscleFunction.notes) {
-                notesTooltip += `<li>${note}</li>`;
-            }
-        } else {
-            notesTooltip += muscleFunction.notes[0];
+`;
+    if(hasMultipleNotes) {
+        for(const note of notes) {
+            notesTooltip += `<li>${note}</li>`;
         }
+    } else {
+        notesTooltip += notes[0];
+    }
 
-        notesTooltip += `
+    notesTooltip += `
         </${notesTag}>
     </div>
 </div>
-        `;
-    }
+    `;
 
-    return `<li>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${notesTooltip}</li>`
+    return notesTooltip;
+}
+
+function renderMuscleFunction(muscles, muscleFunction) {
+    const muscle = muscles.find(muscle => muscle.id === muscleFunction.muscleId);
+
+    return `<li>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</li>`
 }
 
 export default function renderJointsList({joints, muscles, muscleFunctions}) {
@@ -43,8 +49,8 @@ export default function renderJointsList({joints, muscles, muscleFunctions}) {
                 let row = `
 <tr>
     <td>[Link type="Joint" targetId="${joint.id}" label="${joint.label}"]</td>
-    <td>${movement.label}</td>
-    <td>${movement.rom}</td>
+    <td>${movement.label}${renderNotesTooltip(movement.labelNotes)}</td>
+    <td>${movement.rom}${renderNotesTooltip(movement.romNotes)}</td>
     <td>`;
             if(primeMovers.length) {
                 row += `<ul>`;
