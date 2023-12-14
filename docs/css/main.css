@@ -36,3 +36,7 @@ ul {
         max-width: 1840px;
     }
 }
+
+.joints-list a {
+    text-decoration: none;
+}

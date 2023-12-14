@@ -34,7 +34,7 @@ function renderNotesTooltip(notes) {
 function renderMuscleFunction(muscles, muscleFunction) {
     const muscle = muscles.find(muscle => muscle.id === muscleFunction.muscleId);
 
-    return `<li>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</li>`
+    return `<tr><td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</td></tr>`
 }
 
 export default function renderJointsList({joints, muscles, muscleFunctions}) {
@@ -53,22 +53,22 @@ export default function renderJointsList({joints, muscles, muscleFunctions}) {
     <td>${movement.rom}${renderNotesTooltip(movement.romNotes)}</td>
     <td>`;
             if(primeMovers.length) {
-                row += `<ul>`;
+                row += `<table class="table table-striped">`;
                     for(const primeMover of primeMovers) {
                         const muscle = muscles.find(muscle => muscle.id === primeMover.muscleId);
                         row += renderMuscleFunction(muscles, primeMover);
                     }
-                row += `</ul>`;
+                row += `</table>`;
             }
             row += `
     </td>
     <td>`;
             if(otherMuscles.length) {
-                row += `<ul>`;
+                row += `<table class="table table-striped">`;
                     for(const otherMuscle of otherMuscles) {
                         row += renderMuscleFunction(muscles, otherMuscle);
                     }
-                row += `</ul>`;
+                row += `</table>`;
             }
             row += `
     </td>
@@ -83,7 +83,7 @@ export default function renderJointsList({joints, muscles, muscleFunctions}) {
 
 
     return `
-<table class="table">
+<table class="table | joints-list">
     <tr>
         <th>Naam gewricht</th>
         <th>Beweging</th>
