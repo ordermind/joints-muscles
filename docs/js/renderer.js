@@ -24,7 +24,7 @@ function replaceLinks(html) {
     });
 }
 
-export function render(html) {
+export function renderPage(html) {
     document.getElementById("main").innerHTML = replaceLinks(html);
 }
 

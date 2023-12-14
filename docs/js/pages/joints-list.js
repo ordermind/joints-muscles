@@ -1,3 +1,36 @@
+function renderMuscleFunction(muscles, muscleFunction) {
+    const muscle = muscles.find(muscle => muscle.id === muscleFunction.muscleId);
+
+    let notesTooltip = "";
+
+    if(muscleFunction.notes.length) {
+        const hasMultipleNotes = muscleFunction.notes.length > 1;
+        const notesTag = hasMultipleNotes ? "ul" : "span";
+        notesTooltip = `
+<div class="tooltip-wrapper">
+    <i class="tooltip-trigger star"></i>
+    <div class="tooltip-content">
+        <div class="tooltip-content-bg"></div>
+        <${notesTag} class="tooltip-content-inner">
+    `;
+        if(hasMultipleNotes) {
+            for(const note of muscleFunction.notes) {
+                notesTooltip += `<li>${note}</li>`;
+            }
+        } else {
+            notesTooltip += muscleFunction.notes[0];
+        }
+
+        notesTooltip += `
+        </${notesTag}>
+    </div>
+</div>
+        `;
+    }
+
+    return `<li>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${notesTooltip}</li>`
+}
+
 export default function renderJointsList({joints, muscles, muscleFunctions}) {
 
     function createRows() {
@@ -16,8 +49,8 @@ export default function renderJointsList({joints, muscles, muscleFunctions}) {
             if(primeMovers.length) {
                 row += `<ul>`;
                     for(const primeMover of primeMovers) {
-                        const muscle = muscles.find(muscle => muscle.id === primeMover.muscleId)
-                        row += `<li>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]</li>`
+                        const muscle = muscles.find(muscle => muscle.id === primeMover.muscleId);
+                        row += renderMuscleFunction(muscles, primeMover);
                     }
                 row += `</ul>`;
             }
@@ -27,8 +60,7 @@ export default function renderJointsList({joints, muscles, muscleFunctions}) {
             if(otherMuscles.length) {
                 row += `<ul>`;
                     for(const otherMuscle of otherMuscles) {
-                        const muscle = muscles.find(muscle => muscle.id === otherMuscle.muscleId)
-                        row += `<li>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]</li>`
+                        row += renderMuscleFunction(muscles, otherMuscle);
                     }
                 row += `</ul>`;
             }
