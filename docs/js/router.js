@@ -19,6 +19,8 @@ router.on("/", () => {
 
 router.on("/joints-muscles/", () => {
     console.log("render home page on Github");
+    const html = renderHomePage();
+    renderPage(html);
 });
 
 router.on("/joints", () => {
