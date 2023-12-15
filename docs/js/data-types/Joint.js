@@ -33,6 +33,10 @@ export default class Joint {
         return this.#label;
     }
 
+    get shortLabel() {
+        return this.label.split("(")[0].trim();
+    }
+
     get typeIds() {
         return this.#typeIds;
     }

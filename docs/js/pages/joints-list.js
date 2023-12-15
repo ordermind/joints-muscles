@@ -20,8 +20,8 @@ export default function renderJointsList({joints, jointTypes}) {
         for(const [_, joint] of Object.entries(joints)) {
             let row = `
 <tr>
-    <td>[Link type="Joint" targetId="${joint.id}" label="${joint.label}"]</td>
-    <td>${renderJointType(joint, jointTypes)}</td>
+    <td>[Link type="Joint" targetId="${joint.id}" label="${joint.shortLabel}"]</td>
+    <td>${renderJointType(joint, jointTypes, true)}</td>
     <td>${joint.cpp}</td>
     <td>${joint.mlpp}</td>
     <td>${renderMovements(joint)}</td>

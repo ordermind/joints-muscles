@@ -1,7 +1,7 @@
 import JointMuscleFunction from "../data-types/JointMuscleFunction.js";
 import muscles from "./muscles.js";
 
-const muscleFunctions = muscles.flatMap(muscle => muscle.functions);
+const muscleFunctions = Object.entries(muscles).flatMap(([_, muscle]) => muscle.functions);
 
 const spineJoints = [
     "head_joints",

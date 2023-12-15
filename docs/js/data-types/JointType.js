@@ -19,6 +19,10 @@ export default class JointType {
         return this.#label;
     }
 
+    get shortLabel() {
+        return this.label.split("(")[0].trim();
+    }
+
     get description() {
         return this.#description;
     }

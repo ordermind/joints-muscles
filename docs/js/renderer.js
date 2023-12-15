@@ -1,19 +1,34 @@
 import InternalLink from "./data-types/InternalLink.js";
+import jointTypes from "./data/joint-types.js";
+import joints from "./data/joints.js";
+import muscles from "./data/muscles.js";
 
 function createPathFromInternalLink(link) {
-  if(link.type === 'Muscle') {
-      return `/muscles/${link.targetId}`;
-  }
+    if(link.type === 'Muscle') {
+        if(muscles.hasOwnProperty(link.targetId)) {
+            return `/muscles/${link.targetId}`;
+        }
 
-  if(link.type === 'Joint') {
-      return `/joints/${link.targetId}`;
-  }
+        return null;
+    }
 
-  if(link.type === 'JointType') {
-      return `/joint-types/${link.targetId}`;
-  }
+    if(link.type === 'Joint') {
+        if(joints.hasOwnProperty(link.targetId)) {
+            return `/joints/${link.targetId}`;
+        }
 
-  throw new Error(`The link type "${link.type}" is not supported.`);
+        return null;
+    }
+
+    if(link.type === 'JointType') {
+        if(jointTypes.hasOwnProperty(link.targetId)) {
+            return `/joint-types/${link.targetId}`;
+        }
+
+        return null;
+    }
+
+    throw new Error(`The link type "${link.type}" is not supported.`);
 }
 
 export function replaceLinks(html) {
@@ -24,7 +39,13 @@ export function replaceLinks(html) {
             [group3Attribute]: group3Value,
         });
 
-        return `<a href="${createPathFromInternalLink(internalLink)}" data-navigo>${internalLink.label}</a>`;
+        const path = createPathFromInternalLink(internalLink);
+
+        if(path !== null) {
+            return `<a href="${path}" data-navigo>${internalLink.label}</a>`;
+        }
+
+        return internalLink.label;
     });
 }
 

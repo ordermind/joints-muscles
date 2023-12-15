@@ -1,7 +1,7 @@
 import markdownParser from "../../js/markdown-parser.js";
 import { capitalizeTitle } from "../utils.js";
 
-export function renderJointType(joint, jointTypes) {
+export function renderJointType(joint, jointTypes, useShortLabel) {
     if(!joint.typeIds.length) {
         return "";
     }
@@ -11,11 +11,14 @@ export function renderJointType(joint, jointTypes) {
     let jointTypeOutput = `<${jointTypeTag}>`;
     if(hasMultipleJointTypes) {
         for(const jointTypeId of joint.typeIds) {
-            jointTypeOutput += `<li>[Link type="JointType" targetId="${jointTypeId}" label="${jointTypes[jointTypeId].label}"]</li>`;
+            const jointLabel = useShortLabel ? jointTypes[jointTypeId].shortLabel : jointTypes[jointTypeId].label;
+
+            jointTypeOutput += `<li>[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]</li>`;
         }
     } else {      
         const jointTypeId = joint.typeIds[0];
-        jointTypeOutput += `[Link type="JointType" targetId="${jointTypeId}" label="${jointTypes[jointTypeId].label}"]`;
+        const jointLabel = useShortLabel ? jointTypes[jointTypeId].shortLabel : jointTypes[jointTypeId].label;
+        jointTypeOutput += `[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]`;
     }
     jointTypeOutput += `</${jointTypeTag}>`;
 
@@ -56,7 +59,7 @@ function renderNotesTooltip(notes) {
 }
 
 function renderMuscleFunction(muscles, muscleFunction) {
-    const muscle = muscles.find(muscle => muscle.id === muscleFunction.muscleId);
+    const muscle = muscles[muscleFunction.muscleId];
 
     return `<tr><td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</td></tr>`
 }
@@ -75,7 +78,6 @@ function createJointFunctionsRows(joint, muscles, muscleFunctions) {
         if(primeMovers.length) {
             row += `<table class="table table-striped">`;
                 for(const primeMover of primeMovers) {
-                    const muscle = muscles.find(muscle => muscle.id === primeMover.muscleId);
                     row += renderMuscleFunction(muscles, primeMover);
                 }
             row += `</table>`;

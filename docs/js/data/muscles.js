@@ -36,4 +36,4 @@ export default await Promise.all(
         "MM.RotatoresLongi.js",
     ]
     .map(filename => import("./muscles/" + filename).then(module => module.default))
-);
+).then(muscles => muscles.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {}));
