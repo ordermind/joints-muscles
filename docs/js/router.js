@@ -1,4 +1,5 @@
 import renderJointsList from "./pages/joints-list.js";
+import renderJointPage from "./pages/joint.js";
 import renderHomePage from "./pages/home.js";
 import Navigo from "../vendor/navigo/js/navigo.min.js";
 import { renderPage } from "./renderer.js";
@@ -26,6 +27,8 @@ router.on("/joints", () => {
 
 router.on("/joints/:id", ({ data }) => {
   console.log("render joint page", data);
+  const html = renderJointPage({jointId: data.id, joints, muscles, muscleFunctions});
+  renderPage(html);
 });
 
 router.on("/muscles", () => {
