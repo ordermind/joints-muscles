@@ -110,7 +110,7 @@ export default function renderJointPage({jointId, joints, jointTypes, muscles, m
 <div class="row">`;
 
     if(joint.image) {
-        content += `<img src="${joint.image}" class="col flex-grow-0 h-100 | joint-image" />`;
+        content += `<img src="${joint.image}" class="col flex-grow-0 h-100 d-none d-lg-block | page-image" />`;
     }
 
     content += `<div class="col">`;

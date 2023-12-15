@@ -10,7 +10,7 @@ export default function renderJointTypePage({ jointTypeId, jointTypes }) {
 <div class="row">`;
 
     if(jointType.image) {
-        content += `<img src="${jointType.image}" class="col flex-grow-0 h-100 | joint-type-image" />`;
+        content += `<img src="${jointType.image}" class="col flex-grow-0 h-100 d-none d-lg-block | page-image" />`;
     }
 
     content += `<div class="col-6">`;
