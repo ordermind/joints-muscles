@@ -1,95 +1,48 @@
-function renderNotesTooltip(notes) {
-    if(!notes.length) {
-        return "";
+import { renderJointType } from "./joint.js";
+
+function renderMovements(joint) {
+    let output = `<ul>`;
+
+    for(const movement of joint.movements) {
+        output += `<li>${movement.label}</li>`;
     }
 
-    let notesTooltip = "";
+    output += `</ul>`;
 
-    const hasMultipleNotes = notes.length > 1;
-    const notesTag = hasMultipleNotes ? "ul" : "span";
-    notesTooltip = `
-<div class="tooltip-wrapper">
-    <i class="tooltip-trigger">ⓘ</i>
-    <div class="tooltip-content">
-        <div class="tooltip-content-bg"></div>
-        <${notesTag} class="tooltip-content-inner">
-`;
-    if(hasMultipleNotes) {
-        for(const note of notes) {
-            notesTooltip += `<li>${note}</li>`;
-        }
-    } else {
-        notesTooltip += notes[0];
-    }
-
-    notesTooltip += `
-        </${notesTag}>
-    </div>
-</div>
-    `;
-
-    return notesTooltip;
+    return output;
 }
 
-function renderMuscleFunction(muscles, muscleFunction) {
-    const muscle = muscles.find(muscle => muscle.id === muscleFunction.muscleId);
-
-    return `<tr><td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</td></tr>`
-}
-
-export default function renderJointsList({joints, muscles, muscleFunctions}) {
+export default function renderJointsList({joints, jointTypes}) {
 
     function createRows() {
         let rows = [];
 
-        for(const [key, joint] of Object.entries(joints)) {
-            for(const movement of joint.movements) {
-                const primeMovers = muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover === true);
-                const otherMuscles = muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover === false);
-                let row = `
+        for(const [_, joint] of Object.entries(joints)) {
+            let row = `
 <tr>
     <td>[Link type="Joint" targetId="${joint.id}" label="${joint.label}"]</td>
-    <td>${movement.label}${renderNotesTooltip(movement.labelNotes)}</td>
-    <td>${movement.rom}${renderNotesTooltip(movement.romNotes)}</td>
-    <td>`;
-            if(primeMovers.length) {
-                row += `<table class="table table-striped">`;
-                    for(const primeMover of primeMovers) {
-                        const muscle = muscles.find(muscle => muscle.id === primeMover.muscleId);
-                        row += renderMuscleFunction(muscles, primeMover);
-                    }
-                row += `</table>`;
-            }
-            row += `
-    </td>
-    <td>`;
-            if(otherMuscles.length) {
-                row += `<table class="table table-striped">`;
-                    for(const otherMuscle of otherMuscles) {
-                        row += renderMuscleFunction(muscles, otherMuscle);
-                    }
-                row += `</table>`;
-            }
-            row += `
-    </td>
+    <td>${renderJointType(joint, jointTypes)}</td>
+    <td>${joint.cpp}</td>
+    <td>${joint.mlpp}</td>
+    <td>${renderMovements(joint)}</td>
 </tr>
-                `.trim();
-                rows.push(row);
-            }
+            `.trim();
+
+            rows.push(row);
         }
 
         return rows;
     }
 
-
     return `
-<table class="table | joints-list">
+<h1 class="display-1 fs-1">Gewrichten</h1>
+<table class="table">
     <tr>
         <th>Naam gewricht</th>
-        <th>Beweging</th>
-        <th>ROM</th>
-        <th>Prime movers</th>
-        <th>Overige spieren</th>
+        <th>Type gewricht</th>
+        <th>CPP</th>
+        <th>MLPP</th>
+        <th>Bewegingen</th>
     </tr>
     ${createRows().join("")}
 </table>

@@ -2,7 +2,8 @@ import Joint from "../../data-types/Joint.js";
 import Movement from "../../data-types/Movement.js";
 
 /**
- * Unless specified, all ROM values and end-feel come from Schünke et al. (2016) Anatomische atlas - Algemene anatomie en bewegingsapparaat.
+ * Unless specified, all ROM values and end-feel come from Schünke et al. (2016) 
+ * Anatomische atlas - Algemene anatomie en bewegingsapparaat.
  */
 export default {
     columna_vertebralis: new Joint(
@@ -54,6 +55,7 @@ export default {
             description: `
 De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManuele Geneeskunde.
             `,
+            image: "./images/joints/columna_vertebralis.png",
         }
     ),
     head_joints: new Joint(
@@ -100,7 +102,8 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                     }
                 ),
             ],
-        }
+            image: "./images/joints/head_joints.png",
+        },
     ),
     columna_vertebralis_cervicalis: new Joint(
         {
@@ -146,6 +149,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                     }
                 ),
             ],
+            image: "./images/joints/columna_vertebralis_cervicalis.png",
         }
     ),
     columna_vertebralis_thoracalis: new Joint(
@@ -192,6 +196,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                     }
                 ),
             ],
+            image: "./images/joints/columna_vertebralis_thoracalis.png",
         }
     ),
     columna_vertebralis_lumbalis: new Joint(
@@ -238,6 +243,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                     }
                 ),
             ],
+            image: "./images/joints/columna_vertebralis_lumbalis.png",
         }
     ),
 };

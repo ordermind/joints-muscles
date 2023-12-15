@@ -1,12 +1,3 @@
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-ul {
-    padding-left: 1rem;
-}
-
 @media (min-width: 576px) {
     .container, .container-sm {
         max-width: 100%;
@@ -37,6 +28,23 @@ ul {
     }
 }
 
-.joints-list a {
+h1 {
+    margin-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.joint-image {
+    max-width: 25rem;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+table a {
     text-decoration: none;
 }

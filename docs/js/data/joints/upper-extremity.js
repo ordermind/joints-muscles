@@ -102,7 +102,7 @@ Het secundaire scapulothoracale systeem bestaande uit:
             id: "art_sternoclavicularis",
             regionId: "upper_extremity",
             label: "art. sternoclavicularis (het SC-gewricht)",
-            typeIds: ["art_complex", "art_sellaris"],
+            typeIds: ["art_complexa", "art_sellaris"],
             cpp: "maximale elevatie",
             mlpp: "anatomische positie",
             /**
