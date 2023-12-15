@@ -1,4 +1,5 @@
 import renderJointsList from "./pages/joints-list.js";
+import renderHomePage from "./pages/home.js";
 import Navigo from "../vendor/navigo/js/navigo.min.js";
 import { renderPage } from "./renderer.js";
 import joints from "./data/joints.js";
@@ -9,6 +10,8 @@ const router = new Navigo("/", { hash: true });
 
 router.on("/", () => {
     console.log("render home page");
+    const html = renderHomePage();
+    renderPage(html);
 });
 
 router.on("/joints-muscles/", () => {
