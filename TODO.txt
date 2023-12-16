@@ -1,0 +1,9 @@
+- Lägg till muskler för övriga regioner
+- Lägg till sökfunktion
+- Lägg till huvudmeny
+- Lägg till quiz för leder
+- Lägg till quiz för muskler
+- Lägg till muskelsida
+- Lägg till bilder för musklerna
+- Lägg till wrapper för bilder så att img-elementet inte även är ett flexboxelement
+- Lägg till spinner under laddning (även för illness-scripts)
