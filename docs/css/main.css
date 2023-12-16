@@ -50,3 +50,8 @@ ul {
 table a {
     text-decoration: none;
 }
+
+.spinner-border {
+    width: 5rem;
+    height: 5rem;
+}
