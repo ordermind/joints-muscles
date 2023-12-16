@@ -112,10 +112,16 @@ export default function renderJointPage({jointId, joints, jointTypes, muscles, m
 <div class="row">`;
 
     if(joint.image) {
-        content += `<img src="${joint.image}" class="col flex-grow-0 h-100 d-none d-lg-block | page-image" />`;
+        content += `
+    <div class="col flex-grow-0 d-none d-lg-block">
+        <img src="${joint.image}" class="page-image" />
+    </div>
+    `.trim();
     }
 
-    content += `<div class="col">`;
+    content += `
+    <div class="col">
+    `.trim();
 
     if(joint.description) {
         content += markdownParser.parse(joint.description.trim());

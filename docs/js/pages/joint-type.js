@@ -10,10 +10,16 @@ export default function renderJointTypePage({ jointTypeId, jointTypes }) {
 <div class="row">`;
 
     if(jointType.image) {
-        content += `<img src="${jointType.image}" class="col flex-grow-0 h-100 d-none d-lg-block | page-image" />`;
+        content += `
+    <div class="col flex-grow-0 d-none d-lg-block">
+        <img src="${jointType.image}" class="page-image" />
+    </div>
+    `.trim();
     }
 
-    content += `<div class="col-6">`;
+    content += `
+    <div class="col-lg-4">
+    `.trim();
 
     if(jointType.description) {
         content += markdownParser.parse(jointType.description.trim());

@@ -6,5 +6,5 @@
 - Lägg till hjälpmedel för att hårdplugga tabellerna
 - Lägg till muskelsida
 - Lägg till bilder för musklerna
-- Lägg till wrapper för bilder så att img-elementet inte även är ett flexboxelement
-- Lägg till spinner under laddning (även för illness-scripts)
+X Lägg till wrapper för bilder så att img-elementet inte även är ett flexboxelement
+X Lägg till spinner under laddning (även för illness-scripts)
