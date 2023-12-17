@@ -41,5 +41,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_rectus_capitis_lateralis.jpeg",
     }
 );

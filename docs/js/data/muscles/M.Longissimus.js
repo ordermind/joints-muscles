@@ -130,6 +130,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_longissimus.jpeg",
         description: `
 M. longissimus is onderdeel van de m. erector spinae.
 

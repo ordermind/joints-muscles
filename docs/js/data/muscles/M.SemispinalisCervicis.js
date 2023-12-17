@@ -53,5 +53,6 @@ mapping:
                 }
             )
         ],
+        image: "./images/muscles/m_semispinalis_cervicis.jpeg",
     }
 );

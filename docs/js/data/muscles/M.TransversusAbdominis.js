@@ -25,6 +25,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_transversus_abdominis.jpeg",
         description: `
 De spier bekleedt de ventrolaterale (binnen)wand van het cavum abdominis en zorgt, net als de
 overige buikspieren, bij contractie voor een verhoging van de intra-abdominale druk (in samenwerking

@@ -31,6 +31,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/mm_interspinales.jpeg",
         description: `
 De spier loopt van processus spinosus naar de direct daarboven gelegen processus spinosus (monosegmentaal). Mm. interspinales komen alleen lumbaal en cervicaal voor.
         `,

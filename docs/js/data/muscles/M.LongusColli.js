@@ -55,5 +55,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_longus_colli.jpeg",
     }
 );

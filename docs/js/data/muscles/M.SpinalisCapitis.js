@@ -31,6 +31,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_spinalis_capitis.jpeg",
         description: `m. spinalis capitis is vaak samengevoegd met [Link type="Muscle" targetId="m_semispinalis_capitis" label="m. semispinalis capitis"].`,
     }
 );

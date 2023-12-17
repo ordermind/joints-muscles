@@ -61,6 +61,7 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
-        ]
+        ],
+        image: "./images/muscles/m_levator_scapulae.jpeg",
     }
 );

@@ -107,6 +107,7 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/mm_multifidi.jpeg",
         description: `
 De spier loopt van processus transversus naar processus spinosus (overbrugt 2-4
 wervels en reikt van sacraal tot cervicaal)

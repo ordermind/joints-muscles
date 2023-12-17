@@ -42,5 +42,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_rectus_capitis_posterior_major.jpeg",
     }
 );

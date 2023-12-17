@@ -42,5 +42,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_obliquus_capitis_inferior.jpeg",
     }
 );

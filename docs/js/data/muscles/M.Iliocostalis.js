@@ -73,6 +73,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_iliocostalis.jpeg",
         description: `
 M. iliocostalis is onderdeel van de m. erector spinae.
 

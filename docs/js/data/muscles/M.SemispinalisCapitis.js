@@ -50,5 +50,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_semispinalis_capitis.jpeg",
     }
 );

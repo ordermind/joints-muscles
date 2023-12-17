@@ -31,5 +31,6 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_spinalis_thoracis.jpeg",
     }
 );

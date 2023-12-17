@@ -95,6 +95,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_obliquus_externus_abdominis.jpeg",
         description: `
 De spier heeft 8 koppen die alterneren met de koppen van de [Link type="Muscle" targetId="m_serratus_anterior" label="m. serratus anterior"] en de [Link type="Muscle" targetId="m_latissimus_dorsi" label="m. latissimus dorsi"].
 

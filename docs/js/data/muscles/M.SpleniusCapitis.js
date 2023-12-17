@@ -70,5 +70,6 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_splenius_capitis.jpeg",
     }
 );

@@ -41,6 +41,7 @@ export default new Muscle(
                     functionDescription: "handhaven van de stand van de wervelkolom"
                 }
             )
-        ]
+        ],
+        image: "./images/muscles/mm_rotatores_breves.jpeg",
     }
 );

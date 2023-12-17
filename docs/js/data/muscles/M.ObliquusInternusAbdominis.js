@@ -94,6 +94,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "./images/muscles/m_obliquus_internus_abdominis.jpeg",
         description: `
 De spier ligt geheel onder de [Link type="Muscle" targetId="m_obliquus_externus_abdominis" label="m. obliquus externus abdominis"], met uitzondering van een klein gedeelte dat oppervlakkig ligt in het trigonum lumbale.
 

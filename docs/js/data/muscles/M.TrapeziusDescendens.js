@@ -90,5 +90,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_trapezius_descendens.jpeg",
     }
 );

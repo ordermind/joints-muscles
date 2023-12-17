@@ -51,5 +51,6 @@ export default new Muscle(
                 }
             )
         ],
+        image: "./images/muscles/m_longus_capitis.jpeg",
     }
 );
