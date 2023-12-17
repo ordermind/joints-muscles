@@ -35,10 +35,10 @@ export default class MusclePage {
 
         for (const [jointId, jointFunctions] of Object.entries(allJointFunctions)) {
             let row = `
-<tr>
-    <td><div class="hideable">[Link type="Joint" targetId="${jointId}" label="${joints[jointId].shortLabel}"]</div></td>
-    <td><div class="hideable">${renderList(jointFunctions.primeMovers, true)}</div></td>
-    <td><div class="hideable">${renderList(jointFunctions.otherMuscles, true)}</div></td>
+<tr class="hideable">
+    <td>[Link type="Joint" targetId="${jointId}" label="${joints[jointId].shortLabel}"]</td>
+    <td>${renderList(jointFunctions.primeMovers, true)}</td>
+    <td>${renderList(jointFunctions.otherMuscles, true)}</td>
 </tr>
             `.trim();
 
