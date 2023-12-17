@@ -1,12 +1,10 @@
-import jointTypes from "./data/joint-types.js";
-import joints from "./data/joints.js";
-import muscles from "./data/muscles.js";
-import muscleFunctions from "./data/muscle-functions.js";
-import router from "./router.js";
+import Navigo from "../vendor/navigo/js/navigo.min.js";
+import routes from "./routes.js";
 
-console.log('joint types', jointTypes);
-console.log('joints', joints);
-console.log('muscles', muscles);
-console.log('muscle functions', muscleFunctions);
-
+const router = new Navigo("/", { hash: true });
+for(const [_, route] of Object.entries(routes)) {
+    for(const path of route.paths) {
+        router.on(path, route.responseHandler);
+    }
+}
 router.resolve();

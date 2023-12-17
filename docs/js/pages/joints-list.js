@@ -1,3 +1,4 @@
+import renderMainMenu from "../blocks/main-menu.js";
 import { renderJointType } from "./joint.js";
 
 function renderMovements(joint) {
@@ -34,7 +35,7 @@ export default function renderJointsList({joints, jointTypes}) {
         return rows;
     }
 
-    return `
+    const content = `
 <h1 class="display-1 fs-1">Gewrichten</h1>
 <table class="table">
     <tr>
@@ -47,4 +48,9 @@ export default function renderJointsList({joints, jointTypes}) {
     ${createRows().join("")}
 </table>
     `.trim();
+
+    return {
+        header: renderMainMenu("jointsList"),
+        main: content,
+    };
 }

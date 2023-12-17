@@ -49,7 +49,21 @@ export function replaceLinks(html) {
     });
 }
 
-export function renderPage(html) {
-    document.getElementById("main").innerHTML = replaceLinks(html);
+export function renderPage(content) {
+    if(content.hasOwnProperty("header")) {
+        document.getElementById("header").innerHTML = `
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">${replaceLinks(content.header)}</div>
+</nav>
+        `.trim();
+    } else {
+        document.getElementById("header").innerHTML = "";
+    }
+
+    if(content.hasOwnProperty("main")) {
+        document.getElementById("main").innerHTML = replaceLinks(content.main);
+    } else {
+        document.getElementById("main").innerHTML = "";
+    }
 }
 

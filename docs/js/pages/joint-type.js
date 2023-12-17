@@ -1,4 +1,5 @@
 import markdownParser from "../../js/markdown-parser.js";
+import renderMainMenu from "../blocks/main-menu.js";
 import { capitalizeTitle } from "../utils.js";
 
 export default function renderJointTypePage({ jointType }) {
@@ -29,5 +30,8 @@ export default function renderJointTypePage({ jointType }) {
 </div>
     `.trim();
 
-    return content;
+    return {
+        header: renderMainMenu("jointTypePage"),
+        main: content,
+    };
 }

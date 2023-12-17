@@ -1,4 +1,5 @@
 import markdownParser from "../../js/markdown-parser.js";
+import renderMainMenu from "../blocks/main-menu.js";
 import { capitalizeTitle, renderNotesTooltip } from "../utils.js";
 
 export function renderJointType(joint, jointTypes, useShortLabel) {
@@ -120,5 +121,8 @@ export default function renderJointPage({joint, jointTypes, muscles, muscleFunct
 </div>
     `.trim();
 
-    return content;
+    return {
+        header: renderMainMenu("jointPage"),
+        main: content,
+    };
 }

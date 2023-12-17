@@ -1,4 +1,5 @@
 import markdownParser from "../../js/markdown-parser.js";
+import renderMainMenu from "../blocks/main-menu.js";
 import { capitalizeTitle, renderList, renderNotesTooltip } from "../utils.js";
 
 function createJointFunctionsRows(muscle, joints) {
@@ -100,5 +101,8 @@ let content = `
 </div>
     `.trim();
 
-    return content;
+    return {
+        header: renderMainMenu("musclePage"),
+        main: content,
+    };
 }
