@@ -30,7 +30,7 @@ function createJointFunctionsRows(muscle, joints) {
     for (const [jointId, jointFunctions] of Object.entries(allJointFunctions)) {
         let row = `
 <tr>
-    <td>${joints[jointId].shortLabel}</td>
+    <td>[Link type="Joint" targetId="${jointId}" label="${joints[jointId].shortLabel}"]</td>
     <td>${renderList(jointFunctions.primeMovers, true)}</td>
     <td>${renderList(jointFunctions.otherMuscles, true)}</td>
 </tr>
