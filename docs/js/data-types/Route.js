@@ -1,10 +1,12 @@
 export default class Route {
     #paths;
     #responseHandler;
+    #onLeaveHandler;
 
-    constructor({paths, responseHandler}) {
+    constructor({paths, responseHandler, onLeaveHandler}) {
         this.#paths = paths;
         this.#responseHandler = responseHandler;
+        this.#onLeaveHandler = onLeaveHandler;
     }
 
     get paths() {
@@ -13,5 +15,9 @@ export default class Route {
 
     get responseHandler() {
         return this.#responseHandler;
+    }
+
+    get onLeaveHandler() {
+        return this.#onLeaveHandler;
     }
 }

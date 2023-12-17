@@ -66,3 +66,27 @@ export function renderNotesTooltip(notes) {
 
     return notesTooltip;
 }
+
+export function renderJointType(joint, jointTypes, useShortLabel) {
+    if(!joint.typeIds.length) {
+        return "";
+    }
+
+    const hasMultipleJointTypes = joint.typeIds.length > 1;
+    const jointTypeTag = hasMultipleJointTypes ? "ul" : "span";
+    let jointTypeOutput = `<${jointTypeTag}>`;
+    if(hasMultipleJointTypes) {
+        for(const jointTypeId of joint.typeIds) {
+            const jointLabel = useShortLabel ? jointTypes[jointTypeId].shortLabel : jointTypes[jointTypeId].label;
+
+            jointTypeOutput += `<li>[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]</li>`;
+        }
+    } else {      
+        const jointTypeId = joint.typeIds[0];
+        const jointLabel = useShortLabel ? jointTypes[jointTypeId].shortLabel : jointTypes[jointTypeId].label;
+        jointTypeOutput += `[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]`;
+    }
+    jointTypeOutput += `</${jointTypeTag}>`;
+
+    return jointTypeOutput;
+}

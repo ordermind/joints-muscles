@@ -34,3 +34,23 @@ a {
     width: 5rem;
     height: 5rem;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hideable {
+    position: relative;
+}
+
+.hideable-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+background-image: linear-gradient(135deg, #ffc7d1 13.16%, #ffffff 13.16%, #ffffff 50%, #ffc7d1 50%, #ffc7d1 63.16%, #ffffff 63.16%, #ffffff 100%);
+background-size: 19.00px 19.00px;
+}

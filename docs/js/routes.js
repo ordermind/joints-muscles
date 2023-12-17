@@ -1,8 +1,9 @@
 import Route from "./data-types/Route.js";
-import renderJointsList from "./pages/joints-list.js";
-import renderJointPage from "./pages/joint.js";
-import renderJointTypePage from "./pages/joint-type.js";
-import renderHomePage from "./pages/home.js";
+import HomePage from "./pages/home.js";
+import JointsListPage from "./pages/joints-list.js";
+import JointPage from "./pages/joint.js";
+import JointTypePage from "./pages/joint-type.js";
+import MusclePage from "./pages/muscle.js";
 import { renderPage } from "./renderer.js";
 import joints from "./data/joints.js";
 import jointTypes from "./data/joint-types.js";
@@ -10,15 +11,28 @@ import muscles from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
 import renderMusclePage from "./pages/muscle.js";
 
-export default {
+const pages = {
+    home: new HomePage(),
+    jointsList: new JointsListPage(),
+    jointPage: new JointPage(),
+    jointTypePage: new JointTypePage(),
+    musclePage: new MusclePage(),
+}
+
+export const routes = {
     // The home route has two paths to accommodate both local dev environment and Github Pages hosting.
     home: new Route(
         {
             paths: ["/", "/joints-muscles/"],
             responseHandler: () => {
                 console.log("render home page");
-                const content = renderHomePage();
+                const content = pages.home.render();
                 renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.home.cleanUp();
+
+                done();
             }
         }
     ),
@@ -27,8 +41,13 @@ export default {
             paths: ["/joints"],
             responseHandler: () => {
                 console.log("render joints list page");
-                const content = renderJointsList({joints, jointTypes});
+                const content = pages.jointsList.render({joints, jointTypes});
                 renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.jointsList.cleanUp();
+                
+                done();
             }
         }
     ),
@@ -37,8 +56,13 @@ export default {
             paths: ["/joints/:id"],
             responseHandler: ({ data }) => {
                 console.log("render joint page", data);
-                const content = renderJointPage({joint: joints[data.id], jointTypes, muscles, muscleFunctions});
+                const content = pages.jointPage.render({joint: joints[data.id], jointTypes, muscles, muscleFunctions});
                 renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.jointPage.cleanUp();
+                
+                done();
             }
         }
     ),
@@ -47,7 +71,7 @@ export default {
             paths: ["/joint-types"],
             responseHandler: () => {
                 console.log("TODO: render joint types list page");
-            }
+            },
         }
     ),
     jointTypePage: new Route(
@@ -55,8 +79,13 @@ export default {
             paths: ["/joint-types/:id"],
             responseHandler: ({ data }) => {
                 console.log("render joint type page");
-                const content = renderJointTypePage({jointType: jointTypes[data.id]});
+                const content = pages.jointTypePage.render({jointType: jointTypes[data.id]});
                 renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.jointTypePage.cleanUp();
+                
+                done();
             }
         }
     ),
@@ -73,8 +102,13 @@ export default {
             paths: ["/muscles/:id"],
             responseHandler: ({ data }) => {
                 console.log("render muscle page", data);
-                const content = renderMusclePage({muscle: muscles[data.id], joints});
+                const content = pages.musclePage.render({muscle: muscles[data.id], joints});
                 renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.musclePage.cleanUp();
+                
+                done();
             }
         }
     )

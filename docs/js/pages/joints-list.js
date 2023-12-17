@@ -1,31 +1,34 @@
-import renderMainMenu from "../blocks/main-menu.js";
-import { renderJointType } from "./joint.js";
+import MainMenuBlock from "../blocks/main-menu.js";
+import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
+import { renderJointType } from "../utils.js";
 
-function renderMovements(joint) {
-    let output = `<ul>`;
+export default class JointsListPage {
+    #mainMenuBlock;
+    #showHideElementsBlock;
 
-    for(const movement of joint.movements) {
-        output += `<li>${movement.label}</li>`;
+    #renderMovements(joint) {
+        let output = `<ul>`;
+
+        for(const movement of joint.movements) {
+            output += `<li>${movement.label}</li>`;
+        }
+
+        output += `</ul>`;
+
+        return output;
     }
 
-    output += `</ul>`;
-
-    return output;
-}
-
-export default function renderJointsList({joints, jointTypes}) {
-
-    function createRows() {
+    #createRows(joints, jointTypes) {
         let rows = [];
 
         for(const [_, joint] of Object.entries(joints)) {
             let row = `
 <tr>
     <td>[Link type="Joint" targetId="${joint.id}" label="${joint.shortLabel}"]</td>
-    <td>${renderJointType(joint, jointTypes, true)}</td>
-    <td>${joint.cpp}</td>
-    <td>${joint.mlpp}</td>
-    <td>${renderMovements(joint)}</td>
+    <td><div class="hideable">${renderJointType(joint, jointTypes, true)}</div></td>
+    <td><div class="hideable">${joint.cpp}</div></td>
+    <td><div class="hideable">${joint.mlpp}</div></td>
+    <td><div class="hideable">${this.#renderMovements(joint)}</div></td>
 </tr>
             `.trim();
 
@@ -35,22 +38,41 @@ export default function renderJointsList({joints, jointTypes}) {
         return rows;
     }
 
-    const content = `
-<h1 class="display-1 fs-1">Gewrichten</h1>
-<table class="table">
-    <tr>
-        <th>Naam gewricht</th>
-        <th>Type gewricht</th>
-        <th>CPP</th>
-        <th>MLPP</th>
-        <th>Bewegingen</th>
-    </tr>
-    ${createRows().join("")}
-</table>
-    `.trim();
+    render({joints, jointTypes}) {
+        const content = `
+    <h1 class="display-1 fs-1">Gewrichten</h1>
+    <table class="table">
+        <tr>
+            <th>Naam gewricht</th>
+            <th>Type gewricht</th>
+            <th>CPP</th>
+            <th>MLPP</th>
+            <th>Bewegingen</th>
+        </tr>
+        ${this.#createRows(joints, jointTypes).join("")}
+    </table>
+        `.trim();
 
-    return {
-        header: renderMainMenu("jointsList"),
-        main: content,
-    };
+        this.#mainMenuBlock = new MainMenuBlock();
+        this.#showHideElementsBlock = new ShowHideElementsBlock();
+
+        return {
+            header: [
+                this.#mainMenuBlock.render("jointsList"),
+                this.#showHideElementsBlock.render(),
+            ],
+            main: content,
+        };
+    }
+
+    cleanUp() {
+        if(this.#mainMenuBlock instanceof MainMenuBlock) {
+            this.#mainMenuBlock.cleanUp();
+        }
+
+        if(this.#showHideElementsBlock instanceof ShowHideElementsBlock) {
+            this.#showHideElementsBlock.cleanUp();
+        }
+    }
 }
+

@@ -49,15 +49,33 @@ export function replaceLinks(html) {
     });
 }
 
+function getHeader(headerBlocks) {
+    const wrapper = document.createElement("nav");
+    wrapper.classList.add("navbar", "navbar-expand-lg", "bg-body-tertiary");
+
+    const container = document.createElement("div");
+    container.classList.add("container-fluid");
+    headerBlocks = Array.isArray(headerBlocks) ? headerBlocks : [headerBlocks];
+    container.append(...headerBlocks);
+
+    wrapper.appendChild(container);
+
+    return wrapper;
+}
+
 export function renderPage(content) {
+    const headerElement = document.getElementById("header");
+
     if(content.hasOwnProperty("header")) {
-        document.getElementById("header").innerHTML = `
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">${replaceLinks(content.header)}</div>
-</nav>
-        `.trim();
+        while (headerElement.firstChild) {
+            headerElement.removeChild(headerElement.lastChild);
+        }
+
+        headerElement.appendChild(getHeader(content.header));
     } else {
-        document.getElementById("header").innerHTML = "";
+        while (headerElement.firstChild) {
+            headerElement.removeChild(headerElement.lastChild);
+        }
     }
 
     if(content.hasOwnProperty("main")) {

@@ -2,7 +2,7 @@
 - Lägg till sökfunktion
 - Lägg till quiz för leder. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
 - Lägg till quiz för muskler. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
-- Lägg till hjälpmedel för att hårdplugga tabellerna
+X Lägg till hjälpmedel för att hårdplugga tabellerna
 X Lägg till huvudmeny
 X Lägg till muskelsida
 X Lägg till bilder för musklerna
