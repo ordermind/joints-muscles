@@ -28,6 +28,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "mm_rotatores_breves",
                     movementId: "columna_vertebralis_thoracalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
                     notes: ["contralaterale rotatie"],
                 }

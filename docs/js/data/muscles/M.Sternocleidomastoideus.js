@@ -30,6 +30,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_sternocleidomastoideus",
                     movementId: "head_joints__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["contralaterale rotatie"],
                 }

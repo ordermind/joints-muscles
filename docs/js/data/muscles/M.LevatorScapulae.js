@@ -39,6 +39,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_levator_scapulae",
                     movementId: "columna_vertebralis_cervicalis__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: false,
                     notes: ["ipsilaterale rotatie", "alleen bij gefixeerde insertie"],
                 }

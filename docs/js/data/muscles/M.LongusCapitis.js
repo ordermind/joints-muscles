@@ -37,6 +37,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_longus_capitis",
                     movementId: "head_joints__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: false,
                     notes: ["ipsilaterale rotatie"],
                 }

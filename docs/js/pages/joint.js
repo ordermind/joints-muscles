@@ -1,5 +1,5 @@
 import markdownParser from "../../js/markdown-parser.js";
-import { capitalizeTitle } from "../utils.js";
+import { capitalizeTitle, renderNotesTooltip } from "../utils.js";
 
 export function renderJointType(joint, jointTypes, useShortLabel) {
     if(!joint.typeIds.length) {
@@ -23,39 +23,6 @@ export function renderJointType(joint, jointTypes, useShortLabel) {
     jointTypeOutput += `</${jointTypeTag}>`;
 
     return jointTypeOutput;
-}
-
-function renderNotesTooltip(notes) {
-    if(!notes.length) {
-        return "";
-    }
-
-    let notesTooltip = "";
-
-    const hasMultipleNotes = notes.length > 1;
-    const notesTag = hasMultipleNotes ? "ul" : "span";
-    notesTooltip = `
-<div class="tooltip-wrapper">
-    <i class="tooltip-trigger">ⓘ</i>
-    <div class="tooltip-content">
-        <div class="tooltip-content-bg"></div>
-        <${notesTag} class="tooltip-content-inner">
-`;
-    if(hasMultipleNotes) {
-        for(const note of notes) {
-            notesTooltip += `<li>${note}</li>`;
-        }
-    } else {
-        notesTooltip += notes[0];
-    }
-
-    notesTooltip += `
-        </${notesTag}>
-    </div>
-</div>
-    `;
-
-    return notesTooltip;
 }
 
 function renderMuscleFunction(muscles, muscleFunction) {
@@ -102,9 +69,7 @@ function createJointFunctionsRows(joint, muscles, muscleFunctions) {
     return rows;
 }
 
-export default function renderJointPage({jointId, joints, jointTypes, muscles, muscleFunctions}) {
-    const joint = joints[jointId];
-
+export default function renderJointPage({joint, jointTypes, muscles, muscleFunctions}) {
     const title = capitalizeTitle(joint.label);
     
     let content = `

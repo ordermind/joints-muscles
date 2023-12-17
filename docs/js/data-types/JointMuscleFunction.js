@@ -3,14 +3,16 @@ export default class JointMuscleFunction {
     #jointId;
     #muscleId;
     #movementId;
+    #movementLabelOverride;
     #isPrimeMover;
     #notes;
 
-    constructor({id, jointId, muscleId, movementId, isPrimeMover, notes = []}) {
+    constructor({id, jointId, muscleId, movementId, movementLabelOverride, isPrimeMover, notes = []}) {
         this.#id = id;
         this.#jointId = jointId;
         this.#muscleId = muscleId;
         this.#movementId = movementId;
+        this.#movementLabelOverride = movementLabelOverride;
         this.#isPrimeMover = isPrimeMover;
         this.#notes = notes;
     }
@@ -31,6 +33,10 @@ export default class JointMuscleFunction {
         return this.#movementId;
     }
 
+    get movementLabelOverride() {
+        return this.#movementLabelOverride;
+    }
+
     get isPrimeMover() {
         return this.#isPrimeMover;
     }
@@ -45,6 +51,7 @@ export default class JointMuscleFunction {
             jointId: this.jointId,
             muscleId: this.muscleId,
             movementId: this.movementId,
+            movementLabelOverride: this.movementLabelOverride,
             isPrimeMover: this.isPrimeMover,
             notes: this.notes,
         }

@@ -40,6 +40,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_trapezius_descendens",
                     movementId: "head_joints__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["contralaterale rotatie"],
                 }

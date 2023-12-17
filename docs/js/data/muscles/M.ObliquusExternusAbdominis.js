@@ -39,6 +39,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "m_obliquus_externus_abdominis",
                     movementId: "columna_vertebralis_thoracalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["contralaterale rotatie"],
                 }
@@ -67,6 +68,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "m_obliquus_externus_abdominis",
                     movementId: "columna_vertebralis_lumbalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["contralaterale rotatie"],
                 }

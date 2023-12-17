@@ -37,6 +37,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "mm_multifidi",
                     movementId: "columna_vertebralis_cervicalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
                     notes: ["contralaterale rotatie"],
                 }
@@ -65,6 +66,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "mm_multifidi",
                     movementId: "columna_vertebralis_thoracalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
                     notes: ["contralaterale rotatie"],
                 }
@@ -93,6 +95,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "mm_multifidi",
                     movementId: "columna_vertebralis_lumbalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
                     notes: ["contralaterale rotatie"],
                 }

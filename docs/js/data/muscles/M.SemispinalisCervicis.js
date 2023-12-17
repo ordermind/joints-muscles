@@ -5,23 +5,12 @@ import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 export default new Muscle(
     {
         id: "m_semispinalis_cervicis",
-        label: "m. semispinalis, pars cervicis",
+        label: "m. semispinalis cervicis",
         origos: [
             "processi transversi T1-T6",
         ],
         insertions: [
             "processus spinosus bij een bovengelegen wervel C2-C7",
-            `
-mapping:
-<ul>
-<li>T1 -> C2</li>
-<li>T2 -> C3</li>
-<li>T3 -> C4</li>
-<li>T4 -> C5</li>
-<li>T5 -> C6</li>
-<li>T6 -> C7</li>
-</ul>
-            `
         ],
         functions: [
             new JointMuscleFunction(
@@ -39,6 +28,7 @@ mapping:
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_semispinalis_cervicis",
                     movementId: "columna_vertebralis_cervicalis__rotation",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["contralaterale rotatie"],
                 }
@@ -54,5 +44,15 @@ mapping:
             )
         ],
         image: "./images/muscles/m_semispinalis_cervicis.jpeg",
+        description: `
+Mapping van origos en inserties:
+
+- T1 -> C2
+- T2 -> C3
+- T3 -> C4
+- T4 -> C5
+- T5 -> C6
+- T6 -> C7
+        `
     }
 );

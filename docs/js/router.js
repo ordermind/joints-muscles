@@ -8,6 +8,7 @@ import joints from "./data/joints.js";
 import jointTypes from "./data/joint-types.js";
 import muscles from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
+import renderMusclePage from "./pages/muscle.js";
 
 const router = new Navigo("/", { hash: true });
 
@@ -31,7 +32,7 @@ router.on("/joints", () => {
 
 router.on("/joints/:id", ({ data }) => {
     console.log("render joint page", data);
-    const html = renderJointPage({jointId: data.id, joints, jointTypes, muscles, muscleFunctions});
+    const html = renderJointPage({joint: joints[data.id], jointTypes, muscles, muscleFunctions});
     renderPage(html);
 });
 
@@ -41,7 +42,7 @@ router.on("/joint-types", () => {
 
 router.on("/joint-types/:id", ({ data }) => {
     console.log("render joint type page");
-    const html = renderJointTypePage({jointTypeId: data.id, jointTypes});
+    const html = renderJointTypePage({jointType: jointTypes[data.id]});
     renderPage(html);
 });
 
@@ -51,6 +52,8 @@ router.on("/muscles", () => {
 
 router.on("/muscles/:id", ({ data }) => {
     console.log("render muscle page", data);
+    const html = renderMusclePage({muscle: muscles[data.id], joints});
+    renderPage(html);
 });
 
 export default router;

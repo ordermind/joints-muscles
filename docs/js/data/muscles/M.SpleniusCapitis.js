@@ -37,6 +37,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_splenius_capitis",
                     movementId: "head_joints__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }
@@ -65,6 +66,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_splenius_capitis",
                     movementId: "columna_vertebralis_cervicalis__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }

@@ -1,8 +1,7 @@
 import markdownParser from "../../js/markdown-parser.js";
 import { capitalizeTitle } from "../utils.js";
 
-export default function renderJointTypePage({ jointTypeId, jointTypes }) {
-    const jointType = jointTypes[jointTypeId];
+export default function renderJointTypePage({ jointType }) {
     const title = capitalizeTitle(jointType.label);
     
     let content = `

@@ -38,6 +38,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "m_obliquus_internus_abdominis",
                     movementId: "columna_vertebralis_thoracalis__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }
@@ -66,6 +67,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "m_obliquus_internus_abdominis",
                     movementId: "columna_vertebralis_lumbalis__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }

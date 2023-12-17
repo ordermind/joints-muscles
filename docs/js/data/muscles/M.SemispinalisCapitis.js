@@ -5,7 +5,7 @@ import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 export default new Muscle(
     {
         id: "m_semispinalis_capitis",
-        label: "m. semispinalis, pars capitis",
+        label: "m. semispinalis capitis",
         origos: [
             "processi transversi C3-T6",
         ],

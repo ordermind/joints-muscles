@@ -41,6 +41,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_longissimus",
                     movementId: "head_joints__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }
@@ -69,6 +70,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_longissimus",
                     movementId: "columna_vertebralis_cervicalis__rotation",
+                    movementLabelOverride: "wellicht contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["wellicht contralaterale rotatie"],
                 }
@@ -97,6 +99,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "m_longissimus",
                     movementId: "columna_vertebralis_thoracalis__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }
@@ -125,6 +128,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "m_longissimus",
                     movementId: "columna_vertebralis_lumbalis__rotation",
+                    movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }
