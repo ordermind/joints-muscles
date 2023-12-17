@@ -10,7 +10,7 @@ export default class JointPage {
     #renderMuscleFunction(muscles, muscleFunction) {
         const muscle = muscles[muscleFunction.muscleId];
 
-        return `<tr><td><div class="hideable">[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</div></td></tr>`
+        return `<tr><td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</td></tr>`
     }
 
     #createJointFunctionsRows(joint, muscles, muscleFunctions) {
@@ -25,7 +25,7 @@ export default class JointPage {
     <td>${movement.rom}${renderNotesTooltip(movement.romNotes)}</td>
     <td>`;
             if(primeMovers.length) {
-                row += `<table class="table table-striped">`;
+                row += `<table class="table table-striped | hideable">`;
                     for(const primeMover of primeMovers) {
                         row += this.#renderMuscleFunction(muscles, primeMover);
                     }
@@ -35,7 +35,7 @@ export default class JointPage {
     </td>
     <td>`;
             if(otherMuscles.length) {
-                row += `<table class="table table-striped">`;
+                row += `<table class="table table-striped | hideable">`;
                     for(const otherMuscle of otherMuscles) {
                         row += this.#renderMuscleFunction(muscles, otherMuscle);
                     }
