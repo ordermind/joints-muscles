@@ -1,5 +1,6 @@
 .page-quiz .quiz-image {
-    max-height: 20rem;
+    display: inline-block;
+    height: 20rem;
 }
 
 .page-quiz .answers.multiple-choice .correct-answer .btn-check:checked+.btn, 
