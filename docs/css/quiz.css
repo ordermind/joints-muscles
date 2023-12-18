@@ -1,0 +1,19 @@
+.page-quiz .quiz-image {
+    max-height: 20rem;
+}
+
+.page-quiz .answers.multiple-choice .correct-answer .btn-check:checked+.btn, 
+.page-quiz .answers.multiple-choice .correct-answer .btn.active, 
+.page-quiz .answers.multiple-choice .correct-answer .btn.show, 
+.page-quiz .answers.multiple-choice .correct-answer .btn:first-child:active, 
+.page-quiz .answers.multiple-choice .correct-answer :not(.btn-check)+.btn:active {
+    background-color: green;
+}
+
+.page-quiz .answers.multiple-choice .wrong-answer .btn-check:checked+.btn, 
+.page-quiz .answers.multiple-choice .wrong-answer .btn.active, 
+.page-quiz .answers.multiple-choice .wrong-answer .btn.show, 
+.page-quiz .answers.multiple-choice .wrong-answer .btn:first-child:active, 
+.page-quiz .answers.multiple-choice .wrong-answer :not(.btn-check)+.btn:active {
+    background-color: red;
+}

@@ -90,3 +90,9 @@ export function renderJointType(joint, jointTypes, useShortLabel) {
 
     return jointTypeOutput;
 }
+
+export function removeChildren(element) {
+    while (element.firstChild) {
+        element.removeChild(element.lastChild);
+    }
+}

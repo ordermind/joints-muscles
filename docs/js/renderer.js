@@ -2,6 +2,7 @@ import InternalLink from "./data-types/InternalLink.js";
 import jointTypes from "./data/joint-types.js";
 import joints from "./data/joints.js";
 import muscles from "./data/muscles.js";
+import { removeChildren } from "./utils.js";
 
 function createPathFromInternalLink(link) {
     if(link.type === 'Muscle') {
@@ -63,25 +64,31 @@ function getHeader(headerBlocks) {
     return wrapper;
 }
 
-export function renderPage(content) {
-    const headerElement = document.getElementById("header");
+function getMain(mainContent) {
+    if (typeof mainContent === 'string' || mainContent instanceof String) {
+        const template = document.createElement("template");
+        template.innerHTML = replaceLinks(mainContent);
 
-    if(content.hasOwnProperty("header")) {
-        while (headerElement.firstChild) {
-            headerElement.removeChild(headerElement.lastChild);
-        }
+        const children = template.content.children;
 
-        headerElement.appendChild(getHeader(content.header));
-    } else {
-        while (headerElement.firstChild) {
-            headerElement.removeChild(headerElement.lastChild);
-        }
+        if (children.length === 1) return Array.isArray(children[0]) ? children[0] : [children[0]];
+        return children;
     }
 
+    return Array.isArray(mainContent) ? mainContent : [mainContent];
+}
+
+export function renderPage(content) {
+    const headerElement = document.getElementById("header");
+    removeChildren(headerElement);
+    if(content.hasOwnProperty("header")) {
+        headerElement.appendChild(getHeader(content.header));
+    }
+
+    const mainElement = document.getElementById("main");
+    removeChildren(mainElement);
     if(content.hasOwnProperty("main")) {
-        document.getElementById("main").innerHTML = replaceLinks(content.main);
-    } else {
-        document.getElementById("main").innerHTML = "";
+        mainElement.append(...getMain(content.main));
     }
 }
 
