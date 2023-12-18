@@ -25,10 +25,10 @@ export default class JointsListPage {
             let row = `
 <tr>
     <td>[Link type="Joint" targetId="${joint.id}" label="${joint.shortLabel}"]</td>
-    <td><div class="hideable">${renderJointType(joint, jointTypes, true)}</div></td>
-    <td><div class="hideable">${joint.cpp}</div></td>
-    <td><div class="hideable">${joint.mlpp}</div></td>
-    <td><div class="hideable">${this.#renderMovements(joint)}</div></td>
+    <td>`+ (joint.typeIds.length ? `<div class="hideable">${renderJointType(joint, jointTypes, true)}</div>` : "") + `</td>
+    <td>` + (joint.cpp ? `<div class="hideable">${joint.cpp}</div>` : "") + `</td>
+    <td>` + (joint.mlpp ? `<div class="hideable">${joint.mlpp}</div>` : "") + `</td>
+    <td>` + (joint.movements.length ? `<div class="hideable">${this.#renderMovements(joint)}</div>` : "") + `</td>
 </tr>
             `.trim();
 
