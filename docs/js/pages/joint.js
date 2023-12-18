@@ -78,15 +78,15 @@ export default class JointPage {
         <table class="table table-borderless d-inline-block w-auto">
             <tr>
                 <th>Gewrichtstype</th>
-                <td><div class="hideable">${renderJointType(joint, jointTypes)}</div></td>
+                <td>` + (joint.typeIds.length ? `<div class="hideable">${renderJointType(joint, jointTypes)}</div>` : "") + `</td>
             </tr>
             <tr>
                 <th>Close-Packed Position (CPP)</th>
-                <td><div class="hideable">${joint.cpp}</div></td>
+                <td>` + (joint.cpp ? `<div class="hideable">${joint.cpp}</div>` : "") + `</td>
             </tr>
             <tr>
                 <th>Maximally Loose-Packed Position (MLPP)</th>
-                <td><div class="hideable">${joint.mlpp}</div></td>
+                <td>` + (joint.mlpp ? `<div class="hideable">${joint.mlpp}</div>` : "") + `</td>
             </tr>
         </table>
         <table class="table">
