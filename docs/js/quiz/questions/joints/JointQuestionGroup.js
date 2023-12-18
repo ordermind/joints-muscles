@@ -74,7 +74,7 @@ export default class JointQuestionGroup {
         const content = this.#currentQuestion.render();
 
         const nextQuestionButton = document.createElement("button");
-        nextQuestionButton.classList.add("btn", "btn-primary", "d-none", "|", "next-question");
+        nextQuestionButton.classList.add("btn", "btn-primary", "d-none", "mt-2", "|", "next-question");
         nextQuestionButton.innerText = "Volgend gewricht";
         nextQuestionButton.addEventListener("click", this.nextQuestionCallback);
         emitter.on("selected-answer", this.#showOrHideNextQuestionButton);

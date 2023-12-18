@@ -32,7 +32,7 @@ for(const answer of answers) {
     const answerClass = answer.isCorrect ? "correct-answer" : "wrong-answer";
 
     content += `
-    <div class="form-check mt-2 mb-2 ${answerClass}">
+    <div class="form-check mt-2 mb-2 p-0 ${answerClass}">
         <input class="btn-check" type="radio" name="answer" id="${answer.id}">
         <label class="btn btn-outline-secondary w-100" for="${answer.id}">${answer.label}</label>
     </div>

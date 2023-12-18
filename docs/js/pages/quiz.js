@@ -9,7 +9,7 @@ export default class QuizPage {
         this.#mainMenuBlock = new MainMenuBlock();
 
         const elements = document.createElement("div");
-        elements.classList.add("page-quiz", `page-quiz-${quiz.id}`);
+        elements.classList.add("pb-5", "page-quiz", `page-quiz-${quiz.id}`);
         quiz.start(elements);
 
         return {
