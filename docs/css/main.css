@@ -47,8 +47,10 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: calc(100% + 0.5rem);
+    height: calc(100% + 0.5rem);
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
     cursor: pointer;
 
 background-image: linear-gradient(135deg, #ffc7d1 13.16%, #ffffff 13.16%, #ffffff 50%, #ffc7d1 50%, #ffc7d1 63.16%, #ffffff 63.16%, #ffffff 100%);
