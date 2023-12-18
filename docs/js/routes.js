@@ -9,7 +9,9 @@ import joints from "./data/joints.js";
 import jointTypes from "./data/joint-types.js";
 import muscles from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
-import renderMusclePage from "./pages/muscle.js";
+import quizzes from "./quiz/quizzes.js";
+import QuizList from "./pages/quiz-list.js";
+import QuizPage from "./pages/quiz.js";
 
 const pages = {
     home: new HomePage(),
@@ -17,6 +19,8 @@ const pages = {
     jointPage: new JointPage(),
     jointTypePage: new JointTypePage(),
     musclePage: new MusclePage(),
+    quizList: new QuizList(),
+    quizPage: new QuizPage(),
 }
 
 export const routes = {
@@ -25,7 +29,6 @@ export const routes = {
         {
             paths: ["/", "/joints-muscles/"],
             responseHandler: () => {
-                console.log("render home page");
                 const content = pages.home.render();
                 renderPage(content);
             },
@@ -40,7 +43,6 @@ export const routes = {
         {
             paths: ["/joints"],
             responseHandler: () => {
-                console.log("render joints list page");
                 const content = pages.jointsList.render({joints, jointTypes});
                 renderPage(content);
             },
@@ -55,7 +57,6 @@ export const routes = {
         {
             paths: ["/joints/:id"],
             responseHandler: ({ data }) => {
-                console.log("render joint page", data);
                 const content = pages.jointPage.render({joint: joints[data.id], jointTypes, muscles, muscleFunctions});
                 renderPage(content);
             },
@@ -78,7 +79,6 @@ export const routes = {
         {
             paths: ["/joint-types/:id"],
             responseHandler: ({ data }) => {
-                console.log("render joint type page");
                 const content = pages.jointTypePage.render({jointType: jointTypes[data.id]});
                 renderPage(content);
             },
@@ -101,13 +101,40 @@ export const routes = {
         {
             paths: ["/muscles/:id"],
             responseHandler: ({ data }) => {
-                console.log("render muscle page", data);
                 const content = pages.musclePage.render({muscle: muscles[data.id], joints});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {
                 pages.musclePage.cleanUp();
                 
+                done();
+            }
+        }
+    ),
+    quizList: new Route(
+        {
+            paths: ["quiz"],
+            responseHandler: () => {
+                const content = pages.quizList.render();
+                renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.quizList.cleanUp();
+
+                done();
+            }
+        }
+    ),
+    quizPage: new Route(
+        {
+            paths: ["quiz/:id"],
+            responseHandler: ({ data }) => {
+                const content = pages.quizPage.render({quiz: quizzes[data.id]});
+                renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.quizPage.cleanUp();
+
                 done();
             }
         }
