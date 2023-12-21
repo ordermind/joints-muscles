@@ -23,9 +23,9 @@ export default class QuizJoints {
 
     renderFinishedScreen() {
         const finishedScreen = `
-<h1 class="display-3 fs-3">Gefeliciteerd!</h1>
+<h1 class="display-1 fs-1">Gefeliciteerd!</h1>
 <p>Je hebt alle vragen beantwoord!</p>
-<button class="btn btn-primary | restart">Opnieuw spelen</button>
+<button class="btn btn-primary btn-lg | restart">Opnieuw spelen</button>
         `.trim();
 
         const template = document.createElement("template");
