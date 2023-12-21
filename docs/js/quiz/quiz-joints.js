@@ -1,16 +1,32 @@
 import joints from "./data/joints.js";
-import JointQuestionGroup from "./questions/joints/JointQuestionGroup.js";
 import messageBus from "./message-bus.js";
 import { removeChildren } from "../utils.js";
+import JointNameQuestionsFactory from "./questions/joints/JointNameQuestionsFactory.js";
+import JointFunctionsQuestionsFactory from "./questions/joints/JointFunctionsQuestionsFactory.js";
+import { shuffle } from "./utils.js";
 
 export default class QuizJoints {
+    #jointNameQuestionsFactory;
+    #jointFunctionsQuestionsFactory;
+    #questions;
+    #currentQuestionIndex;
+    #wrapper;
+
     constructor() {
-        this.renderFinishedScreen = this.renderFinishedScreen.bind(this);
+        this.#jointNameQuestionsFactory = new JointNameQuestionsFactory();
+        this.#jointFunctionsQuestionsFactory = new JointFunctionsQuestionsFactory();
+
+        this.nextQuestionCallback = this.nextQuestionCallback.bind(this);
         this.onClickRestartButton = this.onClickRestartButton.bind(this);
     }
 
     get id() {
         return "joints";
+    }
+
+    nextQuestionCallback() {
+        this.#questions[this.#currentQuestionIndex].cleanUp();
+        this.#showNextQuestion();
     }
 
     onClickRestartButton() {
@@ -21,7 +37,7 @@ export default class QuizJoints {
         this.start(pageElement);
     }
 
-    renderFinishedScreen() {
+    #renderFinishedScreen() {
         const finishedScreen = `
 <h1 class="display-1 fs-1">Gefeliciteerd!</h1>
 <p>Je hebt alle vragen beantwoord!</p>
@@ -39,23 +55,55 @@ export default class QuizJoints {
         wrapper.querySelector("button.restart").addEventListener("click", this.onClickRestartButton);
     }
 
+    #showNextQuestion() {
+        this.#currentQuestionIndex++;
+
+        if(this.#currentQuestionIndex > this.#questions.length - 1) {
+            this.#renderFinishedScreen();
+        } else {
+            this.#renderQuestion();
+        }
+    }
+
+    #renderQuestion() {
+        const content = this.#questions[this.#currentQuestionIndex].render();
+
+        removeChildren(this.#wrapper);
+
+        this.#wrapper.appendChild(content);
+    }
+
     start(parentElement) {
-        messageBus.on("questions-finished", this.renderFinishedScreen);
+        this.#currentQuestionIndex = -1;
+
+        const shuffledJoints = shuffle([...joints]);
+
+        const jointNameQuestions = this.#jointNameQuestionsFactory.create({joints: shuffledJoints});
+        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: shuffledJoints});
+
+        this.#questions = [];
+
+        for(const [index, jointNameQuestion] of jointNameQuestions.entries()) {
+            this.#questions.push(jointNameQuestion);
+            this.#questions.push(jointFunctionsQuestions[shuffledJoints[index].id]);
+        }
+
         const wrapper = document.createElement("div");
         wrapper.classList.add("d-flex", "flex-row", "justify-content-center");
 
-        const subWrapper = document.createElement("div");
-        subWrapper.classList.add("d-flex", "flex-column", "justify-content-center", "inner-wrapper");
+        this.#wrapper = document.createElement("div");
+        this.#wrapper.classList.add("d-flex", "flex-column", "justify-content-center", "inner-wrapper");
 
-        const questionGroup = new JointQuestionGroup(subWrapper, [...joints]);
-        questionGroup.showNextQuestion();
+        this.#showNextQuestion();
 
-        wrapper.appendChild(subWrapper);
+        wrapper.appendChild(this.#wrapper);
 
         parentElement.appendChild(wrapper);
+
+        messageBus.on("clickedNextQuestionButton", this.nextQuestionCallback);
     }
 
     cleanUp() {
-        messageBus.off("questions-finished", this.renderFinishedScreen);
+        messageBus.off("clickedNextQuestionButton", this.nextQuestionCallback);
     }
 }
