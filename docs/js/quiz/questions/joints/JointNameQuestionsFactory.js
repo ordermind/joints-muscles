@@ -9,8 +9,7 @@ export default class JointNameQuestionsFactory {
     create({joints}) {
         return joints.map(correctJoint => {
             const otherJointsInTheSameRegion = joints
-                .filter(joint => joint.regionId === correctJoint.regionId)
-                .filter(joint => joint.id !== correctJoint.id);
+                .filter(joint => joint.regionId === correctJoint.regionId && joint.id !== correctJoint.id);
 
             const correctAnswer = new MultipleChoiceAnswer(
                 {

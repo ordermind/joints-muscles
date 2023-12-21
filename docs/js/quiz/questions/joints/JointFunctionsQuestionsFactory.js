@@ -1,7 +1,34 @@
 import DraggableQuestion from "../DraggableQuestion.js";
 import NextQuestionButton from "../NextQuestionButton.js";
+import muscleFunctions from "../../data/muscle-functions.js";
+import muscles from "../../../data/muscles.js";
 
 export default class JointFunctionsQuestionsFactory {
+    #createCorrectSolution(joint) {
+        let correctSolution = {
+            primeMovers: {},
+            otherMuscles: {},
+        };
+
+        const muscleFunctionsForJoint = muscleFunctions.filter(muscleFunction => muscleFunction.jointId === joint.id);
+
+        for(const movement of joint.movements) {
+            correctSolution.primeMovers[movement.id] = {};
+
+            for(const muscleFunction of muscleFunctionsForJoint.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover)) {
+                correctSolution.primeMovers[movement.id][muscleFunction.muscleId] = muscles[muscleFunction.muscleId].label;
+            }
+
+            correctSolution.otherMuscles[movement.id] = {};
+
+            for(const muscleFunction of muscleFunctionsForJoint.filter(muscleFunction => muscleFunction.movementId === movement.id && !muscleFunction.isPrimeMover)) {
+                correctSolution.otherMuscles[movement.id][muscleFunction.muscleId] = muscles[muscleFunction.muscleId].label;
+            }
+        }
+
+        return correctSolution;
+    }
+
     create({joints}) {
         let questions = {};
 
@@ -21,6 +48,7 @@ export default class JointFunctionsQuestionsFactory {
                             buttonText: isLastQuestion ? "Klaar!" : "Volgend gewricht"
                         }
                     ),
+                    correctSolution: this.#createCorrectSolution(joint),
                 }
             );
         }
