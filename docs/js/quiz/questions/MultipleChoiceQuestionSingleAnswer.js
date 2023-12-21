@@ -1,21 +1,27 @@
 import { shuffle } from "../utils.js";
-import emitter from "../emitter.js";
+import messageBus from "../message-bus.js";
 
 export default class MultipleChoiceQuestionSingleAnswer {
     #correctAnswer;
     #wrongAnswers;
     #question;
+    #nextQuestionButton
 
-    constructor({correctAnswer, wrongAnswers, question}) {
+    constructor({correctAnswer, wrongAnswers, question, nextQuestionButton}) {
         this.#correctAnswer = correctAnswer;
         this.#wrongAnswers = wrongAnswers;
         this.#question = question;
+        this.#nextQuestionButton = nextQuestionButton;
     }
 
     #onSelectAnswer(e) {
-        const correctAnswer = e.target.parentElement.classList.contains("correct-answer");
+        const isCorrectAnswer = e.target.parentElement.classList.contains("correct-answer");
 
-        emitter.emit("selected-answer", correctAnswer);
+        if(isCorrectAnswer) {
+            messageBus.emit("question-answered-correctly");
+        } else {
+            messageBus.emit("question-answered-incorrectly");
+        }
     }
 
     render() {
@@ -46,6 +52,8 @@ for(const answer of answers) {
         wrapper.classList.add("question", "text-center");
         wrapper.innerHTML = content;
 
+        this.#nextQuestionButton.render(wrapper);
+
         for(const radioElement of wrapper.querySelectorAll(`input[type="radio"][name="answer"]`)) {
             radioElement.addEventListener("change", this.#onSelectAnswer);
         }
@@ -57,5 +65,7 @@ for(const answer of answers) {
         for(const radioElement of document.querySelectorAll(`input[type="radio"][name="answer"]`)) {
             radioElement.removeEventListener("change", this.#onSelectAnswer);
         }
+
+        this.#nextQuestionButton.cleanUp();
     }
 }

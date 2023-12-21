@@ -1,6 +1,6 @@
 import joints from "./data/joints.js";
 import JointQuestionGroup from "./questions/joints/JointQuestionGroup.js";
-import emitter from "./emitter.js";
+import messageBus from "./message-bus.js";
 import { removeChildren } from "../utils.js";
 
 export default class QuizJoints {
@@ -40,7 +40,7 @@ export default class QuizJoints {
     }
 
     start(parentElement) {
-        emitter.on("questions-finished", this.renderFinishedScreen);
+        messageBus.on("questions-finished", this.renderFinishedScreen);
         const wrapper = document.createElement("div");
         wrapper.classList.add("d-flex", "flex-row", "justify-content-center");
 
@@ -56,6 +56,6 @@ export default class QuizJoints {
     }
 
     cleanUp() {
-        emitter.off("questions-finished", this.renderFinishedScreen);
+        messageBus.off("questions-finished", this.renderFinishedScreen);
     }
 }

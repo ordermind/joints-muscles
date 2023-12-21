@@ -1,8 +1,9 @@
 import { shuffle } from "../../utils.js";
 import MultipleChoiceAnswer from "../MultipleChoiceAnswer.js";
 import MultipleChoiceQuestionSingleAnswer from "../MultipleChoiceQuestionSingleAnswer.js";
-import emitter from "../../emitter.js";
+import messageBus from "../../message-bus.js";
 import { removeChildren } from "../../../utils.js";
+import NextQuestionButton from "../NextQuestionButton.js";
 
 export default class JointQuestionGroup {
     #parentElement;
@@ -18,16 +19,6 @@ export default class JointQuestionGroup {
         this.nextQuestionCallback = this.nextQuestionCallback.bind(this);
     }
 
-    #showOrHideNextQuestionButton(show) {
-        const nextQuestionButtonElement = document.querySelector("button.next-question");
-
-        if(show) {
-            nextQuestionButtonElement.classList.remove("invisible");
-        } else {
-            nextQuestionButtonElement.classList.add("invisible");
-        }
-    }
-
     nextQuestionCallback() {
         this.cleanUp();
         this.showNextQuestion();
@@ -35,6 +26,7 @@ export default class JointQuestionGroup {
 
     renderQuestion() {
         const maxWrongAnswers = 5;
+        const isLastQuestion =  this.#currentJointIndex === this.#joints.length - 1;
 
         const correctJoint = this.#joints[this.#currentJointIndex];
 
@@ -67,23 +59,14 @@ export default class JointQuestionGroup {
                 question: `
 <h1 class="display-3 fs-3 mb-1">Welk gewricht is dit?</h1>
 <img class="quiz-image" src="${correctJoint.image}" />
-                `.trim()
+                `.trim(),
+                nextQuestionButton: new NextQuestionButton({buttonText: isLastQuestion ? "Klaar!" : "Volgend gewricht"}),
             }
         )
 
         const content = this.#currentQuestion.render();
 
-        const nextQuestionButton = document.createElement("button");
-        nextQuestionButton.classList.add("btn", "btn-primary", "text-start", "d-inline-flex", "justify-content-between", "align-items-center", "pt-1", "pb-1", "ps-3", "pe-2", "invisible", "|", "next-question");
-        nextQuestionButton.innerHTML = `<span class="fs-5">Volgend gewricht</span><span class="fs-2">➡️</span>`;
-        nextQuestionButton.addEventListener("click", this.nextQuestionCallback);
-        emitter.on("selected-answer", this.#showOrHideNextQuestionButton);
-
-        const buttonWrapper = document.createElement("div");
-        buttonWrapper.classList.add("d-grid", "gap-2", "bg-light", "mt-4");
-        buttonWrapper.appendChild(nextQuestionButton);
-
-        content.appendChild(buttonWrapper);
+        messageBus.on("clickedNextQuestionButton", this.nextQuestionCallback);
 
         removeChildren(this.#parentElement);
 
@@ -94,7 +77,7 @@ export default class JointQuestionGroup {
         this.#currentJointIndex++;
 
         if(this.#currentJointIndex > this.#joints.length - 1) {
-            emitter.emit('questions-finished');
+            messageBus.emit('questions-finished');
         } else {
             this.renderQuestion();
         }
@@ -104,8 +87,6 @@ export default class JointQuestionGroup {
         this.#currentQuestion.cleanUp();
         this.#currentQuestion = null;
 
-        document.querySelector(`button.next-question`).removeEventListener("click", this.nextQuestionCallback);
-
-        emitter.off("selected-answer", this.#showOrHideNextQuestionButton);
+        messageBus.off("clickedNextQuestionButton", this.nextQuestionCallback);
     }
 }
