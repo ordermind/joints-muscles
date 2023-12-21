@@ -32,6 +32,15 @@ export default class DraggableQuestion {
         poolDraggableContainer.classList.add("draggable-container");
         poolRegionColumn.appendChild(poolDraggableContainer);
 
+        for(const answer of this.#answers) {
+            const answerElement = document.createElement("span");
+            answerElement.classList.add("btn", "|", "draggable-element");
+            answerElement.setAttribute("data-id", answer.id);
+            answerElement.textContent = answer.label;
+
+            poolDraggableContainer.appendChild(answerElement);
+        }
+
         for(const regionName of this.#regions) {
             const regionColumn = document.createElement("div");
             regionColumn.classList.add("col", `col-${6 / this.#regions.length}`);

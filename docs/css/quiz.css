@@ -23,3 +23,14 @@
 .page-quiz button.next-question {
     width: 21.25rem;
 }
+
+.page-quiz .draggable-container {
+    border: 2px double #000;
+}
+
+.page-quiz .draggable-container .draggable-element {
+    color: #6c757d;
+    border: 1px dashed #6c757d;
+    width: 25rem;
+    margin: 0.5rem;
+}

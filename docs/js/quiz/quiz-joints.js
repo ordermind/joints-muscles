@@ -88,7 +88,9 @@ export default class QuizJoints {
 
         for(const [index, jointNameQuestion] of jointNameQuestions.entries()) {
             this.#questions.push(jointNameQuestion);
-            this.#questions.push(jointFunctionsQuestions[shuffledJoints[index].id]);
+            for(const jointFunctionsQuestion of jointFunctionsQuestions[shuffledJoints[index].id]) {
+                this.#questions.push(jointFunctionsQuestion);
+            }
         }
 
         const wrapper = document.createElement("div");
