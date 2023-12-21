@@ -22,9 +22,9 @@ export default class JointQuestionGroup {
         const nextQuestionButtonElement = document.querySelector("button.next-question");
 
         if(show) {
-            nextQuestionButtonElement.classList.remove("d-none");
+            nextQuestionButtonElement.classList.remove("invisible");
         } else {
-            nextQuestionButtonElement.classList.add("d-none");
+            nextQuestionButtonElement.classList.add("invisible");
         }
     }
 
@@ -65,7 +65,7 @@ export default class JointQuestionGroup {
                 correctAnswer,
                 wrongAnswers,
                 question: `
-<h1 class="display-3 fs-3">Welk gewricht is dit?</h1>
+<h1 class="display-3 fs-3 mb-1">Welk gewricht is dit?</h1>
 <img class="quiz-image" src="${correctJoint.image}" />
                 `.trim()
             }
@@ -74,12 +74,16 @@ export default class JointQuestionGroup {
         const content = this.#currentQuestion.render();
 
         const nextQuestionButton = document.createElement("button");
-        nextQuestionButton.classList.add("btn", "btn-primary", "d-none", "mt-2", "|", "next-question");
-        nextQuestionButton.innerText = "Volgend gewricht";
+        nextQuestionButton.classList.add("btn", "btn-primary", "text-start", "d-inline-flex", "justify-content-between", "align-items-center", "pt-1", "pb-1", "ps-3", "pe-2", "invisible", "|", "next-question");
+        nextQuestionButton.innerHTML = `<span class="fs-5">Volgend gewricht</span><span class="fs-2">➡️</span>`;
         nextQuestionButton.addEventListener("click", this.nextQuestionCallback);
         emitter.on("selected-answer", this.#showOrHideNextQuestionButton);
 
-        content.appendChild(nextQuestionButton);
+        const buttonWrapper = document.createElement("div");
+        buttonWrapper.classList.add("d-grid", "gap-2", "bg-light", "mt-4");
+        buttonWrapper.appendChild(nextQuestionButton);
+
+        content.appendChild(buttonWrapper);
 
         removeChildren(this.#parentElement);
 

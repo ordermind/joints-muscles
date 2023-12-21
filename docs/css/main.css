@@ -56,3 +56,8 @@ a {
 background-image: linear-gradient(135deg, #ffc7d1 13.16%, #ffffff 13.16%, #ffffff 50%, #ffc7d1 50%, #ffc7d1 63.16%, #ffffff 63.16%, #ffffff 100%);
 background-size: 19.00px 19.00px;
 }
+
+.nav-buttons-wrapper {
+    width: 25rem;
+    max-width: 100%;
+}
