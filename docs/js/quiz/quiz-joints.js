@@ -32,8 +32,11 @@ export default class QuizJoints {
     onClickRestartButton() {
         document.querySelector("button.restart").removeEventListener("click", this.onClickRestartButton);
 
+        this.cleanUp();
+
         const pageElement = document.querySelector(".page-quiz-joints");
         removeChildren(pageElement);
+
         this.start(pageElement);
     }
 
