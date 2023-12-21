@@ -2,8 +2,49 @@ import DraggableQuestion from "../DraggableQuestion.js";
 import NextQuestionButton from "../NextQuestionButton.js";
 import muscleFunctions from "../../data/muscle-functions.js";
 import muscles from "../../../data/muscles.js";
+import { shuffle } from "../../utils.js";
 
 export default class JointFunctionsQuestionsFactory {
+    #createAnswers(correctJoint, correctSolution, joints) {
+        let answers = {};
+
+        // Correct answers
+
+        for(const [movementId, primeMovers] of Object.entries(correctSolution.primeMovers)) {
+            for(const [muscleId, muscleLabel] of Object.entries(primeMovers)) {
+                answers[muscleId] = muscleLabel;
+            }
+        }
+
+        for(const [movementId, primeMovers] of Object.entries(correctSolution.otherMuscles)) {
+            for(const [muscleId, muscleLabel] of Object.entries(primeMovers)) {
+                answers[muscleId] = muscleLabel;
+            }
+        }
+
+        // Incorrect answers
+
+        const otherJointsInTheSameRegion = shuffle(joints
+            .filter(joint => joint.regionId === correctJoint.regionId && joint.id !== correctJoint.id));
+
+        let addedIncorrectAnswers = 0;
+
+        topLoop: for(const otherJoint of otherJointsInTheSameRegion) {
+            for(const muscleFunction of shuffle(muscleFunctions.filter(muscleFunction => muscleFunction.jointId === otherJoint.id))) {
+                if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
+                    answers[muscleFunction.muscleId] = muscles[muscleFunction.muscleId].label;
+                    addedIncorrectAnswers++;
+                }
+
+                if(addedIncorrectAnswers >= 10) {
+                    break topLoop;
+                }
+            }
+        }
+
+        return answers;
+    }
+    
     #createCorrectSolution(joint) {
         let correctSolution = {
             primeMovers: {},
@@ -34,6 +75,7 @@ export default class JointFunctionsQuestionsFactory {
 
         for(const [index, joint] of joints.entries()) {
             const isLastQuestion = index === joints.length - 1;
+            const correctSolution = this.#createCorrectSolution(joint);
 
             questions[joint.id] = new DraggableQuestion(
                 {
@@ -43,12 +85,13 @@ export default class JointFunctionsQuestionsFactory {
 <h2 class="display-4 fs-4">Sleep de spieren naar de correcte functies</h2>
                     `.trim(),
                     regions: ["Prime movers", "Overige spieren"],
+                    answers: this.#createAnswers(joint, correctSolution, joints),
+                    correctSolution: correctSolution,
                     nextQuestionButton: new NextQuestionButton(
                         {
                             buttonText: isLastQuestion ? "Klaar!" : "Volgend gewricht"
                         }
                     ),
-                    correctSolution: this.#createCorrectSolution(joint),
                 }
             );
         }
