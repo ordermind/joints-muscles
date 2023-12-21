@@ -33,4 +33,5 @@
     border: 1px dashed #6c757d;
     width: 25rem;
     margin: 0.5rem;
+    max-width: calc(100% - 1rem);
 }
