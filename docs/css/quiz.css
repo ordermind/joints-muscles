@@ -18,3 +18,8 @@
 .page-quiz .answers.multiple-choice .wrong-answer :not(.btn-check)+.btn:active {
     background-color: red;
 }
+
+.page-quiz .next-question-bg,
+.page-quiz button.next-question {
+    width: 21.25rem;
+}

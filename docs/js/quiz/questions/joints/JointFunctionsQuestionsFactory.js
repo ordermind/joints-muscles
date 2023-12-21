@@ -10,6 +10,11 @@ export default class JointFunctionsQuestionsFactory {
 
             questions[joint.id] = new DraggableQuestion(
                 {
+                    question: `
+<h1 class="display-3 fs-3 mb-1">${joint.shortLabel}</h1>
+<img class="quiz-image" src="${joint.image}" />
+<h2 class="display-4 fs-4">Sleep de spieren naar de correcte functies</h2>
+                    `.trim(),
                     regions: ["Prime movers", "Overige spieren"],
                     nextQuestionButton: new NextQuestionButton(
                         {

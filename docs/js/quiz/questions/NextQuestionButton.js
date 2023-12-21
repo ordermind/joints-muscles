@@ -33,7 +33,7 @@ export default class NextQuestionButton {
         messageBus.on("question-answered-incorrectly", this.onQuestionAnsweredIncorrectly);
 
         const buttonWrapper = document.createElement("div");
-        buttonWrapper.classList.add("d-grid", "gap-2", "bg-light", "mt-4");
+        buttonWrapper.classList.add("bg-light", "mt-4", "ms-auto", "me-auto", "|", "next-question-bg");
         buttonWrapper.appendChild(this.#buttonElement);
 
         parentElement.appendChild(buttonWrapper);

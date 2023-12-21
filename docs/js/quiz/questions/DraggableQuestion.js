@@ -1,12 +1,14 @@
 import messageBus from "../message-bus.js";
 
 export default class DraggableQuestion {
+    #question;
     #regions;
     #answers;
     #correctSolution;
     #nextQuestionButton;
 
-    constructor({regions, answers, correctSolution, nextQuestionButton}) {
+    constructor({question, regions, answers, correctSolution, nextQuestionButton}) {
+        this.#question = question;
         this.#regions = regions;
         this.#answers = answers;
         this.#correctSolution = correctSolution;
@@ -16,6 +18,7 @@ export default class DraggableQuestion {
     render() {
         let wrapper = document.createElement("div");
         wrapper.classList.add("question", "text-center");
+        wrapper.innerHTML = this.#question;
 
         const regionWrapper = document.createElement("div");
         regionWrapper.classList.add("row");
@@ -31,7 +34,7 @@ export default class DraggableQuestion {
 
         for(const regionName of this.#regions) {
             const regionColumn = document.createElement("div");
-            regionColumn.classList.add(`flex-${6 / this.#regions.length}`);
+            regionColumn.classList.add("col", `col-${6 / this.#regions.length}`);
             regionWrapper.appendChild(regionColumn);
 
             const regionNameElement = document.createElement("span");
