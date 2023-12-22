@@ -30,9 +30,9 @@
     min-height: 100%;
     border: 4px double #808080;
     border-radius: 1rem;
-    background-color: #ffa285;
-    background-image: url("../images/quiz/draggable-bg.svg");
-    background-repeat: repeat;
+    background-color: #fd93e7;
+    /* background-image: url("../images/quiz/draggable-bg.svg");
+    background-repeat: repeat; */
     padding: 1rem 0;
 }
 
