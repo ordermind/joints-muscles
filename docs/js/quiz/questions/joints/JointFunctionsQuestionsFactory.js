@@ -96,7 +96,7 @@ export default class JointFunctionsQuestionsFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${joint.image}" />
 </div>
-<h2 class="display-4 fs-4 mt-4 mb-4">Welke spieren zorgen voor <strong>${movement.label}</strong>? Sleep die spieren naar het juiste vak.</h2>
+<h2 class="display-4 fs-4 mt-4 mb-4">Welke spieren zorgen voor <strong>${movement.label}</strong> bij dit gewricht? Sleep die spieren naar het juiste vak.</h2>
                         `.trim(),
                         regions: ["Prime movers", "Overige spieren"],
                         answers: shuffle(
