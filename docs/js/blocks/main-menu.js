@@ -6,7 +6,6 @@ export default class MainMenuBlock {
         const menuItems = [
             new MenuItem({routeName: "home", path: routes.home.paths[0], label: "Start"}),
             new MenuItem({routeName: "jointsList", path: routes.jointsList.paths[0], label: "Kennisbank"}),
-            new MenuItem({routeName: "quizList", path: routes.quizList.paths[0], label: "Quiz"}),
         ];
 
         let content = `
