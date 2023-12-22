@@ -30,10 +30,14 @@
     min-height: 100%;
     border: 4px double #808080;
     border-radius: 1rem;
-    background-color: #dee4ff;
+    background-color: #e4daff;
     /* background-image: url("../images/quiz/draggable-bg.svg");
     background-repeat: repeat; */
     padding: 1rem 0;
+}
+
+.page-quiz .question.correctly-answered .draggable-container {
+    background-color: #84db81;
 }
 
 .page-quiz .draggable-container .draggable-element,

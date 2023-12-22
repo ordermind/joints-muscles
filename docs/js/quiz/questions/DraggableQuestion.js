@@ -19,6 +19,8 @@ export default class DraggableQuestion {
         this.#nextQuestionButton = nextQuestionButton;
 
         this.onDraggableDrop = this.onDraggableDrop.bind(this);
+        this.onQuestionAnsweredCorrectly = this.onQuestionAnsweredCorrectly.bind(this);
+        this.onQuestionAnsweredIncorrectly = this.onQuestionAnsweredIncorrectly.bind(this);
     }
 
     #removePlacementClasses(element) {
@@ -54,6 +56,14 @@ export default class DraggableQuestion {
         } else {
             messageBus.emit("question-answered-incorrectly");
         }
+    }
+
+    onQuestionAnsweredCorrectly() {
+        document.querySelector(".page-quiz .question").classList.add("correctly-answered");
+    }
+
+    onQuestionAnsweredIncorrectly() {
+        document.querySelector(".page-quiz .question").classList.remove("correctly-answered");
     }
 
     onDraggableDrop(element) {
@@ -136,6 +146,9 @@ export default class DraggableQuestion {
 
         this.#nextQuestionButton.render(wrapper);
 
+        messageBus.on("question-answered-correctly", this.onQuestionAnsweredCorrectly);
+        messageBus.on("question-answered-incorrectly", this.onQuestionAnsweredIncorrectly);
+
         this.#dragula = dragula(draggableContainers)
             .on("drop", this.onDraggableDrop);
 
@@ -144,6 +157,10 @@ export default class DraggableQuestion {
 
     cleanUp() {
         this.#nextQuestionButton.cleanUp();
+
+        messageBus.off("question-answered-correctly", this.onQuestionAnsweredCorrectly);
+        messageBus.off("question-answered-incorrectly", this.onQuestionAnsweredIncorrectly);
+
         if(this.#dragula) {
             this.#dragula.destroy();
         }
