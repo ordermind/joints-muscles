@@ -152,8 +152,6 @@ export default class DraggableQuestion {
         this.#dragula = dragula(draggableContainers)
             .on("drop", this.onDraggableDrop);
 
-        messageBus.emit("question-answered-correctly")
-
         return wrapper;
     }
 
