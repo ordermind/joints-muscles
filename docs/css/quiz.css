@@ -28,11 +28,17 @@
 
 .page-quiz .draggable-container {
     min-height: 100%;
-    border: 2px double #000;
+    border: 4px double #808080;
+    border-radius: 1rem;
+    background-color: #ffa285;
+    background-image: url("../images/quiz/draggable-bg.svg");
+    background-repeat: repeat;
+    padding: 1rem 0;
 }
 
 .page-quiz .draggable-container .draggable-element {
     color: #6c757d;
+    background-color: #fff;
     border: 1px dashed #6c757d;
     width: 25rem;
     margin: 0.5rem;

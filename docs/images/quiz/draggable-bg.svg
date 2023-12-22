@@ -1,0 +1,8 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <line x1="20" y1="17" x2="20" y2="23" stroke="#eee" fill="none"/>
+  <line x1="17" y1="20" x2="23" y2="20" stroke="#eee" fill="none"/>
+ </g>
+</svg>
