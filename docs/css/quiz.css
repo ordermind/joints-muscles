@@ -27,6 +27,7 @@
 }
 
 .page-quiz .draggable-container {
+    min-height: 100%;
     border: 2px double #000;
 }
 

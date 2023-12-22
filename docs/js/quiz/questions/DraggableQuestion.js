@@ -20,8 +20,16 @@ export default class DraggableQuestion {
         wrapper.classList.add("question", "text-center");
         wrapper.innerHTML = this.#question;
 
+        const regionLabelWrapper = document.createElement("div");
+        regionLabelWrapper.classList.add("row", "align-items-stretch");
+        wrapper.appendChild(regionLabelWrapper);
+
+        const poolRegionLabelColumn = document.createElement("div");
+        poolRegionLabelColumn.classList.add("col", "col-6");
+        regionLabelWrapper.appendChild(poolRegionLabelColumn);
+
         const regionWrapper = document.createElement("div");
-        regionWrapper.classList.add("row");
+        regionWrapper.classList.add("row", "align-items-stretch");
         wrapper.appendChild(regionWrapper);
 
         const poolRegionColumn = document.createElement("div");
@@ -42,13 +50,17 @@ export default class DraggableQuestion {
         }
 
         for(const regionName of this.#regions) {
+            const regionLabelColumn = document.createElement("div");
+            regionLabelColumn.classList.add("col", `col-${6 / this.#regions.length}`);
+            regionLabelWrapper.appendChild(regionLabelColumn);
+
             const regionColumn = document.createElement("div");
             regionColumn.classList.add("col", `col-${6 / this.#regions.length}`);
             regionWrapper.appendChild(regionColumn);
 
             const regionNameElement = document.createElement("span");
             regionNameElement.textContent = regionName;
-            regionColumn.appendChild(regionNameElement);
+            regionLabelColumn.appendChild(regionNameElement);
 
             const draggableContainer = document.createElement("div");
             draggableContainer.classList.add("draggable-container");
