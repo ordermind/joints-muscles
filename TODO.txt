@@ -3,6 +3,7 @@
 - Lägg till sökfunktion
 - Lägg till quiz för muskler. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
+- Kolla om jag kan förbättra användarupplevelsen i mobilen genom att lägga kolumnerna ovanför varandra i mobillayout i stället för bredvid varandra.
 - Lägg till quiz för leder. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
 X Lägg till bakgrund i draggable containers med små plus så att det syns tydligare att det är en särskild yta. Lägg till en fin liten 3d-border som en ram.
 X Gör kolumnerna för draggable question lika stora med hjälp av flexbox align-items: stretch
