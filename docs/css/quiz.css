@@ -49,7 +49,7 @@
     cursor: grab;
 }
 .page-quiz .draggable-container .draggable-element.correct-placement {
-    border: 4px ridge #018001;
+    border: 4px ridge #00b300;
 }
 .page-quiz .draggable-container .draggable-element.incorrect-placement {
     border: 4px ridge #fd0303;

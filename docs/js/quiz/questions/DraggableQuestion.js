@@ -144,6 +144,8 @@ export default class DraggableQuestion {
 
     cleanUp() {
         this.#nextQuestionButton.cleanUp();
-        this.#dragula.destroy();
+        if(this.#dragula) {
+            this.#dragula.destroy();
+        }
     }
 }

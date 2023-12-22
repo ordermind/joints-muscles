@@ -109,6 +109,10 @@ export default class QuizJoints {
     }
 
     cleanUp() {
+        for(const question of this.#questions) {
+            question.cleanUp();
+        }
+
         messageBus.off("clickedNextQuestionButton", this.nextQuestionCallback);
     }
 }

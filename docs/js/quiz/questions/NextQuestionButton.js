@@ -40,7 +40,10 @@ export default class NextQuestionButton {
     }
 
     cleanUp() {
-        this.#buttonElement.removeEventListener("click", this.onClick);
+        if(this.#buttonElement) {
+            this.#buttonElement.removeEventListener("click", this.onClick);
+        }
+
         messageBus.off("question-answered-correctly", this.onQuestionAnsweredCorrectly);
         messageBus.off("question-answered-incorrectly", this.onQuestionAnsweredIncorrectly);
     }
