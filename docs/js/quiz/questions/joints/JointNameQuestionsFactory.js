@@ -34,7 +34,7 @@ export default class JointNameQuestionsFactory {
                     correctAnswer,
                     wrongAnswers,
                     question: `
-<h1 class="display-3 fs-3 mb-1">Welk gewricht is dit?</h1>
+<h1 id="question-text" class="display-3 fs-3 mb-1">Welk gewricht is dit?</h1>
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${correctJoint.image}" />
 </div>

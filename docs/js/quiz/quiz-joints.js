@@ -67,7 +67,10 @@ export default class QuizJoints {
             this.#renderQuestion();
         }
 
-        window.scrollTo(0, 0);
+        const questionText = document.getElementById("question-text");
+        if(questionText) {
+            questionText.scrollIntoView();
+        }
     }
 
     #renderQuestion() {
