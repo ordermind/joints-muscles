@@ -81,10 +81,10 @@ export default class JointFunctionsQuestionsFactory {
 
         for(const [jointIndex, joint] of joints.entries()) {
 
-            const shuffledMovements = shuffle([...joint.movements]);
+            const shuffledMovements = shuffle(joint.movements);
             let jointQuestions = [];
             for(const [movementIndex, movement] of shuffledMovements.entries()) {
-                const correctSolution = this.#createCorrectSolution(joint);
+                const correctSolution = this.#createCorrectSolution(movement);
 
                 const isLastQuestionForJoint = jointIndex < joints.length - 1 && movementIndex === shuffledMovements.length - 1;
                 const isLastQuestionInTotal = jointIndex === joints.length - 1 && movementIndex === shuffledMovements.length - 1;
@@ -98,7 +98,7 @@ export default class JointFunctionsQuestionsFactory {
 </div>
 <h2 class="display-4 fs-4 mt-4 mb-4">Welke spieren zorgen voor <strong>${movement.label}</strong> bij dit gewricht? Sleep die spieren naar het juiste vak.</h2>
                         `.trim(),
-                        regions: ["Prime movers", "Overige spieren"],
+                        regions: [{id: "primeMovers", label: "Prime movers"}, {id: "otherMuscles", label: "Overige spieren"}],
                         answers: shuffle(
                             Object.entries(
                                 this.#createAnswers(movement, correctSolution, joint, joints)

@@ -30,7 +30,7 @@
     min-height: 100%;
     border: 4px double #808080;
     border-radius: 1rem;
-    background-color: #fd93e7;
+    background-color: #dee4ff;
     /* background-image: url("../images/quiz/draggable-bg.svg");
     background-repeat: repeat; */
     padding: 1rem 0;
@@ -40,7 +40,6 @@
 .draggable-element.gu-mirror {
     color: #6c757d;
     background-color: #fff;
-    border: 1px dashed #6c757d;
     width: 25rem;
     margin: 0.5rem;
     max-width: calc(100% - 1rem);
@@ -48,6 +47,16 @@
 
 .page-quiz .draggable-container .draggable-element {
     cursor: grab;
+}
+.page-quiz .draggable-container .draggable-element.correct-placement {
+    border: 4px ridge #018001;
+}
+.page-quiz .draggable-container .draggable-element.incorrect-placement {
+    border: 4px ridge #fd0303;
+}
+
+.page-quiz .draggable-container .draggable-element.gu-transit {
+    border: 2px dashed #6c757d;
 }
 
 .draggable-element.gu-mirror {

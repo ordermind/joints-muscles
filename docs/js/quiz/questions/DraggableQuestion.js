@@ -1,5 +1,6 @@
 import messageBus from "../message-bus.js";
 import dragula from "../../../vendor/dragula/js/dragula.min.js";
+import {deepEqual} from "../utils.js";
 
 export default class DraggableQuestion {
     #question;
@@ -16,6 +17,63 @@ export default class DraggableQuestion {
         this.#answers = answers;
         this.#correctSolution = correctSolution;
         this.#nextQuestionButton = nextQuestionButton;
+
+        this.onDraggableDrop = this.onDraggableDrop.bind(this);
+    }
+
+    #removePlacementClasses(element) {
+        element.classList.remove("incorrect-placement");
+        element.classList.remove("correct-placement");
+    }
+
+    #setCorrectPlacementClass(element) {
+        this.#removePlacementClasses(element);
+        element.classList.add("correct-placement");
+    }
+
+    #setIncorrectPlacementClass(element) {
+        this.#removePlacementClasses(element);
+        element.classList.add("incorrect-placement");
+    }
+
+    #checkCurrentSolution() {
+        const currentSolution = {};
+
+        for(const draggableContainer of document.querySelectorAll(".draggable-container[data-region-id]")) {
+            const regionId = draggableContainer.getAttribute("data-region-id");
+
+            currentSolution[regionId] = {};
+
+            for(const draggableElement of draggableContainer.querySelectorAll(".draggable-element")) {
+                currentSolution[regionId][draggableElement.getAttribute("data-id")] = draggableElement.innerText;
+            }
+        }
+
+        if(deepEqual(currentSolution, this.#correctSolution)) {
+            messageBus.emit("question-answered-correctly");
+        } else {
+            messageBus.emit("question-answered-incorrectly");
+        }
+    }
+
+    onDraggableDrop(element) {
+        this.#checkCurrentSolution();
+
+        const draggableContainer = element.parentElement;
+        if(!draggableContainer.getAttribute("data-region-id")) {
+            this.#removePlacementClasses(element);
+
+            return;
+        }
+
+        const regionId = draggableContainer.getAttribute("data-region-id");
+        const elementId = element.getAttribute("data-id");
+
+        if(this.#correctSolution[regionId].hasOwnProperty(elementId)) {
+            this.#setCorrectPlacementClass(element);
+        } else {
+            this.#setIncorrectPlacementClass(element);
+        }
     }
 
     render() {
@@ -55,7 +113,7 @@ export default class DraggableQuestion {
             poolDraggableContainer.appendChild(answerElement);
         }
 
-        for(const regionName of this.#regions) {
+        for(const region of this.#regions) {
             const regionLabelColumn = document.createElement("div");
             regionLabelColumn.classList.add("col", `col-${6 / this.#regions.length}`);
             regionLabelWrapper.appendChild(regionLabelColumn);
@@ -64,24 +122,22 @@ export default class DraggableQuestion {
             regionColumn.classList.add("col", `col-${6 / this.#regions.length}`);
             regionWrapper.appendChild(regionColumn);
 
-            const regionNameElement = document.createElement("span");
-            regionNameElement.classList.add("fw-bold");
-            regionNameElement.textContent = regionName;
-            regionLabelColumn.appendChild(regionNameElement);
+            const regionLabelElement = document.createElement("span");
+            regionLabelElement.classList.add("fw-bold");
+            regionLabelElement.textContent = region.label;
+            regionLabelColumn.appendChild(regionLabelElement);
 
             const draggableContainer = document.createElement("div");
             draggableContainer.classList.add("draggable-container");
+            draggableContainer.setAttribute("data-region-id", region.id);
             regionColumn.appendChild(draggableContainer);
             draggableContainers.push(draggableContainer);
         }
 
         this.#nextQuestionButton.render(wrapper);
 
-        this.#dragula = dragula({
-            containers: draggableContainers,
-        });
-
-        messageBus.emit("question-answered-correctly");
+        this.#dragula = dragula(draggableContainers)
+            .on("drop", this.onDraggableDrop);
 
         return wrapper;
     }

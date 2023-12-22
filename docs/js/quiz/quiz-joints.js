@@ -79,7 +79,7 @@ export default class QuizJoints {
     start(parentElement) {
         this.#currentQuestionIndex = -1;
 
-        const shuffledJoints = shuffle([...joints]);
+        const shuffledJoints = shuffle(joints);
 
         const jointNameQuestions = this.#jointNameQuestionsFactory.create({joints: shuffledJoints});
         const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: shuffledJoints});
