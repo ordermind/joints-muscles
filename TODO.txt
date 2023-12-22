@@ -4,9 +4,9 @@
 - Lägg till quiz för muskler. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
 - Lägg till quiz för leder. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
-- Gör en slumpmässig array av movement ids, så att jag sedan kan köra map på den och veta om det är den sista frågan eller inte utan att resultatet sedan randomizas igen. På så sätt kan jag anpassa knapptexterna för att gå vidare till nästa fråga.
 - Lägg till bakgrund i draggable containers med små plus så att det syns tydligare att det är en särskild yta. Lägg till en fin liten 3d-border som en ram.
 - Gör kolumnerna för draggable question lika stora med hjälp av flexbox align-items: stretch
+X Gör en slumpmässig array av movement ids, så att jag sedan kan köra map på den och veta om det är den sista frågan eller inte utan att resultatet sedan randomizas igen. På så sätt kan jag anpassa knapptexterna för att gå vidare till nästa fråga.
 X Ta bort den fasta bredden för bilder i quizzen och lägg den i stället i bildwrappern. Anledningen är att bilden annars blir skev på smala skärmar om bilden är för bred. På det här sättet blir den i stället kortare på höjden vilket är bättre.
 X Lägg till hjälpmedel för att hårdplugga tabellerna
 X Lägg till huvudmeny

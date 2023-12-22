@@ -79,11 +79,15 @@ export default class JointFunctionsQuestionsFactory {
     create({joints}) {
         let questions = {};
 
-        for(const joint of joints) {
+        for(const [jointIndex, joint] of joints.entries()) {
 
+            const shuffledMovements = shuffle([...joint.movements]);
             let jointQuestions = [];
-            for(const movement of joint.movements) {
+            for(const [movementIndex, movement] of shuffledMovements.entries()) {
                 const correctSolution = this.#createCorrectSolution(joint);
+
+                const isLastQuestionForJoint = jointIndex < joints.length - 1 && movementIndex === shuffledMovements.length - 1;
+                const isLastQuestionInTotal = jointIndex === joints.length - 1 && movementIndex === shuffledMovements.length - 1;
 
                 jointQuestions.push(new DraggableQuestion(
                     {
@@ -105,13 +109,13 @@ export default class JointFunctionsQuestionsFactory {
                         correctSolution: correctSolution,
                         nextQuestionButton: new NextQuestionButton(
                             {
-                                buttonText: "Volgende vraag",
+                                buttonText: isLastQuestionInTotal ? "Klaar!" : isLastQuestionForJoint ? "Volgend gewricht" : "Volgende spierfunctie",
                             }
                         ),
                     }
                 ));
 
-                questions[joint.id] = shuffle(jointQuestions);
+                questions[joint.id] = jointQuestions;
             }
         }
 
