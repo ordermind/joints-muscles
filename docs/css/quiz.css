@@ -55,6 +55,7 @@
 
 .page-quiz .draggable-question .draggable-container .draggable-element {
     cursor: grab;
+    word-break: break-word;
 }
 .page-quiz .draggable-question .draggable-container .draggable-element.correct-placement {
     border: 4px ridge #00b300;
