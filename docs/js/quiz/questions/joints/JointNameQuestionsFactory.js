@@ -35,7 +35,9 @@ export default class JointNameQuestionsFactory {
                     wrongAnswers,
                     question: `
 <h1 class="display-3 fs-3 mb-1">Welk gewricht is dit?</h1>
-<img class="quiz-image" src="${correctJoint.image}" />
+<div class="quiz-image-wrapper">
+    <img class="quiz-image" src="${correctJoint.image}" />
+</div>
                     `.trim(),
                     nextQuestionButton: new NextQuestionButton({buttonText: "Spierfuncties"}),
                 }

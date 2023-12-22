@@ -89,7 +89,9 @@ export default class JointFunctionsQuestionsFactory {
                     {
                         question: `
 <h1 class="display-3 fs-3 mb-1">${joint.shortLabel}</h1>
-<img class="quiz-image" src="${joint.image}" />
+<div class="quiz-image-wrapper">
+    <img class="quiz-image" src="${joint.image}" />
+</div>
 <h2 class="display-4 fs-4">Welke spieren zorgen voor <strong>${movement.label}</strong>? Sleep de spieren naar het juiste vak.</h2>
                         `.trim(),
                         regions: ["Prime movers", "Overige spieren"],
