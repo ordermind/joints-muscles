@@ -1,4 +1,5 @@
 import messageBus from "../message-bus.js";
+import dragula from "../../../vendor/dragula/js/dragula.min.js";
 
 export default class DraggableQuestion {
     #question;
@@ -6,6 +7,8 @@ export default class DraggableQuestion {
     #answers;
     #correctSolution;
     #nextQuestionButton;
+
+    #dragula;
 
     constructor({question, regions, answers, correctSolution, nextQuestionButton}) {
         this.#question = question;
@@ -16,6 +19,8 @@ export default class DraggableQuestion {
     }
 
     render() {
+        const draggableContainers = [];
+
         let wrapper = document.createElement("div");
         wrapper.classList.add("question", "text-center");
         wrapper.innerHTML = this.#question;
@@ -39,6 +44,7 @@ export default class DraggableQuestion {
         const poolDraggableContainer = document.createElement("div");
         poolDraggableContainer.classList.add("draggable-container");
         poolRegionColumn.appendChild(poolDraggableContainer);
+        draggableContainers.push(poolDraggableContainer);
 
         for(const answer of this.#answers) {
             const answerElement = document.createElement("span");
@@ -66,9 +72,14 @@ export default class DraggableQuestion {
             const draggableContainer = document.createElement("div");
             draggableContainer.classList.add("draggable-container");
             regionColumn.appendChild(draggableContainer);
+            draggableContainers.push(draggableContainer);
         }
 
         this.#nextQuestionButton.render(wrapper);
+
+        this.#dragula = dragula({
+            containers: draggableContainers,
+        });
 
         messageBus.emit("question-answered-correctly");
 
@@ -77,5 +88,6 @@ export default class DraggableQuestion {
 
     cleanUp() {
         this.#nextQuestionButton.cleanUp();
+        this.#dragula.destroy();
     }
 }

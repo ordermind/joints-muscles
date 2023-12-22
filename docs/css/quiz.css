@@ -36,11 +36,20 @@
     padding: 1rem 0;
 }
 
-.page-quiz .draggable-container .draggable-element {
+.page-quiz .draggable-container .draggable-element,
+.draggable-element.gu-mirror {
     color: #6c757d;
     background-color: #fff;
     border: 1px dashed #6c757d;
     width: 25rem;
     margin: 0.5rem;
     max-width: calc(100% - 1rem);
+}
+
+.page-quiz .draggable-container .draggable-element {
+    cursor: grab;
+}
+
+.draggable-element.gu-mirror {
+    cursor: grabbing;
 }
