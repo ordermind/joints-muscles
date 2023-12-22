@@ -66,6 +66,8 @@ export default class QuizJoints {
         } else {
             this.#renderQuestion();
         }
+
+        window.scrollTo(0, 0);
     }
 
     #renderQuestion() {
