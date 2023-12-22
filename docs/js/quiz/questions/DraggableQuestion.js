@@ -90,7 +90,7 @@ export default class DraggableQuestion {
         const draggableContainers = [];
 
         let wrapper = document.createElement("div");
-        wrapper.classList.add("question", "text-center");
+        wrapper.classList.add("question", "draggable-question", "text-center");
         wrapper.innerHTML = this.#question;
 
         const regionLabelWrapper = document.createElement("div");

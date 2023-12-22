@@ -5,6 +5,13 @@
     height: 20rem;
 }
 
+.page-quiz .next-question-bg,
+.page-quiz button.next-question {
+    width: 21.25rem;
+}
+
+/** Multiple-choice question **/
+
 .page-quiz .answers.multiple-choice .correct-answer .btn-check:checked+.btn, 
 .page-quiz .answers.multiple-choice .correct-answer .btn.active, 
 .page-quiz .answers.multiple-choice .correct-answer .btn.show, 
@@ -21,12 +28,9 @@
     background-color: red;
 }
 
-.page-quiz .next-question-bg,
-.page-quiz button.next-question {
-    width: 21.25rem;
-}
+/** Draggable question **/
 
-.page-quiz .draggable-container {
+.page-quiz .draggable-question .draggable-container {
     min-height: 100%;
     border: 4px double #808080;
     border-radius: 1rem;
@@ -36,11 +40,11 @@
     padding: 1rem 0;
 }
 
-.page-quiz .question.correctly-answered .draggable-container {
+.page-quiz .draggable-question.correctly-answered .draggable-container {
     background-color: #84db81;
 }
 
-.page-quiz .draggable-container .draggable-element,
+.page-quiz .draggable-question .draggable-container .draggable-element,
 .draggable-element.gu-mirror {
     color: #6c757d;
     background-color: #fff;
@@ -49,17 +53,17 @@
     max-width: calc(100% - 1rem);
 }
 
-.page-quiz .draggable-container .draggable-element {
+.page-quiz .draggable-question .draggable-container .draggable-element {
     cursor: grab;
 }
-.page-quiz .draggable-container .draggable-element.correct-placement {
+.page-quiz .draggable-question .draggable-container .draggable-element.correct-placement {
     border: 4px ridge #00b300;
 }
-.page-quiz .draggable-container .draggable-element.incorrect-placement {
+.page-quiz .draggable-question .draggable-container .draggable-element.incorrect-placement {
     border: 4px ridge #fd0303;
 }
 
-.page-quiz .draggable-container .draggable-element.gu-transit {
+.page-quiz .draggable-question .draggable-container .draggable-element.gu-transit {
     border: 2px dashed #6c757d;
 }
 
