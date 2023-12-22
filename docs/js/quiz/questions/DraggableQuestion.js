@@ -59,6 +59,7 @@ export default class DraggableQuestion {
             regionWrapper.appendChild(regionColumn);
 
             const regionNameElement = document.createElement("span");
+            regionNameElement.classList.add("fw-bold");
             regionNameElement.textContent = regionName;
             regionLabelColumn.appendChild(regionNameElement);
 
