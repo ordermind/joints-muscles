@@ -22,6 +22,7 @@ export default new Muscle(
                 }
             ),
         ],
+        image: "",
         description: ``,
     }
 );

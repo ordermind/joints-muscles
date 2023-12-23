@@ -34,7 +34,9 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_quadratus_lumborum.jpeg",
         description: `
-De spier ligt in de achterwand van de buikholte, vóór de m. erector spinae en wordt van deze spier gescheiden door de fascia thoracolumbalis. De spier zou een rol spelen bij de detractie van costa 12 (expiratie).
+De spier ligt in de achterwand van de buikholte, vóór de m. erector spinae en wordt van deze spier gescheiden door de fascia thoracolumbalis.
+
+De spier zou een rol spelen bij de detractie van costa 12 (expiratie).
         `,
     }
 );

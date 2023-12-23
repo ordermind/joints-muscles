@@ -58,5 +58,14 @@ export default new Muscle(
             ),
         ],
         image: "./images/muscles/m_rectus_abdominis.jpeg",
+        description: `
+De spier is meerbuikig. De buiken zijn met elkaar verbonden door tussenpezen, de zogenaamde
+<em>intersectiones tendineae</em>.
+
+De spier loopt in de rectusschede (<em>vagina musculi recti abdominis</em>). In de mediaanlijn, tussen beide
+mm. recti in, wordt de <em>linea alba</em> gevormd door de kruisende vezels van de beide rectusscheden.
+
+De laterale begrenzing van de spier wordt de <em>linea semilunaris</em> genoemd.
+        `.trim(),
     }
 );

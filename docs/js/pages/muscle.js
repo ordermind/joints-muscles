@@ -84,15 +84,24 @@ export default class MusclePage {
         </table>
 
         <h2 class="display-2 fs-2">Gewrichtsfuncties</h2>
-        <table class="table d-inline-block w-auto">
-            <tr>
-                <th>Gewricht</th>
-                <th>Prime mover</th>
-                <th>Helpt mee</th>
-            </tr>
-            ${this.#createJointFunctionsRows(muscle, joints).join("")}
-        </table>
         `.trim();
+
+        if(muscle.functions.length) {
+            content += `
+            <table class="table d-inline-block w-auto">
+                <tr>
+                    <th>Gewricht</th>
+                    <th>Prime mover</th>
+                    <th>Helpt mee</th>
+                </tr>
+                ${this.#createJointFunctionsRows(muscle, joints).join("")}
+            </table>
+            `.trim();
+        } else {
+            content += `<p><em>Er zijn geen gewrichtsfuncties bij deze spier.</em></p>`;
+        }
+
+
 
         if(muscle.specialFunctions.length) {
             content += `
