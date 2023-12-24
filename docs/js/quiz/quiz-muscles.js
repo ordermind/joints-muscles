@@ -7,6 +7,6 @@ export default class QuizMuscles extends BaseQuiz {
     }
 
     get id() {
-        return "joints";
+        return "muscles";
     }
 }
