@@ -29,7 +29,7 @@ export default new Muscle(
                     muscleId: "m_obliquus_capitis_inferior",
                     movementId: "head_joints__rotation",
                     movementLabelOverride: "ipsilaterale rotatie",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],
                 }
             ),

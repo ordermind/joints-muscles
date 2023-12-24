@@ -19,7 +19,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_spinalis_cervicis",
                     movementId: "columna_vertebralis_cervicalis__extension",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(

@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -30,6 +31,25 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_scalenus_anterior__columna_vertebralis_cervicalis__rotation",
+                    jointId: "columna_vertebralis_cervicalis",
+                    muscleId: "m_scalenus_anterior",
+                    movementId: "columna_vertebralis_cervicalis__rotation",
+                    isPrimeMover: true,
+                    notes: ["ipsilaterale rotatie"],
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_scalenus_anterior__breathing",
+                    muscleId: "m_scalenus_anterior",
+                    functionDescription: "bij gefixeerde halswervelkolom de bovenste ribben fixeren / heffen ten behoeve van inspiratie",
+                }
+            )
         ],
         image: "./images/muscles/m_scalenus_anterior.jpeg",
     }

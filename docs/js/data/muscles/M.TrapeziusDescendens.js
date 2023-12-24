@@ -22,7 +22,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_trapezius_descendens",
                     movementId: "head_joints__extension",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
@@ -31,7 +31,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_trapezius_descendens",
                     movementId: "head_joints__lateroflexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
@@ -41,7 +41,7 @@ export default new Muscle(
                     muscleId: "m_trapezius_descendens",
                     movementId: "head_joints__rotation",
                     movementLabelOverride: "contralaterale rotatie",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                     notes: ["contralaterale rotatie"],
                 }
             ),
@@ -51,7 +51,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_trapezius_descendens",
                     movementId: "columna_vertebralis_cervicalis__extension",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(

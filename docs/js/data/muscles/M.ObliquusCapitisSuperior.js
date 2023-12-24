@@ -31,17 +31,6 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
-            new JointMuscleFunction(
-                {
-                    id: "m_obliquus_capitis_superior__head_joints__rotation",
-                    jointId: "head_joints",
-                    muscleId: "m_obliquus_capitis_superior",
-                    movementId: "head_joints__rotation",
-                    movementLabelOverride: "contralaterale rotatie",
-                    isPrimeMover: false,
-                    notes: ["contralaterale rotatie"],
-                }
-            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

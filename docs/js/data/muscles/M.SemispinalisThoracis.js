@@ -39,7 +39,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "m_semispinalis_thoracis",
                     movementId: "columna_vertebralis_thoracalis__extension",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(

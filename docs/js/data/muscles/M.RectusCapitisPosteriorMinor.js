@@ -22,17 +22,6 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
-            new JointMuscleFunction(
-                {
-                    id: "m_rectus_capitis_posterior_minor__head_joints__rotation",
-                    jointId: "head_joints",
-                    muscleId: "m_rectus_capitis_posterior_minor",
-                    movementId: "head_joints__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
-                    isPrimeMover: false,
-                    notes: ["ipsilaterale rotatie"],
-                }
-            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

@@ -21,7 +21,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_sternocleidomastoideus",
                     movementId: "head_joints__extension",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
@@ -50,7 +50,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_sternocleidomastoideus",
                     movementId: "columna_vertebralis_cervicalis__lateroflexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
         ],
