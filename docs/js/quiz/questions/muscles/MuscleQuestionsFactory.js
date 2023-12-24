@@ -13,6 +13,6 @@ export default class MuscleQuestionsFactory {
     create() {
         const shuffledMuscles = shuffle(quizMuscles);
 
-        return this.#muscleNameQuestionsFactory.create(shuffledMuscles, quizMuscleFunctions);
+        return this.#muscleNameQuestionsFactory.create({quizMuscles: shuffledMuscles, quizMuscleFunctions});
     }
 }

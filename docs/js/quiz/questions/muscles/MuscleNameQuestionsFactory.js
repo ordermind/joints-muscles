@@ -9,21 +9,49 @@ export default class MuscleNameQuestionFactory {
 
     #getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
         if(!correctMuscle.functions.length) {
-            return quizMuscles.filter(muscle => muscle.functions.length === 0);
+            return quizMuscles.filter(muscle => muscle.functions.length === 0 && muscle.id !== correctMuscle.id);
         }
 
-        return new Set(
-            quizMuscleFunctions
-                .filter(muscleFunction => {
-                    return correctMuscle.functions.some(correctMuscleFunction => correctMuscleFunction.movementId === muscleFunction.movementId);
-                })
-                .map(muscleFunction => muscles[muscleFunction.muscleId])
+        const otherMusclesWithSameFunctions = Array.from(
+            new Set(
+                quizMuscleFunctions
+                    .filter(muscleFunction => {
+                        return correctMuscle.functions.some(
+                            correctMuscleFunction => correctMuscleFunction.movementId === muscleFunction.movementId
+                            && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                        );
+                    })
+                    .map(muscleFunction => muscles[muscleFunction.muscleId])
+            )
         );
+
+        if(otherMusclesWithSameFunctions.length >= this.#maxWrongAnswers) {
+            return otherMusclesWithSameFunctions;
+        }
+
+        const otherMusclesWithSameJoints = Array.from(
+            new Set(
+                shuffle(
+                    quizMuscleFunctions
+                    .filter(muscleFunction => {
+                        return correctMuscle.functions.some(
+                            correctMuscleFunction => correctMuscleFunction.jointId === muscleFunction.jointId
+                            && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                            && !otherMusclesWithSameFunctions.some(otherMuscle => otherMuscle.id === muscleFunction.muscleId)
+                        );
+                    })
+                )
+                .slice(0, this.#maxWrongAnswers - otherMusclesWithSameFunctions.length)
+                .map(muscleFunction => muscles[muscleFunction.muscleId])
+            )
+        );
+
+        return [...otherMusclesWithSameFunctions, ...otherMusclesWithSameJoints];
     }
 
     create({quizMuscles, quizMuscleFunctions}) {
-        return muscles.map(correctMuscle => {
-            const otherMusclesWithSimilarFunctions = this.#getOtherMusclesWithSimilarFunctions(correctMuscle, muscles, muscleFunctions);
+        return quizMuscles.map(correctMuscle => {
+            const otherMusclesWithSimilarFunctions = this.#getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
 
             const correctAnswer = new MultipleChoiceAnswer(
                 {
@@ -53,7 +81,7 @@ export default class MuscleNameQuestionFactory {
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>
                     `.trim(),
-                    nextQuestionButton: new NextQuestionButton({buttonText: "Origo's en inserties"}),
+                    nextQuestionButton: new NextQuestionButton({buttonText: "Volgende vraag"}),
                 }
             );
         });
