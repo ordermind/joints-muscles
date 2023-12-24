@@ -14,35 +14,6 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_splenius_cervicis__head_joints__extension",
-                    jointId: "head_joints",
-                    muscleId: "m_splenius_cervicis",
-                    movementId: "head_joints__extension",
-                    isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
-                    id: "m_splenius_cervicis__head_joints__lateroflexion",
-                    jointId: "head_joints",
-                    muscleId: "m_splenius_cervicis",
-                    movementId: "head_joints__lateroflexion",
-                    isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
-                    id: "m_splenius_cervicis__head_joints__rotation",
-                    jointId: "head_joints",
-                    muscleId: "m_splenius_cervicis",
-                    movementId: "head_joints__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
-                    isPrimeMover: true,
-                    notes: ["ipsilaterale rotatie"],
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "m_splenius_cervicis__columna_vertebralis_cervicalis__extension",
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_splenius_cervicis",
