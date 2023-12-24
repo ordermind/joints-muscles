@@ -27,7 +27,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "m_spinalis_thoracis",
                     movementId: "columna_vertebralis_thoracalis__lateroflexion",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
         ],

@@ -24,15 +24,6 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_longus_capitis__head_joints__lateroflexion",
-                    jointId: "head_joints",
-                    muscleId: "m_longus_capitis",
-                    movementId: "head_joints__lateroflexion",
-                    isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "m_longus_capitis__head_joints__rotation",
                     jointId: "head_joints",
                     muscleId: "m_longus_capitis",

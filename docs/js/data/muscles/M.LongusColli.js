@@ -41,9 +41,9 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_longus_colli",
                     movementId: "columna_vertebralis_cervicalis__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
-                    notes: ["ipsilaterale rotatie"],
+                    notes: ["contralaterale rotatie"],
                 }
             ),
         ],

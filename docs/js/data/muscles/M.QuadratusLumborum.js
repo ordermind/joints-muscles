@@ -28,7 +28,7 @@ export default new Muscle(
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "m_quadratus_lumborum",
                     movementId: "columna_vertebralis_lumbalis__lateroflexion",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
         ],

@@ -24,15 +24,6 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "mm_multifidi__columna_vertebralis_cervicalis__lateroflexion",
-                    jointId: "columna_vertebralis_cervicalis",
-                    muscleId: "mm_multifidi",
-                    movementId: "columna_vertebralis_cervicalis__lateroflexion",
-                    isPrimeMover: false,
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "mm_multifidi__columna_vertebralis_cervicalis__rotation",
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "mm_multifidi",
@@ -53,15 +44,6 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "mm_multifidi__columna_vertebralis_thoracalis__lateroflexion",
-                    jointId: "columna_vertebralis_thoracalis",
-                    muscleId: "mm_multifidi",
-                    movementId: "columna_vertebralis_thoracalis__lateroflexion",
-                    isPrimeMover: false,
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "mm_multifidi__columna_vertebralis_thoracalis__rotation",
                     jointId: "columna_vertebralis_thoracalis",
                     muscleId: "mm_multifidi",
@@ -77,15 +59,6 @@ export default new Muscle(
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "mm_multifidi",
                     movementId: "columna_vertebralis_lumbalis__extension",
-                    isPrimeMover: false,
-                }
-            ),
-            new JointMuscleFunction(
-                {
-                    id: "mm_multifidi__columna_vertebralis_lumbalis__lateroflexion",
-                    jointId: "columna_vertebralis_lumbalis",
-                    muscleId: "mm_multifidi",
-                    movementId: "columna_vertebralis_lumbalis__lateroflexion",
                     isPrimeMover: false,
                 }
             ),

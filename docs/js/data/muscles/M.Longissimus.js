@@ -95,17 +95,6 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_longissimus__columna_vertebralis_thoracalis__rotation",
-                    jointId: "columna_vertebralis_thoracalis",
-                    muscleId: "m_longissimus",
-                    movementId: "columna_vertebralis_thoracalis__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
-                    isPrimeMover: true,
-                    notes: ["ipsilaterale rotatie"],
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "m_longissimus__columna_vertebralis_lumbalis__extension",
                     jointId: "columna_vertebralis_lumbalis",
                     muscleId: "m_longissimus",
@@ -120,17 +109,6 @@ export default new Muscle(
                     muscleId: "m_longissimus",
                     movementId: "columna_vertebralis_lumbalis__lateroflexion",
                     isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
-                    id: "m_longissimus__columna_vertebralis_lumbalis__rotation",
-                    jointId: "columna_vertebralis_lumbalis",
-                    muscleId: "m_longissimus",
-                    movementId: "columna_vertebralis_lumbalis__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
-                    isPrimeMover: true,
-                    notes: ["ipsilaterale rotatie"],
                 }
             ),
         ],

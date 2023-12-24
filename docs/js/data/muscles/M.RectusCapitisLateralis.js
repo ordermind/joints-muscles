@@ -19,7 +19,7 @@ export default new Muscle(
                     jointId: "head_joints",
                     muscleId: "m_rectus_capitis_lateralis",
                     movementId: "head_joints__flexion",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(

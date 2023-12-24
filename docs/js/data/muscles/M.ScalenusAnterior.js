@@ -37,7 +37,8 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_scalenus_anterior",
                     movementId: "columna_vertebralis_cervicalis__rotation",
-                    isPrimeMover: true,
+                    movementLabelOverride: "ipsilaterale rotatie",
+                    isPrimeMover: false,
                     notes: ["ipsilaterale rotatie"],
                 }
             ),
