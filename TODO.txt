@@ -2,6 +2,7 @@
 - Lägg till sökfunktion
 - Kontrollera att alla uppgifter stämmer
 - Lägg till muskler för övriga regioner
+- Lägg till quizfråga för ROM för leder
 - Lägg till quiz för muskler. Lägg ledfunktioner och specialfunktioner i olika frågor så att jag kan ha bara två draggable containers per sida för de frågorna. Det gör det tekniskt enklare och är också lämpligt eftersom svaren kommer vara ganska långa.
 X Lägg till quiz för leder.
 X Lägg till bakgrund i draggable containers med små plus så att det syns tydligare att det är en särskild yta. Lägg till en fin liten 3d-border som en ram.
