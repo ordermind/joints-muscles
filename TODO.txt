@@ -1,9 +1,9 @@
-- Kontrollera att alla uppgifter stämmer
-- Lägg till sökfunktion
-- Lägg till muskler för övriga regioner
-- Lägg till quiz för muskler. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
-X Lägg till quiz för leder. Använd Dragula (https://bevacqua.github.io/dragula/) för drag/drop-funktionalitet. Jag har lagt till en ES6-kompatibel version i vendor.
+- Lägg till sökfunktion
+- Kontrollera att alla uppgifter stämmer
+- Lägg till muskler för övriga regioner
+- Lägg till quiz för muskler. Lägg ledfunktioner och specialfunktioner i olika frågor så att jag kan ha bara två draggable containers per sida för de frågorna. Det gör det tekniskt enklare och är också lämpligt eftersom svaren kommer vara ganska långa.
+X Lägg till quiz för leder.
 X Lägg till bakgrund i draggable containers med små plus så att det syns tydligare att det är en särskild yta. Lägg till en fin liten 3d-border som en ram.
 X Gör kolumnerna för draggable question lika stora med hjälp av flexbox align-items: stretch
 X Gör en slumpmässig array av movement ids, så att jag sedan kan köra map på den och veta om det är den sista frågan eller inte utan att resultatet sedan randomizas igen. På så sätt kan jag anpassa knapptexterna för att gå vidare till nästa fråga.
