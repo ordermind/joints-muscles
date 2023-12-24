@@ -29,22 +29,22 @@ export default class MuscleNameQuestionFactory {
             return otherMusclesWithSameFunctions;
         }
 
-        const otherMusclesWithSameJoints = Array.from(
-            new Set(
-                shuffle(
-                    quizMuscleFunctions
-                    .filter(muscleFunction => {
-                        return correctMuscle.functions.some(
-                            correctMuscleFunction => correctMuscleFunction.jointId === muscleFunction.jointId
-                            && correctMuscleFunction.muscleId !== muscleFunction.muscleId
-                            && !otherMusclesWithSameFunctions.some(otherMuscle => otherMuscle.id === muscleFunction.muscleId)
-                        );
-                    })
+        const otherMusclesWithSameJoints = shuffle(
+            Array.from(
+                new Set(
+                        quizMuscleFunctions
+                        .filter(muscleFunction => {
+                            return correctMuscle.functions.some(
+                                correctMuscleFunction => correctMuscleFunction.jointId === muscleFunction.jointId
+                                && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                                && !otherMusclesWithSameFunctions.some(otherMuscle => otherMuscle.id === muscleFunction.muscleId)
+                            );
+                        })
+                        .map(muscleFunction => muscles[muscleFunction.muscleId])
+                    )
                 )
-                .slice(0, this.#maxWrongAnswers - otherMusclesWithSameFunctions.length)
-                .map(muscleFunction => muscles[muscleFunction.muscleId])
             )
-        );
+            .slice(0, this.#maxWrongAnswers - otherMusclesWithSameFunctions.length);
 
         return [...otherMusclesWithSameFunctions, ...otherMusclesWithSameJoints];
     }
