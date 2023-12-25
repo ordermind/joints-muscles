@@ -59,7 +59,7 @@ export default new Muscle(
                 {
                     id: "m_semispinalis_thoracis__spine",
                     muscleId: "m_semispinalis_thoracis",
-                    functionDescription: "houdt de vorm van de wervelkolom in stand",
+                    functionDescription: "de vorm van de wervelkolom in stand houden",
                 }
             )
         ],

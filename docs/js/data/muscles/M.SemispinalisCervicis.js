@@ -39,7 +39,7 @@ export default new Muscle(
                 {
                     id: "m_semispinalis_cervicis__spine",
                     muscleId: "m_semispinalis_cervicis",
-                    functionDescription: "houdt de vorm van de wervelkolom in stand",
+                    functionDescription: "de vorm van de wervelkolom in stand houden",
                 }
             )
         ],

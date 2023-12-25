@@ -2,6 +2,7 @@
  * Shuffles an array.
  *
  * @param {array} array
+ * 
  * @returns a new, shuffled array (shallow copy).
  */
 export function shuffle(array) {
@@ -18,6 +19,19 @@ export function shuffle(array) {
         arrayCopy[j] = temp;
     }
     return arrayCopy;
+}
+
+/**
+ * Checks if there is an intersection between two arrays, i.e. they both contain the same value.
+ * 
+ * @param {array} array1 
+ * @param {array} array2
+ * 
+ * @returns boolean
+ */
+export function intersects(array1, array2) {
+    const set = new Set(array2);
+    return [...new Set(array1)].some(value => set.has(value));
 }
 
 /**

@@ -46,7 +46,7 @@ export default new Muscle(
                 {
                     id: "m_semispinalis_capitis__spine",
                     muscleId: "m_semispinalis_capitis",
-                    functionDescription: "houdt de vorm van de wervelkolom in stand",
+                    functionDescription: "de vorm van de wervelkolom in stand houden",
                 }
             )
         ],

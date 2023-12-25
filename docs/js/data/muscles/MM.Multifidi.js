@@ -79,7 +79,7 @@ export default new Muscle(
                 {
                     id: "mm_multifidi__spine_form",
                     muscleId: "mm_multifidi",
-                    functionDescription: "houden de vorm van de wervelkolom in stand",
+                    functionDescription: "de vorm van de wervelkolom in stand houden",
                 }
             )
         ],

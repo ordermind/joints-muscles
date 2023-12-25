@@ -1,19 +1,48 @@
 import NextQuestionButton from "../NextQuestionButton.js";
 import MultipleChoiceAnswer from "../MultipleChoiceAnswer.js";
 import MultipleChoiceQuestionSingleAnswer from "../MultipleChoiceQuestionSingleAnswer.js";
-import { shuffle } from "../../utils.js";
+import { shuffle, intersects } from "../../utils.js";
 import muscles from "../../../data/muscles.js";
 
 export default class MuscleNameQuestionFactory {
     #maxWrongAnswers = 5;
 
     #getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
+        
         function getOtherMusclesWithoutJointFunctions(ignoreMuscles) {
             return shuffle(
                 quizMuscles.filter(muscle => 
-                    muscle.functions.length === 0 
-                    && muscle.id !== correctMuscle.id
+                    muscle.id !== correctMuscle.id
                     && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
+                    && muscle.functions.length === 0
+                )
+            );
+        }
+
+        function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
+            if(!correctMuscle.specialFunctions.length) {
+                return [];
+            }
+
+            return shuffle(
+                quizMuscles.filter(muscle =>
+                    muscle.id !== correctMuscle.id
+                    && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
+                    && muscle.specialFunctions.length > 0
+                    && intersects(
+                        muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription), 
+                        correctMuscle.specialFunctions.map(specialFunction => specialFunction.functionDescription)
+                    )
+                )
+            );
+        }
+
+        function getOtherMusclesWithSpecialFunctions(ignoreMuscles) {
+            return shuffle(
+                quizMuscles.filter(muscle =>
+                    muscle.id !== correctMuscle.id
+                    && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
+                    && muscle.specialFunctions.length > 0
                 )
             );
         }
@@ -24,10 +53,10 @@ export default class MuscleNameQuestionFactory {
                     new Set(
                         quizMuscleFunctions
                             .filter(muscleFunction => {
-                                return correctMuscle.functions.some(
-                                    correctMuscleFunction => correctMuscleFunction.movementId === muscleFunction.movementId
-                                    && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                                return correctMuscle.functions.some(correctMuscleFunction =>
+                                    correctMuscleFunction.muscleId !== muscleFunction.muscleId
                                     && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscleFunction.muscleId)
+                                    && correctMuscleFunction.movementId === muscleFunction.movementId
                                 );
                             })
                             .map(muscleFunction => muscles[muscleFunction.muscleId])
@@ -42,10 +71,10 @@ export default class MuscleNameQuestionFactory {
                     new Set(
                             quizMuscleFunctions
                             .filter(muscleFunction => {
-                                return correctMuscle.functions.some(
-                                    correctMuscleFunction => correctMuscleFunction.jointId === muscleFunction.jointId
-                                    && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                                return correctMuscle.functions.some(correctMuscleFunction =>
+                                    correctMuscleFunction.muscleId !== muscleFunction.muscleId
                                     && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscleFunction.muscleId)
+                                    && correctMuscleFunction.jointId === muscleFunction.jointId
                                 );
                             })
                             .map(muscleFunction => muscles[muscleFunction.muscleId])
@@ -55,10 +84,20 @@ export default class MuscleNameQuestionFactory {
         }
 
         const callbacks = !correctMuscle.functions.length ? [
+            // If the correct muscle has no joint functions, assume that it has special functions
+            getOtherMusclesWithSameSpecialFunctions,
             getOtherMusclesWithoutJointFunctions,
-        ] : [
+            getOtherMusclesWithSpecialFunctions,
+        ] : !correctMuscle.specialFunctions.length ? [
+            // If the correct muscle has only joint functions, do not fetch muscles based on special functions
             getOtherMusclesWithSameJointFunctions,
             getOtherMusclesRelatedToSameJoints,
+        ] : [
+            // If the correct muscles has both joint functions and special functions, fetch muscles based on both joint functions and special functions
+            getOtherMusclesWithSameSpecialFunctions,
+            getOtherMusclesWithSameJointFunctions,
+            getOtherMusclesRelatedToSameJoints,
+            getOtherMusclesWithSpecialFunctions,
         ];
 
         let otherMuscles = [];

@@ -16,7 +16,7 @@ export default new Muscle(
                 {
                     id: "m_serratus_posterior_superior__ribs",
                     muscleId: "m_serratus_posterior_superior",
-                    functionDescription: "heft de ribben",
+                    functionDescription: "elevatie van de ribben (inspiratie)",
                 }
             )
         ],
