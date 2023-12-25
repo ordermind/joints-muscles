@@ -2,7 +2,9 @@ export default await Promise.all(
     [
         "M.Iliocostalis.js",
         "M.LevatorScapulae.js",
-        "M.Longissimus.js",
+        "M.LongissimusCapitis.js",
+        "M.LongissimusCervicis.js",
+        "M.LongissimusThoracis.js",
         "M.LongusCapitis.js",
         "M.LongusColli.js",
         "M.ObliquusCapitisInferior.js",
