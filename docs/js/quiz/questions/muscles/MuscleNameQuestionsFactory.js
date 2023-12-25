@@ -8,45 +8,70 @@ export default class MuscleNameQuestionFactory {
     #maxWrongAnswers = 5;
 
     #getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
-        if(!correctMuscle.functions.length) {
-            return quizMuscles.filter(muscle => muscle.functions.length === 0 && muscle.id !== correctMuscle.id);
+        function getOtherMusclesWithoutJointFunctions(ignoreMuscles) {
+            return shuffle(
+                quizMuscles.filter(muscle => 
+                    muscle.functions.length === 0 
+                    && muscle.id !== correctMuscle.id
+                    && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
+                )
+            );
         }
 
-        const otherMusclesWithSameFunctions = Array.from(
-            new Set(
-                quizMuscleFunctions
-                    .filter(muscleFunction => {
-                        return correctMuscle.functions.some(
-                            correctMuscleFunction => correctMuscleFunction.movementId === muscleFunction.movementId
-                            && correctMuscleFunction.muscleId !== muscleFunction.muscleId
-                        );
-                    })
-                    .map(muscleFunction => muscles[muscleFunction.muscleId])
-            )
-        );
-
-        if(otherMusclesWithSameFunctions.length >= this.#maxWrongAnswers) {
-            return otherMusclesWithSameFunctions;
-        }
-
-        const otherMusclesWithSameJoints = shuffle(
-            Array.from(
-                new Set(
+        function getOtherMusclesWithSameJointFunctions(ignoreMuscles) {
+            return shuffle(
+                Array.from(
+                    new Set(
                         quizMuscleFunctions
-                        .filter(muscleFunction => {
-                            return correctMuscle.functions.some(
-                                correctMuscleFunction => correctMuscleFunction.jointId === muscleFunction.jointId
-                                && correctMuscleFunction.muscleId !== muscleFunction.muscleId
-                                && !otherMusclesWithSameFunctions.some(otherMuscle => otherMuscle.id === muscleFunction.muscleId)
-                            );
-                        })
-                        .map(muscleFunction => muscles[muscleFunction.muscleId])
+                            .filter(muscleFunction => {
+                                return correctMuscle.functions.some(
+                                    correctMuscleFunction => correctMuscleFunction.movementId === muscleFunction.movementId
+                                    && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                                    && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscleFunction.muscleId)
+                                );
+                            })
+                            .map(muscleFunction => muscles[muscleFunction.muscleId])
                     )
                 )
-            )
-            .slice(0, this.#maxWrongAnswers - otherMusclesWithSameFunctions.length);
+            );
+        }
 
-        return [...otherMusclesWithSameFunctions, ...otherMusclesWithSameJoints];
+        function getOtherMusclesRelatedToSameJoints(ignoreMuscles) {
+            return shuffle(
+                Array.from(
+                    new Set(
+                            quizMuscleFunctions
+                            .filter(muscleFunction => {
+                                return correctMuscle.functions.some(
+                                    correctMuscleFunction => correctMuscleFunction.jointId === muscleFunction.jointId
+                                    && correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                                    && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscleFunction.muscleId)
+                                );
+                            })
+                            .map(muscleFunction => muscles[muscleFunction.muscleId])
+                        )
+                    )
+                );
+        }
+
+        const callbacks = !correctMuscle.functions.length ? [
+            getOtherMusclesWithoutJointFunctions,
+        ] : [
+            getOtherMusclesWithSameJointFunctions,
+            getOtherMusclesRelatedToSameJoints,
+        ];
+
+        let otherMuscles = [];
+
+        for(const callback of callbacks) {
+            otherMuscles = [...otherMuscles, ...callback(otherMuscles)];
+
+            if(otherMuscles.length >= this.#maxWrongAnswers) {
+                return otherMuscles.slice(0, this.#maxWrongAnswers);
+            }
+        }
+
+        return otherMuscles;
     }
 
     create({quizMuscles, quizMuscleFunctions}) {
