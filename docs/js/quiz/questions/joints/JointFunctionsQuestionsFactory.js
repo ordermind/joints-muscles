@@ -21,6 +21,10 @@ export default class JointFunctionsQuestionsFactory {
 
         let totalAnswersCount = Object.keys(answers).length;
 
+        if(totalAnswersCount >= maxAnswers) {
+            return answers;
+        }
+
         // Incorrect answers - other muscles for the same joint but for other movements
 
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.jointId === movement.jointId && muscleFunction.movementId !== movement.id)) {
@@ -61,13 +65,9 @@ export default class JointFunctionsQuestionsFactory {
             otherMuscles: {},
         };
 
-        correctSolution.primeMovers = {};
-
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover)) {
             correctSolution.primeMovers[muscleFunction.muscleId] = muscles[muscleFunction.muscleId].label;
         }
-
-        correctSolution.otherMuscles = {};
 
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && !muscleFunction.isPrimeMover)) {
             correctSolution.otherMuscles[muscleFunction.muscleId] = muscles[muscleFunction.muscleId].label;
