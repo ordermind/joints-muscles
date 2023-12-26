@@ -1,3 +1,6 @@
+- Lägg till stöd för att öppna länkar i en ny tabb utan att url:en gör att sidan i den nya tabben går sönder. Det finns olika sätt att lösa detta på:
+  - Event listener för scrollhjulsklick och ctrl + click: https://stackoverflow.com/questions/1795734/triggering-onclick-event-using-middle-click https://stackoverflow.com/questions/16190455/how-to-detect-controlclick-in-javascript-from-an-onclick-div-attribute
+  - Event listener för skapande och uppdatering av en tabb: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onCreated https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
 - Lägg till sökfunktion, alternativt lägg till en muskellista med filter för muskelnamn och lägg även till filter för lednamn på ledlistan. Lägg till primary links till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
 - Kontrollera att alla uppgifter stämmer
