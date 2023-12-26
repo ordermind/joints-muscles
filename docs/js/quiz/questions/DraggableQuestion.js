@@ -118,7 +118,7 @@ export default class DraggableQuestion {
             const answerElement = document.createElement("span");
             answerElement.classList.add("btn", "|", "draggable-element");
             answerElement.setAttribute("data-id", answer.id);
-            answerElement.textContent = answer.label;
+            answerElement.innerHTML = answer.label;
 
             poolDraggableContainer.appendChild(answerElement);
         }
