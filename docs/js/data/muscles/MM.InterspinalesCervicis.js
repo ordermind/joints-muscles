@@ -6,7 +6,7 @@ export default new Muscle(
         id: "mm_interspinales_cervicis",
         label: "mm. interspinales cervicis",
         origos: [
-            "processus spinosus",
+            "processi spinosi C3 - T2",
         ],
         insertions: [
             "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",

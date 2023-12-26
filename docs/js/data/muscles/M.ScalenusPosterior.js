@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_scalenus_posterior",
         label: "m. scalenus posterior",
         origos: [
-            "processus transversi C5-C7 (tubercula posteriora)"
+            "processus transversi C5 - C7",
         ],
         insertions: [
-            "costa 2 (3)",
+            "facies externa costarii 2",
         ],
         functions: [
             new JointMuscleFunction(

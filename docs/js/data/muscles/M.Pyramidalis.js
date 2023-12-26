@@ -6,6 +6,7 @@ export default new Muscle(
         id: "m_pyramidalis",
         label: "m. pyramidalis",
         origos: [
+            "crista pubica",
             "symphysis pubica",
         ],
         insertions: [
@@ -16,7 +17,7 @@ export default new Muscle(
                 {
                     id: "m_pyramidalis__linea_alba",
                     muscleId: "m_pyramidalis",
-                    functionDescription: "spant de linea alba",
+                    functionDescription: "de linea alba spannen",
                 }
             )
         ],

@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_rectus_capitis_posterior_major",
         label: "m. rectus capitis posterior major",
         origos: [
-            "processus spinosus van de axis",
+            "processus spinosus C2",
         ],
         insertions: [
-            "linea nuchae inferior (mediale 1/3 deel)"
+            "linea nuchae inferior (lateraal)",
         ],
         functions: [
             new JointMuscleFunction(

@@ -7,7 +7,7 @@ export default new Muscle(
         id: "mm_rotatores_longi",
         label: "mm. rotatores longi",
         origos: [
-            "processi transversi T2-T12",
+            "processi transversi T2 - T12",
         ],
         insertions: [
             "processus spinosus bij de <strong>2 niveaus</strong> hoger gelegen wervel",

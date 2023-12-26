@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_longissimus_cervicis",
         label: "m. longissimus cervicis",
         origos: [
-            "processi transversi T1-T5",
+            "processi transversi T1 - T5",
         ],
         insertions: [
-            "processi transversi C2-C6",
+            "processi transversi C2 - C6",
         ],
         functions: [
             new JointMuscleFunction(

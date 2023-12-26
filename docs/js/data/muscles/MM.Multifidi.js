@@ -7,7 +7,9 @@ export default new Muscle(
         id: "mm_multifidi",
         label: "mm. multifidi",
         origos: [
-            "processi transversi",
+            "processi transversi C4 - L5",
+            "os sacrum",
+            "spina iliaca posterior superior",
         ],
         insertions: [
             "processus spinosus bij een bovengelegen wervel (overspant 2-4 wervels)",

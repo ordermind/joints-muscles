@@ -7,11 +7,13 @@ export default new Muscle(
         id: "m_obliquus_internus_abdominis",
         label: "m. obliquus internus abdominis",
         origos: [
-            "crista iliaca",
+            "crista iliaca (anteriore 2/3 deel)",
+            "fascia thoracolumbalis",
         ],
         insertions: [
-            "costae 9-12 (onderrand)",
-            "via de rectusschede aan de linea alba",
+            "linea alba",
+            "margines costales inferiores (9)10 - 12",
+            "crista pubica",
         ],
         functions: [
             new JointMuscleFunction(

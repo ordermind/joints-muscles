@@ -6,10 +6,11 @@ export default new Muscle(
         id: "m_serratus_posterior_superior",
         label: "m. serratus posterior superior",
         origos: [
-            "processi spinosi C6-T2",
+            "processi spinosi C7 - T3",
+            "ligamentum nuchae",
         ],
         insertions: [
-            "costae 2-5"
+            "margines costales superiores 2 - 5",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

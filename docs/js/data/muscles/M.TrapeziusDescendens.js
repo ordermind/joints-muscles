@@ -7,9 +7,9 @@ export default new Muscle(
         id: "m_trapezius_descendens",
         label: "m. trapezius, pars descendens",
         origos: [
-            "linea nuchae superior",
+            "linea nuchae superior (mediaal)",
             "protuberantia occipitalis externa",
-            "lig. nuchae",
+            "ligamentum nuchae",
         ],
         insertions: [
             "extremitas acromialis claviculae",

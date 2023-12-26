@@ -7,14 +7,14 @@ export default new Muscle(
         id: "m_longus_colli",
         label: "m. longus colli",
         origos: [
-            "voorzijden van de wervellichamen C5-T3",
-            "processi transversi C3-C5",
-            "voorzijden van de wervellichamen T1-T3",
+            "processi transversi C3 - C5",
+            "facies anteriores corporum vertebralium C5 - T3",
+            "facies anteriores corporum vertebralium T1 - T3",
         ],
         insertions: [
-            "voorzijden van de wervellichamen C2-C4",
-            "tuberculum anterius van de atlas",
-            "processi transversi C5-C6",
+            "tuberculum anterius C1",
+            "facies anteriores corporum vertebralium C2 - C4",
+            "processi transversi C5 - C6",
         ],
         functions: [
             new JointMuscleFunction(

@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_rectus_capitis_posterior_minor",
         label: "m. rectus capitis posterior minor",
         origos: [
-            "tuberculum posterius van de atlas",
+            "tuberculum posterius C1",
         ],
         insertions: [
-            "linea nuchae inferior (mediale 1/3 deel)"
+            "linea nuchae inferior (mediaal)",
         ],
         functions: [
             new JointMuscleFunction(

@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_spinalis_thoracis",
         label: "m. spinalis thoracis",
         origos: [
-            "processi spinosi T11-L2",
+            "processi spinosi T11 - L2",
         ],
         insertions: [
-            "processi spinosi T2-T8"
+            "processi spinosi T2 - T8",
         ],
         functions: [
             new JointMuscleFunction(

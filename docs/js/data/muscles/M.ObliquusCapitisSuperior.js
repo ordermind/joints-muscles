@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_obliquus_capitis_superior",
         label: "m. obliquus capitis superior",
         origos: [
-            "processus transversus van de atlas",
+            "processus transversus C1",
         ],
         insertions: [
-            "linea nuchae inferior (middelste derde), boven de insertie van m. rectus capitis posterior major",
+            "os occipitale (tussen linea nuchae superior en linea nuchae inferior)",
         ],
         functions: [
             new JointMuscleFunction(

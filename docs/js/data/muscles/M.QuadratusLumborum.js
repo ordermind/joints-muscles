@@ -6,11 +6,11 @@ export default new Muscle(
         id: "m_quadratus_lumborum",
         label: "m. quadratus lumborum",
         origos: [
-            "crista iliaca (achterste deel)",
+            "crista iliaca (posterior)",
         ],
         insertions: [
-            "costa 12",
-            "processi costales L1-L4",
+            "margo costalis inferior 12",
+            "processi costarum L1 - L4",
         ],
         functions: [
             new JointMuscleFunction(

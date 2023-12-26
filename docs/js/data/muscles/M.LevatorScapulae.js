@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_levator_scapulae",
         label: "m. levator scapulae",
         origos: [
-            "processi transversi C1-C4",
+            "processi transversi C1 - C4",
         ],
         insertions: [
             "angulus superior scapulae",

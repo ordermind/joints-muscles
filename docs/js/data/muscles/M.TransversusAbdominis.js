@@ -6,15 +6,13 @@ export default new Muscle(
         id: "m_transversus_abdominis",
         label: "m. transversus abdominis",
         origos: [
-            "lig. inguinale (laterale 2/3 deel)",
-            "crista ilica (binnenrand)",
-            "ribkraakbeen van costae 7-12",
+            "crista ilica (anteriore 2/3 deel)",
+            "cartilagines costales 7 - 12",
             "fascia thoracolumbalis",
-            "diafragma (verweven)",
         ],
         insertions: [
             "linea alba",
-            "os pubis",
+            "crista pubica",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

@@ -7,12 +7,12 @@ export default new Muscle(
         id: "m_rectus_abdominis",
         label: "m. rectus abdominis",
         origos: [
-            "voorzijde ribkraakbeen costae 5-7",
-            "processus xiphoideus sterni",
+            "crista pubica",
+            "symphysis pubica",
         ],
         insertions: [
-            "symphysis pubica",
-            "bovenrand os pubis",
+            "cartilagines costales 5 - 7",
+            "processus xiphoideus sterni",
         ],
         functions: [
             new JointMuscleFunction(

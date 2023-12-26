@@ -6,11 +6,12 @@ export default new Muscle(
         id: "m_splenius_capitis",
         label: "m. splenius capitis",
         origos: [
-            "processi spinosi C3-T3",
+            "processi spinosi C7 - T3",
+            "ligamentum nuchae",
         ],
         insertions: [
-            "linea nuchae superior",
             "processus mastoideus",
+            "linea nuchae superior (lateraal)",
         ],
         functions: [
             new JointMuscleFunction(

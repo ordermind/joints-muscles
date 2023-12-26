@@ -6,7 +6,7 @@ export default new Muscle(
         id: "mm_intertransversarii_anteriores_cervicis",
         label: "mm. intertransversarii anteriores cervicis",
         origos: [
-            "processi transversi C2-T1",
+            "processi transversi C3 - T1",
         ],
         insertions: [
             "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",

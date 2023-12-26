@@ -6,7 +6,7 @@ export default new Muscle(
         id: "mm_interspinales_lumborum",
         label: "mm. interspinales lumborum",
         origos: [
-            "processus spinosus",
+            "processi spinosi T11 - L5",
         ],
         insertions: [
             "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",

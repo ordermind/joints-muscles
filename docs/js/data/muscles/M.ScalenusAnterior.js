@@ -7,10 +7,11 @@ export default new Muscle(
         id: "m_scalenus_anterior",
         label: "m. scalenus anterior",
         origos: [
-            "processi transversi C3-C6 (tubercula anteriora)"
+            "processi transversi C3 - C6",
         ],
         insertions: [
-            "costa 1",
+            "tuberculum musculi scaleni anterioris",
+            "margo costalis superior 1",
         ],
         functions: [
             new JointMuscleFunction(

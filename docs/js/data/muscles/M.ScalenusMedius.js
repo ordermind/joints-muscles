@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_scalenus_medius",
         label: "m. scalenus medius",
         origos: [
-            "processus transversi (C1) C2-C7 (tubercula posteriora)"
+            "processus transversi (C1)C2 - C7",
         ],
         insertions: [
-            "costa 1",
+            "margo costalis superior 1",
         ],
         functions: [
             new JointMuscleFunction(

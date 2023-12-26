@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_rectus_capitis_lateralis",
         label: "m. rectus capitis lateralis",
         origos: [
-            "processus transversus van de atlas",
+            "processus transversus C1",
         ],
         insertions: [
-            "os occipitale, pars basilaris"
+            "processus jugularis ossis occipitalis",
         ],
         functions: [
             new JointMuscleFunction(

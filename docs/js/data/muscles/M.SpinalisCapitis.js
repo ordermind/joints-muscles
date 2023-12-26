@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_spinalis_capitis",
         label: "m. spinalis capitis",
         origos: [
-            "processi spinosi C7-T1"
+            "processi spinosi C7 - T1"
         ],
         insertions: [
-            "os occipitale (mediaal)"
+            "os occipitale (mediaal)",
         ],
         functions: [
             new JointMuscleFunction(

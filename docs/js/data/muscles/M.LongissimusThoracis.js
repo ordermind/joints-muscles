@@ -6,15 +6,16 @@ export default new Muscle(
         id: "m_longissimus_thoracis",
         label: "m. longissimus thoracis",
         origos: [
-            "os sacrum",
-            "crista iliaca",
+            "crista sacralis medialis",
+            "facies dorsalis ossis sacri",
+            "crista iliaca (mediaal)",
             "fascia thoracolumbalis",
-            "processi spinosi et transversi L1-L5",
+            "processi spinosi et transversi L1 - L5",
         ],
         insertions: [           
-            "processi transversi L1-L5",
-            "processi transversi T1-T12",
-            "anguli costarum 7-12",
+            "processi transversi L1 - L5",
+            "processi transversi T1 - T12",
+            "anguli costarum 7 - 12",
         ],
         functions: [
             new JointMuscleFunction(

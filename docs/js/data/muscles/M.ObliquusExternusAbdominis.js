@@ -7,11 +7,11 @@ export default new Muscle(
         id: "m_obliquus_externus_abdominis",
         label: "m. obliquus externus abdominis",
         origos: [
-            "costae 5-12 (buitenzijde)",
+            "facies externae costarum 5 - 12",
         ],
         insertions: [
-            "via de rectusschede aan de linea alba",
-            "crista iliaca (voorste 2/3 deel)",
+            "linea alba",
+            "crista iliaca (anteriore 2/3 deel)",
             "tuberculum pubicum",
         ],
         functions: [

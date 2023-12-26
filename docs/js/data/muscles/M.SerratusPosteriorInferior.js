@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_serratus_posterior_inferior",
         label: "m. serratus posterior inferior",
         origos: [
-            "fascia thoracolumbalis (ter hoogte van T11-L2)",
+            "processi spinosi T11 - L2",
         ],
         insertions: [
-            "costae 9-12"
+            "margines costales inferiores 9 - 12",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

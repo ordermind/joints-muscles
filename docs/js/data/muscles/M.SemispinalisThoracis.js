@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_semispinalis_thoracis",
         label: "m. semispinalis thoracis",
         origos: [
-            "processi transversi T6-T12",
+            "processi transversi T6 - T10",
         ],
         insertions: [
-            "processus spinosus bij een bovengelegen wervel C6-T4",
+            "processi spinosi C6 - T4",
         ],
         functions: [
             new JointMuscleFunction(

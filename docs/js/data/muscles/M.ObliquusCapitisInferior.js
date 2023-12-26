@@ -7,10 +7,10 @@ export default new Muscle(
         id: "m_obliquus_capitis_inferior",
         label: "m. obliquus capitis inferior",
         origos: [
-            "processus spinosus van de axis",
+            "processus spinosus C2",
         ],
         insertions: [
-            "processus transversus van de atlas",
+            "processus transversus C1",
         ],
         functions: [
             new JointMuscleFunction(

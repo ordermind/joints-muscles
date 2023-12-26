@@ -7,12 +7,12 @@ export default new Muscle(
         id: "m_sternocleidomastoideus",
         label: "m. sternocleidomastoideus",
         origos: [
-            "pars sternalis: manubrium sterni",
-            "pars clavicularis: extremitas sternalis claviculae",
+            "manubrium sterni",
+            "extremitas sternalis claviculae",
         ],
         insertions: [
             "processus mastoideus",
-            "linae nuchae superior (laterale deel)",
+            "linae nuchae superior (lateraal)",
         ],
         functions: [
             new JointMuscleFunction(

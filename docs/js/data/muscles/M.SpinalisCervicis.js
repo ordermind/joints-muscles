@@ -6,11 +6,11 @@ export default new Muscle(
         id: "m_spinalis_cervicis",
         label: "m. spinalis cervicis",
         origos: [
-            "processi spinosi C7-T1",
-            "lig. nuchae",
+            "processi spinosi C7 - T1",
+            "ligamentum nuchae",
         ],
         insertions: [
-            "processi spinosi C2-C4"
+            "processi spinosi C2 - C4",
         ],
         functions: [
             new JointMuscleFunction(

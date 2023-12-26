@@ -7,10 +7,11 @@ export default new Muscle(
         id: "m_rectus_capitis_anterior",
         label: "m. rectus capitis anterior",
         origos: [
-            "massa lateralis van de atlas",
+            "massa lateralis C1",
+            "processus transversus C1",
         ],
         insertions: [
-            "os occipitale, pars basilaris"
+            "os occipitale, pars basilaris",
         ],
         functions: [
             new JointMuscleFunction(
