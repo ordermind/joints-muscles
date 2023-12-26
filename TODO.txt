@@ -1,5 +1,5 @@
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
-- Lägg till sökfunktion
+- Lägg till sökfunktion, alternativt lägg till en muskellista med filter för muskelnamn och lägg även till filter för lednamn på ledlistan. Lägg till primary links till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
 - Kontrollera att alla uppgifter stämmer
 - Lägg till muskler för övriga regioner
 - Lägg till quizfråga för ROM för leder
