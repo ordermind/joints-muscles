@@ -35,7 +35,7 @@ export default class MuscleNameQuestionFactory {
                     correctAnswer,
                     wrongAnswers,
                     question: `
-<h1 id="question-text" class="display-3 fs-3 mb-1 mt-n4 pt-4">Welke spier is dit?</h1>
+<h1 id="question-text" class="display-3 fs-3 mb-2 mt-n4 pt-4">Welke spier is dit?</h1>
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>

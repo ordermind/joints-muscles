@@ -1,6 +1,5 @@
 import DraggableQuestion from "../DraggableQuestion.js";
 import getOtherMusclesWithSimilarFunctions from "./utils.js";
-import { shuffle } from "../../utils.js";
 import NextQuestionButton from "../NextQuestionButton.js";
 import joints from "../../../data/joints.js";
 
@@ -29,6 +28,11 @@ export default class MuscleJointFunctionsQuestionsFactory {
 
                 if(!answers.hasOwnProperty(answerLabel)) {
                     answers[answerLabel] = answerLabel;
+                    totalAnswersCount++;
+                }
+
+                if(totalAnswersCount >= this.#maxAnswers) {
+                    return answers;
                 }
             }
         }
@@ -69,20 +73,19 @@ export default class MuscleJointFunctionsQuestionsFactory {
             questions[muscle.id] = new DraggableQuestion(
                 {
                     question: `
-<h1 class="display-3 fs-3 mb-1">${muscle.label}</h1>
+<h1 class="display-3 fs-3 mb-2">${muscle.label}</h1>
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${muscle.image}" />
 </div>
 <h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke gewrichtsfuncties heeft deze spier? Sleep die functies naar het juiste vak.</h2>
                     `.trim(),
                     regions: [{id: "primeMover", label: "Prime mover"}, {id: "assistant", label: "Assisteert"}],
-                    answers: shuffle(
-                        Object.entries(
-                            this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
-                        ).map(([id, label]) => {
-                            return {id, label};
-                        })
-                    ),
+                    answers: Object.entries(
+                        this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
+                    ).map(([id, label]) => {
+                        return {id, label};
+                    })
+                    .sort((a, b) => a.label.localeCompare(b.label)),
                     correctSolution: correctSolution,
                         nextQuestionButton: new NextQuestionButton(
                             {

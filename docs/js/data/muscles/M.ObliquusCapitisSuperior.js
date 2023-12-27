@@ -37,7 +37,7 @@ export default new Muscle(
                 {
                     id: "m_obliquus_capitis_superior__proprioception",
                     muscleId: "m_obliquus_capitis_superior",
-                    functionDescription: "Proprioceptieve informatie uit de nekregio leveren, onder andere via de spierspoeltjes"
+                    functionDescription: "proprioceptieve informatie uit de nekregio leveren, onder andere via de spierspoeltjes"
                 }
             )
         ],

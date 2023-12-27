@@ -3,16 +3,6 @@ import { shuffle, intersects } from "../../utils.js";
 
 export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
     
-    function getOtherMusclesWithoutJointFunctions(ignoreMuscles) {
-        return shuffle(
-            quizMuscles.filter(muscle => 
-                muscle.id !== correctMuscle.id
-                && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
-                && muscle.functions.length === 0
-            )
-        );
-    }
-
     function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
         if(!correctMuscle.specialFunctions.length) {
             return [];
@@ -80,7 +70,6 @@ export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizM
     const callbacks = !correctMuscle.functions.length ? [
         // If the correct muscle has no joint functions, assume that it has special functions
         getOtherMusclesWithSameSpecialFunctions,
-        getOtherMusclesWithoutJointFunctions,
         getOtherMusclesWithSpecialFunctions,
     ] : !correctMuscle.specialFunctions.length ? [
         // If the correct muscle has only joint functions, do not fetch muscles based on special functions

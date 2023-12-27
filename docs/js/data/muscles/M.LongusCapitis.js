@@ -39,7 +39,7 @@ export default new Muscle(
                 {
                     id: "m_longus_capitis__proprioception",
                     muscleId: "m_longus_capitis",
-                    functionDescription: "Proprioceptieve informatie uit de nekregio leveren, onder andere via de spierspoeltjes"
+                    functionDescription: "proprioceptieve informatie uit de nekregio leveren, onder andere via de spierspoeltjes"
                 }
             )
         ],

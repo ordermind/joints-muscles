@@ -59,7 +59,7 @@ export default new Muscle(
                 {
                     id: "m_sternocleidomastoideus__breathing",
                     muscleId: "m_sternocleidomastoideus",
-                    functionDescription: "De spier kan, bij gefixeerde insertie, het sternum en de clavicula fixeren / heffen ten behoeve van inspiratie."
+                    functionDescription: "bij gefixeerde insertie het sternum en de clavicula fixeren / heffen ten behoeve van inspiratie."
                 }
             )
         ],

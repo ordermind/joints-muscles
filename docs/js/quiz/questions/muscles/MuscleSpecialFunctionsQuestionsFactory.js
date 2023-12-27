@@ -3,11 +3,11 @@ import getOtherMusclesWithSimilarFunctions from "./utils.js";
 import { shuffle } from "../../utils.js";
 import NextQuestionButton from "../NextQuestionButton.js";
 
-export default class MuscleAnatomyQuestionFactory {
+export default class MuscleSpecialFunctionsQuestionsFactory {
     #maxAnswers = 20;
 
     #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
-        let answers = {...correctSolution.origo, ...correctSolution.insertion};
+        let answers = {...correctSolution.specialFunctions};
 
         let totalAnswersCount = Object.keys(answers).length;
 
@@ -17,20 +17,9 @@ export default class MuscleAnatomyQuestionFactory {
 
         const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
         for(const otherMuscle of otherMuscles) {
-            for(const origoLabel of otherMuscle.origos) {
-                if(!answers.hasOwnProperty(origoLabel)) {
-                    answers[origoLabel] = origoLabel;
-                    totalAnswersCount++;
-                }
-
-                if(totalAnswersCount >= this.#maxAnswers) {
-                    return answers;
-                }
-            }
-
-            for(const insertionLabel of otherMuscle.insertions) {
-                if(!answers.hasOwnProperty(insertionLabel)) {
-                    answers[insertionLabel] = insertionLabel;
+            for(const specialFunction of otherMuscle.specialFunctions) {
+                if(!answers.hasOwnProperty(specialFunction.functionDescription)) {
+                    answers[specialFunction.functionDescription] = specialFunction.functionDescription;
                     totalAnswersCount++;
                 }
 
@@ -41,21 +30,15 @@ export default class MuscleAnatomyQuestionFactory {
         }
 
         return answers;
-        
     }
 
     #createCorrectSolution(correctMuscle) {
         let correctSolution = {
-            origo: {},
-            insertion: {},
+            specialFunctions: {},
         };
 
-        for(const origoLabel of correctMuscle.origos) {
-            correctSolution.origo[origoLabel] = origoLabel;
-        }
-
-        for(const insertionLabel of correctMuscle.insertions) {
-            correctSolution.insertion[insertionLabel] = insertionLabel;
+        for(const specialFunction of correctMuscle.specialFunctions) {
+            correctSolution.specialFunctions[specialFunction.functionDescription] = specialFunction.functionDescription;
         }
 
         return correctSolution;
@@ -65,8 +48,11 @@ export default class MuscleAnatomyQuestionFactory {
         let questions = {};
 
         for(const muscle of quizMuscles) {
+            if(!muscle.specialFunctions.length) {
+                continue;
+            }
+
             const correctSolution = this.#createCorrectSolution(muscle);
-            const hasJointFunctions = muscle.functions.length > 0;
 
             questions[muscle.id] = new DraggableQuestion(
                 {
@@ -75,9 +61,9 @@ export default class MuscleAnatomyQuestionFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${muscle.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat zijn de origo en insertie van deze spier? Sleep die anatomische structuren naar het juiste vak.</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke overige functies heeft deze spier? Sleep die functies naar het juiste vak.</h2>
                     `.trim(),
-                    regions: [{id: "origo", label: "Origo"}, {id: "insertion", label: "Insertie"}],
+                    regions: [{id: "specialFunctions", label: "Overige functies"}],
                     answers: shuffle(
                         Object.entries(
                             this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
@@ -88,7 +74,7 @@ export default class MuscleAnatomyQuestionFactory {
                     correctSolution: correctSolution,
                         nextQuestionButton: new NextQuestionButton(
                             {
-                                buttonText: hasJointFunctions ? "Gewrichtsfuncties" : "Overige functies",
+                                buttonText: "Volgende spier",
                             }
                         ),
                 }

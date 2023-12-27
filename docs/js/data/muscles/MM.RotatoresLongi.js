@@ -39,7 +39,7 @@ export default new Muscle(
                 {
                     id: "mm_rotatores_longi__spine",
                     muscleId: "mm_rotatores_longi",
-                    functionDescription: "handhaven van de stand van de wervelkolom"
+                    functionDescription: "de vorm van de wervelkolom in stand houden"
                 }
             )
         ],

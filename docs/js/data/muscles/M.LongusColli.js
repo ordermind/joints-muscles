@@ -51,7 +51,7 @@ export default new Muscle(
                 {
                     id: "m_longus_colli__proprioception",
                     muscleId: "m_longus_colli",
-                    functionDescription: "Proprioceptieve informatie uit de nekregio leveren, onder andere via de spierspoeltjes"
+                    functionDescription: "proprioceptieve informatie uit de nekregio leveren, onder andere via de spierspoeltjes"
                 }
             )
         ],
