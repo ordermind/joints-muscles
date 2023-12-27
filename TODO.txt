@@ -3,7 +3,8 @@
   - Event listener för skapande och uppdatering av en tabb: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onCreated https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
 - Lägg till sökfunktion, alternativt lägg till en muskellista med filter för muskelnamn och lägg även till filter för lednamn på ledlistan. Lägg till primary links till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
-- Kontrollera att alla uppgifter stämmer
+- Dela upp quizzes efter sektion så att man kan välja att genomgå wervelkolom, bovenste extremiteit, onderste extremiteit eller het hele lichaam
+- När jag hämtar muskler med liknande funktioner, prioritera de funktioner i ursprungsmuskeln som är prime mover-funktioner.
 - Lägg till muskler för övriga regioner
 X Lägg till quizfråga för ROM för leder
 X Lägg till quiz för muskler. Lägg ledfunktioner och specialfunktioner i olika frågor så att jag kan ha bara två draggable containers per sida för de frågorna. Det gör det tekniskt enklare och är också lämpligt eftersom svaren kommer vara ganska långa.
