@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_scalenus_posterior",
         label: "m. scalenus posterior",
         origos: [
-            "processus transversi C5 - C7",
+            "processi transversi C5 - C7",
         ],
         insertions: [
             "facies externa costarii 2",
