@@ -5,6 +5,7 @@ export default new Muscle(
     {
         id: "m_pyramidalis",
         label: "m. pyramidalis",
+        regionIds: ["spine"],
         origos: [
             "crista pubica",
             "symphysis pubica",

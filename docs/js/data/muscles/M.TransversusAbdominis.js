@@ -5,6 +5,7 @@ export default new Muscle(
     {
         id: "m_transversus_abdominis",
         label: "m. transversus abdominis",
+        regionIds: ["spine"],
         origos: [
             "crista iliaca (anteriore 2/3 deel)",
             "cartilagines costales 7 - 12",

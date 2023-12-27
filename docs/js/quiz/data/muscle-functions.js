@@ -1,5 +1,9 @@
 import muscleFunctions from "../../data/muscle-functions.js";
-import joints from "./joints.js";
+import quizJoints from "./joints.js";
+import quizMuscles from "./muscles.js";
 
 export default muscleFunctions
-    .filter(muscleFunction => joints.some(joint => joint.id === muscleFunction.jointId));
+    .filter(muscleFunction =>
+        quizJoints.some(joint => joint.id === muscleFunction.jointId)
+        && quizMuscles.some(muscle => muscle.id === muscleFunction.muscleId)
+    );

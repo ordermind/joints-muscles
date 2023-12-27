@@ -1,6 +1,9 @@
+import joints from "../data/joints.js";
+
 export default class Muscle {
     #id;
     #label;
+    #regionIdsOverride;
     #origos;
     #insertions;
     #functions;
@@ -8,9 +11,10 @@ export default class Muscle {
     #image;
     #description;
 
-    constructor({id, label, description = '', origos = [], insertions = [], functions = [], specialFunctions = [], image = ''}) {
+    constructor({id, label, regionIds = [], description = '', origos = [], insertions = [], functions = [], specialFunctions = [], image = ''}) {
         this.#id = id;
         this.#label = label;
+        this.#regionIdsOverride = regionIds;
         this.#origos = origos;
         this.#insertions = insertions;
         this.#functions = functions;
@@ -49,5 +53,19 @@ export default class Muscle {
 
     get description() {
         return this.#description;
+    }
+
+    get regionIds() {
+        if(this.#regionIdsOverride.length) {
+            return this.#regionIdsOverride;
+        }
+
+        if(this.functions.length) {
+            return Array.from(
+                new Set(this.functions.map(jointFunction => joints[jointFunction.jointId].regionId))
+            );
+        }
+
+        throw new Error(`The muscle ${this.label} does not have any joint functions. Please set the region ids manually.`);
     }
 }

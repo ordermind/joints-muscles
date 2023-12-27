@@ -5,6 +5,7 @@ export default new Muscle(
     {
         id: "m_serratus_posterior_inferior",
         label: "m. serratus posterior inferior",
+        regionIds: ["spine"],
         origos: [
             "processi spinosi T11 - L2",
         ],
