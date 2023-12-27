@@ -9,7 +9,7 @@ export default new Muscle(
             "processi costarum L2 - L5",
         ],
         insertions: [
-            "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",
+            "processus costarii bij de <strong>eerstvolgende</strong> hoger gelegen wervel",
         ],
         functions: [
             new JointMuscleFunction(
