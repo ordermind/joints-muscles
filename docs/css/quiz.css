@@ -71,3 +71,19 @@
 .draggable-element.gu-mirror {
     cursor: grabbing;
 }
+
+/** Multiple text input question **/
+
+.page-quiz .multiple-text-input-question .correct-answer {
+    outline: 4px ridge #00b300;
+}
+
+.page-quiz .multiple-text-input-question .incorrect-answer {
+    outline: 4px ridge #fd0303;
+}
+
+/** ROM question **/
+
+.question-rom .answers input[type="text"] {
+    width: 5rem;
+}

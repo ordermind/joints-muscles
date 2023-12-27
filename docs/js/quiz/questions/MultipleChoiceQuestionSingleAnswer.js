@@ -5,13 +5,15 @@ export default class MultipleChoiceQuestionSingleAnswer {
     #correctAnswer;
     #wrongAnswers;
     #question;
-    #nextQuestionButton
+    #nextQuestionButton;
+    #wrapperClasses;
 
-    constructor({correctAnswer, wrongAnswers, question, nextQuestionButton}) {
+    constructor({correctAnswer, wrongAnswers, question, nextQuestionButton, wrapperClasses = []}) {
         this.#correctAnswer = correctAnswer;
         this.#wrongAnswers = wrongAnswers;
         this.#question = question;
         this.#nextQuestionButton = nextQuestionButton;
+        this.#wrapperClasses = wrapperClasses;
     }
 
     #onSelectAnswer(e) {
@@ -24,7 +26,7 @@ export default class MultipleChoiceQuestionSingleAnswer {
         }
     }
 
-    render() {
+    render(parentElement) {
         const answers = shuffle([
             this.#correctAnswer,
             ...this.#wrongAnswers,
@@ -39,7 +41,7 @@ for(const answer of answers) {
 
     content += `
     <div class="form-check mt-2 mb-2 p-0 ${answerClass}">
-        <input class="btn-check" type="radio" name="answer" id="${answer.id}">
+        <input class="btn-check" type="radio" name="answer" id="${answer.id}" />
         <label class="btn btn-outline-secondary w-100" for="${answer.id}">${answer.label}</label>
     </div>
     `.trim();
@@ -49,7 +51,7 @@ for(const answer of answers) {
         `.trim();
 
         const wrapper = document.createElement('div');
-        wrapper.classList.add("question", "text-center");
+        wrapper.classList.add("question", "text-center", ...this.#wrapperClasses);
         wrapper.innerHTML = content;
 
         this.#nextQuestionButton.render(wrapper);
@@ -58,11 +60,11 @@ for(const answer of answers) {
             radioElement.addEventListener("change", this.#onSelectAnswer);
         }
 
-        return wrapper;
+        parentElement.appendChild(wrapper);
     }
 
     cleanUp() {
-        for(const radioElement of document.querySelectorAll(`input[type="radio"][name="answer"]`)) {
+        for(const radioElement of document.querySelectorAll(`.multiple-choice input[type="radio"][name="answer"]`)) {
             radioElement.removeEventListener("change", this.#onSelectAnswer);
         }
 

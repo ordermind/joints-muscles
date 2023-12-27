@@ -7,7 +7,12 @@ export default class JointNameQuestionsFactory {
     #maxWrongAnswers = 5;
 
     create({joints}) {
-        return joints.map(correctJoint => {
+        const questions = [];
+
+        for(const [index, correctJoint] of joints.entries()) {
+            const hasMovements = correctJoint.movements.length > 0;
+            const isLastJoint = index >= joints.length - 1;
+
             const otherJointsInTheSameRegion = joints
                 .filter(joint => joint.regionId === correctJoint.regionId && joint.id !== correctJoint.id);
 
@@ -29,7 +34,7 @@ export default class JointNameQuestionsFactory {
                     }
                 ));
 
-            return new MultipleChoiceQuestionSingleAnswer(
+            questions.push(new MultipleChoiceQuestionSingleAnswer(
                 {
                     correctAnswer,
                     wrongAnswers,
@@ -39,9 +44,11 @@ export default class JointNameQuestionsFactory {
     <img class="quiz-image" src="${correctJoint.image}" />
 </div>
                     `.trim(),
-                    nextQuestionButton: new NextQuestionButton({buttonText: "Spierfuncties"}),
+                    nextQuestionButton: new NextQuestionButton({buttonText: hasMovements ? "Range of Motion" : isLastJoint ? "Klaar!" : "Volgend gewricht"}),
                 }
-            );
-        });
+            ));
+        }
+
+        return questions;
     }
 }

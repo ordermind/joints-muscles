@@ -92,7 +92,7 @@ export default class JointFunctionsQuestionsFactory {
                 jointQuestions.push(new DraggableQuestion(
                     {
                         question: `
-<h1 class="display-3 fs-3 mb-1">${joint.shortLabel}</h1>
+<h1 class="display-3 fs-3 mb-2">${joint.shortLabel}</h1>
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${joint.image}" />
 </div>

@@ -73,11 +73,9 @@ export default class BaseQuiz {
     }
 
     #renderQuestion() {
-        const content = this.#questions[this.#currentQuestionIndex].render();
-
         removeChildren(this.#wrapper);
 
-        this.#wrapper.appendChild(content);
+        this.#questions[this.#currentQuestionIndex].render(this.#wrapper);
     }
 
     start(parentElement) {

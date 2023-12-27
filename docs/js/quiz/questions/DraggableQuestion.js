@@ -8,15 +8,17 @@ export default class DraggableQuestion {
     #answers;
     #correctSolution;
     #nextQuestionButton;
+    #wrapperClasses;
 
     #dragula;
 
-    constructor({question, regions, answers, correctSolution, nextQuestionButton}) {
+    constructor({question, regions, answers, correctSolution, nextQuestionButton, wrapperClasses = []}) {
         this.#question = question;
         this.#regions = regions;
         this.#answers = answers;
         this.#correctSolution = correctSolution;
         this.#nextQuestionButton = nextQuestionButton;
+        this.#wrapperClasses = wrapperClasses;
 
         this.onDraggableDrop = this.onDraggableDrop.bind(this);
         this.onQuestionAnsweredCorrectly = this.onQuestionAnsweredCorrectly.bind(this);
@@ -86,11 +88,11 @@ export default class DraggableQuestion {
         }
     }
 
-    render() {
+    render(parentElement) {
         const draggableContainers = [];
 
         let wrapper = document.createElement("div");
-        wrapper.classList.add("question", "draggable-question", "text-center");
+        wrapper.classList.add("question", "draggable-question", "text-center", ...this.#wrapperClasses);
         wrapper.innerHTML = this.#question;
 
         const regionLabelWrapper = document.createElement("div");
@@ -152,7 +154,7 @@ export default class DraggableQuestion {
         this.#dragula = dragula(draggableContainers)
             .on("drop", this.onDraggableDrop);
 
-        return wrapper;
+        parentElement.appendChild(wrapper);
     }
 
     cleanUp() {
