@@ -56,6 +56,15 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
+                    id: "m_trapezius_descendens__columna_vertebralis_cervicalis__lateroflexion",
+                    jointId: "columna_vertebralis_cervicalis",
+                    muscleId: "m_trapezius_descendens",
+                    movementId: "columna_vertebralis_cervicalis__lateroflexion",
+                    isPrimeMover: false,
+                }
+            ),
+            new JointMuscleFunction(
+                {
                     id: "m_trapezius_descendens__shoulder_girdle__retraction",
                     jointId: "shoulder_girdle",
                     muscleId: "m_trapezius_descendens",
