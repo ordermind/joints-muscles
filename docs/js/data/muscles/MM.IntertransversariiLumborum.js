@@ -6,7 +6,7 @@ export default new Muscle(
         id: "mm_intertransversarii_lumborum",
         label: "mm. intertransversarii lumborum",
         origos: [
-            "processi transversi L2 - L5",
+            "processi costarum L2 - L5",
         ],
         insertions: [
             "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",

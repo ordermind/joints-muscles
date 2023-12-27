@@ -13,7 +13,7 @@ export default new Muscle(
             "processi spinosi et transversi L1 - L5",
         ],
         insertions: [           
-            "processi transversi L1 - L5",
+            "processi costarum L1 - L5",
             "processi transversi T1 - T12",
             "anguli costarum 7 - 12",
         ],
