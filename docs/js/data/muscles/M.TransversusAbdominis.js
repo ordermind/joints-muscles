@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_transversus_abdominis",
         label: "m. transversus abdominis",
         origos: [
-            "crista ilica (anteriore 2/3 deel)",
+            "crista iliaca (anteriore 2/3 deel)",
             "cartilagines costales 7 - 12",
             "fascia thoracolumbalis",
         ],
