@@ -92,7 +92,7 @@ export default class MusclePage {
                 <tr>
                     <th>Gewricht</th>
                     <th>Prime mover</th>
-                    <th>Helpt mee</th>
+                    <th>Assisteert</th>
                 </tr>
                 ${this.#createJointFunctionsRows(muscle, joints).join("")}
             </table>
