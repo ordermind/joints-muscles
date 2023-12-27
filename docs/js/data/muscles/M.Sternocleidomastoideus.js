@@ -12,7 +12,7 @@ export default new Muscle(
         ],
         insertions: [
             "processus mastoideus",
-            "linae nuchae superior (lateraal)",
+            "linea nuchae superior (lateraal)",
         ],
         functions: [
             new JointMuscleFunction(
