@@ -47,7 +47,7 @@ export default class DraggableQuestion {
             currentSolution[regionId] = {};
 
             for(const draggableElement of draggableContainer.querySelectorAll(".draggable-element")) {
-                currentSolution[regionId][draggableElement.getAttribute("data-id")] = draggableElement.innerText;
+                currentSolution[regionId][draggableElement.getAttribute("data-id")] = draggableElement.innerHTML;
             }
         }
 
