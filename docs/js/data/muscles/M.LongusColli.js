@@ -9,7 +9,6 @@ export default new Muscle(
         origos: [
             "processi transversi C3 - C5",
             "facies anteriores corporum vertebralium C5 - T3",
-            "facies anteriores corporum vertebralium T1 - T3",
         ],
         insertions: [
             "tuberculum anterius C1",
