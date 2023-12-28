@@ -1,6 +1,6 @@
 import InternalLink from "./data-types/InternalLink.js";
 import jointTypes from "./data/joint-types.js";
-import joints from "./data/joints.js";
+import { objJoints } from "./data/joints.js";
 import muscles from "./data/muscles.js";
 import { removeChildren } from "./utils.js";
 
@@ -14,7 +14,7 @@ function createPathFromInternalLink(link) {
     }
 
     if(link.type === 'Joint') {
-        if(joints.hasOwnProperty(link.targetId)) {
+        if(objJoints.hasOwnProperty(link.targetId)) {
             return `/joints/${link.targetId}`;
         }
 
@@ -91,4 +91,3 @@ export function renderPage(content) {
         mainElement.append(...getMain(content.main));
     }
 }
-

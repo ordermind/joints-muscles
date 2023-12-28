@@ -18,10 +18,10 @@ export default class JointsListPage {
         return output;
     }
 
-    #createRows(joints, jointTypes) {
+    #createRows(arrJoints, jointTypes) {
         let rows = [];
 
-        for(const [_, joint] of Object.entries(joints)) {
+        for(const joint of arrJoints) {
             let row = `
 <tr>
     <td>[Link type="Joint" targetId="${joint.id}" label="${joint.shortLabel}"]</td>
@@ -38,7 +38,7 @@ export default class JointsListPage {
         return rows;
     }
 
-    render({joints, jointTypes}) {
+    render({arrJoints, jointTypes}) {
         const content = `
     <h1 class="display-1 fs-1">Gewrichten</h1>
     <table class="table">
@@ -49,7 +49,7 @@ export default class JointsListPage {
             <th>MLPP</th>
             <th>Bewegingen</th>
         </tr>
-        ${this.#createRows(joints, jointTypes).join("")}
+        ${this.#createRows(arrJoints, jointTypes).join("")}
     </table>
         `.trim();
 
@@ -75,4 +75,3 @@ export default class JointsListPage {
         }
     }
 }
-

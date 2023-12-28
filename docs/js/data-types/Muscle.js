@@ -1,4 +1,4 @@
-import joints from "../data/joints.js";
+import { objJoints } from "../data/joints.js";
 
 export default class Muscle {
     #id;
@@ -62,7 +62,7 @@ export default class Muscle {
 
         if(this.functions.length) {
             return Array.from(
-                new Set(this.functions.map(jointFunction => joints[jointFunction.jointId].regionId))
+                new Set(this.functions.map(jointFunction => objJoints[jointFunction.jointId].regionId))
             );
         }
 

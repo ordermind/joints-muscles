@@ -6,6 +6,8 @@
 - Dela upp quizzes efter sektion så att man kan välja att genomgå romp (för muskler) / wervelkolom (för leder), bovenste extremiteit, onderste extremiteit eller het hele lichaam.
 - När jag hämtar muskler med liknande funktioner, prioritera de funktioner i ursprungsmuskeln som är prime mover-funktioner.
 - Lägg till muskler för övriga regioner
+- Kontrollera ledtyp för varje led med hjälp av Speciële anatomie van het houdings- en bewegingsapparaat
+X Gör en refactoring av lederna så att varje led ligger i en egen fil
 - Lägg till bilder för leder för onderste extremiteit
 - Lägg till återstående leder för onderste extremiteit
 - Lägg till bilder för leder för bovenste extremiteit

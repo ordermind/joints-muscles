@@ -1,15 +1,15 @@
 import DraggableQuestion from "../DraggableQuestion.js";
 import getOtherMusclesWithSimilarFunctions from "./utils.js";
 import NextQuestionButton from "../NextQuestionButton.js";
-import joints from "../../../data/joints.js";
+import { objJoints } from "../../../data/joints.js";
 
 export default class MuscleJointFunctionsQuestionsFactory {
     #maxAnswers = 20;
 
     #createAnswerLabel(jointFunction) {
-        const movementName = jointFunction.movementLabelOverride ?? joints[jointFunction.jointId].movements.find(movement => movement.id === jointFunction.movementId).label;
+        const movementName = jointFunction.movementLabelOverride ?? objJoints[jointFunction.jointId].movements.find(movement => movement.id === jointFunction.movementId).label;
 
-        return `<em>${joints[jointFunction.jointId].shortLabel}</em>: ${movementName}`;
+        return `<em>${objJoints[jointFunction.jointId].shortLabel}</em>: ${movementName}`;
     }
 
     #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
