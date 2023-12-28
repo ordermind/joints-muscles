@@ -9,7 +9,7 @@
 - Kontrollera ledtyp för varje led med hjälp av Speciële anatomie van het houdings- en bewegingsapparaat
 X Gör en refactoring av lederna så att varje led ligger i en egen fil
 - Lägg till bilder för leder för onderste extremiteit
-- Lägg till återstående leder för onderste extremiteit
+X Lägg till återstående leder för onderste extremiteit
 - Lägg till bilder för leder för bovenste extremiteit
 X Lägg till återstående leder för bovenste extremiteit
 X Lägg till quizfråga för ROM för leder

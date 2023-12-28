@@ -9,7 +9,7 @@ export default class Joint {
     #description;
     #image;
 
-    constructor({id, regionId, label, typeIds, cpp = '', mlpp = '', movements = [], description = '', image = ''}) {
+    constructor({id, regionId, label, typeIds = [], cpp = '', mlpp = '', movements = [], description = '', image = ''}) {
         this.#id = id;
         this.#regionId = regionId;
         this.#label = label;
@@ -52,7 +52,7 @@ export default class Joint {
     get movements() {
         return this.#movements;
     }
-    
+
     get description() {
         return this.#description;
     }

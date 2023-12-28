@@ -18,7 +18,7 @@ Bij deze verbinding zijn de botstukken direct aan elkaar samengegroeid. Voorbeel
             description: `
 Deze verbinding bestaat uit bindweefsel. Dit weefsel raakt beide botten direct en is weinig beweegbaar.
 
-- Syndesmosis: Fibreuze bindweefsel tussen botten. Voorbeeld: syndesmosis tibiofibularis.
+- Syndesmosis: Fibreuze bindweefsel tussen botten. Voorbeeld: [Link type="Joint" targetId="art_tibiofibularis_inferior", label="syndesmosis tibiofibularis"].
 - Sutura: Heel onbeweegbare bindweefsel tussen botten. Voorbeeld: de verbindingen tussen de schedelen in het cranium.
             `.trim(),
         }

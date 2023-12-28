@@ -76,19 +76,41 @@ export default class JointPage {
 
         content += `
         <table class="table table-borderless d-inline-block w-auto">
+        `.trim();
+
+        if(joint.typeIds.length) {
+            content += `
             <tr>
                 <th>Gewrichtstype</th>
-                <td>` + (joint.typeIds.length ? `<div class="hideable">${renderJointType(joint, jointTypes)}</div>` : "") + `</td>
+                <td><div class="hideable">${renderJointType(joint, jointTypes)}</div></td>
             </tr>
+            `.trim();
+        }
+
+        if(joint.cpp) {
+            content += `
             <tr>
                 <th>Close-Packed Position (CPP)</th>
-                <td>` + (joint.cpp ? `<div class="hideable">${joint.cpp}</div>` : "") + `</td>
+                <td><div class="hideable">${joint.cpp}</div></td>
             </tr>
+            `.trim();
+        }
+
+        if(joint.mlpp) {
+            content += `
             <tr>
                 <th>Maximally Loose-Packed Position (MLPP)</th>
-                <td>` + (joint.mlpp ? `<div class="hideable">${joint.mlpp}</div>` : "") + `</td>
+                <td><div class="hideable">${joint.mlpp}</div></td>
             </tr>
+            `.trim();
+        }
+
+        content += `
         </table>
+        `.trim();
+
+        if(joint.movements.length) {
+            content += `
         <table class="table">
             <tr>
                 <th>Beweging</th>
@@ -98,6 +120,10 @@ export default class JointPage {
             </tr>
             ${this.#createJointFunctionsRows(joint, objMuscles, muscleFunctions).join("")}
         </table>
+            `.trim();
+        }
+
+        content += `
     </div>
 </div>
         `.trim();

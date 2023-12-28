@@ -7,7 +7,6 @@ export default [
             id: "shoulder_girdle",
             regionId: "upper_extremity",
             label: "schoudergordel",
-            typeIds: [],
             movements: [
                 new Movement(
                     {

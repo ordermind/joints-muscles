@@ -7,7 +7,7 @@ export default new Joint(
         regionId: "lower_extremity",
         label: "art. coxae (heupgewricht)",
         typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
-        cpp: "Maximale extensie met lichte endorotatie en lichte abductie",
+        cpp: "maximale extensie met lichte endorotatie en lichte abductie",
         mlpp: "30° anteflexie met 30° abductie en lichte exorotatie",
         movements: [
             new Movement(
