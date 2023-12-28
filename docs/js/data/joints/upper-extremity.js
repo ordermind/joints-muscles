@@ -596,7 +596,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_1__flexion",
                         jointId: "art_metacarpophalangea_1",
                         label: "flexie",
-                        rom: "45°"
+                        rom: "45°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -604,7 +605,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_1__extension",
                         jointId: "art_metacarpophalangea_1",
                         label: "extensie",
-                        rom: "45°"
+                        rom: "45°",
+                        endFeel: "capsulair",
                     }
                 ),
             ]
@@ -632,7 +634,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_2__extension",
                         jointId: "art_metacarpophalangea_2",
                         label: "extensie",
-                        rom: "45°"
+                        rom: "45°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -640,6 +643,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_2__abduction",
                         jointId: "art_metacarpophalangea_2",
                         label: "abductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -648,6 +652,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_2__adduction",
                         jointId: "art_metacarpophalangea_2",
                         label: "adductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -668,7 +673,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_3__flexion",
                         jointId: "art_metacarpophalangea_3",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -676,7 +682,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_3__extension",
                         jointId: "art_metacarpophalangea_3",
                         label: "extensie",
-                        rom: "45°"
+                        rom: "45°",
+                        endFeel: "capsulair",
                     }
                 ),
                 new Movement(
@@ -684,6 +691,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_3__abduction",
                         jointId: "art_metacarpophalangea_3",
                         label: "abductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -692,6 +700,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_3__adduction",
                         jointId: "art_metacarpophalangea_3",
                         label: "adductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -712,7 +721,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_4__flexion",
                         jointId: "art_metacarpophalangea_4",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -720,7 +730,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_4__extension",
                         jointId: "art_metacarpophalangea_4",
                         label: "extensie",
-                        rom: "45°"
+                        rom: "45°",
+                        endFeel: "capsulair",
                     }
                 ),
                 new Movement(
@@ -728,6 +739,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_4__abduction",
                         jointId: "art_metacarpophalangea_4",
                         label: "abductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -736,6 +748,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_4__adduction",
                         jointId: "art_metacarpophalangea_4",
                         label: "adductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -756,7 +769,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_5__flexion",
                         jointId: "art_metacarpophalangea_5",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -764,7 +778,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_5__extension",
                         jointId: "art_metacarpophalangea_5",
                         label: "extensie",
-                        rom: "45°"
+                        rom: "45°",
+                        endFeel: "capsulair",
                     }
                 ),
                 new Movement(
@@ -772,6 +787,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_5__abduction",
                         jointId: "art_metacarpophalangea_5",
                         label: "abductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -780,6 +796,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_metacarpophalangea_5__adduction",
                         jointId: "art_metacarpophalangea_5",
                         label: "adductie",
+                        endFeel: "capsulair",
                         description: `ten opzichte van 3e vingerstraal`,
                     }
                 ),
@@ -800,7 +817,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_1__flexion",
                         jointId: "art_interphalangea_1",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -808,7 +826,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_1__extension",
                         jointId: "art_interphalangea_1",
                         label: "extensie",
-                        rom: "0°"
+                        rom: "0°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -828,7 +847,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_2__flexion",
                         jointId: "art_interphalangea_proximalis_2",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -836,7 +856,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_2__extension",
                         jointId: "art_interphalangea_proximalis_2",
                         label: "extensie",
-                        rom: "0°"
+                        rom: "0°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -856,7 +877,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_3__flexion",
                         jointId: "art_interphalangea_proximalis_3",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -864,7 +886,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_3__extension",
                         jointId: "art_interphalangea_proximalis_3",
                         label: "extensie",
-                        rom: "0°"
+                        rom: "0°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -884,7 +907,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_4__flexion",
                         jointId: "art_interphalangea_proximalis_4",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -892,7 +916,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_4__extension",
                         jointId: "art_interphalangea_proximalis_4",
                         label: "extensie",
-                        rom: "0°"
+                        rom: "0°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -912,7 +937,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_5__flexion",
                         jointId: "art_interphalangea_proximalis_5",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -920,7 +946,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_proximalis_5__extension",
                         jointId: "art_interphalangea_proximalis_5",
                         label: "extensie",
-                        rom: "0°"
+                        rom: "0°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -940,7 +967,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_2__flexion",
                         jointId: "art_interphalangea_distalis_2",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -948,7 +976,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_2__extension",
                         jointId: "art_interphalangea_distalis_2",
                         label: "extensie",
-                        rom: "10°"
+                        rom: "10°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -968,7 +997,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_3__flexion",
                         jointId: "art_interphalangea_distalis_3",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -976,7 +1006,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_3__extension",
                         jointId: "art_interphalangea_distalis_3",
                         label: "extensie",
-                        rom: "10°"
+                        rom: "10°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -996,7 +1027,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_4__flexion",
                         jointId: "art_interphalangea_distalis_4",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -1004,7 +1036,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_4__extension",
                         jointId: "art_interphalangea_distalis_4",
                         label: "extensie",
-                        rom: "10°"
+                        rom: "10°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],
@@ -1024,7 +1057,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_5__flexion",
                         jointId: "art_interphalangea_distalis_5",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -1032,7 +1066,8 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
                         id: "art_interphalangea_distalis_5__extension",
                         jointId: "art_interphalangea_distalis_5",
                         label: "extensie",
-                        rom: "10°"
+                        rom: "10°",
+                        endFeel: "capsulair",
                     }
                 ),
             ],

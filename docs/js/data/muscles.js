@@ -1,5 +1,6 @@
 export default await Promise.all(
     [
+        "M.AbductorPollicisLongus.js",
         "M.IliocostalisCervicis.js",
         "M.IliocostalisLumborum.js",
         "M.IliocostalisThoracis.js",
