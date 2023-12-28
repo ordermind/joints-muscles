@@ -1,4 +1,4 @@
-export default await Promise.all(
+export const arrMuscles = await Promise.all(
     [
         "M.AbductorPollicisLongus.js",
         "M.IliocostalisCervicis.js",
@@ -47,4 +47,7 @@ export default await Promise.all(
         "MM.RotatoresLongi.js",
     ]
     .map(filename => import("./muscles/" + filename).then(module => module.default))
-).then(muscles => muscles.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {}));
+)
+.then(muscles => muscles.sort((a, b) => a.label.localeCompare(b.label)));
+
+export const objMuscles = arrMuscles.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {});

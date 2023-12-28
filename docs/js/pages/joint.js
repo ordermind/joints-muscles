@@ -7,13 +7,13 @@ export default class JointPage {
     #mainMenuBlock;
     #showHideElementsBlock;
 
-    #renderMuscleFunction(muscles, muscleFunction) {
-        const muscle = muscles[muscleFunction.muscleId];
+    #renderMuscleFunction(objMuscles, muscleFunction) {
+        const muscle = objMuscles[muscleFunction.muscleId];
 
         return `<tr><td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</td></tr>`
     }
 
-    #createJointFunctionsRows(joint, muscles, muscleFunctions) {
+    #createJointFunctionsRows(joint, objMuscles, muscleFunctions) {
         let rows = [];
 
         for(const movement of joint.movements) {
@@ -27,7 +27,7 @@ export default class JointPage {
             if(primeMovers.length) {
                 row += `<table class="table table-striped | hideable">`;
                     for(const primeMover of primeMovers) {
-                        row += this.#renderMuscleFunction(muscles, primeMover);
+                        row += this.#renderMuscleFunction(objMuscles, primeMover);
                     }
                 row += `</table>`;
             }
@@ -37,7 +37,7 @@ export default class JointPage {
             if(otherMuscles.length) {
                 row += `<table class="table table-striped | hideable">`;
                     for(const otherMuscle of otherMuscles) {
-                        row += this.#renderMuscleFunction(muscles, otherMuscle);
+                        row += this.#renderMuscleFunction(objMuscles, otherMuscle);
                     }
                 row += `</table>`;
             }
@@ -51,7 +51,7 @@ export default class JointPage {
         return rows;
     }
 
-    render({joint, jointTypes, muscles, muscleFunctions}) {
+    render({joint, jointTypes, objMuscles, muscleFunctions}) {
         const title = capitalizeTitle(joint.label);
 
         let content = `
@@ -96,7 +96,7 @@ export default class JointPage {
                 <th>Prime movers</th>
                 <th>Overige spieren</th>
             </tr>
-            ${this.#createJointFunctionsRows(joint, muscles, muscleFunctions).join("")}
+            ${this.#createJointFunctionsRows(joint, objMuscles, muscleFunctions).join("")}
         </table>
     </div>
 </div>

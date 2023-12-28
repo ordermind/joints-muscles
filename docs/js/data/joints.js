@@ -22,6 +22,6 @@ export const arrJoints = await Promise.all(
     .map(path => import("./joints/" + path).then(module => module.default))
 )
 .then(joints => joints.flat())
-.then(joints => joints.sort((a, b) => a.label.localeCompare(b.label)));
+.then(joints => joints.sort((a, b) => a.shortLabel.localeCompare(b.shortLabel)));
 
 export const objJoints = arrJoints.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {});

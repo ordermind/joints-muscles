@@ -1,4 +1,4 @@
-import muscles from "../../data/muscles.js";
+import { arrMuscles } from "../../data/muscles.js";
 
-export default Object.values(muscles)
+export default arrMuscles
     .filter(muscle => muscle.regionIds.includes("spine"));

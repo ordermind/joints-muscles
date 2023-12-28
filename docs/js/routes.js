@@ -8,7 +8,7 @@ import { renderPage } from "./renderer.js";
 import { objJoints } from "./data/joints.js";
 import { arrJoints } from "./data/joints.js";
 import jointTypes from "./data/joint-types.js";
-import muscles from "./data/muscles.js";
+import { objMuscles } from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
 import quizzes from "./quiz/quizzes.js";
 import QuizList from "./pages/quiz-list.js";
@@ -58,7 +58,7 @@ export const routes = {
         {
             paths: ["/joints/:id"],
             responseHandler: ({ data }) => {
-                const content = pages.jointPage.render({joint: objJoints[data.id], jointTypes, muscles, muscleFunctions});
+                const content = pages.jointPage.render({joint: objJoints[data.id], jointTypes, objMuscles, muscleFunctions});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {
@@ -102,7 +102,7 @@ export const routes = {
         {
             paths: ["/muscles/:id"],
             responseHandler: ({ data }) => {
-                const content = pages.musclePage.render({muscle: muscles[data.id], joints: objJoints});
+                const content = pages.musclePage.render({muscle: objMuscles[data.id], joints: objJoints});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {

@@ -1,7 +1,7 @@
 import JointMuscleFunction from "../data-types/JointMuscleFunction.js";
-import muscles from "./muscles.js";
+import { arrMuscles } from "./muscles.js";
 
-const muscleFunctions = Object.entries(muscles).flatMap(([_, muscle]) => muscle.functions);
+const muscleFunctions = arrMuscles.flatMap(muscle => muscle.functions);
 
 const spineJoints = [
     "head_joints",
@@ -12,9 +12,9 @@ const spineJoints = [
 
 /**
  * Add muscle functions for the spine globally based on muscle functions for parts of the spine.
- * 
+ *
  * We use a Set in combination with JSON stringify and parse to remove duplicates that occur when a muscle has identical function for multiple parts of the spine.
- */ 
+ */
 const wholeSpineFunctions = new Set(
     muscleFunctions.map(muscleFunction => {
         if(spineJoints.includes(muscleFunction.jointId)) {

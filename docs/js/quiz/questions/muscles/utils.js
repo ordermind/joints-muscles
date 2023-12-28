@@ -1,8 +1,8 @@
-import muscles from "../../../data/muscles.js";
+import { objMuscles } from "../../../data/muscles.js";
 import { shuffle, intersects } from "../../utils.js";
 
 export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
-    
+
     function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
         if(!correctMuscle.specialFunctions.length) {
             return [];
@@ -14,7 +14,7 @@ export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizM
                 && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
                 && muscle.specialFunctions.length > 0
                 && intersects(
-                    muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription), 
+                    muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription),
                     correctMuscle.specialFunctions.map(specialFunction => specialFunction.functionDescription)
                 )
             )
@@ -43,7 +43,7 @@ export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizM
                                 && correctMuscleFunction.movementId === muscleFunction.movementId
                             );
                         })
-                        .map(muscleFunction => muscles[muscleFunction.muscleId])
+                        .map(muscleFunction => objMuscles[muscleFunction.muscleId])
                 )
             )
         );
@@ -61,7 +61,7 @@ export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizM
                                 && correctMuscleFunction.jointId === muscleFunction.jointId
                             );
                         })
-                        .map(muscleFunction => muscles[muscleFunction.muscleId])
+                        .map(muscleFunction => objMuscles[muscleFunction.muscleId])
                     )
                 )
             );
