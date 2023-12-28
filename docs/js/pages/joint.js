@@ -22,7 +22,7 @@ export default class JointPage {
             let row = `
 <tr>
     <td>${movement.label}${renderNotesTooltip(movement.labelNotes)}</td>
-    <td>${movement.rom}${renderNotesTooltip(movement.romNotes)}</td>
+    <td>${movement.rom || ""}${renderNotesTooltip(movement.romNotes)}</td>
     <td>`;
             if(primeMovers.length) {
                 row += `<table class="table table-striped | hideable">`;
@@ -53,7 +53,7 @@ export default class JointPage {
 
     render({joint, jointTypes, muscles, muscleFunctions}) {
         const title = capitalizeTitle(joint.label);
-        
+
         let content = `
 <h1 class="display-1 fs-1">${title}</h1>
 <div class="row">`;
