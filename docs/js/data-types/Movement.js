@@ -8,7 +8,7 @@ export default class Movement {
     #endFeel;
     #description;
 
-    constructor({id, jointId, label, labelNotes = [], rom, romNotes = [], endFeel = '', description = ''}) {
+    constructor({id, jointId, label, labelNotes = [], rom = null, romNotes = [], endFeel = '', description = ''}) {
         this.#id = id;
         this.#jointId = jointId;
         this.#label = label;

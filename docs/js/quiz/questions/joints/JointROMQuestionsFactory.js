@@ -12,7 +12,9 @@ export default class JointROMQuestionsFactory {
                 continue;
             }
 
-            const answers = joint.movements.map(movement =>
+            const answers = joint.movements
+                .filter(movement => movement.rom !== null)
+                .map(movement =>
                 {
                     return new TextInputAnswer(
                         {

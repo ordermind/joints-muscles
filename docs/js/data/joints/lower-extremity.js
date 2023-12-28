@@ -10,7 +10,7 @@ export default {
             id: "art_coxae",
             regionId: "lower_extremity",
             label: "art. coxae (heupgewricht)",
-            typeIds: ["art_simplex", "art_sphaeroidea"],
+            typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "Maximale extensie met lichte endorotatie en lichte abductie",
             mlpp: "30° anteflexie met 30° abductie en lichte exorotatie",
             movements: [
@@ -76,7 +76,7 @@ export default {
             id: "art_genus",
             regionId: "lower_extremity",
             label: "art. genus (kniegewricht)",
-            typeIds: ["art_complexa", "art_ginglymus", "art_trochoidea"],
+            typeIds: ["junctura_synovialis", "art_complexa", "art_ginglymus", "art_trochoidea"],
             cpp: "maximale extensie",
             mlpp: "30° flexie",
             movements: [
@@ -124,7 +124,7 @@ export default {
             id: "art_talocruralis",
             regionId: "lower_extremity",
             label: "art. talocruralis (bovenste spronggewricht)",
-            typeIds: ["art_composita", "art_ginglymus"],
+            typeIds: ["junctura_synovialis", "art_composita", "art_ginglymus"],
             cpp: "maximale dorsaalflexie",
             mlpp: "10° plantairflexie",
             movements: [
@@ -154,7 +154,7 @@ export default {
             id: "art_talotarsalis",
             regionId: "lower_extremity",
             label: "art. talotarsalis (onderste spronggewricht)",
-            typeIds: ["art_composita"],
+            typeIds: ["junctura_synovialis", "art_composita"],
             cpp: "maximale inversie",
             mlpp: "middenstand inversie",
             movements: [
@@ -179,7 +179,8 @@ export default {
             ],
             description: `
 Het onderste spronggewricht bestaat uit art. talocalcaneonavicularis + art.subtalaris.
-N.B. de Latijnse naam <em>art. talotarsalis</em> komt niet vaak voor in de literatuur, maar ik vind het zelf logisch. In de literatuur wordt het o.a. "art. talocalcaneonavicularis in brede zin" genoemd. 
+
+N.B. de Latijnse naam <em>art. talotarsalis</em> komt niet vaak voor in de literatuur, maar ik vind het zelf logisch. In de literatuur wordt het o.a. "art. talocalcaneonavicularis in brede zin" genoemd.
             `,
         }
     ),
