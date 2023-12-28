@@ -569,11 +569,11 @@ Doordat er tussen het os MC I en het os MC II een dergelijk gewricht ontbreekt, 
             `.trim(),
         }
     ),
-    artt_intermetacarpales: new Joint(
+    artt_intermetacarpales_distales: new Joint(
         {
-            id: "artt_intermetacarpales",
+            id: "artt_intermetacarpales_distales",
             regionId: "upper_extremity",
-            label: "artt. intermetacarpales",
+            label: "artt. intermetacarpales distales",
             typeIds: ["junctura_fibrosa"],
             description: `
 Er is nauwelijks beweging mogelijk.
