@@ -790,7 +790,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_1",
             regionId: "upper_extremity",
-            label: "art. interphalangea 1 (IP I)",
+            label: "art. interphalangea I (IP I)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -818,7 +818,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_proximalis_2",
             regionId: "upper_extremity",
-            label: "art. interphalangea proximalis 2 (PIP II)",
+            label: "art. interphalangea proximalis II (PIP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -846,7 +846,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_proximalis_3",
             regionId: "upper_extremity",
-            label: "art. interphalangea proximalis 3 (PIP III)",
+            label: "art. interphalangea proximalis III (PIP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -874,7 +874,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_proximalis_4",
             regionId: "upper_extremity",
-            label: "art. interphalangea proximalis 4 (PIP IV)",
+            label: "art. interphalangea proximalis IV (PIP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -902,7 +902,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_proximalis_5",
             regionId: "upper_extremity",
-            label: "art. interphalangea proximalis 5 (PIP V)",
+            label: "art. interphalangea proximalis V (PIP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -930,7 +930,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_distalis_2",
             regionId: "upper_extremity",
-            label: "art. interphalangea distalis 2 (DIP II)",
+            label: "art. interphalangea distalis II (DIP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -958,7 +958,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_distalis_3",
             regionId: "upper_extremity",
-            label: "art. interphalangea distalis 3 (DIP III)",
+            label: "art. interphalangea distalis III (DIP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -986,7 +986,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_distalis_4",
             regionId: "upper_extremity",
-            label: "art. interphalangea distalis 4 (DIP IV)",
+            label: "art. interphalangea distalis IV (DIP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -1014,7 +1014,7 @@ Deze gewrichten vormen functioneel één geheel met de articulationes intermetac
         {
             id: "art_interphalangea_distalis_5",
             regionId: "upper_extremity",
-            label: "art. interphalangea distalis 5 (DIP V)",
+            label: "art. interphalangea distalis V (DIP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",

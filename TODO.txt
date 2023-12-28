@@ -6,6 +6,10 @@
 - Dela upp quizzes efter sektion så att man kan välja att genomgå romp (för muskler) / wervelkolom (för leder), bovenste extremiteit, onderste extremiteit eller het hele lichaam.
 - När jag hämtar muskler med liknande funktioner, prioritera de funktioner i ursprungsmuskeln som är prime mover-funktioner.
 - Lägg till muskler för övriga regioner
+- Lägg till bilder för leder för onderste extremiteit
+- Lägg till återstående leder för onderste extremiteit
+- Lägg till bilder för leder för bovenste extremiteit
+X Lägg till återstående leder för bovenste extremiteit
 X Lägg till quizfråga för ROM för leder
 X Lägg till quiz för muskler. Lägg ledfunktioner och specialfunktioner i olika frågor så att jag kan ha bara två draggable containers per sida för de frågorna. Det gör det tekniskt enklare och är också lämpligt eftersom svaren kommer vara ganska långa.
 X Fixa till origos och inserties så att de passar quizzen bättre. Standardisera benämning av kotor och revben. Exempel: T2 - T5 med mellanslag emellan. Vid variationer kan jag då skriva t ex T2-3 - T5-6. Var specifik, t ex ange en del av crista iliaca.
