@@ -29,7 +29,8 @@ export default [
                         endFeel: "capsulair",
                     }
                 ),
-            ]
+            ],
+            image: "./images/joints/art_metacarpophalangea_1.jpeg",
         }
     ),
     new Joint(
@@ -77,6 +78,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metacarpophalangea_2.jpeg",
         }
     ),
     new Joint(
@@ -125,6 +127,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metacarpophalangea_3.jpeg",
         }
     ),
     new Joint(
@@ -173,6 +176,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metacarpophalangea_4.jpeg",
         }
     ),
     new Joint(
@@ -221,6 +225,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metacarpophalangea_5.jpeg",
         }
     ),
 ];

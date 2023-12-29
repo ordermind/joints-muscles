@@ -48,6 +48,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_radiocarpalis.jpeg",
         }
     ),
     new Joint(
@@ -58,6 +59,7 @@ export default [
             typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
             cpp: "maximale dorsaalflexie",
             mlpp: "lichte palmairflexie",
+            image: "./images/joints/art_mediocarpalis.jpeg",
             description: `
 Het gewricht vormt samen met de articulatio radiocarpalis het polsgewricht en beweegt mee bij de bewegingen van [Link type="Joint" targetId="art_radiocarpalis" label="art. radiocarpalis"].
 

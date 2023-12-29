@@ -68,6 +68,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_carpometacarpalis_1.jpeg",
             description: `
 De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijkheden) van de overige articulationes carpometacarpales. De homologe bewegingen van de vingers worden niet in de [Link type="Joint" targetId="artt_carpometacarpales" label="articulationes carpometacarpales uitgevoerd"] maar in de articulationes metacarpophalangeales.
             `.trim(),
@@ -79,13 +80,12 @@ De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijk
             regionId: "upper_extremity",
             label: "artt. carpometacarpales II-V (CMC II-V)",
             typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
+            image: "./images/joints/artt_carpometacarpales.jpeg",
             description: `
-Bewegingsmogelijkheden zijn beperkt tot een klein beetje translatie.
-
 De vier articulationes carpometacarpales gezamenlijk vormen weer een 'blok' ten opzichte van de [Link type="Joint" targetId="art.carpometacarpalis_1" label="articulatio carpometacarpalis (pollicis) I"]. Dit houdt verband met de grijpfunctie van de hand (oppositie
 van de duim, pincetgreep).
 
-De articulatio carpometacarpalis (CMC) V is van de vier articulationes carpometacarpales het meest beweeglijk.
+Bewegingsmogelijkheden zijn beperkt tot een klein beetje translatie. De articulatio carpometacarpalis (CMC) V is van de vier articulationes carpometacarpales het meest beweeglijk.
             `.trim(),
         }
     ),

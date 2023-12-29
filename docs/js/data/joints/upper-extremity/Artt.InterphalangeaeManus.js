@@ -30,6 +30,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_manus_1.jpeg",
         }
     ),
     new Joint(
@@ -60,6 +61,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_manus_2.jpeg",
         }
     ),
     new Joint(
@@ -90,6 +92,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_manus_3.jpeg",
         }
     ),
     new Joint(
@@ -120,6 +123,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_manus_4.jpeg",
         }
     ),
     new Joint(
@@ -150,6 +154,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_manus_5.jpeg",
         }
     ),
     new Joint(
@@ -180,6 +185,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_manus_2.jpeg",
         }
     ),
     new Joint(
@@ -210,6 +216,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_manus_3.jpeg",
         }
     ),
     new Joint(
@@ -240,6 +247,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_manus_4.jpeg",
         }
     ),
     new Joint(
@@ -270,6 +278,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_manus_5.jpeg",
         }
     ),
 ];

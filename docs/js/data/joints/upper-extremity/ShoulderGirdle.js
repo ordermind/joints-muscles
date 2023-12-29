@@ -57,6 +57,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/shoulder_girdle.jpeg",
             description: `
 De schoudergordel bestaat uit een zeer mobiel en coördinatief hoogwaardig systeem, met vele onderdelen die perfect in elkaar grijpen.  Stoornissen in dit systeem kunnen leiden tot beperkingen in activiteiten, waardoor zelfs het participeren in de maatschappij kan worden belemmerd.
 De verbindingen tussen de botdelen van de schouderregio worden in twee hoofdgroepen verdeeld:
@@ -93,6 +94,58 @@ Het secundaire scapulothoracale systeem bestaande uit:
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "90° abductie van [Link type=\"Joint\" targetId=\"art_humeri\" label=\"art. humeri\"]",
             mlpp: "anatomische positie",
+            /**
+             * Movements are taken from https://www.kenhub.com/en/library/anatomy/acromioclavicular-ac-joint
+             */
+            movements: [
+                new Movement(
+                    {
+                        id: "art_acromioclavicularis__protraction",
+                        jointId: "art_acromioclavicularis",
+                        label: "protractie",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_acromioclavicularis__retraction",
+                        jointId: "art_acromioclavicularis",
+                        label: "retractie",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_acromioclavicularis__elevation",
+                        jointId: "art_acromioclavicularis",
+                        label: "elevatie",
+                        rom: "5-10°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_acromioclavicularis__depression",
+                        jointId: "art_acromioclavicularis",
+                        label: "depressie (detractie)",
+                        rom: "5-10°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_acromioclavicularis__laterorotation",
+                        jointId: "art_acromioclavicularis",
+                        label: "laterorotatie",
+                        rom: "15°",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_acromioclavicularis__mediorotation",
+                        jointId: "art_acromioclavicularis",
+                        label: "mediorotatie",
+                        rom: "15°",
+                    }
+                ),
+            ],
+            image: "./images/joints/art_acromioclavicularis.jpeg",
             description: "De bewegingen van dit gewricht zijn geringe translatie en rotatie rond de lengte-as van de clavicula."
         }
     ),
@@ -159,6 +212,7 @@ Het secundaire scapulothoracale systeem bestaande uit:
                     }
                 ),
             ],
+            image: "./images/joints/art_sternoclavicularis.jpeg",
         }
     ),
 ];

@@ -48,6 +48,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_cubiti.jpeg",
             description: `
 Het ellebooggewricht bestaat uit drie gewrichten:
 - [Link type="Joint" targetId="art_humeroradialis" label="art. humeroradialis"] (flexie, extensie, pronatie, supinatie)
@@ -102,6 +103,7 @@ Het ellebooggewricht bestaat uit drie gewrichten:
                     }
                 ),
             ],
+            image: "./images/joints/art_humeroradialis.jpeg",
         }
     ),
     new Joint(
@@ -132,6 +134,7 @@ Het ellebooggewricht bestaat uit drie gewrichten:
                     }
                 ),
             ],
+            image: "./images/joints/art_humeroulnaris.jpeg",
         }
     ),
     new Joint(
@@ -162,6 +165,7 @@ Het ellebooggewricht bestaat uit drie gewrichten:
                     }
                 ),
             ],
+            image: "./images/joints/art_radioulnaris.jpeg",
             description: `
 De art. radioulnaris is een duplexgewricht en bestaat uit twee subgewrichten die met elkaar samenwerken: art. radioulnaris proximalis en art. radioulnaris distalis.
             `,

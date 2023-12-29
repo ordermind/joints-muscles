@@ -6,6 +6,7 @@ export default new Joint(
         regionId: "upper_extremity",
         label: "artt. intercarpales",
         typeIds: ["art_simplex", "art_plana"],
+        image: "./images/joints/artt_intercarpales.jpeg",
         description: `Dit zijn de gewrichtjes tussen de ossa carpi onderling.`,
     }
 );

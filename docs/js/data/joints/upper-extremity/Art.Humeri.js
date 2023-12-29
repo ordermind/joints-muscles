@@ -67,5 +67,6 @@ export default new Joint(
                 }
             ),
         ],
+        image: "./images/joints/art_humeri.jpeg",
     }
 );
