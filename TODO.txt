@@ -1,4 +1,3 @@
-- Klargör definitionen av syndesmosis tibiofibularis och den eventuella relationen till membrana interossea cruris
 - Lägg till stöd för att öppna länkar i en ny tabb utan att url:en gör att sidan i den nya tabben går sönder. Det finns olika sätt att lösa detta på:
   - Event listener för scrollhjulsklick och ctrl + click: https://stackoverflow.com/questions/1795734/triggering-onclick-event-using-middle-click https://stackoverflow.com/questions/16190455/how-to-detect-controlclick-in-javascript-from-an-onclick-div-attribute
   - Event listener för skapande och uppdatering av en tabb: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onCreated https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
@@ -8,8 +7,9 @@
 - När jag hämtar muskler med liknande funktioner, prioritera de funktioner i ursprungsmuskeln som är prime mover-funktioner.
 - Lägg till muskler för övriga regioner
 - Kontrollera ledtyp för varje led med hjälp av Speciële anatomie van het houdings- en bewegingsapparaat
+X Klargör definitionen av syndesmosis tibiofibularis och den eventuella relationen till membrana interossea cruris
 X Gör en refactoring av lederna så att varje led ligger i en egen fil
-- Lägg till bilder för leder för onderste extremiteit
+X Lägg till bilder för leder för onderste extremiteit
 X Lägg till återstående leder för onderste extremiteit
 X Lägg till bilder för leder för bovenste extremiteit
 X Ställ frågor i plural om svaret är plural
