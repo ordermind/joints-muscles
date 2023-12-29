@@ -11,6 +11,10 @@ export default class JointNameQuestionsFactory {
         const questions = [];
 
         for(const [index, correctJoint] of joints.entries()) {
+            if(!correctJoint.image) {
+                continue;
+            }
+
             const hasMovements = correctJoint.movements.length > 0;
             const isLastJoint = index >= joints.length - 1;
 

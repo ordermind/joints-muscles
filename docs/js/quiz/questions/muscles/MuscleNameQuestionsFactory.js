@@ -8,7 +8,13 @@ export default class MuscleNameQuestionFactory {
     #maxWrongAnswers = 5;
 
     create({quizMuscles, quizMuscleFunctions}) {
-        return quizMuscles.map(correctMuscle => {
+        const questions = [];
+
+        for(const correctMuscle of quizMuscles) {
+            if(!correctMuscle.image) {
+                continue;
+            }
+
             const otherMusclesWithSimilarFunctions = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions)
                 .slice(0, this.#maxWrongAnswers);
 
@@ -30,7 +36,7 @@ export default class MuscleNameQuestionFactory {
                     }
                 ));
 
-            return new MultipleChoiceQuestionSingleAnswer(
+            questions.push(new MultipleChoiceQuestionSingleAnswer(
                 {
                     correctAnswer,
                     wrongAnswers,
@@ -42,7 +48,9 @@ export default class MuscleNameQuestionFactory {
                     `.trim(),
                     nextQuestionButton: new NextQuestionButton({buttonText: "Origo & Insertie"}),
                 }
-            );
-        });
+            ));
+        }
+
+        return questions;
     }
 }
