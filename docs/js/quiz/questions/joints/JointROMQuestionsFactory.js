@@ -2,6 +2,7 @@ import NextQuestionButton from "../NextQuestionButton.js";
 import { shuffle } from "../../utils.js";
 import TextInputAnswer from "../TextInputAnswer.js";
 import MultipleTextInputQuestion from "../MultipleTextInputQuestion.js";
+import { isJointPlural } from "./utils.js";
 
 export default class JointROMQuestionsFactory {
     create({joints}) {
@@ -34,7 +35,7 @@ export default class JointROMQuestionsFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${joint.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat is de ROM van dit gewricht?</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat is de ROM van ` + (isJointPlural(joint) ? "deze gewrichten" : "dit gewricht") + `?</h2>
                     `.trim(),
                     answers: shuffle(answers),
                     nextQuestionButton: new NextQuestionButton({buttonText: "Spierfuncties"}),

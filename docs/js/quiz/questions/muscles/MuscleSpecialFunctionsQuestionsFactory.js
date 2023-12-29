@@ -1,5 +1,5 @@
 import DraggableQuestion from "../DraggableQuestion.js";
-import getOtherMusclesWithSimilarFunctions from "./utils.js";
+import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import { shuffle } from "../../utils.js";
 import NextQuestionButton from "../NextQuestionButton.js";
 
@@ -61,7 +61,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${muscle.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke overige functies heeft deze spier? Sleep die functies naar het juiste vak.</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke overige functies ` + (isMusclePlural(muscle) ? "hebben deze spieren" : "heeft deze spier") + `? Sleep die functies naar het juiste vak.</h2>
                     `.trim(),
                     regions: [{id: "specialFunctions", label: "Overige functies"}],
                     answers: shuffle(

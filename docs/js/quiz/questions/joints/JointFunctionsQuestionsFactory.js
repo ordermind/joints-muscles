@@ -3,6 +3,7 @@ import NextQuestionButton from "../NextQuestionButton.js";
 import muscleFunctions from "../../data/muscle-functions.js";
 import { objMuscles } from "../../../data/muscles.js";
 import { shuffle } from "../../utils.js";
+import { isJointPlural } from "./utils.js";
 
 export default class JointFunctionsQuestionsFactory {
     #createAnswers(movement, correctSolution, correctJoint, joints) {
@@ -96,7 +97,7 @@ export default class JointFunctionsQuestionsFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${joint.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke spieren zorgen voor <strong>${movement.label}</strong> bij dit gewricht? Sleep die spieren naar het juiste vak.</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke spieren zorgen voor <strong>${movement.label}</strong> bij ` + (isJointPlural(joint) ? "deze gewrichten" : "dit gewricht") + `? Sleep die spieren naar het juiste vak.</h2>
                         `.trim(),
                         regions: [{id: "primeMovers", label: "Prime movers"}, {id: "otherMuscles", label: "Overige spieren"}],
                         answers: shuffle(

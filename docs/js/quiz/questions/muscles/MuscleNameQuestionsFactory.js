@@ -2,7 +2,7 @@ import NextQuestionButton from "../NextQuestionButton.js";
 import MultipleChoiceAnswer from "../MultipleChoiceAnswer.js";
 import MultipleChoiceQuestionSingleAnswer from "../MultipleChoiceQuestionSingleAnswer.js";
 import { shuffle } from "../../utils.js";
-import getOtherMusclesWithSimilarFunctions from "./utils.js";
+import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 
 export default class MuscleNameQuestionFactory {
     #maxWrongAnswers = 5;
@@ -19,7 +19,7 @@ export default class MuscleNameQuestionFactory {
                     isCorrect: true,
                 }
             );
-            
+
             const wrongAnswers = shuffle(otherMusclesWithSimilarFunctions)
                 .slice(0, this.#maxWrongAnswers)
                 .map(otherMuscle => new MultipleChoiceAnswer(
@@ -35,7 +35,7 @@ export default class MuscleNameQuestionFactory {
                     correctAnswer,
                     wrongAnswers,
                     question: `
-<h1 id="question-text" class="display-3 fs-3 mb-2 mt-n4 pt-4">Welke spier is dit?</h1>
+<h1 id="question-text" class="display-3 fs-3 mb-2 mt-n4 pt-4">Welke ` + (isMusclePlural(correctMuscle) ? "spieren zijn" : "spier is") + `&nbsp;dit?</h1>
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>

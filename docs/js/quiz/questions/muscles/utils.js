@@ -1,7 +1,7 @@
 import { objMuscles } from "../../../data/muscles.js";
 import { shuffle, intersects } from "../../utils.js";
 
-export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
+export function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
 
     function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
         if(!correctMuscle.specialFunctions.length) {
@@ -90,4 +90,8 @@ export default function getOtherMusclesWithSimilarFunctions(correctMuscle, quizM
     }
 
     return otherMuscles;
+}
+
+export function isMusclePlural(muscle) {
+    return muscle.label.includes('mm.');
 }

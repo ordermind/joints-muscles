@@ -1,7 +1,7 @@
 import DraggableQuestion from "../DraggableQuestion.js";
-import getOtherMusclesWithSimilarFunctions from "./utils.js";
 import { shuffle } from "../../utils.js";
 import NextQuestionButton from "../NextQuestionButton.js";
+import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 
 export default class MuscleAnatomyQuestionFactory {
     #maxAnswers = 20;
@@ -41,7 +41,7 @@ export default class MuscleAnatomyQuestionFactory {
         }
 
         return answers;
-        
+
     }
 
     #createCorrectSolution(correctMuscle) {
@@ -75,7 +75,7 @@ export default class MuscleAnatomyQuestionFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${muscle.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat zijn de origo en insertie van deze spier? Sleep die anatomische structuren naar het juiste vak.</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat zijn de origo en insertie van ` + (isMusclePlural(muscle) ? "deze spieren" : "deze spier") + `? Sleep die anatomische structuren naar het juiste vak.</h2>
                     `.trim(),
                     regions: [{id: "origo", label: "Origo"}, {id: "insertion", label: "Insertie"}],
                     answers: shuffle(

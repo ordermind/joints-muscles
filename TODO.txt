@@ -12,7 +12,7 @@ X Gör en refactoring av lederna så att varje led ligger i en egen fil
 - Lägg till bilder för leder för onderste extremiteit
 X Lägg till återstående leder för onderste extremiteit
 - Lägg till bilder för leder för bovenste extremiteit
-- Ställ frågor i plural om svaret är plural
+X Ställ frågor i plural om svaret är plural
 X Lägg till återstående leder för bovenste extremiteit
 X Lägg till quizfråga för ROM för leder
 X Lägg till quiz för muskler. Lägg ledfunktioner och specialfunktioner i olika frågor så att jag kan ha bara två draggable containers per sida för de frågorna. Det gör det tekniskt enklare och är också lämpligt eftersom svaren kommer vara ganska långa.

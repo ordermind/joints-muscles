@@ -2,6 +2,7 @@ import NextQuestionButton from "../NextQuestionButton.js";
 import MultipleChoiceAnswer from "../MultipleChoiceAnswer.js";
 import MultipleChoiceQuestionSingleAnswer from "../MultipleChoiceQuestionSingleAnswer.js";
 import { shuffle } from "../../utils.js";
+import { isJointPlural } from "./utils.js";
 
 export default class JointNameQuestionsFactory {
     #maxWrongAnswers = 5;
@@ -23,7 +24,7 @@ export default class JointNameQuestionsFactory {
                     isCorrect: true,
                 }
             );
-            
+
             const wrongAnswers = shuffle(otherJointsInTheSameRegion)
                 .slice(0, this.#maxWrongAnswers)
                 .map(otherJoint => new MultipleChoiceAnswer(
@@ -39,7 +40,7 @@ export default class JointNameQuestionsFactory {
                     correctAnswer,
                     wrongAnswers,
                     question: `
-<h1 id="question-text" class="display-3 fs-3 mb-2 mt-n4 pt-4">Welk gewricht is dit?</h1>
+<h1 id="question-text" class="display-3 fs-3 mb-2 mt-n4 pt-4">` + (isJointPlural(correctJoint) ? "Welke gewrichten zijn" : "Welk gewricht is") + `&nbsp;dit?</h1>
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${correctJoint.image}" />
 </div>
