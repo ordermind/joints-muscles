@@ -1,3 +1,4 @@
+- Klargör definitionen av syndesmosis tibiofibularis och den eventuella relationen till membrana interossea cruris
 - Lägg till stöd för att öppna länkar i en ny tabb utan att url:en gör att sidan i den nya tabben går sönder. Det finns olika sätt att lösa detta på:
   - Event listener för scrollhjulsklick och ctrl + click: https://stackoverflow.com/questions/1795734/triggering-onclick-event-using-middle-click https://stackoverflow.com/questions/16190455/how-to-detect-controlclick-in-javascript-from-an-onclick-div-attribute
   - Event listener för skapande och uppdatering av en tabb: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onCreated https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
@@ -11,6 +12,7 @@ X Gör en refactoring av lederna så att varje led ligger i en egen fil
 - Lägg till bilder för leder för onderste extremiteit
 X Lägg till återstående leder för onderste extremiteit
 - Lägg till bilder för leder för bovenste extremiteit
+- Ställ frågor i plural om svaret är plural
 X Lägg till återstående leder för bovenste extremiteit
 X Lägg till quizfråga för ROM för leder
 X Lägg till quiz för muskler. Lägg ledfunktioner och specialfunktioner i olika frågor så att jag kan ha bara två draggable containers per sida för de frågorna. Det gör det tekniskt enklare och är också lämpligt eftersom svaren kommer vara ganska långa.
