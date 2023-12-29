@@ -48,6 +48,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_genus.jpeg",
             description: `
 Het kniegewricht bestaat uit [Link type="Joint" targetId="art_femorotibialis" label="art. femorotibialis"] en [Link type="Joint" targetId="art_femoropatellaris" label="art. femoropatellaris"].
 
@@ -73,6 +74,7 @@ De endorotatie en exorotatie van articulatio genus is beperkt. De grootste beweg
             typeIds: ["junctura_synovialis", "art_complexa", "art_ginglymus", "art_trochoidea"],
             cpp: "maximale extensie",
             mlpp: "30° flexie",
+            image: "./images/joints/art_femorotibialis.jpeg",
             description: `
 Het geheel van de articulatio femorotibialis is te beschouwen als een articulatio condylaris. Elke condyl van het femur articuleert met de bovenzijde van een meniscus (articulatio meniscofemoralis) en elke meniscus articuleert met de onderzijde met een tibiacondyl / tibiplateau (articulatio meniscotibialis).
             `.trim(),
@@ -86,6 +88,7 @@ Het geheel van de articulatio femorotibialis is te beschouwen als een articulati
             typeIds: ["junctura_synovialis", "art_complexa"],
             cpp: "90° flexie",
             mlpp: "maximale extensie met maximale exorotatie tibia",
+            image: "./images/joints/art_femoropatellaris.jpeg",
             description: `
 De articulatio femoro-patellaris vormt een onderdeel van de articulatio genus. De patella is te beschouwen als een sesambeen in de pees van de m. quadriceps.
             `.trim(),

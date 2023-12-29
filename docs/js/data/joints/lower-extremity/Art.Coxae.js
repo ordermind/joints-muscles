@@ -65,5 +65,6 @@ export default new Joint(
                 }
             ),
         ],
+        image: "./images/joints/art_coxae.jpeg",
     }
 );

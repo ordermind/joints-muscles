@@ -30,6 +30,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_talocruralis.jpeg",
             description: `
     Het gewricht wordt vaak het bovenste spronggewricht genoemd en vormt samen met de [Link type="Joint" targetId="art_talotarsalis" label="articulatio talocalcaneonavicularis in brede zin (onderste spronggewricht)"] het enkelgewricht.
             `,
@@ -63,6 +64,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_talotarsalis.jpeg",
             description: `
 Het onderste spronggewricht bestaat uit [Link type="Joint" targetId="art_talocalcaneonavicularis" label="art. talocalcaneonavicularis"] en [Link type="Joint" targetId="art_subtalaris" label="art.subtalaris"].
 
@@ -78,6 +80,7 @@ De inversiebeweging is theoretisch te ontleden in de deelbewegingen: plantairfle
             regionId: "lower_extremity",
             label: "art. talocalcaneonavicularis (in engere zin)",
             typeIds: ["junctura_synovialis", "art_composita"],
+            image: "./images/joints/art_talocalcaneonavicularis.jpeg",
             description: `
 Dit gewricht is onderdeel van het [Link type="Joint" targetId="art_talotarsalis" label="onderste spronggewricht"].
             `.trim(),
@@ -89,6 +92,7 @@ Dit gewricht is onderdeel van het [Link type="Joint" targetId="art_talotarsalis"
             regionId: "lower_extremity",
             label: "art. subtalaris",
             typeIds: ["junctura_synovialis", "art_simplex"],
+            image: "./images/joints/art_subtalaris.jpeg",
             description: `
 Dit gewricht is onderdeel van het [Link type="Joint" targetId="art_talotarsalis" label="onderste spronggewricht"].
             `.trim(),

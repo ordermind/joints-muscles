@@ -30,6 +30,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_pedis_1.jpeg",
         }
     ),
     new Joint(
@@ -60,6 +61,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_pedis_2.jpeg",
         }
     ),
     new Joint(
@@ -90,6 +92,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_pedis_3.jpeg",
         }
     ),
     new Joint(
@@ -120,6 +123,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_pedis_4.jpeg",
         }
     ),
     new Joint(
@@ -150,6 +154,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_proximalis_pedis_5.jpeg",
         }
     ),
     new Joint(
@@ -178,6 +183,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_pedis_2.jpeg",
         }
     ),
     new Joint(
@@ -206,6 +212,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_pedis_3.jpeg",
         }
     ),
     new Joint(
@@ -234,6 +241,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_pedis_4.jpeg",
         }
     ),
     new Joint(
@@ -262,6 +270,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_interphalangea_distalis_pedis_5.jpeg",
         }
     ),
 ];

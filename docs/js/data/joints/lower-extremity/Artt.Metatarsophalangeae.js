@@ -30,6 +30,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metatarsophalangea_1.jpeg",
         }
     ),
     new Joint(
@@ -60,6 +61,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metatarsophalangea_2.jpeg",
         }
     ),
     new Joint(
@@ -90,6 +92,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metatarsophalangea_3.jpeg",
         }
     ),
     new Joint(
@@ -120,6 +123,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metatarsophalangea_4.jpeg",
         }
     ),
     new Joint(
@@ -150,6 +154,7 @@ export default [
                     }
                 ),
             ],
+            image: "./images/joints/art_metatarsophalangea_5.jpeg",
         }
     ),
 ];

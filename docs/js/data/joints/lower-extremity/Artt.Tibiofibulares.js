@@ -9,6 +9,7 @@ export default [
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "maximale dorsaalflexie enkel",
             mlpp: "Knie halverwege flexie-extensie met 10° plantairflexie enkel",
+            image: "./images/joints/art_tibiofibularis_superior.jpeg",
             description: `
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie van de fibula naar proximaal bij dorsaalflexie van de voet.
 
@@ -22,6 +23,7 @@ Dit gewricht vormt samen met de membrana interossea en de syndesmosis tibiofibul
             regionId: "lower_extremity",
             label: "membrana interossea cruris",
             typeIds: ["junctura_fibrosa"],
+            image: "./images/joints/membrana_interossea_cruris.jpeg",
             description: `
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie tussen tibia en fibula.
 
@@ -37,6 +39,7 @@ De membrana interossea cruris is een strak bindweefselvlies dat tussen de tibia 
             typeIds: ["junctura_fibrosa"],
             cpp: "maximale dorsaalflexie enkel",
             mlpp: "10° plantairflexie enkel",
+            image: "./images/joints/art_tibiofibularis_inferior.jpeg",
             description: `
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie tussen tibia en fibula.
 

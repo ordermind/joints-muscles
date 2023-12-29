@@ -8,6 +8,7 @@ export default [
             label: "art. tarsi transversa (gewrichtslijn van Chopart)",
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/art_tarsi_transversa.jpeg",
             description: `
 Vanuit de klinische praktijk van de voetamputaties is de notitie gegroeid dat ín de voetwortel (tarsus) een amputatie- of gewrichtslijn kan worden onderscheiden die samenvalt met de (gecombineerde) gewrichtsspleet van:
 
@@ -24,6 +25,7 @@ Vanuit de klinische praktijk van de voetamputaties is de notitie gegroeid dat í
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/art_talonavicularis.jpeg",
             description: `
 Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
 
@@ -39,6 +41,7 @@ Dit gewricht is onderdeel van [Link type="Joint" targetId="art_talocalcaneonavic
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/art_calcaneocuboidea.jpeg",
             description: `
 Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
 
@@ -51,9 +54,10 @@ Dit gewricht is onderdeel van het [Link type="Joint" targetId="art_tarsi_transve
             id: "art_cuneonavicularis",
             regionId: "lower_extremity",
             label: "art. cuneonavicularis",
-            typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
+            typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/art_cuneonavicularis.jpeg",
             description: `
 Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
             `.trim(),
@@ -67,6 +71,7 @@ Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. inte
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/art_cuneocuboidea.jpeg",
             description: `
 Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
             `.trim(),
@@ -76,10 +81,11 @@ Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. inte
         {
             id: "artt_intercuneiformes",
             regionId: "lower_extremity",
-            label: "art. intercuneiformes",
+            label: "artt. intercuneiformes",
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/artt_intercuneiformes.jpeg",
             description: `
 Deze gewrichten valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
             `.trim(),
@@ -93,6 +99,7 @@ Deze gewrichten valt onder de gewrichten tussen de ossa tarsi onderling (artt. i
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
+            image: "./images/joints/art_cuboideonavicularis.jpeg",
             description: `
 Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
             `.trim(),
