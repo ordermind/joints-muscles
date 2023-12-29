@@ -10,7 +10,7 @@ export const arrJoints = await Promise.all(
         "lower-extremity/Artt.InterphalangeaePedis.js",
         "lower-extremity/Artt.Intertarsales.js",
         "lower-extremity/Artt.Metatarsophalangeae.js",
-        "lower-extremity/Artt.Tarsometatarseae.js",
+        "lower-extremity/Artt.Tarsometatarsales.js",
         "lower-extremity/Artt.Tibiofibulares.js",
         "lower-extremity/AnkleJoint.js",
         "spine/Spine.js",

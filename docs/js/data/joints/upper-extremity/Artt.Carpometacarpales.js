@@ -7,7 +7,7 @@ export default [
             id: "art_carpometacarpalis_1",
             regionId: "upper_extremity",
             label: "art. carpometacarpalis I (art. carpometacarpalis pollicis, CMC I)",
-            typeIds: ["art_simplex", "art_sellaris"],
+            typeIds: ["junctura_synovialis", "art_simplex", "art_sellaris"],
             cpp: "maximale oppositie",
             mlpp: "lichte flexie met lichte abductie",
             movements: [
@@ -79,7 +79,7 @@ De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijk
             id: "artt_carpometacarpales",
             regionId: "upper_extremity",
             label: "artt. carpometacarpales II-V (CMC II-V)",
-            typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
+            typeIds: ["junctura_synovialis", "art_plana"],
             image: "./images/joints/artt_carpometacarpales.jpeg",
             description: `
 De vier articulationes carpometacarpales gezamenlijk vormen weer een 'blok' ten opzichte van de [Link type="Joint" targetId="art.carpometacarpalis_1" label="articulatio carpometacarpalis (pollicis) I"]. Dit houdt verband met de grijpfunctie van de hand (oppositie

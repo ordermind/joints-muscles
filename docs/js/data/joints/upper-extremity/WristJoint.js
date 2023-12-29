@@ -7,7 +7,7 @@ export default [
             id: "art_radiocarpalis",
             regionId: "upper_extremity",
             label: "art. radiocarpalis (polsgewricht)",
-            typeIds: ["junctura_synovialis", "art_simplex", "art_ellipsoidea"],
+            typeIds: ["junctura_synovialis", "art_composita", "art_complexa", "art_ellipsoidea"],
             cpp: "maximale dorsaalflexie met maximale radiaaldeviatie",
             mlpp: "lichte palmairflexie met lichte ulnairdeviatie",
             movements: [

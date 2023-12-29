@@ -85,7 +85,7 @@ Het geheel van de articulatio femorotibialis is te beschouwen als een articulati
             id: "art_femoropatellaris",
             regionId: "lower_extremity",
             label: "art. femoropatellaris",
-            typeIds: ["junctura_synovialis", "art_complexa"],
+            typeIds: ["junctura_synovialis"],
             cpp: "90° flexie",
             mlpp: "maximale extensie met maximale exorotatie tibia",
             image: "./images/joints/art_femoropatellaris.jpeg",

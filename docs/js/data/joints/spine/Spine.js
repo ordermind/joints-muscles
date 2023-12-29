@@ -11,7 +11,6 @@ export default [
             id: "columna_vertebralis",
             regionId: "spine",
             label: "columna vertebralis (wervelkolom)",
-            typeIds: ["junctura_synovialis", "art_complexa"],
             cpp: "maximale extensie",
             mlpp: "neutraal tot lichte flexie",
             movements: [
@@ -63,7 +62,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
             id: "juncturae_craniovertebrales",
             regionId: "spine",
             label: "juncturae craniovertebrales (hoofdgewrichten, art. atlantooccipitalis / artt. atlantoaxiales)",
-            typeIds: ["junctura_synovialis", "art_complexa"],
+            typeIds: ["junctura_synovialis", "art_ellipsoidea", "art_trochoidea", "art_plana"],
             movements: [
                 new Movement(
                     {
@@ -110,7 +109,6 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
             id: "columna_vertebralis_cervicalis",
             regionId: "spine",
             label: "columna vertebralis, pars cervicalis (CWK)",
-            typeIds: ["junctura_synovialis", "art_complexa"],
             movements: [
                 new Movement(
                     {
@@ -157,7 +155,6 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
             id: "columna_vertebralis_thoracalis",
             regionId: "spine",
             label: "columna vertebralis, pars thoracalis (TWK)",
-            typeIds: ["junctura_synovialis", "art_complexa"],
             movements: [
                 new Movement(
                     {
@@ -204,7 +201,6 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
             id: "columna_vertebralis_lumbalis",
             regionId: "spine",
             label: "columna vertebralis, pars lumbalis (LWK)",
-            typeIds: ["junctura_synovialis", "art_complexa"],
             movements: [
                 new Movement(
                     {

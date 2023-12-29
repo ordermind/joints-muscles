@@ -6,6 +6,7 @@ export default [
             id: "art_tarsi_transversa",
             regionId: "lower_extremity",
             label: "art. tarsi transversa (gewrichtslijn van Chopart)",
+            typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
             cpp: "supinatie subtalair gewricht",
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
             image: "./images/joints/art_tarsi_transversa.jpeg",
