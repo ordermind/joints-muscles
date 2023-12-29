@@ -15,19 +15,19 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_longus_capitis__head_joints__flexion",
-                    jointId: "head_joints",
+                    id: "m_longus_capitis__juncturae_craniovertebrales__flexion",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_longus_capitis",
-                    movementId: "head_joints__flexion",
+                    movementId: "juncturae_craniovertebrales__flexion",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_longus_capitis__head_joints__rotation",
-                    jointId: "head_joints",
+                    id: "m_longus_capitis__juncturae_craniovertebrales__rotation",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_longus_capitis",
-                    movementId: "head_joints__rotation",
+                    movementId: "juncturae_craniovertebrales__rotation",
                     movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: false,
                     notes: ["ipsilaterale rotatie"],

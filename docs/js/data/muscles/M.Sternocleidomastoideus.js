@@ -17,19 +17,19 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_sternocleidomastoideus__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_sternocleidomastoideus__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_sternocleidomastoideus",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_sternocleidomastoideus__head_joints__rotation",
-                    jointId: "head_joints",
+                    id: "m_sternocleidomastoideus__juncturae_craniovertebrales__rotation",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_sternocleidomastoideus",
-                    movementId: "head_joints__rotation",
+                    movementId: "juncturae_craniovertebrales__rotation",
                     movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: true,
                     notes: ["contralaterale rotatie"],

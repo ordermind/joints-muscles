@@ -18,28 +18,28 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_trapezius_descendens__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_trapezius_descendens__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_trapezius_descendens",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_trapezius_descendens__head_joints__lateroflexion",
-                    jointId: "head_joints",
+                    id: "m_trapezius_descendens__juncturae_craniovertebrales__lateroflexion",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_trapezius_descendens",
-                    movementId: "head_joints__lateroflexion",
+                    movementId: "juncturae_craniovertebrales__lateroflexion",
                     isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_trapezius_descendens__head_joints__rotation",
-                    jointId: "head_joints",
+                    id: "m_trapezius_descendens__juncturae_craniovertebrales__rotation",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_trapezius_descendens",
-                    movementId: "head_joints__rotation",
+                    movementId: "juncturae_craniovertebrales__rotation",
                     movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
                     notes: ["contralaterale rotatie"],

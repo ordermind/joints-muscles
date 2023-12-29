@@ -14,28 +14,28 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_longissimus_capitis__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_longissimus_capitis__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_longissimus_capitis",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_longissimus_capitis__head_joints__lateroflexion",
-                    jointId: "head_joints",
+                    id: "m_longissimus_capitis__juncturae_craniovertebrales__lateroflexion",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_longissimus_capitis",
-                    movementId: "head_joints__lateroflexion",
+                    movementId: "juncturae_craniovertebrales__lateroflexion",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_longissimus_capitis__head_joints__rotation",
-                    jointId: "head_joints",
+                    id: "m_longissimus_capitis__juncturae_craniovertebrales__rotation",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_longissimus_capitis",
-                    movementId: "head_joints__rotation",
+                    movementId: "juncturae_craniovertebrales__rotation",
                     movementLabelOverride: "ipsilaterale rotatie",
                     isPrimeMover: true,
                     notes: ["ipsilaterale rotatie"],

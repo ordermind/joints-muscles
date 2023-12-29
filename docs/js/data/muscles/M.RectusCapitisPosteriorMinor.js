@@ -15,10 +15,10 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_rectus_capitis_posterior_minor__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_rectus_capitis_posterior_minor__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_rectus_capitis_posterior_minor",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: false,
                 }
             ),

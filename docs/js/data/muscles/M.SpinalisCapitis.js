@@ -14,10 +14,10 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_spinalis_capitis__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_spinalis_capitis__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_spinalis_capitis",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: false,
                 }
             ),

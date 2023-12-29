@@ -15,19 +15,19 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_obliquus_capitis_superior__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_obliquus_capitis_superior__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_obliquus_capitis_superior",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_obliquus_capitis_superior__head_joints__lateroflexion",
-                    jointId: "head_joints",
+                    id: "m_obliquus_capitis_superior__juncturae_craniovertebrales__lateroflexion",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_obliquus_capitis_superior",
-                    movementId: "head_joints__lateroflexion",
+                    movementId: "juncturae_craniovertebrales__lateroflexion",
                     isPrimeMover: false,
                 }
             ),

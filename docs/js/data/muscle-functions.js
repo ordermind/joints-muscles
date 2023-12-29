@@ -4,7 +4,7 @@ import { arrMuscles } from "./muscles.js";
 const muscleFunctions = arrMuscles.flatMap(muscle => muscle.functions);
 
 const spineJoints = [
-    "head_joints",
+    "juncturae_craniovertebrales",
     "columna_vertebralis_cervicalis",
     "columna_vertebralis_thoracalis",
     "columna_vertebralis_lumbalis",

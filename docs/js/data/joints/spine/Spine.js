@@ -60,15 +60,15 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
     ),
     new Joint(
         {
-            id: "head_joints",
+            id: "juncturae_craniovertebrales",
             regionId: "spine",
-            label: "art. atlantooccipitalis / artt. atlantoaxiales (hoofdgewrichten)",
+            label: "juncturae craniovertebrales (hoofdgewrichten, art. atlantooccipitalis / artt. atlantoaxiales)",
             typeIds: ["junctura_synovialis", "art_complexa"],
             movements: [
                 new Movement(
                     {
-                        id: "head_joints__flexion",
-                        jointId: "head_joints",
+                        id: "juncturae_craniovertebrales__flexion",
+                        jointId: "juncturae_craniovertebrales",
                         label: "flexie",
                         rom: "20°",
                         endFeel: "capsulair",
@@ -76,8 +76,8 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                 ),
                 new Movement(
                     {
-                        id: "head_joints__extension",
-                        jointId: "head_joints",
+                        id: "juncturae_craniovertebrales__extension",
+                        jointId: "juncturae_craniovertebrales",
                         label: "extensie",
                         rom: "10°",
                         endFeel: "bot",
@@ -85,8 +85,8 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                 ),
                 new Movement(
                     {
-                        id: "head_joints__lateroflexion",
-                        jointId: "head_joints",
+                        id: "juncturae_craniovertebrales__lateroflexion",
+                        jointId: "juncturae_craniovertebrales",
                         label: "lateroflexie",
                         rom: "5°",
                         endFeel: "capsulair",
@@ -94,15 +94,15 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                 ),
                 new Movement(
                     {
-                        id: "head_joints__rotation",
-                        jointId: "head_joints",
+                        id: "juncturae_craniovertebrales__rotation",
+                        jointId: "juncturae_craniovertebrales",
                         label: "rotatie",
                         rom: "35°",
                         endFeel: "capsulair",
                     }
                 ),
             ],
-            image: "./images/joints/head_joints.png",
+            image: "./images/joints/juncturae_craniovertebrales.jpeg",
         },
     ),
     new Joint(

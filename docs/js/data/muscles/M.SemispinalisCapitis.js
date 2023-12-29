@@ -15,19 +15,19 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_semispinalis_capitis__head_joints__extension",
-                    jointId: "head_joints",
+                    id: "m_semispinalis_capitis__juncturae_craniovertebrales__extension",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_semispinalis_capitis",
-                    movementId: "head_joints__extension",
+                    movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_semispinalis_capitis__head_joints__lateroflexion",
-                    jointId: "head_joints",
+                    id: "m_semispinalis_capitis__juncturae_craniovertebrales__lateroflexion",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_semispinalis_capitis",
-                    movementId: "head_joints__lateroflexion",
+                    movementId: "juncturae_craniovertebrales__lateroflexion",
                     isPrimeMover: true,
                 }
             ),

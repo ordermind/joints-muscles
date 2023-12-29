@@ -16,10 +16,10 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_rectus_capitis_anterior__head_joints__flexion",
-                    jointId: "head_joints",
+                    id: "m_rectus_capitis_anterior__juncturae_craniovertebrales__flexion",
+                    jointId: "juncturae_craniovertebrales",
                     muscleId: "m_rectus_capitis_anterior",
-                    movementId: "head_joints__flexion",
+                    movementId: "juncturae_craniovertebrales__flexion",
                     isPrimeMover: true,
                 }
             ),
