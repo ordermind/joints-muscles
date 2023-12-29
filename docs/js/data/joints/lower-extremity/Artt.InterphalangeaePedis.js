@@ -166,7 +166,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_2__flexion",
                         jointId: "art_interphalangea_distalis_pedis_2",
                         label: "flexie",
-                        rom: "10°",
                         endFeel: "hard capsulair",
                     }
                 ),
@@ -175,7 +174,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_2__extension",
                         jointId: "art_interphalangea_distalis_pedis_2",
                         label: "extensie",
-                        rom: "70°",
                         endFeel: "capsulair",
                     }
                 ),
@@ -196,7 +194,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_3__flexion",
                         jointId: "art_interphalangea_distalis_pedis_3",
                         label: "flexie",
-                        rom: "10°",
                         endFeel: "hard capsulair",
                     }
                 ),
@@ -205,7 +202,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_3__extension",
                         jointId: "art_interphalangea_distalis_pedis_3",
                         label: "extensie",
-                        rom: "70°",
                         endFeel: "capsulair",
                     }
                 ),
@@ -226,7 +222,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_4__flexion",
                         jointId: "art_interphalangea_distalis_pedis_4",
                         label: "flexie",
-                        rom: "10°",
                         endFeel: "hard capsulair",
                     }
                 ),
@@ -235,7 +230,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_4__extension",
                         jointId: "art_interphalangea_distalis_pedis_4",
                         label: "extensie",
-                        rom: "70°",
                         endFeel: "capsulair",
                     }
                 ),
@@ -256,7 +250,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_5__flexion",
                         jointId: "art_interphalangea_distalis_pedis_5",
                         label: "flexie",
-                        rom: "10°",
                         endFeel: "hard capsulair",
                     }
                 ),
@@ -265,7 +258,6 @@ export default [
                         id: "art_interphalangea_distalis_pedis_5__extension",
                         jointId: "art_interphalangea_distalis_pedis_5",
                         label: "extensie",
-                        rom: "70°",
                         endFeel: "capsulair",
                     }
                 ),
