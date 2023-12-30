@@ -62,3 +62,10 @@ background-size: 19.00px 19.00px;
     width: 25rem;
     max-width: 100%;
 }
+
+/** Muscle page **/
+
+.page-muscle table.joint-functions tr th,
+.page-muscle table.joint-functions tr td {
+    min-width: 10rem;
+}

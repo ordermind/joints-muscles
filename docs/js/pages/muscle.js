@@ -30,7 +30,7 @@ export default class MusclePage {
 
             functionLevel.push((muscleFunction.movementLabelOverride ?? joints[muscleFunction.jointId].movements.find(movement => movement.id === muscleFunction.movementId).label) + renderNotesTooltip(notes));
         }
-        
+
         let rows = [];
 
         for (const [jointId, jointFunctions] of Object.entries(allJointFunctions)) {
@@ -52,19 +52,20 @@ export default class MusclePage {
         const title = capitalizeTitle(muscle.label);
 
     let content = `
-<h1 class="display-1 fs-1">${title}</h1>
-<div class="row">`;
+<div class="page page-muscle">
+    <h1 class="display-1 fs-1">${title}</h1>
+    <div class="row">`;
 
         if(muscle.image) {
             content += `
-    <div class="col flex-grow-0 d-none d-lg-block">
-        <img src="${muscle.image}" class="page-image" />
-    </div>
+        <div class="col flex-grow-0 d-none d-lg-block">
+            <img src="${muscle.image}" class="page-image" />
+        </div>
         `.trim();
         }
 
         content += `
-    <div class="col">
+        <div class="col">
         `.trim();
 
         if(muscle.description) {
@@ -72,30 +73,30 @@ export default class MusclePage {
         }
 
         content += `
-        <table class="table table-borderless d-inline-block w-auto">
-            <tr>
-                <th>Origo</th>
-                <td><div class="hideable">${renderList(muscle.origos, true)}</div></td>
-            </tr>
-            <tr>
-                <th>Insertie</th>
-                <td><div class="hideable">${renderList(muscle.insertions, true)}</div></td>
-            </tr>
-        </table>
+            <table class="table table-borderless d-inline-block w-auto">
+                <tr>
+                    <th>Origo</th>
+                    <td><div class="hideable">${renderList(muscle.origos, true)}</div></td>
+                </tr>
+                <tr>
+                    <th>Insertie</th>
+                    <td><div class="hideable">${renderList(muscle.insertions, true)}</div></td>
+                </tr>
+            </table>
 
-        <h2 class="display-2 fs-2">Gewrichtsfuncties</h2>
+            <h2 class="display-2 fs-2">Gewrichtsfuncties</h2>
         `.trim();
 
         if(muscle.functions.length) {
             content += `
-            <table class="table d-inline-block w-auto">
-                <tr>
-                    <th>Gewricht</th>
-                    <th>Prime mover</th>
-                    <th>Assisteert</th>
-                </tr>
+                <table class="table d-inline-block w-auto | joint-functions">
+                    <tr>
+                        <th>Gewricht</th>
+                        <th>Prime mover</th>
+                        <th>Assisteert</th>
+                    </tr>
                 ${this.#createJointFunctionsRows(muscle, joints).join("")}
-            </table>
+                </table>
             `.trim();
         } else {
             content += `<p><em>Er zijn geen gewrichtsfuncties bij deze spier.</em></p>`;
@@ -105,12 +106,13 @@ export default class MusclePage {
 
         if(muscle.specialFunctions.length) {
             content += `
-        <h2 class="display-2 fs-2">Overige functies</h2>
-        <div class="hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription))}</div>
+            <h2 class="display-2 fs-2">Overige functies</h2>
+            <div class="hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription))}</div>
             `.trim();
         }
 
         content += `
+        </div>
     </div>
 </div>
         `.trim();

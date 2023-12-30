@@ -55,19 +55,20 @@ export default class JointPage {
         const title = capitalizeTitle(joint.label);
 
         let content = `
-<h1 class="display-1 fs-1">${title}</h1>
-<div class="row">`;
+<div class="page page-joint">
+    <h1 class="display-1 fs-1">${title}</h1>
+    <div class="row">`;
 
         if(joint.image) {
             content += `
-    <div class="col flex-grow-0 d-none d-lg-block">
-        <img src="${joint.image}" class="page-image" />
-    </div>
+        <div class="col flex-grow-0 d-none d-lg-block">
+            <img src="${joint.image}" class="page-image" />
+        </div>
         `.trim();
         }
 
         content += `
-    <div class="col">
+        <div class="col">
         `.trim();
 
         if(joint.description) {
@@ -75,55 +76,56 @@ export default class JointPage {
         }
 
         content += `
-        <table class="table table-borderless d-inline-block w-auto">
+            <table class="table table-borderless d-inline-block w-auto">
         `.trim();
 
         if(joint.typeIds.length) {
             content += `
-            <tr>
-                <th>Gewrichtstype</th>
-                <td><div class="hideable">${renderJointType(joint, jointTypes)}</div></td>
-            </tr>
+                <tr>
+                    <th>Gewrichtstype</th>
+                    <td><div class="hideable">${renderJointType(joint, jointTypes)}</div></td>
+                </tr>
             `.trim();
         }
 
         if(joint.cpp) {
             content += `
-            <tr>
-                <th>Close-Packed Position (CPP)</th>
-                <td><div class="hideable">${joint.cpp}</div></td>
-            </tr>
+                <tr>
+                    <th>Close-Packed Position (CPP)</th>
+                    <td><div class="hideable">${joint.cpp}</div></td>
+                </tr>
             `.trim();
         }
 
         if(joint.mlpp) {
             content += `
-            <tr>
-                <th>Maximally Loose-Packed Position (MLPP)</th>
-                <td><div class="hideable">${joint.mlpp}</div></td>
-            </tr>
+                <tr>
+                    <th>Maximally Loose-Packed Position (MLPP)</th>
+                    <td><div class="hideable">${joint.mlpp}</div></td>
+                </tr>
             `.trim();
         }
 
         content += `
-        </table>
+            </table>
         `.trim();
 
         if(joint.movements.length) {
             content += `
-        <table class="table">
-            <tr>
-                <th>Beweging</th>
-                <th>ROM</th>
-                <th>Prime movers</th>
-                <th>Overige spieren</th>
-            </tr>
+            <table class="table">
+                <tr>
+                    <th>Beweging</th>
+                    <th>ROM</th>
+                    <th>Prime movers</th>
+                    <th>Overige spieren</th>
+                </tr>
             ${this.#createJointFunctionsRows(joint, objMuscles, muscleFunctions).join("")}
-        </table>
+            </table>
             `.trim();
         }
 
         content += `
+        </div>
     </div>
 </div>
         `.trim();
