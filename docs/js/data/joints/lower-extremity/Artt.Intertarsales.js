@@ -88,7 +88,7 @@ Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. inte
             mlpp: "pronatie subtalair gewricht of middenpositie enkel-voet",
             image: "./images/joints/artt_intercuneiformes.jpeg",
             description: `
-Deze gewrichten valt onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
+Deze gewrichten vallen onder de gewrichten tussen de ossa tarsi onderling (artt. intertarsales).
             `.trim(),
         }
     ),
