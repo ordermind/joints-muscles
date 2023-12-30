@@ -35,8 +35,16 @@ export default class Muscle {
         return this.#origos;
     }
 
+    get origosWithoutPrefix() {
+        return this.origos.map(origo => origo.replace(/^[^:]+:\s*/, ""));
+    }
+
     get insertions() {
         return this.#insertions;
+    }
+
+    get insertionsWithoutPrefix() {
+        return this.insertions.map(insertion => insertion.replace(/^[^:]+:\s*/, ""));
     }
 
     get functions() {

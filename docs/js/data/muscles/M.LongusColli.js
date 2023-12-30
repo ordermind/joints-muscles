@@ -7,13 +7,14 @@ export default new Muscle(
         id: "m_longus_colli",
         label: "m. longus colli",
         origos: [
-            "processi transversi C3 - C5",
-            "facies anteriores corporum vertebralium C5 - T3",
+            "<em>pars recta/verticalis</em>: facies anteriores corporum vertebralium C5 - T3",
+            "<em>pars obliqua superior</em>: processi transversi C3 - C5",
+            "<em>pars obliqua inferior</em>: facies anteriores corporum vertebralium T1 - T3",
         ],
         insertions: [
-            "tuberculum anterius C1",
-            "facies anteriores corporum vertebralium C2 - C4",
-            "processi transversi C5 - C6",
+            "<em>pars recta/verticalis</em>: facies anteriores corporum vertebralium C2 - C4",
+            "<em>pars obliqua superior</em>: tuberculum anterius C1",
+            "<em>pars obliqua inferior</em>: processi transversi C5 - C6",
         ],
         functions: [
             new JointMuscleFunction(

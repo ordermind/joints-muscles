@@ -17,7 +17,7 @@ export default class MuscleAnatomyQuestionFactory {
 
         const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
         for(const otherMuscle of otherMuscles) {
-            for(const origoLabel of otherMuscle.origos) {
+            for(const origoLabel of otherMuscle.origosWithoutPrefix) {
                 if(!answers.hasOwnProperty(origoLabel)) {
                     answers[origoLabel] = origoLabel;
                     totalAnswersCount++;
@@ -28,7 +28,7 @@ export default class MuscleAnatomyQuestionFactory {
                 }
             }
 
-            for(const insertionLabel of otherMuscle.insertions) {
+            for(const insertionLabel of otherMuscle.insertionsWithoutPrefix) {
                 if(!answers.hasOwnProperty(insertionLabel)) {
                     answers[insertionLabel] = insertionLabel;
                     totalAnswersCount++;
@@ -50,11 +50,11 @@ export default class MuscleAnatomyQuestionFactory {
             insertion: {},
         };
 
-        for(const origoLabel of correctMuscle.origos) {
+        for(const origoLabel of correctMuscle.origosWithoutPrefix) {
             correctSolution.origo[origoLabel] = origoLabel;
         }
 
-        for(const insertionLabel of correctMuscle.insertions) {
+        for(const insertionLabel of correctMuscle.insertionsWithoutPrefix) {
             correctSolution.insertion[insertionLabel] = insertionLabel;
         }
 

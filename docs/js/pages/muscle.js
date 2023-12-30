@@ -107,7 +107,7 @@ export default class MusclePage {
         if(muscle.specialFunctions.length) {
             content += `
             <h2 class="display-2 fs-2">Overige functies</h2>
-            <div class="hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription))}</div>
+            <div class="hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription), true)}</div>
             `.trim();
         }
 

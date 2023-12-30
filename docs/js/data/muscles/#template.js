@@ -9,7 +9,7 @@ export default new Muscle(
 
         ],
         insertions: [
-            
+
         ],
         functions: [
             new JointMuscleFunction(
@@ -23,6 +23,8 @@ export default new Muscle(
             ),
         ],
         image: "",
-        description: ``,
+        description: `
+
+        `.trim(),
     }
 );
