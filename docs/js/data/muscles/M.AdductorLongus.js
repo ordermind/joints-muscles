@@ -52,14 +52,7 @@ export default new Muscle(
                 {
                     id: "m_adductor_longus__pelvis",
                     muscleId: "m_adductor_longus",
-                    functionDescription: "het bekken stabiliseren tijdens staan of lopen",
-                }
-            ),
-            new SpecialMuscleFunction(
-                {
-                    id: "m_adductor_longus__pelvis",
-                    muscleId: "m_adductor_longus",
-                    functionDescription: "op één been helpen balanseren tijdens de standfasen van het lopen",
+                    functionDescription: "het bekken stabiliseren tijdens lopen",
                 }
             ),
         ],
