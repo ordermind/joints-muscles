@@ -133,6 +133,7 @@ Het secundaire scapulothoracale systeem bestaande uit:
                         id: "art_acromioclavicularis__laterorotation",
                         jointId: "art_acromioclavicularis",
                         label: "laterorotatie",
+                        labelNotes: ["om de lengte-as van de clavicula"],
                         rom: "15°",
                     }
                 ),
@@ -141,6 +142,7 @@ Het secundaire scapulothoracale systeem bestaande uit:
                         id: "art_acromioclavicularis__mediorotation",
                         jointId: "art_acromioclavicularis",
                         label: "mediorotatie",
+                        labelNotes: ["om de lengte-as van de clavicula"],
                         rom: "15°",
                     }
                 ),
