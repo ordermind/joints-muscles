@@ -5,7 +5,7 @@ export default new Muscle(
     {
         id: "m_serratus_posterior_superior",
         label: "m. serratus posterior superior",
-        regionIds: ["spine"],
+        regionIds: ["torso"],
         origos: [
             "processi spinosi C7 - T3",
             "ligamentum nuchae",
