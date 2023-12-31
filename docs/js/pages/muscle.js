@@ -1,6 +1,7 @@
 import markdownParser from "../../js/markdown-parser.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
+import renderAnatomicStructureOrString from "../data-types/utils.js";
 import { capitalizeTitle, renderList, renderNotesTooltip } from "../utils.js";
 
 export default class MusclePage {
@@ -76,11 +77,11 @@ export default class MusclePage {
             <table class="table table-borderless d-inline-block w-auto">
                 <tr>
                     <th>Origo</th>
-                    <td><div class="hideable">${renderList(muscle.origos, true)}</div></td>
+                    <td><div class="hideable">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo)), true)}</div></td>
                 </tr>
                 <tr>
                     <th>Insertie</th>
-                    <td><div class="hideable">${renderList(muscle.insertions, true)}</div></td>
+                    <td><div class="hideable">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion)), true)}</div></td>
                 </tr>
             </table>
 
@@ -101,8 +102,6 @@ export default class MusclePage {
         } else {
             content += `<p><em>Er zijn geen gewrichtsfuncties bij deze spier.</em></p>`;
         }
-
-
 
         if(muscle.specialFunctions.length) {
             content += `
