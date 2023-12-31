@@ -41,22 +41,22 @@ export default class IndividualFingerAndToeJointFunctionsFactory {
     };
 
     createElement(muscleFunction) {
-        if(this.#invididualJointGroups.hasOwnProperty(muscleFunction.jointId)) {
-            return this.#invididualJointGroups[muscleFunction.jointId].map(jointId => {
-                return new JointMuscleFunction(
-                    {
-                        id: muscleFunction.id.replace(muscleFunction.jointId, jointId),
-                        jointId,
-                        muscleId: muscleFunction.muscleId,
-                        movementId: muscleFunction.movementId.replace(muscleFunction.jointId, jointId),
-                        isPrimeMover: muscleFunction.isPrimeMover,
-                        notes: muscleFunction.notes,
-                    }
-                );
-            })
+        if(!this.#invididualJointGroups.hasOwnProperty(muscleFunction.jointId)) {
+            return null;
         }
 
-        return null;
+        return this.#invididualJointGroups[muscleFunction.jointId].map(jointId => {
+            return new JointMuscleFunction(
+                {
+                    id: muscleFunction.id.replace(muscleFunction.jointId, jointId),
+                    jointId,
+                    muscleId: muscleFunction.muscleId,
+                    movementId: muscleFunction.movementId.replace(muscleFunction.jointId, jointId),
+                    isPrimeMover: muscleFunction.isPrimeMover,
+                    notes: muscleFunction.notes,
+                }
+            );
+        });
     }
 
     processArray(createdMuscleFunctions) {

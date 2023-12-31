@@ -12,22 +12,22 @@ export default class WholeSpineFunctionsFactory {
     ];
 
     createElement(muscleFunction) {
-        if(this.#torsoJoints.includes(muscleFunction.jointId)) {
-            const jointId = muscleFunction.jointId;
-
-            return new JointMuscleFunction(
-                {
-                    id: muscleFunction.id.replace(jointId, "columna_vertebralis"),
-                    jointId: "columna_vertebralis",
-                    muscleId: muscleFunction.muscleId,
-                    movementId: muscleFunction.movementId.replace(jointId, "columna_vertebralis"),
-                    isPrimeMover: muscleFunction.isPrimeMover,
-                    notes: muscleFunction.notes,
-                }
-            );
+        if(!this.#torsoJoints.includes(muscleFunction.jointId)) {
+            return null;
         }
 
-        return null;
+        const jointId = muscleFunction.jointId;
+
+        return new JointMuscleFunction(
+            {
+                id: muscleFunction.id.replace(jointId, "columna_vertebralis"),
+                jointId: "columna_vertebralis",
+                muscleId: muscleFunction.muscleId,
+                movementId: muscleFunction.movementId.replace(jointId, "columna_vertebralis"),
+                isPrimeMover: muscleFunction.isPrimeMover,
+                notes: muscleFunction.notes,
+            }
+        );
     }
 
     /**
