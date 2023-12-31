@@ -1,6 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
-import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
@@ -44,15 +43,6 @@ export default new Muscle(
                     muscleId: "m_adductor_longus",
                     movementId: "art_coxae__exorotation",
                     isPrimeMover: false,
-                }
-            ),
-        ],
-        specialFunctions: [
-            new SpecialMuscleFunction(
-                {
-                    id: "m_adductor_longus__pelvis",
-                    muscleId: "m_adductor_longus",
-                    functionDescription: "het bekken stabiliseren tijdens lopen",
                 }
             ),
         ],

@@ -1,14 +1,25 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_biceps_brachii",
         label: "m. biceps brachii",
         origos: [
-            "<em>caput longum</em>: tuberculum supraglenoidale scapulae",
-            "<em>caput breve</em>: processus coracoideus scapulae",
+            new AnatomicStructure(
+                {
+                    label: "tuberculum supraglenoidale scapulae",
+                    notes: ["caput longum"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "processus coracoideus scapulae",
+                    notes: ["caput breve"],
+                }
+            ),
         ],
         insertions: [
             "tuberositas radii",
@@ -50,7 +61,7 @@ export default new Muscle(
                     muscleId: "m_biceps_brachii",
                     movementId: "art_humeri__abduction",
                     isPrimeMover: false,
-                    notes: ["caput longum"],
+                    notes: ["alleen caput longum"],
                 }
             ),
             new JointMuscleFunction(
@@ -60,7 +71,7 @@ export default new Muscle(
                     muscleId: "m_biceps_brachii",
                     movementId: "art_humeri__endorotation",
                     isPrimeMover: false,
-                    notes: ["caput longum"],
+                    notes: ["alleen caput longum"],
                 }
             ),
             new JointMuscleFunction(
@@ -70,7 +81,7 @@ export default new Muscle(
                     muscleId: "m_biceps_brachii",
                     movementId: "art_humeri__adduction",
                     isPrimeMover: false,
-                    notes: ["caput breve"],
+                    notes: ["alleen caput breve"],
                 }
             ),
         ],

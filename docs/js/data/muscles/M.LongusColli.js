@@ -1,20 +1,51 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_longus_colli",
         label: "m. longus colli",
         origos: [
-            "<em>pars recta/verticalis</em>: facies anteriores corporum vertebralium C5 - T3",
-            "<em>pars obliqua superior</em>: processi transversi C3 - C5",
-            "<em>pars obliqua inferior</em>: facies anteriores corporum vertebralium T1 - T3",
+            new AnatomicStructure(
+                {
+                    label: "facies anteriores corporum vertebralium C5 - T3",
+                    notes: ["pars recta/verticalis"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "processi transversi C3 - C5",
+                    notes: ["pars obliqua superior"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "facies anteriores corporum vertebralium T1 - T3",
+                    notes: ["pars obliqua inferior"],
+                }
+            ),
         ],
         insertions: [
-            "<em>pars recta/verticalis</em>: facies anteriores corporum vertebralium C2 - C4",
-            "<em>pars obliqua superior</em>: tuberculum anterius C1",
-            "<em>pars obliqua inferior</em>: processi transversi C5 - C6",
+            new AnatomicStructure(
+                {
+                    label: "facies anteriores corporum vertebralium C2 - C4",
+                    notes: ["pars recta/verticalis"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "tuberculum anterius C1",
+                    notes: ["pars obliqua superior"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "processi transversi C5 - C6",
+                    notes: ["pars obliqua inferior"],
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(

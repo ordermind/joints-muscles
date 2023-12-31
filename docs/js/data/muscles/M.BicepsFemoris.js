@@ -1,0 +1,61 @@
+import Muscle from "../../data-types/Muscle.js";
+import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
+
+export default new Muscle(
+    {
+        id: "m_biceps_femoris",
+        label: "m. biceps femoris",
+        origos: [
+            new AnatomicStructure(
+                {
+                    label: "tuber ischiadicum",
+                    notes: ["caput longum"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "linea aspera femoris (distale helft, lateraal)",
+                    notes: ["caput breve"],
+                }
+            ),
+        ],
+        insertions: [
+            "caput fibulae",
+        ],
+        functions: [
+            new JointMuscleFunction(
+                {
+                    id: "m_biceps_femoris__art_genus__flexion",
+                    jointId: "art_genus",
+                    muscleId: "m_biceps_femoris",
+                    movementId: "art_genus__flexion",
+                    isPrimeMover: true,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_biceps_femoris__art_genus__exorotation",
+                    jointId: "art_genus",
+                    muscleId: "m_biceps_femoris",
+                    movementId: "art_genus__exorotation",
+                    isPrimeMover: true,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_biceps_femoris__art_coxae__retroflexion",
+                    jointId: "art_coxae",
+                    muscleId: "m_biceps_femoris",
+                    movementId: "art_coxae__retroflexion",
+                    isPrimeMover: true,
+                    notes: ["alleen caput longum"],
+                }
+            ),
+        ],
+        image: "./images/muscles/m_biceps_femoris.jpeg",
+        description: `
+
+        `.trim(),
+    }
+);

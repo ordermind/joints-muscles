@@ -2,6 +2,7 @@ import DraggableQuestion from "../DraggableQuestion.js";
 import { shuffle } from "../../utils.js";
 import NextQuestionButton from "../NextQuestionButton.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
+import renderAnatomicStructureOrString from "../../../data-types/utils.js";
 
 export default class MuscleAnatomyQuestionFactory {
     #maxAnswers = 20;
@@ -17,7 +18,7 @@ export default class MuscleAnatomyQuestionFactory {
 
         const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
         for(const otherMuscle of otherMuscles) {
-            for(const origoLabel of otherMuscle.origosWithoutPrefix) {
+            for(const origoLabel of otherMuscle.origos.map(origo => renderAnatomicStructureOrString(origo))) {
                 if(!answers.hasOwnProperty(origoLabel)) {
                     answers[origoLabel] = origoLabel;
                     totalAnswersCount++;
@@ -28,7 +29,7 @@ export default class MuscleAnatomyQuestionFactory {
                 }
             }
 
-            for(const insertionLabel of otherMuscle.insertionsWithoutPrefix) {
+            for(const insertionLabel of otherMuscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion))) {
                 if(!answers.hasOwnProperty(insertionLabel)) {
                     answers[insertionLabel] = insertionLabel;
                     totalAnswersCount++;
@@ -50,11 +51,11 @@ export default class MuscleAnatomyQuestionFactory {
             insertion: {},
         };
 
-        for(const origoLabel of correctMuscle.origosWithoutPrefix) {
+        for(const origoLabel of correctMuscle.origos.map(origo => renderAnatomicStructureOrString(origo))) {
             correctSolution.origo[origoLabel] = origoLabel;
         }
 
-        for(const insertionLabel of correctMuscle.insertionsWithoutPrefix) {
+        for(const insertionLabel of correctMuscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion))) {
             correctSolution.insertion[insertionLabel] = insertionLabel;
         }
 

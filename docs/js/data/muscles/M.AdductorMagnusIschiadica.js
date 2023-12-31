@@ -1,7 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import AnatomicStructure from "../../data-types/AnatomicStructure.js";
-import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -46,15 +45,6 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
-        ],
-        specialFunctions: [
-            new SpecialMuscleFunction(
-                {
-                    id: "m_adductor_magnus_ischiadica__pelvis",
-                    muscleId: "m_adductor_magnus_ischiadica",
-                    functionDescription: "het bekken stabiliseren tijdens lopen",
-                }
-            )
         ],
         image: "./images/muscles/m_adductor_magnus_ischiadica.jpeg",
         description: `

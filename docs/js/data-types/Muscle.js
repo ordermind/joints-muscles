@@ -1,5 +1,4 @@
 import { objJoints } from "../data/joints.js";
-import AnatomicStructure from "./AnatomicStructure.js";
 
 export default class Muscle {
     #id;
@@ -36,28 +35,8 @@ export default class Muscle {
         return this.#origos;
     }
 
-    get origosWithoutPrefix() {
-        return this.origos.map(origo => {
-            if(origo instanceof AnatomicStructure) {
-                origo = origo.label;
-            }
-
-            return origo.replace(/^[^:]+:\s*/, "");
-        });
-    }
-
     get insertions() {
         return this.#insertions;
-    }
-
-    get insertionsWithoutPrefix() {
-        return this.insertions.map(insertion => {
-            if(insertion instanceof AnatomicStructure) {
-                insertion = insertion.label;
-            }
-
-            return insertion.replace(/^[^:]+:\s*/, "");
-        });
     }
 
     get functions() {

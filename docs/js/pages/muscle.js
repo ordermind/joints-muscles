@@ -77,11 +77,11 @@ export default class MusclePage {
             <table class="table table-borderless d-inline-block w-auto">
                 <tr>
                     <th>Origo</th>
-                    <td><div class="hideable">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo)), true)}</div></td>
+                    <td><div class="hideable">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo, true)), true)}</div></td>
                 </tr>
                 <tr>
                     <th>Insertie</th>
-                    <td><div class="hideable">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion)), true)}</div></td>
+                    <td><div class="hideable">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, true)), true)}</div></td>
                 </tr>
             </table>
 
