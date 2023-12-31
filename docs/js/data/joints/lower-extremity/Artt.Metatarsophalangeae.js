@@ -35,6 +35,37 @@ export default [
     ),
     new Joint(
         {
+            id: "artt_metatarsophalangeae_2_5",
+            regionId: "lower_extremity",
+            label: "artt. metatarsophalangeae II - V (MTP II - V)",
+            typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
+            cpp: "maximale extensie",
+            mlpp: "lichte extensie",
+            movements: [
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_5__flexion",
+                        jointId: "artt_metatarsophalangeae_2_5",
+                        label: "flexie",
+                        rom: "45°",
+                        endFeel: "hard capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_5__extension",
+                        jointId: "artt_metatarsophalangeae_2_5",
+                        label: "extensie",
+                        rom: "70°",
+                        endFeel: "capsulair",
+                    }
+                ),
+            ],
+            image: "./images/joints/artt_metatarsophalangeae_2_5.jpeg",
+        }
+    ),
+    new Joint(
+        {
             id: "art_metatarsophalangea_2",
             regionId: "lower_extremity",
             label: "art. metatarsophalangea II (MTP II)",

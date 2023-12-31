@@ -76,11 +76,11 @@ De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijk
     ),
     new Joint(
         {
-            id: "artt_carpometacarpales",
+            id: "artt_carpometacarpales_2_5",
             regionId: "upper_extremity",
-            label: "artt. carpometacarpales II-V (CMC II-V)",
+            label: "artt. carpometacarpales II - V (CMC II - V)",
             typeIds: ["junctura_synovialis", "art_plana"],
-            image: "./images/joints/artt_carpometacarpales.jpeg",
+            image: "./images/joints/artt_carpometacarpales_2_5.jpeg",
             description: `
 De vier articulationes carpometacarpales gezamenlijk vormen weer een 'blok' ten opzichte van de [Link type="Joint" targetId="art.carpometacarpalis_1" label="articulatio carpometacarpalis (pollicis) I"]. Dit houdt verband met de grijpfunctie van de hand (oppositie
 van de duim, pincetgreep).

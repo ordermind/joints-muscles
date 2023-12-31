@@ -35,6 +35,54 @@ export default [
     ),
     new Joint(
         {
+            id: "artt_metacarpophalangeae_2_5",
+            regionId: "upper_extremity",
+            label: "artt. metacarpophalangeae II - V (MCP II - V)",
+            typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
+            cpp: "maximale flexie",
+            mlpp: "lichte flexie met lichte adductie",
+            movements: [
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_5__flexion",
+                        jointId: "artt_metacarpophalangeae_2_5",
+                        label: "flexie",
+                        rom: "90°"
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_5__extension",
+                        jointId: "artt_metacarpophalangeae_2_5",
+                        label: "extensie",
+                        rom: "45°",
+                        endFeel: "hard capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_5__abduction",
+                        jointId: "artt_metacarpophalangeae_2_5",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                        description: `ten opzichte van 3e vingerstraal`,
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_5__adduction",
+                        jointId: "artt_metacarpophalangeae_2_5",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                        description: `ten opzichte van 3e vingerstraal`,
+                    }
+                ),
+            ],
+            image: "./images/joints/artt_metacarpophalangeae_2_5.jpeg",
+        }
+    ),
+    new Joint(
+        {
             id: "art_metacarpophalangea_2",
             regionId: "upper_extremity",
             label: "art. metacarpophalangea II (MCP II)",
