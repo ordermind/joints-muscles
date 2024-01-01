@@ -25,7 +25,7 @@ export default class JointPage {
     <td class="${movement.rom ? "hideable" : ""}">${movement.rom ?? ""}${renderNotesTooltip(movement.romNotes)}</td>
     <td class="${primeMovers.length ? "hideable" : ""}">`;
             if(primeMovers.length) {
-                row += `<table class="table table-striped">`;
+                row += `<table class="table table-striped table-borderless">`;
                     for(const primeMover of primeMovers) {
                         row += this.#renderMuscleFunction(objMuscles, primeMover);
                     }
@@ -35,7 +35,7 @@ export default class JointPage {
     </td>
     <td class="${otherMuscles.length ? "hideable" : ""}">`;
             if(otherMuscles.length) {
-                row += `<table class="table table-striped">`;
+                row += `<table class="table table-striped table-borderless">`;
                     for(const otherMuscle of otherMuscles) {
                         row += this.#renderMuscleFunction(objMuscles, otherMuscle);
                     }
