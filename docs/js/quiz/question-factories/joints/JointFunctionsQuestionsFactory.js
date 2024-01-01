@@ -86,7 +86,7 @@ export default class JointFunctionsQuestionsFactory {
             for(const [movementIndex, movement] of shuffledMovements.entries()) {
                 const correctSolution = this.#createCorrectSolution(movement);
 
-                const isFirstQuestion = movementIndex === 0;
+                const isFirstMovementWithinTheJoint = movementIndex === 0;
 
                 jointQuestions.push(new DraggableQuestion(
                     {
@@ -106,7 +106,7 @@ export default class JointFunctionsQuestionsFactory {
                             })
                         ),
                         correctSolution: correctSolution,
-                        previousNextQuestionButtonText: isFirstQuestion ? "Spierfuncties" : "Volgende spierfunctie",
+                        previousNextQuestionButtonText: isFirstMovementWithinTheJoint ? "Spierfuncties" : "Volgende spierfunctie",
                     }
                 ));
 
