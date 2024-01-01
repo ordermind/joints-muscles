@@ -8,6 +8,7 @@
 - Lägg till muskler för bovenste extremiteit
 - När jag hämtar muskler med liknande funktioner, lägg till en fallbackfunktion som hämtar muskler som delar en region med ursprungsmuskeln (array intersect)
 - När jag hämtar muskler med liknande funktioner, prioritera de funktioner i ursprungsmuskeln som är prime mover-funktioner.
+- Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 
 MVP RELEASE
 
