@@ -22,10 +22,10 @@ export default class JointPage {
             let row = `
 <tr>
     <td>${movement.label}${renderNotesTooltip(movement.labelNotes)}</td>
-    <td>${movement.rom || ""}${renderNotesTooltip(movement.romNotes)}</td>
-    <td>`;
+    <td class="${movement.rom ? "hideable" : ""}">${movement.rom ?? ""}${renderNotesTooltip(movement.romNotes)}</td>
+    <td class="${primeMovers.length ? "hideable" : ""}">`;
             if(primeMovers.length) {
-                row += `<table class="table table-striped | hideable">`;
+                row += `<table class="table table-striped">`;
                     for(const primeMover of primeMovers) {
                         row += this.#renderMuscleFunction(objMuscles, primeMover);
                     }
@@ -33,9 +33,9 @@ export default class JointPage {
             }
             row += `
     </td>
-    <td>`;
+    <td class="${otherMuscles.length ? "hideable" : ""}">`;
             if(otherMuscles.length) {
-                row += `<table class="table table-striped | hideable">`;
+                row += `<table class="table table-striped">`;
                     for(const otherMuscle of otherMuscles) {
                         row += this.#renderMuscleFunction(objMuscles, otherMuscle);
                     }
@@ -83,7 +83,7 @@ export default class JointPage {
             content += `
                 <tr>
                     <th>Gewrichtstype</th>
-                    <td><div class="hideable">${renderJointType(joint, jointTypes)}</div></td>
+                    <td class="hideable">${renderJointType(joint, jointTypes)}</td>
                 </tr>
             `.trim();
         }
@@ -92,7 +92,7 @@ export default class JointPage {
             content += `
                 <tr>
                     <th>Close-Packed Position (CPP)</th>
-                    <td><div class="hideable">${joint.cpp}</div></td>
+                    <td class="hideable">${joint.cpp}</td>
                 </tr>
             `.trim();
         }
@@ -101,7 +101,7 @@ export default class JointPage {
             content += `
                 <tr>
                     <th>Maximally Loose-Packed Position (MLPP)</th>
-                    <td><div class="hideable">${joint.mlpp}</div></td>
+                    <td class="hideable">${joint.mlpp}</td>
                 </tr>
             `.trim();
         }
