@@ -24,7 +24,7 @@ export default new Muscle(
                     jointId: "art_coxae",
                     muscleId: "m_adductor_longus",
                     movementId: "art_coxae__anteflexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(

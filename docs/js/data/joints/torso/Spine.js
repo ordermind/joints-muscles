@@ -61,7 +61,7 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
         {
             id: "juncturae_craniovertebrales",
             regionId: "torso",
-            label: "juncturae craniovertebrales (hoofdgewrichten, art. atlantooccipitalis / artt. atlantoaxiales)",
+            label: "juncturae craniovertebrales (hoofdgewrichten)",
             typeIds: ["junctura_synovialis", "art_ellipsoidea", "art_trochoidea", "art_plana"],
             movements: [
                 new Movement(
@@ -102,6 +102,9 @@ De waarden voor CPP en MLPP komen uit Hogezand (2005) Inleiding in de OrthoManue
                 ),
             ],
             image: "./images/joints/juncturae_craniovertebrales.jpeg",
+            description: `
+Deze gewrichtsgroep bestaat uit [Link type="Joint" targetId="art_atlantooccipitalis" label="art. atlantooccipitalis"] en [Link type="Joint" targetId="artt_atlantoaxiales" label="artt. atlantoaxiales"].
+            `.trim(),
         },
     ),
     new Joint(

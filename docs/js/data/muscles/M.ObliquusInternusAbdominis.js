@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_obliquus_internus_abdominis",
         label: "m. obliquus internus abdominis",
         origos: [
-            "crista iliaca (anteriore 2/3 deel)",
+            "crista iliaca (ventrale 2/3 deel)",
             "fascia thoracolumbalis",
         ],
         insertions: [
@@ -80,7 +80,8 @@ export default new Muscle(
                 {
                     id: "m_obliquus_internus_abdominis__pelvis",
                     muscleId: "m_obliquus_internus_abdominis",
-                    functionDescription: "achteroverkantelen bekken (bij gefixeerde thorax)",
+                    functionDescription: "achteroverkantelen bekken",
+                    notes: ["bij gefixeerde thorax"],
                 }
             ),
             new SpecialMuscleFunction(

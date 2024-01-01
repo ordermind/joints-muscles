@@ -20,7 +20,7 @@ export default new Muscle(
                     jointId: "juncturae_craniovertebrales",
                     muscleId: "m_rectus_capitis_anterior",
                     movementId: "juncturae_craniovertebrales__flexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
         ],

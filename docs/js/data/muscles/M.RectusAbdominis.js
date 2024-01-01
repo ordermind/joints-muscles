@@ -39,7 +39,8 @@ export default new Muscle(
                 {
                     id: "m_rectus_abdominis__pelvis",
                     muscleId: "m_rectus_abdominis",
-                    functionDescription: "achteroverkantelen bekken (bij gefixeerde thorax)",
+                    functionDescription: "achteroverkantelen bekken",
+                    notes: ["bij gefixeerde thorax"],
                 }
             ),
             new SpecialMuscleFunction(

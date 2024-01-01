@@ -11,7 +11,7 @@ export default new Muscle(
         ],
         insertions: [
             "linea alba",
-            "crista iliaca (anteriore 2/3 deel)",
+            "crista iliaca (ventrale 2/3 deel)",
             "tuberculum pubicum",
         ],
         functions: [
@@ -79,7 +79,8 @@ export default new Muscle(
                 {
                     id: "m_obliquus_externus_abdominis__pelvis",
                     muscleId: "m_obliquus_externus_abdominis",
-                    functionDescription: "achteroverkantelen bekken (bij gefixeerde thorax)",
+                    functionDescription: "achteroverkantelen bekken",
+                    notes: ["bij gefixeerde thorax"],
                 }
             ),
             new SpecialMuscleFunction(

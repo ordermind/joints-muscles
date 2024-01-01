@@ -15,15 +15,6 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_rectus_capitis_lateralis__juncturae_craniovertebrales__flexion",
-                    jointId: "juncturae_craniovertebrales",
-                    muscleId: "m_rectus_capitis_lateralis",
-                    movementId: "juncturae_craniovertebrales__flexion",
-                    isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "m_rectus_capitis_lateralis__juncturae_craniovertebrales__lateroflexion",
                     jointId: "juncturae_craniovertebrales",
                     muscleId: "m_rectus_capitis_lateralis",
