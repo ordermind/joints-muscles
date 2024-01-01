@@ -60,8 +60,6 @@ export default class IndividualFingerAndToeJointFunctionsFactory {
     }
 
     processArray(createdMuscleFunctions) {
-        return createdMuscleFunctions
-            .flat()
-            .filter(element => element !== null);
+        return createdMuscleFunctions.flat();
     }
 }

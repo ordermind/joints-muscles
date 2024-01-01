@@ -7,7 +7,7 @@ export default class JointMuscleFunction {
     #isPrimeMover;
     #notes;
 
-    constructor({id, jointId, muscleId, movementId, movementLabelOverride, isPrimeMover, notes = []}) {
+    constructor({id, jointId, muscleId, movementId, movementLabelOverride = null, isPrimeMover, notes = []}) {
         this.#id = id;
         this.#jointId = jointId;
         this.#muscleId = muscleId;
@@ -61,4 +61,3 @@ export default class JointMuscleFunction {
         return new JointMuscleFunction(JSON.parse(json));
     }
 }
-

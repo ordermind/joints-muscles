@@ -22,7 +22,11 @@ const muscleFunctionFactories = [
 
 for(const muscleFunction of muscleFunctions) {
     for(const muscleFunctionFactory of muscleFunctionFactories) {
-        muscleFunctionFactory.createdMuscleFunctions.push(muscleFunctionFactory.factory.createElement(muscleFunction));
+        const createdMuscleFunction = muscleFunctionFactory.factory.createElement(muscleFunction);
+
+        if(createdMuscleFunction !== null) {
+            muscleFunctionFactory.createdMuscleFunctions.push(createdMuscleFunction);
+        }
     }
 }
 

@@ -37,7 +37,6 @@ export default class WholeSpineFunctionsFactory {
         return Array.from(
             new Set(
                 createdMuscleFunctions
-                .filter(element => element !== null)
                 .map(element => JSON.stringify(element))
             )
         ).map(element => JointMuscleFunction.fromJSON(element));

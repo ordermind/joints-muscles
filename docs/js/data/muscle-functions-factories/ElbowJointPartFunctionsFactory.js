@@ -51,8 +51,6 @@ export default class ElbowJointPartFunctionsFactory {
     }
 
     processArray(createdMuscleFunctions) {
-        return createdMuscleFunctions
-            .flat()
-            .filter(element => element !== null);
+        return createdMuscleFunctions.flat();
     }
 }
