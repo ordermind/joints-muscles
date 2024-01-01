@@ -14,6 +14,8 @@ export const arrMuscles = await Promise.all(
         "M.FibularisLongus.js",
         "M.FibularisTertius.js",
         "M.FlexorDigitorumLongus.js",
+        "M.FlexorHallucisLongus.js",
+        "M.Gastrocnemius.js",
         "M.IliocostalisCervicis.js",
         "M.IliocostalisLumborum.js",
         "M.IliocostalisThoracis.js",
