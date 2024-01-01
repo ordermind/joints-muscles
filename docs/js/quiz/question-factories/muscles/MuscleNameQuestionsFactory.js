@@ -1,6 +1,5 @@
-import NextQuestionButton from "../NextQuestionButton.js";
-import MultipleChoiceAnswer from "../MultipleChoiceAnswer.js";
-import MultipleChoiceQuestionSingleAnswer from "../MultipleChoiceQuestionSingleAnswer.js";
+import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
+import MultipleChoiceQuestionSingleAnswer from "../../questions/MultipleChoiceQuestionSingleAnswer.js";
 import { shuffle } from "../../utils.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 
@@ -46,7 +45,7 @@ export default class MuscleNameQuestionFactory {
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>
                     `.trim(),
-                    nextQuestionButton: new NextQuestionButton({buttonText: "Origo & Insertie"}),
+                    previousNextQuestionButtonText: "Volgende spier",
                 }
             ));
         }

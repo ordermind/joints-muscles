@@ -1,18 +1,26 @@
 import messageBus from "../message-bus.js";
+import NextQuestionButton from "../misc/NextQuestionButton.js";
 
 export default class MultipleTextInputQuestion {
     #question;
     #answers;
-    #nextQuestionButton;
+    #previousNextQuestionButtonText;
     #wrapperClasses;
 
-    constructor({question, answers, nextQuestionButton, wrapperClasses = []}) {
+    #nextQuestionButton;
+
+    constructor({question, answers, previousNextQuestionButtonText, wrapperClasses = []}) {
         this.#question = question;
         this.#answers = answers;
-        this.#nextQuestionButton = nextQuestionButton;
         this.#wrapperClasses = wrapperClasses;
+        this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
+        this.#nextQuestionButton = new NextQuestionButton();
 
         this.onChangeAnswer = this.onChangeAnswer.bind(this);
+    }
+
+    get previousNextQuestionButtonText() {
+        return this.#previousNextQuestionButtonText;
     }
 
     #removeAnswerClasses(element) {
@@ -54,7 +62,7 @@ export default class MultipleTextInputQuestion {
         }
     }
 
-    render(parentElement) {
+    render({parentElement, nextQuestionButtonText}) {
         let content = `
     ${this.#question}
 <table class="table table-borderless align-middle text-start w-auto m-auto | answers multiple-text-input">
@@ -82,7 +90,7 @@ for(const answer of this.#answers) {
         wrapper.classList.add("question", "multiple-text-input-question", "text-center", ...this.#wrapperClasses);
         wrapper.innerHTML = content;
 
-        this.#nextQuestionButton.render(wrapper);
+        this.#nextQuestionButton.render({parentElement: wrapper, buttonText: nextQuestionButtonText});
 
         for(const inputElement of wrapper.querySelectorAll(`.answers input[type="text"`)) {
             inputElement.addEventListener("change", this.onChangeAnswer);

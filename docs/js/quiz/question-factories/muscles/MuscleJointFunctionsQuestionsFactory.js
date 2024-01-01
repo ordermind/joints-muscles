@@ -1,6 +1,5 @@
-import DraggableQuestion from "../DraggableQuestion.js";
+import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
-import NextQuestionButton from "../NextQuestionButton.js";
 import { objJoints } from "../../../data/joints.js";
 
 export default class MuscleJointFunctionsQuestionsFactory {
@@ -68,7 +67,6 @@ export default class MuscleJointFunctionsQuestionsFactory {
             }
 
             const correctSolution = this.#createCorrectSolution(muscle);
-            const hasSpecialFunctions = muscle.specialFunctions.length > 0;
 
             questions[muscle.id] = new DraggableQuestion(
                 {
@@ -87,11 +85,7 @@ export default class MuscleJointFunctionsQuestionsFactory {
                     })
                     .sort((a, b) => a.label.localeCompare(b.label)),
                     correctSolution: correctSolution,
-                        nextQuestionButton: new NextQuestionButton(
-                            {
-                                buttonText: hasSpecialFunctions ? "Overige functies" : "Volgende spier",
-                            }
-                        ),
+                    previousNextQuestionButtonText: "Gewrichtsfuncties",
                 }
             );
         }

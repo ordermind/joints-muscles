@@ -1,7 +1,6 @@
-import DraggableQuestion from "../DraggableQuestion.js";
+import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import { shuffle } from "../../utils.js";
-import NextQuestionButton from "../NextQuestionButton.js";
 
 export default class MuscleSpecialFunctionsQuestionsFactory {
     #maxAnswers = 20;
@@ -61,9 +60,9 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${muscle.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke overige functies ` + (isMusclePlural(muscle) ? "hebben deze spieren" : "heeft deze spier") + `? Sleep die functies naar het juiste vak.</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke speciale functies ` + (isMusclePlural(muscle) ? "hebben deze spieren" : "heeft deze spier") + `? Sleep die functies naar het juiste vak.</h2>
                     `.trim(),
-                    regions: [{id: "specialFunctions", label: "Overige functies"}],
+                    regions: [{id: "specialFunctions", label: "Speciale functies"}],
                     answers: shuffle(
                         Object.entries(
                             this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
@@ -72,11 +71,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
                         })
                     ),
                     correctSolution: correctSolution,
-                        nextQuestionButton: new NextQuestionButton(
-                            {
-                                buttonText: "Volgende spier",
-                            }
-                        ),
+                    previousNextQuestionButtonText: "Speciale functies",
                 }
             );
         }

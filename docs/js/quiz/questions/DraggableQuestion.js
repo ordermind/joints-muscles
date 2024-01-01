@@ -1,28 +1,36 @@
 import messageBus from "../message-bus.js";
 import dragula from "../../../vendor/dragula/js/dragula.min.js";
 import {deepEqual} from "../utils.js";
+import NextQuestionButton from "../misc/NextQuestionButton.js";
 
 export default class DraggableQuestion {
     #question;
     #regions;
     #answers;
     #correctSolution;
-    #nextQuestionButton;
+    #previousNextQuestionButtonText;
     #wrapperClasses;
 
+    #nextQuestionButton;
     #dragula;
 
-    constructor({question, regions, answers, correctSolution, nextQuestionButton, wrapperClasses = []}) {
+    constructor({question, regions, answers, correctSolution, previousNextQuestionButtonText, wrapperClasses = []}) {
         this.#question = question;
         this.#regions = regions;
         this.#answers = answers;
         this.#correctSolution = correctSolution;
-        this.#nextQuestionButton = nextQuestionButton;
+        this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
         this.#wrapperClasses = wrapperClasses;
+
+        this.#nextQuestionButton = new NextQuestionButton();
 
         this.onDraggableDrop = this.onDraggableDrop.bind(this);
         this.onQuestionAnsweredCorrectly = this.onQuestionAnsweredCorrectly.bind(this);
         this.onQuestionAnsweredIncorrectly = this.onQuestionAnsweredIncorrectly.bind(this);
+    }
+
+    get previousNextQuestionButtonText() {
+        return this.#previousNextQuestionButtonText;
     }
 
     #removePlacementClasses(element) {
@@ -88,7 +96,7 @@ export default class DraggableQuestion {
         }
     }
 
-    render(parentElement) {
+    render({parentElement, nextQuestionButtonText}) {
         const draggableContainers = [];
 
         let wrapper = document.createElement("div");
@@ -146,7 +154,7 @@ export default class DraggableQuestion {
             draggableContainers.push(draggableContainer);
         }
 
-        this.#nextQuestionButton.render(wrapper);
+        this.#nextQuestionButton.render({parentElement: wrapper, buttonText: nextQuestionButtonText});
 
         messageBus.on("question-answered-correctly", this.onQuestionAnsweredCorrectly);
         messageBus.on("question-answered-incorrectly", this.onQuestionAnsweredIncorrectly);

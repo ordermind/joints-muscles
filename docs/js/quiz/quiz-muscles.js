@@ -1,5 +1,5 @@
 import BaseQuiz from "./base-quiz.js";
-import MuscleQuestionsFactory from "./questions/muscles/MuscleQuestionsFactory.js";
+import MuscleQuestionsFactory from "./question-factories/muscles/MuscleQuestionsFactory.js";
 
 export default class QuizMuscles extends BaseQuiz {
     constructor() {

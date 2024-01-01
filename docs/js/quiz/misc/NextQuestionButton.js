@@ -2,11 +2,8 @@ import messageBus from "../message-bus.js";
 
 export default class NextQuestionButton {
     #buttonElement;
-    #buttonText;
 
-    constructor({buttonText}) {
-        this.#buttonText = buttonText;
-
+    constructor() {
         this.onClick = this.onClick.bind(this);
         this.onQuestionAnsweredCorrectly = this.onQuestionAnsweredCorrectly.bind(this);
         this.onQuestionAnsweredIncorrectly = this.onQuestionAnsweredIncorrectly.bind(this);
@@ -24,10 +21,10 @@ export default class NextQuestionButton {
         messageBus.emit("clickedNextQuestionButton");
     }
 
-    render(parentElement) {
+    render({parentElement, buttonText}) {
         this.#buttonElement = document.createElement("button");
         this.#buttonElement.classList.add("btn", "btn-primary", "text-start", "d-inline-flex", "justify-content-between", "align-items-center", "pt-1", "pb-1", "ps-3", "pe-2", "invisible", "|", "next-question");
-        this.#buttonElement.innerHTML = `<span class="fs-5">${this.#buttonText}</span><span class="fs-2">➡️</span>`;
+        this.#buttonElement.innerHTML = `<span class="fs-5">${buttonText}</span><span class="fs-2">➡️</span>`;
         this.#buttonElement.addEventListener("click", this.onClick);
         messageBus.on("question-answered-correctly", this.onQuestionAnsweredCorrectly);
         messageBus.on("question-answered-incorrectly", this.onQuestionAnsweredIncorrectly);

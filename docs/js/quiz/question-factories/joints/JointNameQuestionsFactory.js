@@ -1,6 +1,5 @@
-import NextQuestionButton from "../NextQuestionButton.js";
-import MultipleChoiceAnswer from "../MultipleChoiceAnswer.js";
-import MultipleChoiceQuestionSingleAnswer from "../MultipleChoiceQuestionSingleAnswer.js";
+import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
+import MultipleChoiceQuestionSingleAnswer from "../../questions/MultipleChoiceQuestionSingleAnswer.js";
 import { shuffle } from "../../utils.js";
 import { isJointPlural } from "./utils.js";
 
@@ -10,13 +9,10 @@ export default class JointNameQuestionsFactory {
     create({joints}) {
         const questions = [];
 
-        for(const [index, correctJoint] of joints.entries()) {
+        for(const correctJoint of joints) {
             if(!correctJoint.image) {
                 continue;
             }
-
-            const hasMovements = correctJoint.movements.length > 0;
-            const isLastJoint = index >= joints.length - 1;
 
             const otherJointsInTheSameRegion = joints
                 .filter(joint => joint.regionId === correctJoint.regionId && joint.id !== correctJoint.id);
@@ -49,7 +45,7 @@ export default class JointNameQuestionsFactory {
     <img class="quiz-image" src="${correctJoint.image}" />
 </div>
                     `.trim(),
-                    nextQuestionButton: new NextQuestionButton({buttonText: hasMovements ? "Range of Motion" : isLastJoint ? "Klaar!" : "Volgend gewricht"}),
+                    previousNextQuestionButtonText: "Volgend gewricht",
                 }
             ));
         }

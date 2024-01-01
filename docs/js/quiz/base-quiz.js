@@ -73,9 +73,12 @@ export default class BaseQuiz {
     }
 
     #renderQuestion() {
+        const isLastQuestion = this.#currentQuestionIndex === this.#questions.length - 1;
+        const nextQuestionButtonText = isLastQuestion ? "Klaar!" : this.#questions[this.#currentQuestionIndex + 1].previousNextQuestionButtonText;
+
         removeChildren(this.#wrapper);
 
-        this.#questions[this.#currentQuestionIndex].render(this.#wrapper);
+        this.#questions[this.#currentQuestionIndex].render({parentElement: this.#wrapper, nextQuestionButtonText});
     }
 
     start(parentElement) {

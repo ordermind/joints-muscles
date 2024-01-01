@@ -1,6 +1,5 @@
-import DraggableQuestion from "../DraggableQuestion.js";
+import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { shuffle } from "../../utils.js";
-import NextQuestionButton from "../NextQuestionButton.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import renderAnatomicStructureOrString from "../../../data-types/utils.js";
 
@@ -67,7 +66,6 @@ export default class MuscleAnatomyQuestionFactory {
 
         for(const muscle of quizMuscles) {
             const correctSolution = this.#createCorrectSolution(muscle);
-            const hasJointFunctions = muscle.functions.length > 0;
 
             questions[muscle.id] = new DraggableQuestion(
                 {
@@ -87,11 +85,7 @@ export default class MuscleAnatomyQuestionFactory {
                         })
                     ),
                     correctSolution: correctSolution,
-                        nextQuestionButton: new NextQuestionButton(
-                            {
-                                buttonText: hasJointFunctions ? "Gewrichtsfuncties" : "Overige functies",
-                            }
-                        ),
+                    previousNextQuestionButtonText: "Origo & Insertie",
                 }
             );
         }

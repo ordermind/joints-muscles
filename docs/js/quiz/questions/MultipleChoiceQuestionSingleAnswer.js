@@ -1,19 +1,28 @@
 import { shuffle } from "../utils.js";
 import messageBus from "../message-bus.js";
+import NextQuestionButton from "../misc/NextQuestionButton.js";
 
 export default class MultipleChoiceQuestionSingleAnswer {
     #correctAnswer;
     #wrongAnswers;
     #question;
-    #nextQuestionButton;
+    #previousNextQuestionButtonText;
     #wrapperClasses;
 
-    constructor({correctAnswer, wrongAnswers, question, nextQuestionButton, wrapperClasses = []}) {
+    #nextQuestionButton;
+
+    constructor({correctAnswer, wrongAnswers, question, previousNextQuestionButtonText, wrapperClasses = []}) {
         this.#correctAnswer = correctAnswer;
         this.#wrongAnswers = wrongAnswers;
         this.#question = question;
-        this.#nextQuestionButton = nextQuestionButton;
+        this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
         this.#wrapperClasses = wrapperClasses;
+
+        this.#nextQuestionButton = new NextQuestionButton();
+    }
+
+    get previousNextQuestionButtonText() {
+        return this.#previousNextQuestionButtonText;
     }
 
     #onSelectAnswer(e) {
@@ -26,7 +35,7 @@ export default class MultipleChoiceQuestionSingleAnswer {
         }
     }
 
-    render(parentElement) {
+    render({parentElement, nextQuestionButtonText}) {
         const answers = shuffle([
             this.#correctAnswer,
             ...this.#wrongAnswers,
@@ -54,7 +63,7 @@ for(const answer of answers) {
         wrapper.classList.add("question", "text-center", ...this.#wrapperClasses);
         wrapper.innerHTML = content;
 
-        this.#nextQuestionButton.render(wrapper);
+        this.#nextQuestionButton.render({parentElement: wrapper, buttonText: nextQuestionButtonText});
 
         for(const radioElement of wrapper.querySelectorAll(`input[type="radio"][name="answer"]`)) {
             radioElement.addEventListener("change", this.#onSelectAnswer);

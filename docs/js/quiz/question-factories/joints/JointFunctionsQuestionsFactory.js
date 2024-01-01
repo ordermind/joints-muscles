@@ -1,5 +1,4 @@
-import DraggableQuestion from "../DraggableQuestion.js";
-import NextQuestionButton from "../NextQuestionButton.js";
+import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import muscleFunctions from "../../data/muscle-functions.js";
 import { objMuscles } from "../../../data/muscles.js";
 import { shuffle } from "../../utils.js";
@@ -80,15 +79,14 @@ export default class JointFunctionsQuestionsFactory {
     create({joints}) {
         let questions = {};
 
-        for(const [jointIndex, joint] of joints.entries()) {
+        for(const joint of joints) {
 
             const shuffledMovements = shuffle(joint.movements);
             let jointQuestions = [];
             for(const [movementIndex, movement] of shuffledMovements.entries()) {
                 const correctSolution = this.#createCorrectSolution(movement);
 
-                const isLastQuestionForJoint = jointIndex < joints.length - 1 && movementIndex === shuffledMovements.length - 1;
-                const isLastQuestionInTotal = jointIndex === joints.length - 1 && movementIndex === shuffledMovements.length - 1;
+                const isFirstQuestion = movementIndex === 0;
 
                 jointQuestions.push(new DraggableQuestion(
                     {
@@ -108,11 +106,7 @@ export default class JointFunctionsQuestionsFactory {
                             })
                         ),
                         correctSolution: correctSolution,
-                        nextQuestionButton: new NextQuestionButton(
-                            {
-                                buttonText: isLastQuestionInTotal ? "Klaar!" : isLastQuestionForJoint ? "Volgend gewricht" : "Volgende spierfunctie",
-                            }
-                        ),
+                        previousNextQuestionButtonText: isFirstQuestion ? "Spierfuncties" : "Volgende spierfunctie",
                     }
                 ));
 
