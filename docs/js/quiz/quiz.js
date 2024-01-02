@@ -3,6 +3,7 @@ import messageBus from "./message-bus.js";
 import QuestionCollectionFactory from "./question-factories/QuestionCollectionFactory.js";
 
 export default class Quiz {
+    /** Set this to true in order to walk through a quiz quickly by not having to answer any questions. */
     #passThroughMode = false;
 
     #regionId;
