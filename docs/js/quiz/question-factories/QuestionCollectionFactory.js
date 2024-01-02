@@ -45,11 +45,13 @@ export default class QuestionCollectionFactory {
 
         const filteredJoints = arrJoints.filter(joint => {
             return (regionId === 'all' || joint.regionId === regionId)
-            && !skipJoints.includes(joint.id);
+            && !skipJoints.includes(joint.id)
+            && joint.regionId !== "upper_extremity"; //temporary workaround until all the muscles are there
         });
 
         const filteredMuscles = arrMuscles.filter(muscle => {
             return (regionId === 'all' || muscle.regionIds.includes(regionId))
+            && !muscle.regionIds.includes("upper_extremity"); //temporary workaround until all the muscles are there
         });
 
         const filteredMuscleFunctions = muscleFunctions.filter(muscleFunction => {
@@ -122,7 +124,7 @@ export default class QuestionCollectionFactory {
 
         const jointNameQuestions = this.#jointNameQuestionsFactory.create({joints: quizData.joints});
         const jointROMQuestions = this.#jointROMQuestionsFactory.create({joints: quizData.joints});
-        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: quizData.joints});
+        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: quizData.joints, quizMuscleFunctions: quizData.muscleFunctions});
 
         const muscleNameQuestions = this.#muscleNameQuestionsFactory.create({quizMuscles: quizData.muscles, quizMuscleFunctions: quizData.muscleFunctions});
         const muscleAnatomyQuestions = this.#muscleAnatomyQuestionsFactory.create({quizMuscles: quizData.muscles, quizMuscleFunctions: quizData.muscleFunctions});
