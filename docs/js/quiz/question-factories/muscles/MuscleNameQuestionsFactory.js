@@ -7,7 +7,7 @@ export default class MuscleNameQuestionFactory {
     #maxWrongAnswers = 5;
 
     create({quizMuscles, quizMuscleFunctions}) {
-        const questions = [];
+        const questions = {};
 
         for(const correctMuscle of quizMuscles) {
             if(!correctMuscle.image) {
@@ -35,7 +35,7 @@ export default class MuscleNameQuestionFactory {
                     }
                 ));
 
-            questions.push(new MultipleChoiceQuestionSingleAnswer(
+            questions[correctMuscle.id] = new MultipleChoiceQuestionSingleAnswer(
                 {
                     correctAnswer,
                     wrongAnswers,
@@ -45,9 +45,9 @@ export default class MuscleNameQuestionFactory {
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>
                     `.trim(),
-                    previousNextQuestionButtonText: "Volgende spier",
+                    previousNextQuestionButtonText: "Volgende vraag",
                 }
-            ));
+            );
         }
 
         return questions;

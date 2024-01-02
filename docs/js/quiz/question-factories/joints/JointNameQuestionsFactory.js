@@ -7,7 +7,7 @@ export default class JointNameQuestionsFactory {
     #maxWrongAnswers = 5;
 
     create({joints}) {
-        const questions = [];
+        const questions = {};
 
         for(const correctJoint of joints) {
             if(!correctJoint.image) {
@@ -35,7 +35,7 @@ export default class JointNameQuestionsFactory {
                     }
                 ));
 
-            questions.push(new MultipleChoiceQuestionSingleAnswer(
+            questions[correctJoint.id] = new MultipleChoiceQuestionSingleAnswer(
                 {
                     correctAnswer,
                     wrongAnswers,
@@ -45,9 +45,9 @@ export default class JointNameQuestionsFactory {
     <img class="quiz-image" src="${correctJoint.image}" />
 </div>
                     `.trim(),
-                    previousNextQuestionButtonText: "Volgend gewricht",
+                    previousNextQuestionButtonText: "Volgende vraag",
                 }
-            ));
+            );
         }
 
         return questions;
