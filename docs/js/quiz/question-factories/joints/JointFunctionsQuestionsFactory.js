@@ -5,6 +5,12 @@ import { shuffle } from "../../utils.js";
 import { isJointPlural } from "./utils.js";
 
 export default class JointFunctionsQuestionsFactory {
+    #passThroughMode;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
+
     #createAnswers(movement, correctSolution, correctJoint, joints) {
         let answers = {};
         const maxAnswers = 20;
@@ -107,6 +113,7 @@ export default class JointFunctionsQuestionsFactory {
                         ),
                         correctSolution: correctSolution,
                         previousNextQuestionButtonText: isFirstMovementWithinTheJoint ? "Spierfuncties" : "Volgende spierfunctie",
+                        passThroughMode: this.#passThroughMode,
                     }
                 ));
 

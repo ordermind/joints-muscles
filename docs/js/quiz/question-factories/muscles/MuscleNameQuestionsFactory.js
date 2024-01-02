@@ -4,7 +4,13 @@ import { shuffle } from "../../utils.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 
 export default class MuscleNameQuestionFactory {
+    #passThroughMode;
+
     #maxWrongAnswers = 5;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
 
     create({quizMuscles, quizMuscleFunctions}) {
         const questions = {};
@@ -46,6 +52,7 @@ export default class MuscleNameQuestionFactory {
 </div>
                     `.trim(),
                     previousNextQuestionButtonText: "Volgende vraag",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

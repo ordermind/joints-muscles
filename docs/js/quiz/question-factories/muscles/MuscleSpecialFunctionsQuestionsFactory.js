@@ -3,7 +3,13 @@ import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js"
 import { shuffle } from "../../utils.js";
 
 export default class MuscleSpecialFunctionsQuestionsFactory {
+    #passThroughMode;
+
     #maxAnswers = 20;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
 
     #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
         let answers = {...correctSolution.specialFunctions};
@@ -72,6 +78,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
                     ),
                     correctSolution: correctSolution,
                     previousNextQuestionButtonText: "Speciale functies",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

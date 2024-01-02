@@ -4,7 +4,13 @@ import { shuffle } from "../../utils.js";
 import { isJointPlural } from "./utils.js";
 
 export default class JointNameQuestionsFactory {
+    #passThroughMode;
+
     #maxWrongAnswers = 5;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
 
     create({joints}) {
         const questions = {};
@@ -46,6 +52,7 @@ export default class JointNameQuestionsFactory {
 </div>
                     `.trim(),
                     previousNextQuestionButtonText: "Volgende vraag",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

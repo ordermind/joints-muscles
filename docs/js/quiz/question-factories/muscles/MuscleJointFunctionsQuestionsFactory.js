@@ -3,7 +3,13 @@ import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js"
 import { objJoints } from "../../../data/joints.js";
 
 export default class MuscleJointFunctionsQuestionsFactory {
+    #passThroughMode;
+
     #maxAnswers = 20;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
 
     #createAnswerLabel(jointFunction) {
         const movementName = jointFunction.movementLabelOverride ?? objJoints[jointFunction.jointId].movements.find(movement => movement.id === jointFunction.movementId).label;
@@ -86,6 +92,7 @@ export default class MuscleJointFunctionsQuestionsFactory {
                     .sort((a, b) => a.label.localeCompare(b.label)),
                     correctSolution: correctSolution,
                     previousNextQuestionButtonText: "Gewrichtsfuncties",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

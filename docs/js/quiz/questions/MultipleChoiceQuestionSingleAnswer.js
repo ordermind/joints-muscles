@@ -8,15 +8,17 @@ export default class MultipleChoiceQuestionSingleAnswer {
     #question;
     #previousNextQuestionButtonText;
     #wrapperClasses;
+    #passThroughMode;
 
     #nextQuestionButton;
 
-    constructor({correctAnswer, wrongAnswers, question, previousNextQuestionButtonText, wrapperClasses = []}) {
+    constructor({correctAnswer, wrongAnswers, question, previousNextQuestionButtonText, wrapperClasses = [], passThroughMode = false}) {
         this.#correctAnswer = correctAnswer;
         this.#wrongAnswers = wrongAnswers;
         this.#question = question;
         this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
         this.#wrapperClasses = wrapperClasses;
+        this.#passThroughMode = passThroughMode;
 
         this.#nextQuestionButton = new NextQuestionButton();
     }
@@ -70,6 +72,10 @@ for(const answer of answers) {
         }
 
         parentElement.appendChild(wrapper);
+
+        if(this.#passThroughMode) {
+            messageBus.emit("question-answered-correctly");
+        }
     }
 
     cleanUp() {

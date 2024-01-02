@@ -4,7 +4,13 @@ import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js"
 import renderAnatomicStructureOrString from "../../../data-types/utils.js";
 
 export default class MuscleAnatomyQuestionFactory {
+    #passThroughMode;
+
     #maxAnswers = 20;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
 
     #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
         let answers = {...correctSolution.origo, ...correctSolution.insertion};
@@ -86,6 +92,7 @@ export default class MuscleAnatomyQuestionFactory {
                     ),
                     correctSolution: correctSolution,
                     previousNextQuestionButtonText: "Origo & Insertie",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

@@ -21,15 +21,15 @@ export default class QuestionCollectionFactory {
     #muscleJointFunctionsQuestionsFactory;
     #muscleSpecialFunctionsQuestionsFactory;
 
-    constructor() {
-        this.#jointNameQuestionsFactory = new JointNameQuestionsFactory();
-        this.#jointROMQuestionsFactory = new JointROMQuestionsFactory();
-        this.#jointFunctionsQuestionsFactory = new JointFunctionsQuestionsFactory();
+    constructor({passThroughMode = false}) {
+        this.#jointNameQuestionsFactory = new JointNameQuestionsFactory({passThroughMode});
+        this.#jointROMQuestionsFactory = new JointROMQuestionsFactory({passThroughMode});
+        this.#jointFunctionsQuestionsFactory = new JointFunctionsQuestionsFactory({passThroughMode});
 
-        this.#muscleNameQuestionsFactory = new MuscleNameQuestionFactory();
-        this.#muscleAnatomyQuestionsFactory = new MuscleAnatomyQuestionFactory();
-        this.#muscleJointFunctionsQuestionsFactory = new MuscleJointFunctionsQuestionsFactory();
-        this.#muscleSpecialFunctionsQuestionsFactory = new MuscleSpecialFunctionsQuestionsFactory();
+        this.#muscleNameQuestionsFactory = new MuscleNameQuestionFactory({passThroughMode});
+        this.#muscleAnatomyQuestionsFactory = new MuscleAnatomyQuestionFactory({passThroughMode});
+        this.#muscleJointFunctionsQuestionsFactory = new MuscleJointFunctionsQuestionsFactory({passThroughMode});
+        this.#muscleSpecialFunctionsQuestionsFactory = new MuscleSpecialFunctionsQuestionsFactory({passThroughMode});
     }
 
     #createQuizDataForRegion(regionId) {

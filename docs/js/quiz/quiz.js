@@ -3,6 +3,8 @@ import messageBus from "./message-bus.js";
 import QuestionCollectionFactory from "./question-factories/QuestionCollectionFactory.js";
 
 export default class Quiz {
+    #passThroughMode = false;
+
     #regionId;
     #questionsFactory;
 
@@ -12,7 +14,7 @@ export default class Quiz {
 
     constructor({regionId}) {
         this.#regionId = regionId;
-        this.#questionsFactory = new QuestionCollectionFactory();
+        this.#questionsFactory = new QuestionCollectionFactory({passThroughMode: this.#passThroughMode});
 
         this.nextQuestionCallback = this.nextQuestionCallback.bind(this);
         this.onClickRestartButton = this.onClickRestartButton.bind(this);
