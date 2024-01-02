@@ -32,7 +32,7 @@ export default [
             ],
             image: "./images/joints/art_talocruralis.jpeg",
             description: `
-    Het gewricht wordt vaak het bovenste spronggewricht genoemd en vormt samen met de [Link type="Joint" targetId="art_talotarsalis" label="articulatio talocalcaneonavicularis in brede zin (onderste spronggewricht)"] het enkelgewricht.
+    Het gewricht wordt vaak het bovenste spronggewricht genoemd en vormt samen met de [Link type="Joint" targetId="art_talotarsalis" label="art. talotarsalis (onderste spronggewricht)"] het enkelgewricht.
             `,
         }
     ),

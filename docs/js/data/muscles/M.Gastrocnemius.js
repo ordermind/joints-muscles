@@ -21,7 +21,11 @@ export default new Muscle(
             ),
         ],
         insertions: [
-            "tuber calcanei via de tendo calcaneus",
+            new AnatomicStructure(
+                {
+                    label: "tuber calcanei (via de tendo calcaneus)",
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(
@@ -45,7 +49,13 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_gastrocnemius.jpeg",
         description: `
-De spier vormt samen met de [Link type="Muscle" targetId="m_soleus" label="m. soleus"] de <em>m. triceps surae</em>. Beide spieren hebben een gemeenschappelijke insertiepees, de tendo calcaneus (tendo achillis of achillespees).
+M. gastrocnemius bestaat voornamelijk uit type II spiervezels en is vooral betrokken bij explosieve bewegingen zoals springen of hardlopen.
+
+De spier vormt samen met de [Link type="Muscle" targetId="m_soleus" label="m. soleus"] de [Link type="Muscle" targetId="m_triceps_surae" label="m. triceps surae"]. Beide spieren hebben een gemeenschappelijke insertiepees, de tendo calcaneus (tendo achillis of achillespees).
+
+Deze spier is, net als [Link type="Muscle" targetId="m_soleus" label="m. soleus"], onderdeel van het <strong>oppervlakkige dorsale compartiment</strong> van het onderbeen.
+
+<img class="d-block float-xxl-end" src="./images/misc/muscle_compartments_lower_leg.jpg" />
         `.trim(),
     }
 );

@@ -19,6 +19,12 @@ export default new Muscle(
                     notes: ["caput breve"],
                 }
             ),
+            new AnatomicStructure(
+                {
+                    label: "linea supracondylaris lateralis femoris",
+                    notes: ["caput breve"],
+                }
+            ),
         ],
         insertions: [
             "caput fibulae",

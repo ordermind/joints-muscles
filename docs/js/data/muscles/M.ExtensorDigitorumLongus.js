@@ -63,6 +63,10 @@ export default new Muscle(
         image: "./images/muscles/m_extensor_digitorum_longus.jpeg",
         description: `
 De m. extensor digitorum longus heeft vaak een extra pees, die [Link type="Muscle" targetId="m_fibularis_tertius" label="m. fibularis tertius"] genoemd wordt.
+
+Deze spier is, net als [Link type="Muscle" targetId="m_tibialis_anterior" label="m. tibialis anterior"] en [Link type="Muscle" targetId="m_extensor_hallucis_longus" label="m. extensor hallucis longus"], onderdeel van het <strong>anterieure compartiment</strong> van het onderbeen.
+
+<img class="d-block float-xxl-end" src="./images/misc/muscle_compartments_lower_leg.jpg" />
         `.trim(),
     }
 );

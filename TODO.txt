@@ -14,7 +14,8 @@ MVP RELEASE
 
 - Lägg till sökfunktion, alternativt lägg till en muskellista med filter för muskelnamn och lägg även till filter för lednamn på ledlistan. Lägg till primary links till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
 - Dela upp quizzes efter region så att man kan välja att genomgå romp (för muskler) / wervelkolom (för leder), bovenste extremiteit, onderste extremiteit eller het hele lichaam. I samband med detta, slå ihop quizzen för leder och muskler så att det blir blandade frågor. Man ska alltså inte längre kunna välja mellan muskler och leder, utan i stället ska man välja region.
-- Lägg till muskler för onderste extremiteit
+X Specificera vilket compartiment underbensmusklerna tillhör.
+X Lägg till muskler för onderste extremiteit
 X Kontrollera ledtyp för varje led med hjälp av Speciële anatomie van het houdings- en bewegingsapparaat
 X Klargör definitionen av syndesmosis tibiofibularis och den eventuella relationen till membrana interossea cruris
 X Gör en refactoring av lederna så att varje led ligger i en egen fil

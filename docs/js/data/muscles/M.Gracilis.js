@@ -9,7 +9,7 @@ export default new Muscle(
             "ramus inferior ossis pubis",
         ],
         insertions: [
-            "facies medialis tibiae via de pes anserinus superficialis",
+            "facies medialis tibiae (via de pes anserinus superficialis)",
         ],
         functions: [
             new JointMuscleFunction(
@@ -52,7 +52,7 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_gracilis.jpeg",
         description: `
-De spier ligt distaal tussen de pezen van de [Link type="Muscle" targetId="m_sartorius", label="m. sartorius"] en [Link type="Muscle" targetId="m_semitendinosus" label="m. semitendinosus"] en zijn distale eindpees vormt, samen met de pezen van de [Link type="Muscle" targetId="m_semitendinosus" label="m. semitendinosus"] en de [Link type="Muscle" targetId="m_sartorius" label="m. sartorius"] de pes anserinus superficialis.
+De spier ligt distaal tussen de pezen van de [Link type="Muscle" targetId="m_sartorius" label="m. sartorius"] en [Link type="Muscle" targetId="m_semitendinosus" label="m. semitendinosus"] en zijn distale eindpees vormt, samen met de pezen van de [Link type="Muscle" targetId="m_semitendinosus" label="m. semitendinosus"] en de [Link type="Muscle" targetId="m_sartorius" label="m. sartorius"], de <em>pes anserinus superficialis</em>.
         `.trim(),
     }
 );

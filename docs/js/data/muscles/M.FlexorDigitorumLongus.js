@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_flexor_digitorum_longus",
         label: "m. flexor digitorum longus",
         origos: [
-            "facies posterior tibiae (distaal van de linea m. solei tibiae)",
+            "facies posterior tibiae (distaal van de linea m. solei)",
         ],
         insertions: [
             "bases phalangium distalium II - V (plantair)",
@@ -60,7 +60,9 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_flexor_digitorum_longus.jpeg",
         description: `
+Deze spier is, net als [Link type="Muscle" targetId="m_tibialis_posterior" label="m. tibialis posterior"] en [Link type="Muscle" targetId="m_flexor_hallucis_longus" label="m. flexor hallucis longus"], onderdeel van het <strong>diepe dorsale compartiment</strong> van het onderbeen.
 
+<img class="d-block float-xxl-end" src="./images/misc/muscle_compartments_lower_leg.jpg" />
         `.trim(),
     }
 );

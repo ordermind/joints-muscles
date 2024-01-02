@@ -81,6 +81,9 @@ body .hideable-cover {
 }
 
 /** Muscle page **/
+.page-muscle {
+    max-width: 92rem;
+}
 
 .page-muscle table.joint-functions tr th,
 .page-muscle table.joint-functions tr td {

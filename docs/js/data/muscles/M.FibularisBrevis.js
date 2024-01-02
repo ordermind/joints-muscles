@@ -35,6 +35,10 @@ export default new Muscle(
         image: "./images/muscles/m_fibularis_brevis.jpeg",
         description: `
 Ook bekend als <em>m. peroneus brevis</em>.
+
+Deze spier is, net als [Link type="Muscle" targetId="m_fibularis_longus" label="m. fibularis longus"], onderdeel van het <strong>laterale compartiment</strong> van het onderbeen.
+
+<img class="d-block float-xxl-end" src="./images/misc/muscle_compartments_lower_leg.jpg" />
         `.trim(),
     }
 );

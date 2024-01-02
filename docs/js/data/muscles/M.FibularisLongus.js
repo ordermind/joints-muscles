@@ -36,7 +36,11 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_fibularis_longus.jpeg",
         description: `
-Ook bekend als <em>m. peroneus longus</em>. De insertie van deze spier komt overeen met de insertie van de [Link type="Muscle" targetId="m_tibialis_anterior" label="m. tibialis anterior"].
+Ook bekend als <em>m. peroneus longus</em>. De insertie van deze spier ligt dichtbij de insertie van de [Link type="Muscle" targetId="m_tibialis_anterior" label="m. tibialis anterior"].
+
+Deze spier is, net als [Link type="Muscle" targetId="m_fibularis_brevis" label="m. fibularis brevis"], onderdeel van het <strong>laterale compartiment</strong> van het onderbeen.
+
+<img class="d-block float-xxl-end" src="./images/misc/muscle_compartments_lower_leg.jpg" />
         `.trim(),
     }
 );
