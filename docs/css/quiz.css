@@ -94,5 +94,6 @@
 /** ROM question **/
 
 .question-rom .answers input[type="text"] {
-    width: 5rem;
+    width: 6rem;
+    text-align: center;
 }
