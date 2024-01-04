@@ -9,7 +9,7 @@ export default new Muscle(
             "processi transversi C2 - T1",
         ],
         insertions: [
-            "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",
+            "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (C1 - C7)",
         ],
         functions: [
             new JointMuscleFunction(

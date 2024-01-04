@@ -10,7 +10,7 @@ export default new Muscle(
             "margines inferiores costarum 1 - 11"
         ],
         insertions: [
-            "margo superior bij de <strong>eerstvolgende</strong> lager gelegen rib",
+            "margo superior bij de <strong>eerstvolgende</strong> lager gelegen rib (2 - 12)",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

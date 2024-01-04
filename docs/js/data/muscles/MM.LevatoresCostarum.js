@@ -10,7 +10,7 @@ export default new Muscle(
             "processi transversi C7 - T11",
         ],
         insertions: [
-            "facies posterior costae bij de <strong>eerstvolgende</strong> lager gelegen wervel",
+            "facies posterior costae bij de <strong>eerstvolgende</strong> lager gelegen wervel (T1 - T12)",
         ],
         functions: [
             new JointMuscleFunction(

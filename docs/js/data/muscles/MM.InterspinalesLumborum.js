@@ -9,7 +9,7 @@ export default new Muscle(
             "processi spinosi T11 - L5",
         ],
         insertions: [
-            "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel",
+            "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (T10 - L4)",
         ],
         functions: [
             new JointMuscleFunction(
