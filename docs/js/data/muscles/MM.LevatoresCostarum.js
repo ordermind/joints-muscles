@@ -28,7 +28,7 @@ export default new Muscle(
                 {
                     id: "mm_levatores_costarum__ribs",
                     muscleId: "mm_levatores_costarum",
-                    functionDescription: "heffen van de ribben",
+                    functionDescription: "heffen van de ribben (zonder duidelijke koppeling aan inspiratie)",
                 }
             )
         ],
