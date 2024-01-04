@@ -26,7 +26,10 @@ export default class MuscleJointFunctionsQuestionsFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions({
+            correctMuscle,
+            priorityArea: 'jointFunctions',
+        });
         for(const otherMuscle of otherMuscles) {
             for(const jointFunction of otherMuscle.functions) {
                 const answerLabel = this.#createAnswerLabel(jointFunction);

@@ -16,6 +16,11 @@
 
 /** Multiple-choice question **/
 
+.page-quiz .answers.multiple-choice {
+    width: 21.25rem;
+    margin: 0 auto;
+}
+
 .page-quiz .answers.multiple-choice .correct-answer .btn-check:checked+.btn,
 .page-quiz .answers.multiple-choice .correct-answer .btn.active,
 .page-quiz .answers.multiple-choice .correct-answer .btn.show,

@@ -7,7 +7,6 @@ import MuscleJointFunctionsQuestionsFactory from "./muscles/MuscleJointFunctions
 import MuscleNameQuestionFactory from "./muscles/MuscleNameQuestionsFactory.js";
 import MuscleSpecialFunctionsQuestionsFactory from "./muscles/MuscleSpecialFunctionsQuestionsFactory.js";
 import { arrJoints } from "../../data/joints.js";
-import muscleFunctions from "../../data/muscle-functions.js";
 import { arrMuscles } from "../../data/muscles.js";
 import { shuffle } from "../utils.js";
 
@@ -116,10 +115,11 @@ export default class QuestionCollectionFactory {
 
     createQuestions({regionId}) {
         const quizData = this.#createQuizDataForRegion(regionId);
+        const allQuizData = regionId === 'all' ? quizData : this.#createQuizDataForRegion('all');
 
-        const jointNameQuestions = this.#jointNameQuestionsFactory.create({joints: quizData.joints});
-        const jointROMQuestions = this.#jointROMQuestionsFactory.create({joints: quizData.joints});
-        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: quizData.joints});
+        const jointNameQuestions = this.#jointNameQuestionsFactory.create({quizJoints: quizData.joints, allQuizJoints: allQuizData.joints});
+        const jointROMQuestions = this.#jointROMQuestionsFactory.create({quizJoints: quizData.joints});
+        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({quizJoints: quizData.joints});
 
         const muscleNameQuestions = this.#muscleNameQuestionsFactory.create({quizMuscles: quizData.muscles});
         const muscleAnatomyQuestions = this.#muscleAnatomyQuestionsFactory.create({quizMuscles: quizData.muscles});

@@ -21,7 +21,9 @@ export default class MuscleAnatomyQuestionFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions({
+            correctMuscle,
+        });
         for(const otherMuscle of otherMuscles) {
             for(const origoLabel of otherMuscle.origos.map(origo => renderAnatomicStructureOrString(origo))) {
                 if(!answers.hasOwnProperty(origoLabel)) {

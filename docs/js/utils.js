@@ -3,7 +3,7 @@ export function capitalizeTitle(title) {
 
     const capitalizedTitle = titleParts[0]
         .split(" ")
-        .map(word => word.length ? word[0].toUpperCase() + word.substr(1) : "")
+        .map(word => word.length ? word[0].toUpperCase() + word.slice(1) : "")
         .join(" ")
         + (titleParts[1] ? "(" + titleParts[1] : "");
 
@@ -81,7 +81,7 @@ export function renderJointType(joint, jointTypes, useShortLabel) {
 
             jointTypeOutput += `<li>[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]</li>`;
         }
-    } else {      
+    } else {
         const jointTypeId = joint.typeIds[0];
         const jointLabel = useShortLabel ? jointTypes[jointTypeId].shortLabel : jointTypes[jointTypeId].label;
         jointTypeOutput += `[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]`;

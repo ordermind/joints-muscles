@@ -1,7 +1,6 @@
 import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
 import MultipleChoiceQuestionSingleAnswer from "../../questions/MultipleChoiceQuestionSingleAnswer.js";
-import { shuffle } from "../../utils.js";
-import { isJointPlural } from "./utils.js";
+import { getSimilarJoints, isJointPlural } from "./utils.js";
 
 export default class JointNameQuestionsFactory {
     #passThroughMode;
@@ -12,16 +11,13 @@ export default class JointNameQuestionsFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    create({joints}) {
+    create({quizJoints, allQuizJoints}) {
         const questions = {};
 
-        for(const correctJoint of joints) {
+        for(const correctJoint of quizJoints) {
             if(!correctJoint.image) {
                 continue;
             }
-
-            const otherJointsInTheSameRegion = joints
-                .filter(joint => joint.regionId === correctJoint.regionId && joint.id !== correctJoint.id);
 
             const correctAnswer = new MultipleChoiceAnswer(
                 {
@@ -31,7 +27,7 @@ export default class JointNameQuestionsFactory {
                 }
             );
 
-            const wrongAnswers = shuffle(otherJointsInTheSameRegion)
+            const wrongAnswers = getSimilarJoints(correctJoint, allQuizJoints, this.#maxWrongAnswers)
                 .slice(0, this.#maxWrongAnswers)
                 .map(otherJoint => new MultipleChoiceAnswer(
                     {

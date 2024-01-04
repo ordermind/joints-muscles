@@ -10,11 +10,15 @@ export default class JointROMQuestionsFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    create({joints}) {
+    create({quizJoints}) {
         const questions = {};
 
-        for(const joint of joints) {
+        for(const joint of quizJoints) {
             if(!joint.movements.length) {
+                continue;
+            }
+
+            if(!joint.movements.some(movement => movement.rom)) {
                 continue;
             }
 

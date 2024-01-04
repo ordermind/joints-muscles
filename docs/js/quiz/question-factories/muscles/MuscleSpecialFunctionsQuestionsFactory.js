@@ -20,7 +20,10 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions({
+            correctMuscle,
+            priorityArea: 'specialFunctions',
+        });
         for(const otherMuscle of otherMuscles) {
             for(const specialFunction of otherMuscle.specialFunctions) {
                 if(!answers.hasOwnProperty(specialFunction.functionDescription)) {
