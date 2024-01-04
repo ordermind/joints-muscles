@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_quadratus_lumborum",
         label: "m. quadratus lumborum",
         origos: [
-            "crista iliaca (posterior)",
+            "crista iliaca (dorsaal)",
         ],
         insertions: [
             "margo costalis inferior 12",
