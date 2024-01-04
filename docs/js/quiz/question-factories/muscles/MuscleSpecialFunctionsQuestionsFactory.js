@@ -11,7 +11,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
+    #createAnswers(correctMuscle, correctSolution) {
         let answers = {...correctSolution.specialFunctions};
 
         let totalAnswersCount = Object.keys(answers).length;
@@ -20,7 +20,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle);
         for(const otherMuscle of otherMuscles) {
             for(const specialFunction of otherMuscle.specialFunctions) {
                 if(!answers.hasOwnProperty(specialFunction.functionDescription)) {
@@ -49,7 +49,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
         return correctSolution;
     }
 
-    create({quizMuscles, quizMuscleFunctions}) {
+    create({quizMuscles}) {
         let questions = {};
 
         for(const muscle of quizMuscles) {
@@ -71,7 +71,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
                     regions: [{id: "specialFunctions", label: "Speciale functies"}],
                     answers: shuffle(
                         Object.entries(
-                            this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
+                            this.#createAnswers(muscle, correctSolution)
                         ).map(([id, label]) => {
                             return {id, label};
                         })

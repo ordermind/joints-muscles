@@ -12,7 +12,7 @@ export default class MuscleNameQuestionFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    create({quizMuscles, quizMuscleFunctions}) {
+    create({quizMuscles}) {
         const questions = {};
 
         for(const correctMuscle of quizMuscles) {
@@ -20,7 +20,7 @@ export default class MuscleNameQuestionFactory {
                 continue;
             }
 
-            const otherMusclesWithSimilarFunctions = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions)
+            const otherMusclesWithSimilarFunctions = getOtherMusclesWithSimilarFunctions(correctMuscle)
                 .slice(0, this.#maxWrongAnswers);
 
             const correctAnswer = new MultipleChoiceAnswer(

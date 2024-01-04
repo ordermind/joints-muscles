@@ -1,7 +1,8 @@
-import { objMuscles } from "../../../data/muscles.js";
+import { objMuscles, arrMuscles } from "../../../data/muscles.js";
+import muscleFunctions from "../../../data/muscle-functions.js";
 import { shuffle, intersects } from "../../utils.js";
 
-export function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions) {
+export function getOtherMusclesWithSimilarFunctions(correctMuscle) {
 
     function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
         if(!correctMuscle.specialFunctions.length) {
@@ -9,7 +10,7 @@ export function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, 
         }
 
         return shuffle(
-            quizMuscles.filter(muscle =>
+            arrMuscles.filter(muscle =>
                 muscle.id !== correctMuscle.id
                 && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
                 && muscle.specialFunctions.length > 0
@@ -23,7 +24,7 @@ export function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, 
 
     function getOtherMusclesWithSpecialFunctions(ignoreMuscles) {
         return shuffle(
-            quizMuscles.filter(muscle =>
+            arrMuscles.filter(muscle =>
                 muscle.id !== correctMuscle.id
                 && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
                 && muscle.specialFunctions.length > 0
@@ -31,29 +32,49 @@ export function getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, 
         );
     }
 
+    /**
+     * Muscles related to prime mover functions are prioritized.
+     */
     function getOtherMusclesWithSameJointFunctions(ignoreMuscles) {
-        return shuffle(
-            Array.from(
-                new Set(
-                    quizMuscleFunctions
-                        .filter(muscleFunction => {
-                            return correctMuscle.functions.some(correctMuscleFunction =>
-                                correctMuscleFunction.muscleId !== muscleFunction.muscleId
-                                && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscleFunction.muscleId)
-                                && correctMuscleFunction.movementId === muscleFunction.movementId
-                            );
-                        })
-                        .map(muscleFunction => objMuscles[muscleFunction.muscleId])
+        function getOtherMusclesWithCertainJointFunctions(correctMuscleFunctions, ignoreMuscles) {
+            if(!correctMuscleFunctions.length) {
+                return [];
+            }
+
+            return shuffle(
+                Array.from(
+                    new Set(
+                        muscleFunctions
+                            .filter(muscleFunction => {
+                                return correctMuscleFunctions.some(correctMuscleFunction =>
+                                    correctMuscleFunction.muscleId !== muscleFunction.muscleId
+                                    && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscleFunction.muscleId)
+                                    && correctMuscleFunction.movementId === muscleFunction.movementId
+                                );
+                            })
+                            .map(muscleFunction => objMuscles[muscleFunction.muscleId])
+                    )
                 )
-            )
-        );
+            );
+        }
+
+        const primeMoverFunctions = correctMuscle.functions.filter(correctMuscleFunction => correctMuscleFunction.isPrimeMover === true);
+        const assistantFunctions = correctMuscle.functions.filter(correctMuscleFunction => correctMuscleFunction.isPrimeMover === false);
+
+        const musclesRelatedToPrimeMoverFunctions = getOtherMusclesWithCertainJointFunctions(primeMoverFunctions, ignoreMuscles);
+        const musclesRelatedToAssistantFunctions = getOtherMusclesWithCertainJointFunctions(assistantFunctions, [...ignoreMuscles, ...musclesRelatedToPrimeMoverFunctions]);
+
+        return [
+            ...musclesRelatedToPrimeMoverFunctions,
+            ...musclesRelatedToAssistantFunctions,
+        ];
     }
 
     function getOtherMusclesRelatedToSameJoints(ignoreMuscles) {
         return shuffle(
             Array.from(
                 new Set(
-                        quizMuscleFunctions
+                    muscleFunctions
                         .filter(muscleFunction => {
                             return correctMuscle.functions.some(correctMuscleFunction =>
                                 correctMuscleFunction.muscleId !== muscleFunction.muscleId

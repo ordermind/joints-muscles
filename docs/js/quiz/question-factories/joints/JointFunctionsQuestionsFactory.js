@@ -1,5 +1,6 @@
 import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { objMuscles } from "../../../data/muscles.js";
+import muscleFunctions from "../../../data/muscle-functions.js";
 import { shuffle } from "../../utils.js";
 import { isJointPlural } from "./utils.js";
 
@@ -10,7 +11,7 @@ export default class JointFunctionsQuestionsFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    #createAnswers(movement, correctSolution, correctJoint, joints, quizMuscleFunctions) {
+    #createAnswers(movement, correctSolution, correctJoint, joints) {
         let answers = {};
         const maxAnswers = 20;
 
@@ -32,7 +33,7 @@ export default class JointFunctionsQuestionsFactory {
 
         // Incorrect answers - other muscles for the same joint but for other movements
 
-        for(const muscleFunction of quizMuscleFunctions.filter(muscleFunction => muscleFunction.jointId === movement.jointId && muscleFunction.movementId !== movement.id)) {
+        for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.jointId === movement.jointId && muscleFunction.movementId !== movement.id)) {
             if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
                 answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
                 totalAnswersCount++;
@@ -49,7 +50,7 @@ export default class JointFunctionsQuestionsFactory {
             .filter(joint => joint.regionId === correctJoint.regionId && joint.id !== correctJoint.id));
 
         for(const otherJoint of otherJointsInTheSameRegion) {
-            for(const muscleFunction of shuffle(quizMuscleFunctions.filter(muscleFunction => muscleFunction.jointId === otherJoint.id))) {
+            for(const muscleFunction of shuffle(muscleFunctions.filter(muscleFunction => muscleFunction.jointId === otherJoint.id))) {
                 if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
                     answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
                     totalAnswersCount++;
@@ -64,24 +65,24 @@ export default class JointFunctionsQuestionsFactory {
         return answers;
     }
 
-    #createCorrectSolution(movement, quizMuscleFunctions) {
+    #createCorrectSolution(movement) {
         let correctSolution = {
             primeMovers: {},
             otherMuscles: {},
         };
 
-        for(const muscleFunction of quizMuscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover)) {
+        for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover)) {
             correctSolution.primeMovers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
         }
 
-        for(const muscleFunction of quizMuscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && !muscleFunction.isPrimeMover)) {
+        for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && !muscleFunction.isPrimeMover)) {
             correctSolution.otherMuscles[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
         }
 
         return correctSolution;
     }
 
-    create({joints, quizMuscleFunctions}) {
+    create({joints}) {
         let questions = {};
 
         for(const joint of joints) {
@@ -89,7 +90,7 @@ export default class JointFunctionsQuestionsFactory {
             const shuffledMovements = shuffle(joint.movements);
             let jointQuestions = [];
             for(const [movementIndex, movement] of shuffledMovements.entries()) {
-                const correctSolution = this.#createCorrectSolution(movement, quizMuscleFunctions);
+                const correctSolution = this.#createCorrectSolution(movement);
 
                 const isFirstMovementWithinTheJoint = movementIndex === 0;
 
@@ -105,7 +106,7 @@ export default class JointFunctionsQuestionsFactory {
                         regions: [{id: "primeMovers", label: "Prime movers"}, {id: "otherMuscles", label: "Overige spieren"}],
                         answers: shuffle(
                             Object.entries(
-                                this.#createAnswers(movement, correctSolution, joint, joints, quizMuscleFunctions)
+                                this.#createAnswers(movement, correctSolution, joint, joints)
                             ).map(([id, label]) => {
                                 return {id, label};
                             })

@@ -12,7 +12,7 @@ export default class MuscleAnatomyQuestionFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
+    #createAnswers(correctMuscle, correctSolution) {
         let answers = {...correctSolution.origo, ...correctSolution.insertion};
 
         let totalAnswersCount = Object.keys(answers).length;
@@ -21,7 +21,7 @@ export default class MuscleAnatomyQuestionFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle);
         for(const otherMuscle of otherMuscles) {
             for(const origoLabel of otherMuscle.origos.map(origo => renderAnatomicStructureOrString(origo))) {
                 if(!answers.hasOwnProperty(origoLabel)) {
@@ -67,7 +67,7 @@ export default class MuscleAnatomyQuestionFactory {
         return correctSolution;
     }
 
-    create({quizMuscles, quizMuscleFunctions}) {
+    create({quizMuscles}) {
         let questions = {};
 
         for(const muscle of quizMuscles) {
@@ -85,7 +85,7 @@ export default class MuscleAnatomyQuestionFactory {
                     regions: [{id: "origo", label: "Origo"}, {id: "insertion", label: "Insertie"}],
                     answers: shuffle(
                         Object.entries(
-                            this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
+                            this.#createAnswers(muscle, correctSolution)
                         ).map(([id, label]) => {
                             return {id, label};
                         })

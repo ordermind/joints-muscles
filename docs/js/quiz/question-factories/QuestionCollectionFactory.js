@@ -55,14 +55,14 @@ export default class QuestionCollectionFactory {
             && !muscle.regionIds.includes("upper_extremity"); //temporary workaround until all the muscles are there
         });
 
-        const filteredMuscleFunctions = muscleFunctions.filter(muscleFunction => {
-            return filteredJoints.some(joint => joint.id === muscleFunction.jointId)
-            && filteredMuscles.some(muscle => muscle.id === muscleFunction.muscleId);
-        });
+        // const filteredMuscleFunctions = muscleFunctions.filter(muscleFunction => {
+        //     return filteredJoints.some(joint => joint.id === muscleFunction.jointId)
+        //     && filteredMuscles.some(muscle => muscle.id === muscleFunction.muscleId);
+        // });
 
         return {
             joints: filteredJoints,
-            muscleFunctions: filteredMuscleFunctions,
+            // muscleFunctions: filteredMuscleFunctions,
             muscles: filteredMuscles,
         };
     }
@@ -125,12 +125,12 @@ export default class QuestionCollectionFactory {
 
         const jointNameQuestions = this.#jointNameQuestionsFactory.create({joints: quizData.joints});
         const jointROMQuestions = this.#jointROMQuestionsFactory.create({joints: quizData.joints});
-        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: quizData.joints, quizMuscleFunctions: quizData.muscleFunctions});
+        const jointFunctionsQuestions = this.#jointFunctionsQuestionsFactory.create({joints: quizData.joints});
 
-        const muscleNameQuestions = this.#muscleNameQuestionsFactory.create({quizMuscles: quizData.muscles, quizMuscleFunctions: quizData.muscleFunctions});
-        const muscleAnatomyQuestions = this.#muscleAnatomyQuestionsFactory.create({quizMuscles: quizData.muscles, quizMuscleFunctions: quizData.muscleFunctions});
-        const muscleJointFunctionsQuestions = this.#muscleJointFunctionsQuestionsFactory.create({quizMuscles: quizData.muscles, quizMuscleFunctions: quizData.muscleFunctions});
-        const muscleSpecialFunctionsQuestions = this.#muscleSpecialFunctionsQuestionsFactory.create({quizMuscles: quizData.muscles, quizMuscleFunctions: quizData.muscleFunctions});
+        const muscleNameQuestions = this.#muscleNameQuestionsFactory.create({quizMuscles: quizData.muscles});
+        const muscleAnatomyQuestions = this.#muscleAnatomyQuestionsFactory.create({quizMuscles: quizData.muscles});
+        const muscleJointFunctionsQuestions = this.#muscleJointFunctionsQuestionsFactory.create({quizMuscles: quizData.muscles});
+        const muscleSpecialFunctionsQuestions = this.#muscleSpecialFunctionsQuestionsFactory.create({quizMuscles: quizData.muscles});
 
         const shuffledJointsAndMusclesList = shuffle([
             ...quizData.joints,
