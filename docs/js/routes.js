@@ -18,7 +18,7 @@ const pages = {
     jointsList: new JointsListPage(),
     jointPage: new JointPage(),
     jointTypePage: new JointTypePage(),
-    muscleListPage: new MuscleListPage(),
+    musclesList: new MuscleListPage(),
     musclePage: new MusclePage(),
     quizList: new QuizList(),
     quizPage: new QuizPage(),
@@ -94,11 +94,11 @@ export const routes = {
         {
             paths: ["/muscles"],
             responseHandler: () => {
-                const content = pages.muscleListPage.render({arrMuscles});
+                const content = pages.musclesList.render({arrMuscles});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {
-                pages.muscleListPage.cleanUp();
+                pages.musclesList.cleanUp();
 
                 done();
             }

@@ -12,7 +12,7 @@
 
 MVP RELEASE
 
-- Lägg till en muskellista. Lägg till primary links (tabs) till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
+X Lägg till en muskellista. Lägg till primary links (tabs) till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
 X Fixa buggar i quizzen
 X När jag hämtar muskler med liknande funktioner, lägg till en fallbackfunktion som hämtar muskler som delar en region med ursprungsmuskeln (array intersect)
 X När jag hämtar muskler med liknande funktioner, prioritera de funktioner i ursprungsmuskeln som är prime mover-funktioner.

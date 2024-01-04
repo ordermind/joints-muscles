@@ -1,10 +1,12 @@
 import markdownParser from "../../js/markdown-parser.js";
+import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-links.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import { capitalizeTitle, renderJointType, renderNotesTooltip } from "../utils.js";
 
 export default class JointPage {
     #mainMenuBlock;
+    #primaryLinksBlock;
     #showHideElementsBlock;
 
     #renderMuscleFunction(objMuscles, muscleFunction) {
@@ -143,6 +145,7 @@ export default class JointPage {
         `.trim();
 
         this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
         this.#showHideElementsBlock = new ShowHideElementsBlock();
 
         return {
@@ -150,13 +153,20 @@ export default class JointPage {
                 this.#mainMenuBlock.render("jointPage"),
                 this.#showHideElementsBlock.render(),
             ],
-            main: content,
+            main: [
+                this.#primaryLinksBlock.render("jointPage"),
+                content,
+            ],
         };
     }
 
     cleanUp() {
         if(this.#mainMenuBlock instanceof MainMenuBlock) {
             this.#mainMenuBlock.cleanUp();
+        }
+
+        if(this.#primaryLinksBlock instanceof KnowledgeBankPrimaryLinksBlock) {
+            this.#primaryLinksBlock.cleanUp();
         }
 
         if(this.#showHideElementsBlock instanceof ShowHideElementsBlock) {

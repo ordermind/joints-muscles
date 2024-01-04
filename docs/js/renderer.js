@@ -65,17 +65,21 @@ function getHeader(headerBlocks) {
 }
 
 function getMain(mainContent) {
-    if (typeof mainContent === 'string' || mainContent instanceof String) {
-        const template = document.createElement("template");
-        template.innerHTML = replaceLinks(mainContent);
+    const mainBlocks = Array.isArray(mainContent) ? mainContent : [mainContent];
 
-        const children = template.content.children;
+    return mainBlocks.flatMap(mainBlock => {
+        if (typeof mainBlock === 'string' || mainBlock instanceof String) {
+            const template = document.createElement("template");
+            template.innerHTML = replaceLinks(mainBlock);
 
-        if (children.length === 1) return Array.isArray(children[0]) ? children[0] : [children[0]];
-        return children;
-    }
+            const children = template.content.children;
 
-    return Array.isArray(mainContent) ? mainContent : [mainContent];
+            if (children.length === 1) return Array.isArray(children[0]) ? children[0] : [children[0]];
+            return Array.from(children);
+        }
+
+        return mainBlock;
+    });
 }
 
 export function renderPage(content) {

@@ -1,4 +1,5 @@
 import markdownParser from "../../js/markdown-parser.js";
+import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-links.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import renderAnatomicStructureOrString from "../data-types/utils.js";
@@ -6,6 +7,7 @@ import { capitalizeTitle, getMuscleJointFunctionsForRendering, renderList, rende
 
 export default class MusclePage {
     #mainMenuBlock;
+    #primaryLinksBlock;
     #showHideElementsBlock;
 
     #createJointFunctionsRows(muscle, objJoints) {
@@ -96,6 +98,7 @@ export default class MusclePage {
         `.trim();
 
         this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
         this.#showHideElementsBlock = new ShowHideElementsBlock();
 
         return {
@@ -103,13 +106,20 @@ export default class MusclePage {
                 this.#mainMenuBlock.render("musclePage"),
                 this.#showHideElementsBlock.render(),
             ],
-            main: content,
+            main: [
+                this.#primaryLinksBlock.render("musclePage"),
+                content,
+            ],
         };
     }
 
     cleanUp() {
         if(this.#mainMenuBlock instanceof MainMenuBlock) {
             this.#mainMenuBlock.cleanUp();
+        }
+
+        if(this.#primaryLinksBlock instanceof KnowledgeBankPrimaryLinksBlock) {
+            this.#primaryLinksBlock.cleanUp();
         }
 
         if(this.#showHideElementsBlock instanceof ShowHideElementsBlock) {

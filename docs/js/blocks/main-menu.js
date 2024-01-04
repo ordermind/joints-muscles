@@ -16,11 +16,11 @@ export default class MainMenuBlock {
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         `.trim();
-        
+
         content += menuItems.map(menuItem => {
             const activeClass = menuItem.routeName === currentRouteName ? "active" : "";
 
-            return `<li class="nav-item"><a class="nav-link ${activeClass}" href="${menuItem.path}" data-navigo>${menuItem.label}</a></li>`;
+            return `<li class="nav-item"><a class="nav-link" href="${menuItem.path}" data-navigo>${menuItem.label}</a></li>`;
         }).join("");
 
         content += `
@@ -36,4 +36,3 @@ export default class MainMenuBlock {
 
     cleanUp() {}
 }
-

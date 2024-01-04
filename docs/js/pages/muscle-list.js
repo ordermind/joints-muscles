@@ -1,3 +1,4 @@
+import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-links.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import renderAnatomicStructureOrString from "../data-types/utils.js";
@@ -6,6 +7,7 @@ import { getMuscleJointFunctionsForRendering, renderList } from "../utils.js";
 
 export default class MuscleListPage {
     #mainMenuBlock;
+    #primaryLinksBlock;
     #showHideElementsBlock;
 
     #getPrimeMoverColumn(muscle) {
@@ -57,7 +59,6 @@ export default class MuscleListPage {
 
     render({arrMuscles}) {
         const content = `
-    <h1 class="display-1 fs-1">Spieren</h1>
     <table class="table">
         <tr>
             <th>Naam spier</th>
@@ -72,6 +73,7 @@ export default class MuscleListPage {
         `.trim();
 
         this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
         this.#showHideElementsBlock = new ShowHideElementsBlock();
 
         return {
@@ -79,13 +81,20 @@ export default class MuscleListPage {
                 this.#mainMenuBlock.render("musclesList"),
                 this.#showHideElementsBlock.render(),
             ],
-            main: content,
+            main: [
+                this.#primaryLinksBlock.render("musclesList"),
+                content,
+            ],
         };
     }
 
     cleanUp() {
         if(this.#mainMenuBlock instanceof MainMenuBlock) {
             this.#mainMenuBlock.cleanUp();
+        }
+
+        if(this.#primaryLinksBlock instanceof KnowledgeBankPrimaryLinksBlock) {
+            this.#primaryLinksBlock.cleanUp();
         }
 
         if(this.#showHideElementsBlock instanceof ShowHideElementsBlock) {

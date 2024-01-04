@@ -1,9 +1,11 @@
+import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-links.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import { renderJointType } from "../utils.js";
 
 export default class JointsListPage {
     #mainMenuBlock;
+    #primaryLinksBlock;
     #showHideElementsBlock;
 
     #renderMovements(joint) {
@@ -40,7 +42,6 @@ export default class JointsListPage {
 
     render({arrJoints, jointTypes}) {
         const content = `
-    <h1 class="display-1 fs-1">Gewrichten</h1>
     <table class="table">
         <tr>
             <th>Naam gewricht</th>
@@ -54,6 +55,7 @@ export default class JointsListPage {
         `.trim();
 
         this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
         this.#showHideElementsBlock = new ShowHideElementsBlock();
 
         return {
@@ -61,13 +63,20 @@ export default class JointsListPage {
                 this.#mainMenuBlock.render("jointsList"),
                 this.#showHideElementsBlock.render(),
             ],
-            main: content,
+            main: [
+                this.#primaryLinksBlock.render("jointsList"),
+                content,
+            ],
         };
     }
 
     cleanUp() {
         if(this.#mainMenuBlock instanceof MainMenuBlock) {
             this.#mainMenuBlock.cleanUp();
+        }
+
+        if(this.#primaryLinksBlock instanceof KnowledgeBankPrimaryLinksBlock) {
+            this.#primaryLinksBlock.cleanUp();
         }
 
         if(this.#showHideElementsBlock instanceof ShowHideElementsBlock) {

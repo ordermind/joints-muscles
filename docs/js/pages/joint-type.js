@@ -1,14 +1,15 @@
 import markdownParser from "../../js/markdown-parser.js";
+import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-links.js";
 import MainMenuBlock from "../blocks/main-menu.js";
-import getMainMenuBlock from "../blocks/main-menu.js";
 import { capitalizeTitle } from "../utils.js";
 
 export default class JointTypePage {
     #mainMenuBlock;
+    #primaryLinksBlock;
 
     render({ jointType }) {
         const title = capitalizeTitle(jointType.label);
-        
+
         let content = `
 <h1 class="display-1 fs-1">${title}</h1>
 <div class="row">`;
@@ -35,16 +36,24 @@ export default class JointTypePage {
         `.trim();
 
         this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
 
         return {
             header: this.#mainMenuBlock.render("jointTypePage"),
-            main: content,
+            main: [
+                this.#primaryLinksBlock.render("jointTypePage"),
+                content,
+            ],
         };
     }
 
     cleanUp() {
         if(this.#mainMenuBlock instanceof MainMenuBlock) {
             this.#mainMenuBlock.cleanUp();
+        }
+
+        if(this.#primaryLinksBlock instanceof KnowledgeBankPrimaryLinksBlock) {
+            this.#primaryLinksBlock.cleanUp();
         }
     }
 }
