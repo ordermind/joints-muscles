@@ -60,6 +60,7 @@ export const routes = {
             responseHandler: ({ data }) => {
                 const content = pages.jointPage.render({joint: objJoints[data.id], jointTypes, objMuscles, muscleFunctions});
                 renderPage(content);
+                window.scrollTo(0, 0);
             },
             onLeaveHandler: (done) => {
                 pages.jointPage.cleanUp();
@@ -82,6 +83,7 @@ export const routes = {
             responseHandler: ({ data }) => {
                 const content = pages.jointTypePage.render({jointType: jointTypes[data.id]});
                 renderPage(content);
+                window.scrollTo(0, 0);
             },
             onLeaveHandler: (done) => {
                 pages.jointTypePage.cleanUp();
@@ -110,6 +112,7 @@ export const routes = {
             responseHandler: ({ data }) => {
                 const content = pages.musclePage.render({muscle: objMuscles[data.id], objJoints: objJoints});
                 renderPage(content);
+                window.scrollTo(0, 0);
             },
             onLeaveHandler: (done) => {
                 pages.musclePage.cleanUp();
