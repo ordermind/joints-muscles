@@ -12,6 +12,7 @@ import muscleFunctions from "./data/muscle-functions.js";
 import QuizList from "./pages/quiz-list.js";
 import QuizPage from "./pages/quiz.js";
 import MuscleListPage from "./pages/muscle-list.js";
+import TestPage from "./quiz/webworker/test-page.js";
 
 const pages = {
     home: new HomePage(),
@@ -148,5 +149,14 @@ export const routes = {
                 done();
             }
         }
-    )
+    ),
+    testPage: new Route(
+        {
+            paths: ["test"],
+            responseHandler: () => {
+                const content = new TestPage().render();
+                renderPage(content);
+            }
+        }
+    ),
 }
