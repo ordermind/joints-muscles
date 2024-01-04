@@ -35,6 +35,7 @@ export default class QuestionCollectionFactory {
     #createQuizDataForRegion(regionId) {
         const skipJoints = [
             "columna_vertebralis",
+            "artt_costovertebrales",
             "artt_metacarpophalangeae_2_5",
             "artt_interphalangeae_proximales_manuum_2_5",
             "artt_interphalangeae_distales_manuum_2_5",
