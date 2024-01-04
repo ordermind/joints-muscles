@@ -57,6 +57,22 @@ export default class Joint {
         return this.#description;
     }
 
+    get firstDescription() {
+        if(!Array.isArray(this.description)) {
+            return this.description;
+        }
+
+        return this.description[0];
+    }
+
+    get otherDescriptions() {
+        if(!Array.isArray(this.description)) {
+            return [];
+        }
+
+        return this.description.slice(1);
+    }
+
     get image() {
         return this.#image;
     }

@@ -51,29 +51,8 @@ export default class JointPage {
         return rows;
     }
 
-    render({joint, jointTypes, objMuscles, muscleFunctions}) {
-        const title = capitalizeTitle(joint.label);
-
-        let content = `
-<div class="page page-joint">
-    <h1 class="display-1 fs-1">${title}</h1>
-    <div class="row">`;
-
-        if(joint.image) {
-            content += `
-        <div class="col flex-grow-0 d-none d-lg-block">
-            <img src="${joint.image}" class="page-image" />
-        </div>
-        `.trim();
-        }
-
-        content += `
-        <div class="col">
-        `.trim();
-
-        if(joint.description) {
-            content += markdownParser.parse(joint.description.trim());
-        }
+    #getInfoTable(joint, jointTypes) {
+        let content = "";
 
         content += `
             <table class="table table-borderless d-inline-block w-auto">
@@ -110,9 +89,42 @@ export default class JointPage {
             </table>
         `.trim();
 
+        return content;
+    }
+
+    render({joint, jointTypes, objMuscles, muscleFunctions}) {
+        const title = capitalizeTitle(joint.label);
+
+        let content = `
+<div class="page page-joint">
+    <h1 class="display-1 fs-1">${title}</h1>
+    <div class="row">`;
+
+        if(joint.image) {
+            content += `
+        <div class="col flex-grow-0 d-none d-lg-block">
+            <img src="${joint.image}" class="page-image" />
+        </div>
+        `.trim();
+        }
+
+        content += `
+        <div class="col">
+        `.trim();
+
+        if(joint.firstDescription) {
+            content += markdownParser.parse(joint.firstDescription.trim());
+        }
+
+        content += this.#getInfoTable(joint, jointTypes);
+
+        if(joint.otherDescriptions.length) {
+            content += markdownParser.parse(joint.otherDescriptions.join("\n\n").trim());
+        }
+
         if(joint.movements.length) {
             content += `
-            <table class="table">
+            <table class="table d-inline-block">
                 <tr>
                     <th>Beweging</th>
                     <th>ROM</th>
