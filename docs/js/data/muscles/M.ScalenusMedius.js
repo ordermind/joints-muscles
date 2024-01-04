@@ -48,7 +48,8 @@ export default new Muscle(
                 {
                     id: "m_scalenus_medius__breathing",
                     muscleId: "m_scalenus_medius",
-                    functionDescription: "bij gefixeerde halswervelkolom de bovenste ribben fixeren / heffen ten behoeve van inspiratie",
+                    functionDescription: "inspiratie (door middel van elevatie van de ribben)",
+                    notes: ["bij gefixeerde halswervelkolom de bovenste ribben fixeren / heffen"],
                 }
             )
         ],

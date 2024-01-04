@@ -87,7 +87,7 @@ export default class MusclePage {
         if(muscle.specialFunctions.length) {
             content += `
             <h2 class="display-2 fs-2">Speciale functies</h2>
-            <div class="d-inline-block mb-3 | hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription), true)}</div>
+            <div class="d-inline-block mb-3 | hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes)), true)}</div>
             `.trim();
         }
 

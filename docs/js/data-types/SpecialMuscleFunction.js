@@ -5,11 +5,13 @@ export default class SpecialMuscleFunction {
     #id;
     #muscleId;
     #functionDescription;
+    #notes;
 
-    constructor({id, muscleId, functionDescription}) {
+    constructor({id, muscleId, functionDescription, notes = []}) {
         this.#id = id;
         this.#muscleId = muscleId;
         this.#functionDescription = functionDescription;
+        this.#notes = notes;
     }
 
     get id() {
@@ -22,5 +24,9 @@ export default class SpecialMuscleFunction {
 
     get functionDescription() {
         return this.#functionDescription;
+    }
+
+    get notes() {
+        return this.#notes;
     }
 }

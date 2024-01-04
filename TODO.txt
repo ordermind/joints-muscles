@@ -9,7 +9,7 @@
 - Lägg till filter för muskelnamn på muskellistan
 - Lägg till muskler för bovenste extremiteit
 - Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
-- Lägg till notes för specialfunktioner för muskler så att jag kan standardisera dem bättre. Jag tänker på m_scalenus_anterior, m_scalenus_medius, m_scalenus_posterior, m_sternocleidomastoideus som kan förenklas om jag lägger fixeringskravet i notes i stället.
+X Lägg till notes för specialfunktioner för muskler så att jag kan standardisera dem bättre. Jag tänker på m_scalenus_anterior, m_scalenus_medius, m_scalenus_posterior, m_sternocleidomastoideus som kan förenklas om jag lägger fixeringskravet i notes i stället.
 
 MVP RELEASE
 

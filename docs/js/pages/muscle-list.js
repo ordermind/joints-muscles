@@ -3,7 +3,7 @@ import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import renderAnatomicStructureOrString from "../data-types/utils.js";
 import { objJoints } from "../data/joints.js";
-import { getMuscleJointFunctionsForRendering, renderList } from "../utils.js";
+import { getMuscleJointFunctionsForRendering, renderList, renderNotesTooltip } from "../utils.js";
 
 export default class MuscleListPage {
     #mainMenuBlock;
@@ -47,7 +47,7 @@ export default class MuscleListPage {
     <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, true)), true)}</td>
     <td class="${muscle.hasPrimeMoverJointFunctions() ? "hideable" : ""}">` + renderList(this.#getPrimeMoverColumn(muscle), true) + `</td>
     <td class="${muscle.hasAssistantJointFunctions() ? "hideable" : ""}">` + renderList(this.#getAssistantColumn(muscle), true) + `</td>
-    <td class="${muscle.specialFunctions.length ? "hideable" : ""}">` + renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription), true) + `</td>
+    <td class="${muscle.specialFunctions.length ? "hideable" : ""}">` + renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes)), true) + `</td>
 </tr>
             `.trim();
 
