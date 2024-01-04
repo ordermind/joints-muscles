@@ -9,7 +9,7 @@ export default new Muscle(
             "crista iliaca (dorsaal)",
         ],
         insertions: [
-            "margo costalis inferior 12",
+            "margo inferior costae 12",
             "processi costarum L1 - L4",
         ],
         functions: [
