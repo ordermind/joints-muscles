@@ -77,7 +77,7 @@ export default new Muscle(
                 {
                     id: "m_tensor_fasciae_latae__tractus_iliotibialis",
                     muscleId: "m_tensor_fasciae_latae",
-                    functionDescription: "spannen van de tractus iliotibialis)",
+                    functionDescription: "spannen van de tractus iliotibialis",
                 }
             )
         ],
