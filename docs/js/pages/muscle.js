@@ -2,42 +2,21 @@ import markdownParser from "../../js/markdown-parser.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import renderAnatomicStructureOrString from "../data-types/utils.js";
-import { capitalizeTitle, renderList, renderNotesTooltip } from "../utils.js";
+import { capitalizeTitle, getMuscleJointFunctionsForRendering, renderList, renderNotesTooltip } from "../utils.js";
 
 export default class MusclePage {
     #mainMenuBlock;
     #showHideElementsBlock;
 
-    #createJointFunctionsRows(muscle, joints) {
-        const allJointFunctions = {};
-
-        for(const muscleFunction of muscle.functions.filter(muscleFunction => muscleFunction.muscleId === muscle.id)) {
-            if(!allJointFunctions.hasOwnProperty(muscleFunction.jointId)) {
-                allJointFunctions[muscleFunction.jointId] = {
-                    primeMovers: [],
-                    otherMuscles: [],
-                };
-            }
-
-            const functionLevel = muscleFunction.isPrimeMover ? allJointFunctions[muscleFunction.jointId].primeMovers : allJointFunctions[muscleFunction.jointId].otherMuscles;
-
-            const notes = [...muscleFunction.notes];
-            if(muscleFunction.movementLabelOverride) {
-                const movementLabelIndex = notes.indexOf(muscleFunction.movementLabelOverride);
-                if(movementLabelIndex > -1) {
-                    notes.splice(movementLabelIndex, 1);
-                }
-            }
-
-            functionLevel.push((muscleFunction.movementLabelOverride ?? joints[muscleFunction.jointId].movements.find(movement => movement.id === muscleFunction.movementId).label) + renderNotesTooltip(notes));
-        }
+    #createJointFunctionsRows(muscle, objJoints) {
+        const allJointFunctions = getMuscleJointFunctionsForRendering(muscle, objJoints);
 
         let rows = [];
 
         for (const [jointId, jointFunctions] of Object.entries(allJointFunctions)) {
             let row = `
 <tr class="hideable">
-    <td>[Link type="Joint" targetId="${jointId}" label="${joints[jointId].shortLabel}"]</td>
+    <td>[Link type="Joint" targetId="${jointId}" label="${objJoints[jointId].shortLabel}"]</td>
     <td>${renderList(jointFunctions.primeMovers, true)}</td>
     <td>${renderList(jointFunctions.otherMuscles, true)}</td>
 </tr>
@@ -49,7 +28,7 @@ export default class MusclePage {
         return rows;
     }
 
-    render({ muscle, joints }) {
+    render({ muscle, objJoints }) {
         const title = capitalizeTitle(muscle.label);
 
     let content = `
@@ -76,11 +55,11 @@ export default class MusclePage {
         content += `
             <table class="table table-borderless d-inline-block w-auto">
                 <tr>
-                    <th>Origo</th>
+                    <th>Origo(s)</th>
                     <td class="${muscle.origos.length ? "hideable" : ""}">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo, true)), true)}</td>
                 </tr>
                 <tr>
-                    <th>Insertie</th>
+                    <th>Insertie(s)</th>
                     <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, true)), true)}</td>
                 </tr>
             </table>
@@ -96,7 +75,7 @@ export default class MusclePage {
                         <th>Prime mover</th>
                         <th>Assisteert</th>
                     </tr>
-                ${this.#createJointFunctionsRows(muscle, joints).join("")}
+                ${this.#createJointFunctionsRows(muscle, objJoints).join("")}
                 </table>
             `.trim();
         } else {

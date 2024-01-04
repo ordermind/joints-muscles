@@ -68,4 +68,12 @@ export default class Muscle {
 
         throw new Error(`The muscle ${this.label} does not have any joint functions. Please set the region ids manually.`);
     }
+
+    hasPrimeMoverJointFunctions() {
+        return this.functions.some(jointFunction => jointFunction.isPrimeMover === true);
+    }
+
+    hasAssistantJointFunctions() {
+        return this.functions.some(jointFunction => jointFunction.isPrimeMover === false);
+    }
 }

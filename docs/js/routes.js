@@ -5,19 +5,20 @@ import JointPage from "./pages/joint.js";
 import JointTypePage from "./pages/joint-type.js";
 import MusclePage from "./pages/muscle.js";
 import { renderPage } from "./renderer.js";
-import { objJoints } from "./data/joints.js";
-import { arrJoints } from "./data/joints.js";
+import { objJoints, arrJoints } from "./data/joints.js";
 import jointTypes from "./data/joint-types.js";
-import { objMuscles } from "./data/muscles.js";
+import { objMuscles, arrMuscles } from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
 import QuizList from "./pages/quiz-list.js";
 import QuizPage from "./pages/quiz.js";
+import MuscleListPage from "./pages/muscle-list.js";
 
 const pages = {
     home: new HomePage(),
     jointsList: new JointsListPage(),
     jointPage: new JointPage(),
     jointTypePage: new JointTypePage(),
+    muscleListPage: new MuscleListPage(),
     musclePage: new MusclePage(),
     quizList: new QuizList(),
     quizPage: new QuizPage(),
@@ -93,7 +94,13 @@ export const routes = {
         {
             paths: ["/muscles"],
             responseHandler: () => {
-                console.log("TODO: render muscles list page");
+                const content = pages.muscleListPage.render({arrMuscles});
+                renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.muscleListPage.cleanUp();
+
+                done();
             }
         }
     ),
@@ -101,7 +108,7 @@ export const routes = {
         {
             paths: ["/muscles/:id"],
             responseHandler: ({ data }) => {
-                const content = pages.musclePage.render({muscle: objMuscles[data.id], joints: objJoints});
+                const content = pages.musclePage.render({muscle: objMuscles[data.id], objJoints: objJoints});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {

@@ -91,6 +91,33 @@ export function renderJointType(joint, jointTypes, useShortLabel) {
     return jointTypeOutput;
 }
 
+export function getMuscleJointFunctionsForRendering(muscle, objJoints) {
+    const allJointFunctions = {};
+
+    for(const muscleFunction of muscle.functions.filter(muscleFunction => muscleFunction.muscleId === muscle.id)) {
+        if(!allJointFunctions.hasOwnProperty(muscleFunction.jointId)) {
+            allJointFunctions[muscleFunction.jointId] = {
+                primeMovers: [],
+                otherMuscles: [],
+            };
+        }
+
+        const functionLevel = muscleFunction.isPrimeMover ? allJointFunctions[muscleFunction.jointId].primeMovers : allJointFunctions[muscleFunction.jointId].otherMuscles;
+
+        const notes = [...muscleFunction.notes];
+        if(muscleFunction.movementLabelOverride) {
+            const movementLabelIndex = notes.indexOf(muscleFunction.movementLabelOverride);
+            if(movementLabelIndex > -1) {
+                notes.splice(movementLabelIndex, 1);
+            }
+        }
+
+        functionLevel.push((muscleFunction.movementLabelOverride ?? objJoints[muscleFunction.jointId].movements.find(movement => movement.id === muscleFunction.movementId).label) + renderNotesTooltip(notes));
+    }
+
+    return allJointFunctions;
+}
+
 export function removeChildren(element) {
     while (element.firstChild) {
         element.removeChild(element.lastChild);
