@@ -17,7 +17,7 @@ export default new Muscle(
                 {
                     id: "mm_subcostales__breathing_out",
                     muscleId: "mm_subcostales",
-                    functionDescription: "expiratie (door middel van verlagen van de ribben)",
+                    functionDescription: "expiratie (door middel van detractie van de ribben)",
                 }
             ),
             new SpecialMuscleFunction(

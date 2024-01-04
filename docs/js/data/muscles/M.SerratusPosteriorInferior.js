@@ -17,7 +17,7 @@ export default new Muscle(
                 {
                     id: "m_serratus_posterior_inferior__ribs",
                     muscleId: "m_serratus_posterior_inferior",
-                    functionDescription: "detractie van de ribben (expiratie)",
+                    functionDescription: "expiratie (door middel van detractie van de ribben)",
                 }
             )
         ],

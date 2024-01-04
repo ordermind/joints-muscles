@@ -87,7 +87,7 @@ export default new Muscle(
                 {
                     id: "m_obliquus_externus_abdominis__ribs",
                     muscleId: "m_obliquus_externus_abdominis",
-                    functionDescription: "detractie van de ribben (expiratie)",
+                    functionDescription: "expiratie (door middel van detractie van de ribben)",
                 }
             ),
             new SpecialMuscleFunction(

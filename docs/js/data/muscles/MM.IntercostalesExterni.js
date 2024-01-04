@@ -17,7 +17,7 @@ export default new Muscle(
                 {
                     id: "mm_intercostales_externi__breathing_in",
                     muscleId: "mm_intercostales_externi",
-                    functionDescription: "inspiratie (door middel van heffen van de ribben)",
+                    functionDescription: "inspiratie (door middel van elevatie van de ribben)",
                 }
             ),
             new SpecialMuscleFunction(

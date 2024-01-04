@@ -47,7 +47,7 @@ export default new Muscle(
                 {
                     id: "m_rectus_abdominis__ribs",
                     muscleId: "m_rectus_abdominis",
-                    functionDescription: "detractie van de ribben (expiratie)",
+                    functionDescription: "expiratie (door middel van detractie van de ribben)",
                 }
             ),
             new SpecialMuscleFunction(

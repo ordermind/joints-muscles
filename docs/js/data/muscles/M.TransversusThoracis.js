@@ -19,7 +19,7 @@ export default new Muscle(
                 {
                     id: "m_transversus_thoracis__breathing_out",
                     muscleId: "m_transversus_thoracis",
-                    functionDescription: "expiratie (door middel van verlagen van de ribben)",
+                    functionDescription: "expiratie (door middel van detractie van de ribben)",
                 }
             ),
             new SpecialMuscleFunction(
