@@ -16,7 +16,7 @@ MVP RELEASE
 
 - Lägg till en muskellista. Lägg till primary links (tabs) till "gewrichten" och "spieren" på alla sidor relaterade till Kennisbank, som en sorts undermeny så att det är lätt att komma tillbaka till listorna.
 - Fixa buggar i quizzen
-- Lägg till leder och muskler i BOKS som saknas i applikationen
+X Lägg till leder och muskler i BOKS som saknas i applikationen
 X Dela upp quizzes efter region så att man kan välja att genomgå romp, bovenste extremiteit, onderste extremiteit eller het hele lichaam. I samband med detta, slå ihop quizzen för leder och muskler så att det blir blandade frågor. Man ska alltså inte längre kunna välja mellan muskler och leder, utan i stället ska man välja region.
 X Specificera vilket compartiment underbensmusklerna tillhör.
 X Lägg till muskler för onderste extremiteit
