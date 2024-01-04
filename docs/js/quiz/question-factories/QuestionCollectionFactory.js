@@ -55,14 +55,8 @@ export default class QuestionCollectionFactory {
             && !muscle.regionIds.includes("upper_extremity"); //temporary workaround until all the muscles are there
         });
 
-        // const filteredMuscleFunctions = muscleFunctions.filter(muscleFunction => {
-        //     return filteredJoints.some(joint => joint.id === muscleFunction.jointId)
-        //     && filteredMuscles.some(muscle => muscle.id === muscleFunction.muscleId);
-        // });
-
         return {
             joints: filteredJoints,
-            // muscleFunctions: filteredMuscleFunctions,
             muscles: filteredMuscles,
         };
     }

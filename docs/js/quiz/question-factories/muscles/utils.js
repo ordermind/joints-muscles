@@ -2,8 +2,7 @@ import { objMuscles, arrMuscles } from "../../../data/muscles.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
 import { shuffle, intersects } from "../../utils.js";
 
-export function getOtherMusclesWithSimilarFunctions(correctMuscle) {
-
+export function getOtherMusclesWithSimilarFunctions(correctMuscle, maxLength = 20) {
     function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
         if(!correctMuscle.specialFunctions.length) {
             return [];
@@ -88,26 +87,54 @@ export function getOtherMusclesWithSimilarFunctions(correctMuscle) {
             );
     }
 
+    function getOtherMusclesWithinTheSameRegion(ignoreMuscles) {
+        return shuffle(
+            arrMuscles.filter(muscle =>
+                muscle.id !== correctMuscle.id
+                && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
+                && intersects(muscle.regionIds, correctMuscle.regionIds)
+            )
+        );
+    }
+
+    function getOtherMusclesWithoutRestrictions(ignoreMuscles) {
+        return shuffle(
+            arrMuscles.filter(muscle =>
+                muscle.id !== correctMuscle.id
+                && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id)
+            )
+        );
+    }
+
     const callbacks = !correctMuscle.functions.length ? [
         // If the correct muscle has no joint functions, assume that it has special functions
         getOtherMusclesWithSameSpecialFunctions,
         getOtherMusclesWithSpecialFunctions,
+        getOtherMusclesWithinTheSameRegion,
+        getOtherMusclesWithoutRestrictions,
     ] : !correctMuscle.specialFunctions.length ? [
         // If the correct muscle has only joint functions, do not fetch muscles based on special functions
         getOtherMusclesWithSameJointFunctions,
         getOtherMusclesRelatedToSameJoints,
+        getOtherMusclesWithinTheSameRegion,
+        getOtherMusclesWithoutRestrictions,
     ] : [
         // If the correct muscles has both joint functions and special functions, fetch muscles based on both joint functions and special functions
         getOtherMusclesWithSameSpecialFunctions,
         getOtherMusclesWithSameJointFunctions,
         getOtherMusclesRelatedToSameJoints,
         getOtherMusclesWithSpecialFunctions,
+        getOtherMusclesWithinTheSameRegion,
+        getOtherMusclesWithoutRestrictions,
     ];
 
     let otherMuscles = [];
 
     for(const callback of callbacks) {
         otherMuscles = [...otherMuscles, ...callback(otherMuscles)];
+        if(otherMuscles.length >= maxLength) {
+            return otherMuscles;
+        }
     }
 
     return otherMuscles;
