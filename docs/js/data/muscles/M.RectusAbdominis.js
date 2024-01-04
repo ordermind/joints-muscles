@@ -54,7 +54,8 @@ export default new Muscle(
                 {
                     id: "m_rectus_abdominis__pressure",
                     muscleId: "m_rectus_abdominis",
-                    functionDescription: "<strong>(gering)</strong> verhoogt intra-abdominale druk (bij gelijktijdige contractie met het diafragma).",
+                    functionDescription: "<strong>(gering)</strong> verhoogt de intra-abdominale druk",
+                    notes: ["bij gelijktijdige contractie met het diafragma"],
                 }
             ),
         ],

@@ -95,7 +95,8 @@ export default new Muscle(
                 {
                     id: "m_obliquus_internus_abdominis__pressure",
                     muscleId: "m_obliquus_internus_abdominis",
-                    functionDescription: "verhoogt intra-abdominale druk (bij gelijktijdige contractie met het diafragma)",
+                    functionDescription: "verhoogt de intra-abdominale druk",
+                    notes: ["bij gelijktijdige contractie met het diafragma"],
                 }
             ),
         ],

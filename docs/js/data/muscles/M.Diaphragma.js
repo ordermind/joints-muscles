@@ -48,7 +48,8 @@ export default new Muscle(
                 {
                     id: "m_diaphragma__pressure",
                     muscleId: "m_diaphragma",
-                    functionDescription: "vergroot de intra-abdominale druk (bij gelijktijdige contractie van de buikspieren)",
+                    functionDescription: "verhoogt de intra-abdominale druk",
+                    notes: ["bij gelijktijdige contractie van de buikspieren"],
                 }
             ),
         ],
