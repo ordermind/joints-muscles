@@ -11,7 +11,7 @@ export default new Muscle(
             "ligamentum nuchae",
         ],
         insertions: [
-            "margines costales superiores 2 - 5",
+            "margines superiores costarum 2 - 5",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

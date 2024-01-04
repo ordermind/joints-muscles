@@ -11,7 +11,7 @@ export default new Muscle(
         ],
         insertions: [
             "tuberculum musculi scaleni anterioris",
-            "margo costalis superior 1",
+            "margo superior costae 1",
         ],
         functions: [
             new JointMuscleFunction(

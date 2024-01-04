@@ -10,7 +10,7 @@ export default new Muscle(
             "processi transversi (C1)C2 - C7",
         ],
         insertions: [
-            "margo costalis superior 1",
+            "margo superior costae 1",
         ],
         functions: [
             new JointMuscleFunction(

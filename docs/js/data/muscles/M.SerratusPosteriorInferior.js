@@ -10,7 +10,7 @@ export default new Muscle(
             "processi spinosi T11 - L2",
         ],
         insertions: [
-            "margines costales inferiores 9 - 12",
+            "margines inferiores costarum 9 - 12",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
