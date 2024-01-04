@@ -1,26 +1,28 @@
 import {removeChildren} from "../utils.js";
 import messageBus from "./message-bus.js";
+import QuestionCollectionFactory from "./question-factories/QuestionCollectionFactory.js";
 
-export default class BaseQuiz {
+export default class Quiz {
+    /** Set this to true in order to walk through a quiz quickly by not having to answer any questions. */
+    #passThroughMode = false;
+
+    #regionId;
     #questionsFactory;
 
     #questions;
     #currentQuestionIndex;
     #wrapper;
 
-    constructor(questionsFactory) {
-        this.#questionsFactory = questionsFactory;
+    constructor({regionId}) {
+        this.#regionId = regionId;
+        this.#questionsFactory = new QuestionCollectionFactory({passThroughMode: this.#passThroughMode});
 
         this.nextQuestionCallback = this.nextQuestionCallback.bind(this);
         this.onClickRestartButton = this.onClickRestartButton.bind(this);
     }
 
     get #pageElementSelector() {
-        return ".page-quiz-" + this.id;
-    }
-
-    get id() {
-        throw new Error('Please implement this method in the subclass');
+        return ".page-quiz-" + this.#regionId;
     }
 
     nextQuestionCallback() {
@@ -84,7 +86,7 @@ export default class BaseQuiz {
     start(parentElement) {
         this.#currentQuestionIndex = -1;
 
-        this.#questions = this.#questionsFactory.create();
+        this.#questions = this.#questionsFactory.createQuestions({regionId: this.#regionId});
 
         const wrapper = document.createElement("div");
         wrapper.classList.add("d-flex", "flex-row", "justify-content-center");

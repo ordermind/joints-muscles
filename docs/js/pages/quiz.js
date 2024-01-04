@@ -1,16 +1,17 @@
 import MainMenuBlock from "../blocks/main-menu.js";
+import Quiz from "../quiz/quiz.js";
 
 export default class QuizPage {
     #quiz;
     #mainMenuBlock;
 
-    render({ quiz }) {
-        this.#quiz = quiz;
+    render({ regionId }) {
+        this.#quiz = new Quiz({regionId});
         this.#mainMenuBlock = new MainMenuBlock();
 
         const elements = document.createElement("div");
-        elements.classList.add("pb-3", "page-quiz", `page-quiz-${quiz.id}`);
-        quiz.start(elements);
+        elements.classList.add("pb-3", "page-quiz", `page-quiz-${regionId}`);
+        this.#quiz.start(elements);
 
         return {
             header: [

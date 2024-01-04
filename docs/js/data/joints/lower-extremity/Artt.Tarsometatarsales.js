@@ -4,7 +4,7 @@ export default new Joint(
     {
         id: "artt_tarsometatarsales",
         regionId: "lower_extremity",
-        label: "artt. artt_tarsometatarsales (TMT, gewrichtslijn van Lisfranc)",
+        label: "artt. tarsometatarsales (TMT, gewrichtslijn van Lisfranc)",
         typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
         cpp: "maximale plantairflexie van de enkel",
         mlpp: "maximale dorsaalflexie van de enkel",

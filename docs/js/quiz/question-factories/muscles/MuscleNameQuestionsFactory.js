@@ -1,20 +1,30 @@
 import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
 import MultipleChoiceQuestionSingleAnswer from "../../questions/MultipleChoiceQuestionSingleAnswer.js";
 import { shuffle } from "../../utils.js";
-import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
+import { getOtherMusclesWithSimilarFunctions, getOtherMusclesWithSimilarNames, isMusclePlural } from "./utils.js";
 
 export default class MuscleNameQuestionFactory {
+    #passThroughMode;
+
     #maxWrongAnswers = 5;
 
-    create({quizMuscles, quizMuscleFunctions}) {
-        const questions = [];
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
+
+    create({quizMuscles}) {
+        const questions = {};
 
         for(const correctMuscle of quizMuscles) {
             if(!correctMuscle.image) {
                 continue;
             }
 
-            const otherMusclesWithSimilarFunctions = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions)
+            const otherMusclesWithSimilarFunctions = getOtherMusclesWithSimilarFunctions(
+                {
+                    correctMuscle,
+                    customCallbacks: [getOtherMusclesWithSimilarNames.bind(this, correctMuscle)],
+                })
                 .slice(0, this.#maxWrongAnswers);
 
             const correctAnswer = new MultipleChoiceAnswer(
@@ -35,7 +45,7 @@ export default class MuscleNameQuestionFactory {
                     }
                 ));
 
-            questions.push(new MultipleChoiceQuestionSingleAnswer(
+            questions[correctMuscle.id] = new MultipleChoiceQuestionSingleAnswer(
                 {
                     correctAnswer,
                     wrongAnswers,
@@ -45,9 +55,10 @@ export default class MuscleNameQuestionFactory {
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>
                     `.trim(),
-                    previousNextQuestionButtonText: "Volgende spier",
+                    previousNextQuestionButtonText: "Volgende vraag",
+                    passThroughMode: this.#passThroughMode,
                 }
-            ));
+            );
         }
 
         return questions;

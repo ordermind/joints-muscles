@@ -6,14 +6,17 @@ export default class MultipleTextInputQuestion {
     #answers;
     #previousNextQuestionButtonText;
     #wrapperClasses;
+    #passThroughMode;
 
     #nextQuestionButton;
 
-    constructor({question, answers, previousNextQuestionButtonText, wrapperClasses = []}) {
+    constructor({question, answers, previousNextQuestionButtonText, wrapperClasses = [], passThroughMode = false}) {
         this.#question = question;
         this.#answers = answers;
-        this.#wrapperClasses = wrapperClasses;
         this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
+        this.#wrapperClasses = wrapperClasses;
+        this.#passThroughMode = passThroughMode;
+
         this.#nextQuestionButton = new NextQuestionButton();
 
         this.onChangeAnswer = this.onChangeAnswer.bind(this);
@@ -97,6 +100,10 @@ for(const answer of this.#answers) {
         }
 
         parentElement.appendChild(wrapper);
+
+        if(this.#passThroughMode) {
+            messageBus.emit("question-answered-correctly");
+        }
     }
 
     cleanUp() {

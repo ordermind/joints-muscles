@@ -3,9 +3,15 @@ import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js"
 import { shuffle } from "../../utils.js";
 
 export default class MuscleSpecialFunctionsQuestionsFactory {
+    #passThroughMode;
+
     #maxAnswers = 20;
 
-    #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
+
+    #createAnswers(correctMuscle, correctSolution) {
         let answers = {...correctSolution.specialFunctions};
 
         let totalAnswersCount = Object.keys(answers).length;
@@ -14,7 +20,10 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions({
+            correctMuscle,
+            priorityArea: 'specialFunctions',
+        });
         for(const otherMuscle of otherMuscles) {
             for(const specialFunction of otherMuscle.specialFunctions) {
                 if(!answers.hasOwnProperty(specialFunction.functionDescription)) {
@@ -43,7 +52,7 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
         return correctSolution;
     }
 
-    create({quizMuscles, quizMuscleFunctions}) {
+    create({quizMuscles}) {
         let questions = {};
 
         for(const muscle of quizMuscles) {
@@ -65,13 +74,14 @@ export default class MuscleSpecialFunctionsQuestionsFactory {
                     regions: [{id: "specialFunctions", label: "Speciale functies"}],
                     answers: shuffle(
                         Object.entries(
-                            this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
+                            this.#createAnswers(muscle, correctSolution)
                         ).map(([id, label]) => {
                             return {id, label};
                         })
                     ),
                     correctSolution: correctSolution,
                     previousNextQuestionButtonText: "Speciale functies",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

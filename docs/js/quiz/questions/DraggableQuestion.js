@@ -10,17 +10,19 @@ export default class DraggableQuestion {
     #correctSolution;
     #previousNextQuestionButtonText;
     #wrapperClasses;
+    #passThroughMode;
 
     #nextQuestionButton;
     #dragula;
 
-    constructor({question, regions, answers, correctSolution, previousNextQuestionButtonText, wrapperClasses = []}) {
+    constructor({question, regions, answers, correctSolution, previousNextQuestionButtonText, wrapperClasses = [], passThroughMode = false}) {
         this.#question = question;
         this.#regions = regions;
         this.#answers = answers;
         this.#correctSolution = correctSolution;
         this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
         this.#wrapperClasses = wrapperClasses;
+        this.#passThroughMode = passThroughMode;
 
         this.#nextQuestionButton = new NextQuestionButton();
 
@@ -163,6 +165,10 @@ export default class DraggableQuestion {
             .on("drop", this.onDraggableDrop);
 
         parentElement.appendChild(wrapper);
+
+        if(this.#passThroughMode) {
+            messageBus.emit("question-answered-correctly");
+        }
     }
 
     cleanUp() {

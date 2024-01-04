@@ -10,7 +10,6 @@ import { arrJoints } from "./data/joints.js";
 import jointTypes from "./data/joint-types.js";
 import { objMuscles } from "./data/muscles.js";
 import muscleFunctions from "./data/muscle-functions.js";
-import quizzes from "./quiz/quizzes.js";
 import QuizList from "./pages/quiz-list.js";
 import QuizPage from "./pages/quiz.js";
 
@@ -128,9 +127,9 @@ export const routes = {
     ),
     quizPage: new Route(
         {
-            paths: ["quiz/:id"],
+            paths: ["quiz/:regionId"],
             responseHandler: ({ data }) => {
-                const content = pages.quizPage.render({quiz: quizzes[data.id]});
+                const content = pages.quizPage.render({regionId: data.regionId});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {

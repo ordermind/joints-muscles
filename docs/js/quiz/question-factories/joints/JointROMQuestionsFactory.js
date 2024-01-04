@@ -4,11 +4,21 @@ import MultipleTextInputQuestion from "../../questions/MultipleTextInputQuestion
 import { isJointPlural } from "./utils.js";
 
 export default class JointROMQuestionsFactory {
-    create({joints}) {
+    #passThroughMode;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
+
+    create({quizJoints}) {
         const questions = {};
 
-        for(const joint of joints) {
+        for(const joint of quizJoints) {
             if(!joint.movements.length) {
+                continue;
+            }
+
+            if(!joint.movements.some(movement => movement.rom)) {
                 continue;
             }
 
@@ -39,6 +49,7 @@ export default class JointROMQuestionsFactory {
                     answers: shuffle(answers),
                     previousNextQuestionButtonText: "Range of Motion",
                     wrapperClasses: ["question-rom"],
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }

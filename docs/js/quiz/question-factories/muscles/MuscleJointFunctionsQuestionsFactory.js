@@ -3,7 +3,13 @@ import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js"
 import { objJoints } from "../../../data/joints.js";
 
 export default class MuscleJointFunctionsQuestionsFactory {
+    #passThroughMode;
+
     #maxAnswers = 20;
+
+    constructor({passThroughMode = false}) {
+        this.#passThroughMode = passThroughMode;
+    }
 
     #createAnswerLabel(jointFunction) {
         const movementName = jointFunction.movementLabelOverride ?? objJoints[jointFunction.jointId].movements.find(movement => movement.id === jointFunction.movementId).label;
@@ -11,7 +17,7 @@ export default class MuscleJointFunctionsQuestionsFactory {
         return `<em>${objJoints[jointFunction.jointId].shortLabel}</em>: ${movementName}`;
     }
 
-    #createAnswers(correctMuscle, correctSolution, quizMuscles, quizMuscleFunctions) {
+    #createAnswers(correctMuscle, correctSolution) {
         let answers = {...correctSolution.primeMover, ...correctSolution.assistant};
 
         let totalAnswersCount = Object.keys(answers).length;
@@ -20,7 +26,10 @@ export default class MuscleJointFunctionsQuestionsFactory {
             return answers;
         }
 
-        const otherMuscles = getOtherMusclesWithSimilarFunctions(correctMuscle, quizMuscles, quizMuscleFunctions);
+        const otherMuscles = getOtherMusclesWithSimilarFunctions({
+            correctMuscle,
+            priorityArea: 'jointFunctions',
+        });
         for(const otherMuscle of otherMuscles) {
             for(const jointFunction of otherMuscle.functions) {
                 const answerLabel = this.#createAnswerLabel(jointFunction);
@@ -58,7 +67,7 @@ export default class MuscleJointFunctionsQuestionsFactory {
         return correctSolution;
     }
 
-    create({quizMuscles, quizMuscleFunctions}) {
+    create({quizMuscles}) {
         let questions = {};
 
         for(const muscle of quizMuscles) {
@@ -79,13 +88,14 @@ export default class MuscleJointFunctionsQuestionsFactory {
                     `.trim(),
                     regions: [{id: "primeMover", label: "Prime mover"}, {id: "assistant", label: "Assisteert"}],
                     answers: Object.entries(
-                        this.#createAnswers(muscle, correctSolution, quizMuscles, quizMuscleFunctions)
+                        this.#createAnswers(muscle, correctSolution)
                     ).map(([id, label]) => {
                         return {id, label};
                     })
                     .sort((a, b) => a.label.localeCompare(b.label)),
                     correctSolution: correctSolution,
                     previousNextQuestionButtonText: "Gewrichtsfuncties",
+                    passThroughMode: this.#passThroughMode,
                 }
             );
         }
