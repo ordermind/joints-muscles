@@ -10,7 +10,7 @@ export default new Muscle(
             "processi transversi C5 - C7",
         ],
         insertions: [
-            "facies externa costarii 2",
+            "facies externa costae 2",
         ],
         functions: [
             new JointMuscleFunction(
