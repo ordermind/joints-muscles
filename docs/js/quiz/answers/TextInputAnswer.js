@@ -26,4 +26,13 @@ export default class TextInputAnswer {
     get correctAnswer() {
         return this.#correctAnswer;
     }
+
+    toJSON() {
+        return {
+            id: this.id,
+            label: this.label,
+            suffix: this.suffix,
+            correctAnswer: this.correctAnswer,
+        };
+    }
 }

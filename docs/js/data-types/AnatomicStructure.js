@@ -14,4 +14,11 @@ export default class AnatomicStructure {
     get notes() {
         return this.#notes;
     }
+
+    toJSON() {
+        return {
+            label: this.label,
+            notes: this.notes,
+        };
+    }
 }

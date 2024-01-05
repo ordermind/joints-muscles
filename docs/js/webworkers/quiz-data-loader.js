@@ -1,4 +1,4 @@
-import QuestionsDataFactory from "./quiz/question-factories/QuestionsDataFactory.js";
+import QuestionsDataFactory from "../quiz/question-data-factories/QuestionsDataFactory.js";
 
 self.onmessage = (e) => {
     const {type, data} = e.data;

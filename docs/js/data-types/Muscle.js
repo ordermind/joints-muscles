@@ -74,4 +74,17 @@ export default class Muscle {
     hasAssistantJointFunctions() {
         return this.functions.some(jointFunction => jointFunction.isPrimeMover === false);
     }
+
+    toJSON() {
+        return {
+            id: this.id,
+            label: this.label,
+            origos: this.origos,
+            insertions: this.insertions,
+            functions: this.functions,
+            specialFunctions: this.specialFunctions,
+            image: this.image,
+            description: this.description,
+        };
+    }
 }
