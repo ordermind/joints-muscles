@@ -163,9 +163,15 @@ export default class MuscleListPage {
         listWrapper.append(...template.content.children);
 
         addLinkEventListeners();
+
+        this.#showHideElementsBlock.updateAfterRedraw();
     }
 
     render({arrMuscles, objJoints}) {
+        this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
+        this.#showHideElementsBlock = new ShowHideElementsBlock();
+
         this.#arrMuscles = arrMuscles;
         this.#objJoints = objJoints;
 
@@ -182,10 +188,6 @@ export default class MuscleListPage {
 
         this.#renderFilters();
         this.#renderList();
-
-        this.#mainMenuBlock = new MainMenuBlock();
-        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
-        this.#showHideElementsBlock = new ShowHideElementsBlock();
 
         return {
             header: [

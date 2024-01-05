@@ -7,10 +7,8 @@ export const router = new Navigo("/", { hash: true });
 
 router.hooks({
     after(match) {
-        if(sessionStorage.getItem('hide-info')) {
-            const showHideElementsBlock = new ShowHideElementsBlock();
-            showHideElementsBlock.hideAll();
-        }
+        const showHideElementsBlock = new ShowHideElementsBlock();
+        showHideElementsBlock.updateAfterRedraw();
 
         addNewTabClickEventListeners();
     },

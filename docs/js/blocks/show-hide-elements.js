@@ -12,7 +12,7 @@ export default class ShowHideElementsBlock {
     hideAll() {
         for(const element of document.querySelectorAll(".hideable")) {
             element.querySelectorAll(".hideable-cover").forEach(coverElement => coverElement.remove());
-            
+
             const coverElement = document.createElement("span");
             coverElement.classList.add("hideable-cover");
             coverElement.setAttribute("onclick", "this.remove()");
@@ -20,6 +20,12 @@ export default class ShowHideElementsBlock {
         }
 
         sessionStorage.setItem('hide-info', true);
+    }
+
+    updateAfterRedraw() {
+        if(sessionStorage.getItem('hide-info')) {
+            this.hideAll();
+        }
     }
 
     #doRender() {
@@ -61,4 +67,3 @@ export default class ShowHideElementsBlock {
         hideAllElement.removeEventListener("click", this.hideAll);
     }
 }
-

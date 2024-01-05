@@ -146,9 +146,15 @@ export default class JointsListPage {
         listWrapper.append(...template.content.children);
 
         addLinkEventListeners();
+
+        this.#showHideElementsBlock.updateAfterRedraw();
     }
 
     render({arrJoints, jointTypes}) {
+        this.#mainMenuBlock = new MainMenuBlock();
+        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
+        this.#showHideElementsBlock = new ShowHideElementsBlock();
+
         this.#arrJoints = arrJoints;
         this.#jointTypes = jointTypes;
 
@@ -165,10 +171,6 @@ export default class JointsListPage {
 
         this.#renderFilters();
         this.#renderList();
-
-        this.#mainMenuBlock = new MainMenuBlock();
-        this.#primaryLinksBlock = new KnowledgeBankPrimaryLinksBlock();
-        this.#showHideElementsBlock = new ShowHideElementsBlock();
 
         return {
             header: [
