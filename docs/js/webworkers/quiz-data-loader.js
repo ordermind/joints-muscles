@@ -10,10 +10,10 @@ self.onmessage = (e) => {
 
     const questionsDataFactory = new QuestionsDataFactory({passThroughMode: data.passThroughMode ?? false});
 
-    const timedFunction = debugTimer.wrap(questionsDataFactory.createQuestionsData);
+    const timedFunction = debugTimer.wrap(questionsDataFactory.createQuestionsData.bind(questionsDataFactory));
     const timedResult = timedFunction({regionId: data.regionId});
-    console.log(timedResult);
     const questionsData = timedResult.result;
+
     console.log('quiz loading time', data.regionId, timedResult.execTimeInMs);
 
     // const questionsData = questionsDataFactory.createQuestionsData({regionId: data.regionId});
