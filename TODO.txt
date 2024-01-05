@@ -1,6 +1,3 @@
-- Lägg till stöd för att öppna länkar i en ny tabb utan att url:en gör att sidan i den nya tabben går sönder. Det finns olika sätt att lösa detta på:
-  - Event listener för scrollhjulsklick och ctrl + click: https://stackoverflow.com/questions/1795734/triggering-onclick-event-using-middle-click https://stackoverflow.com/questions/16190455/how-to-detect-controlclick-in-javascript-from-an-onclick-div-attribute
-  - Event listener för skapande och uppdatering av en tabb: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onCreated https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 - Lägg ev. till quizfråga för mlpp (multiple choice single answer)
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
@@ -9,6 +6,7 @@
 - Lägg till filter för muskelnamn på muskellistan
 - Lägg till muskler för bovenste extremiteit
 - Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
+X Lägg till stöd för att öppna länkar i en ny tabb utan att url:en gör att sidan i den nya tabben går sönder. Event listener för scrollhjulsklick och ctrl + click: https://stackoverflow.com/questions/1795734/triggering-onclick-event-using-middle-click https://stackoverflow.com/questions/16190455/how-to-detect-controlclick-in-javascript-from-an-onclick-div-attribute
 X Försök ev. korta ner tiden för laddning av en quiz. En möjlighet skulle kunna vara att göra letandet efter leder och muskler mer effektiv, särskilt musklerna där programmet går igenom stora arrayer gång på gång.
 X Lägg till notes för specialfunktioner för muskler så att jag kan standardisera dem bättre. Jag tänker på m_scalenus_anterior, m_scalenus_medius, m_scalenus_posterior, m_sternocleidomastoideus som kan förenklas om jag lägger fixeringskravet i notes i stället.
 
