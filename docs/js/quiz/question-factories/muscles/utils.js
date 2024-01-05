@@ -1,6 +1,7 @@
 import { objMuscles, arrMuscles } from "../../../data/muscles.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
 import { shuffle, intersects, checkStringSimilarity } from "../../utils.js";
+import { objJoints } from "../../../data/joints.js";
 
 export function isMusclePlural(muscle) {
     return muscle.label.includes('mm.');
@@ -110,7 +111,7 @@ export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallba
         return shuffle(
             arrMuscles.filter(muscle =>
                 baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, correctMuscle, ignoreMuscles)
-                && intersects(muscle.regionIds, correctMuscle.regionIds)
+                && intersects(muscle.getRegionIds(objJoints), correctMuscle.getRegionIds(objJoints))
             )
         );
     }

@@ -1,5 +1,3 @@
-import { objJoints } from "../data/joints.js";
-
 export default class Muscle {
     #id;
     #label;
@@ -55,7 +53,7 @@ export default class Muscle {
         return this.#description;
     }
 
-    get regionIds() {
+    getRegionIds(objJoints) {
         if(this.#regionIdsOverride.length) {
             return this.#regionIdsOverride;
         }

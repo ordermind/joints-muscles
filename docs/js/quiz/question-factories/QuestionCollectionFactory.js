@@ -6,7 +6,7 @@ import MuscleAnatomyQuestionFactory from "./muscles/MuscleAnatomyQuestionsFactor
 import MuscleJointFunctionsQuestionsFactory from "./muscles/MuscleJointFunctionsQuestionsFactory.js";
 import MuscleNameQuestionFactory from "./muscles/MuscleNameQuestionsFactory.js";
 import MuscleSpecialFunctionsQuestionsFactory from "./muscles/MuscleSpecialFunctionsQuestionsFactory.js";
-import { arrJoints } from "../../data/joints.js";
+import { arrJoints, objJoints } from "../../data/joints.js";
 import { arrMuscles } from "../../data/muscles.js";
 import { shuffle } from "../utils.js";
 
@@ -50,8 +50,8 @@ export default class QuestionCollectionFactory {
         });
 
         const filteredMuscles = arrMuscles.filter(muscle => {
-            return (regionId === 'all' || muscle.regionIds.includes(regionId))
-            && !muscle.regionIds.includes("upper_extremity"); //temporary workaround until all the muscles are there
+            return (regionId === 'all' || muscle.getRegionIds(objJoints).includes(regionId))
+            && !muscle.getRegionIds(objJoints).includes("upper_extremity"); //temporary workaround until all the muscles are there
         });
 
         return {
