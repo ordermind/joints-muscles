@@ -1,7 +1,7 @@
 import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
 import { shuffle } from "../../utils.js";
 import QuestionData from "../QuestionData.js";
-import { getOtherMusclesWithSimilarFunctions, getOtherMusclesWithSimilarNames, isMusclePlural } from "./utils.js";
+import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 
 export default class MuscleNameQuestionsDataFactory {
     #passThroughMode;
@@ -23,7 +23,6 @@ export default class MuscleNameQuestionsDataFactory {
             const otherMusclesWithSimilarFunctions = getOtherMusclesWithSimilarFunctions(
                 {
                     correctMuscle,
-                    customCallbacks: [getOtherMusclesWithSimilarNames.bind(this, correctMuscle)],
                 })
                 .slice(0, this.#maxWrongAnswers);
 

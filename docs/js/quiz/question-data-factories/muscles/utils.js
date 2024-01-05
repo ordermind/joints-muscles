@@ -1,40 +1,20 @@
 import { objMuscles, arrMuscles } from "../../../data/muscles.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
-import { shuffle, intersects, checkStringSimilarity } from "../../utils.js";
+import { shuffle, intersects } from "../../utils.js";
 import { objJoints } from "../../../data/joints.js";
 
 export function isMusclePlural(muscle) {
     return muscle.label.includes('mm.');
 }
 
-function baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, correctMuscle, ignoreMuscles) {
-    return muscle.id !== correctMuscle.id
-        && (!mustHaveJointFunctions || muscle.functions.length > 0)
-        && (!mustHaveSpecialFunctions || muscle.specialFunctions.length > 0)
-        && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id);
-}
+export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallbacks = [], priorityArea = null}) {
+    function baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, ignoreMuscles) {
+        return muscle.id !== correctMuscle.id
+            && (!mustHaveJointFunctions || muscle.functions.length > 0)
+            && (!mustHaveSpecialFunctions || muscle.specialFunctions.length > 0)
+            && !ignoreMuscles.some(ignoreMuscle => ignoreMuscle.id === muscle.id);
+    }
 
-export function getOtherMusclesWithSimilarNames(correctMuscle, ignoreMuscles) {
-    const maxLength = 1;
-
-    return arrMuscles
-        .filter(muscle =>
-            baseFilter(muscle, false, false, correctMuscle, ignoreMuscles)
-        )
-        .sort((firstMuscle, secondMuscle) => {
-            if(
-                checkStringSimilarity(firstMuscle.label, correctMuscle.label)
-                > checkStringSimilarity(secondMuscle.label, correctMuscle.label)
-            ) {
-                return -1;
-            }
-
-            return 1;
-        })
-        .slice(0, maxLength);
-}
-
-export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallbacks = [], priorityArea = null, maxLength = 200}) {
     function getOtherMusclesWithSameSpecialFunctions(ignoreMuscles) {
         if(!correctMuscle.specialFunctions.length) {
             return [];
@@ -42,7 +22,7 @@ export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallba
 
         return shuffle(
             arrMuscles.filter(muscle =>
-                baseFilter(muscle, false, true, correctMuscle, ignoreMuscles)
+                baseFilter(muscle, false, true, ignoreMuscles)
                 && intersects(
                     muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription),
                     correctMuscle.specialFunctions.map(specialFunction => specialFunction.functionDescription)
@@ -110,7 +90,7 @@ export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallba
     function getOtherMusclesWithinTheSameRegion(mustHaveJointFunctions, mustHaveSpecialFunctions, ignoreMuscles) {
         return shuffle(
             arrMuscles.filter(muscle =>
-                baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, correctMuscle, ignoreMuscles)
+                baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, ignoreMuscles)
                 && intersects(muscle.getRegionIds(objJoints), correctMuscle.getRegionIds(objJoints))
             )
         );
@@ -126,7 +106,7 @@ export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallba
 
     function getOtherMuscles(mustHaveJointFunctions, mustHaveSpecialFunctions, ignoreMuscles) {
         return shuffle(
-            arrMuscles.filter(muscle => baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, correctMuscle, ignoreMuscles))
+            arrMuscles.filter(muscle => baseFilter(muscle, mustHaveJointFunctions, mustHaveSpecialFunctions, ignoreMuscles))
         );
     }
 
@@ -177,9 +157,6 @@ export function getOtherMusclesWithSimilarFunctions({correctMuscle, customCallba
 
     for(const callback of createCallbackChain()) {
         otherMuscles = [...otherMuscles, ...callback(otherMuscles)];
-        if(otherMuscles.length >= maxLength) {
-            return otherMuscles;
-        }
     }
 
     return otherMuscles;
