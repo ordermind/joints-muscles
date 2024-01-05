@@ -123,3 +123,12 @@ export function removeChildren(element) {
         element.removeChild(element.lastChild);
     }
 }
+
+export function debounce(func, timeout = 250){
+    let timer;
+
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+}
