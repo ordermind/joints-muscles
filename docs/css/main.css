@@ -84,6 +84,22 @@ body .hideable-cover {
     margin-bottom: 0;
 }
 
+/** List page **/
+.page-list form[name="filters"] .form-control-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.page-list form[name="filters"] .search-wrapper input[type="text"] {
+    padding-right: 2rem;
+}
+
+.page-list form[name="filters"] .search-wrapper .ico {
+    position: absolute;
+    right: 1rem;
+    top: calc(50% - 6px);
+}
+
 /** Muscle page **/
 .page-muscle {
     max-width: 92rem;

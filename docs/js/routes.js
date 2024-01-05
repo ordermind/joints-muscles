@@ -96,7 +96,7 @@ export const routes = {
         {
             paths: ["/muscles"],
             responseHandler: () => {
-                const content = pages.musclesList.render({arrMuscles});
+                const content = pages.musclesList.render({arrMuscles, objJoints});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {
