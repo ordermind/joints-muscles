@@ -1,5 +1,7 @@
-.page-quiz-list .nav-buttons-wrapper img {
+.page-quiz-list .nav-buttons-wrapper .quiz-icon {
+    display: inline-block;
     height: 2rem;
+    width: 2rem;
 }
 
 .page-quiz .quiz-image-wrapper {
