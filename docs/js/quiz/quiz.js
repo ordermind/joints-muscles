@@ -4,7 +4,7 @@ import transformQuestionDataToQuestion from "./question-data-transformer.js";
 
 export default class Quiz {
     /** Set this to true in order to walk through a quiz quickly by not having to answer any questions. */
-    #passThroughMode = true;
+    #passThroughMode = false;
 
     #regionId;
 
