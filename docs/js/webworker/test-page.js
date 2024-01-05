@@ -1,6 +1,6 @@
 export default class TestPage {
     #initWebWorker() {
-        const worker = new Worker("./js/quiz/webworker/quizDataLoaderWorker.js", {type: "module"});
+        const worker = new Worker("./js/webworker/quizDataLoaderWorker.js", {type: "module"});
         worker.postMessage("hej");
     }
 

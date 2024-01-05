@@ -1,4 +1,4 @@
-import JointType from "../../../data-types/JointType.js";
+import JointType from "../../data-types/JointType.js";
 
 export default {
     // Indeling naar de aard van verbinding
