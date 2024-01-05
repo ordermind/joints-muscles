@@ -1,5 +1,5 @@
 import MainMenuBlock from "../blocks/main-menu.js";
-import Quiz from "../quiz/quiz.js";
+import Quiz from "../webworker/quiz/quiz.js";
 
 export default class QuizPage {
     #quiz;
