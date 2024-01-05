@@ -1,4 +1,4 @@
-import Region from "../../data-types/Region.js";
+import Region from "../data-types/Region.js";
 
 export default [
     new Region({id: "torso", label: "romp"}),

@@ -1,7 +1,7 @@
 import { arrMuscles } from "./muscles.js";
-import WholeSpineFunctionsFactory from "../../data/muscle-functions-factories/WholeSpineFunctionsFactory.js";
-import IndividualFingerAndToeJointFunctionsFactory from "../../data/muscle-functions-factories/IndividualFingerAndToeJointFunctionsFactory.js";
-import ElbowJointPartFunctionsFactory from "../../data/muscle-functions-factories/ElbowJointPartFunctionsFactory.js";
+import WholeSpineFunctionsFactory from "./muscle-functions-factories/WholeSpineFunctionsFactory.js";
+import IndividualFingerAndToeJointFunctionsFactory from "./muscle-functions-factories/IndividualFingerAndToeJointFunctionsFactory.js";
+import ElbowJointPartFunctionsFactory from "./muscle-functions-factories/ElbowJointPartFunctionsFactory.js";
 
 const muscleFunctions = arrMuscles.flatMap(muscle => muscle.functions);
 
