@@ -1,24 +1,25 @@
 import {removeChildren} from "../utils.js";
 import messageBus from "./message-bus.js";
-import QuestionCollectionFactory from "./question-factories/QuestionCollectionFactory.js";
+import transformQuestionDataToQuestion from "./question-data-transformer.js";
 
 export default class Quiz {
     /** Set this to true in order to walk through a quiz quickly by not having to answer any questions. */
-    #passThroughMode = false;
+    #passThroughMode = true;
 
     #regionId;
-    #questionsFactory;
 
-    #questions;
+    #quizDataLoaderWorker;
+    #questionsData;
+    #currentQuestion;
     #currentQuestionIndex;
     #wrapper;
 
     constructor({regionId}) {
         this.#regionId = regionId;
-        this.#questionsFactory = new QuestionCollectionFactory({passThroughMode: this.#passThroughMode});
 
         this.nextQuestionCallback = this.nextQuestionCallback.bind(this);
         this.onClickRestartButton = this.onClickRestartButton.bind(this);
+        this.onQuizDataLoaderWorkerMessage = this.onQuizDataLoaderWorkerMessage.bind(this);
     }
 
     get #pageElementSelector() {
@@ -26,7 +27,7 @@ export default class Quiz {
     }
 
     nextQuestionCallback() {
-        this.#questions[this.#currentQuestionIndex].cleanUp();
+        this.#currentQuestion.cleanUp();
         this.#showNextQuestion();
     }
 
@@ -39,6 +40,34 @@ export default class Quiz {
         removeChildren(pageElement);
 
         this.start(pageElement);
+    }
+
+    onQuizDataLoaderWorkerMessage(e) {
+        const {type, data} = e.data;
+
+        if(type !== "TYPE_FINISHED") {
+            return;
+        }
+
+        this.#questionsData = JSON.parse(data);
+        this.#onQuizReady();
+    }
+
+    #onQuizReady() {
+        this.#showNextQuestion();
+        messageBus.on("clickedNextQuestionButton", this.nextQuestionCallback);
+    }
+
+    #initQuizDataLoaderWorker() {
+        this.#quizDataLoaderWorker = new Worker("./js/webworkers/quiz-data-loader.js", {type: "module"});
+        this.#quizDataLoaderWorker.postMessage({
+            type: "TYPE_START",
+            data: {
+                regionId: this.#regionId,
+                passThroughMode: this.#passThroughMode,
+            },
+        });
+        this.#quizDataLoaderWorker.onmessage = this.onQuizDataLoaderWorkerMessage;
     }
 
     #renderFinishedScreen() {
@@ -62,7 +91,7 @@ export default class Quiz {
     #showNextQuestion() {
         this.#currentQuestionIndex++;
 
-        if(this.#currentQuestionIndex > this.#questions.length - 1) {
+        if(this.#currentQuestionIndex > this.#questionsData.length - 1) {
             this.#renderFinishedScreen();
         } else {
             this.#renderQuestion();
@@ -75,18 +104,19 @@ export default class Quiz {
     }
 
     #renderQuestion() {
-        const isLastQuestion = this.#currentQuestionIndex === this.#questions.length - 1;
-        const nextQuestionButtonText = isLastQuestion ? "Klaar!" : this.#questions[this.#currentQuestionIndex + 1].previousNextQuestionButtonText;
+        const isLastQuestion = this.#currentQuestionIndex === this.#questionsData.length - 1;
+        const nextQuestionButtonText = isLastQuestion ? "Klaar!" : this.#questionsData[this.#currentQuestionIndex + 1].data.previousNextQuestionButtonText;
+        this.#currentQuestion = transformQuestionDataToQuestion(this.#questionsData[this.#currentQuestionIndex]);
 
         removeChildren(this.#wrapper);
 
-        this.#questions[this.#currentQuestionIndex].render({parentElement: this.#wrapper, nextQuestionButtonText});
+        this.#currentQuestion.render({parentElement: this.#wrapper, nextQuestionButtonText});
     }
 
     start(parentElement) {
         this.#currentQuestionIndex = -1;
 
-        this.#questions = this.#questionsFactory.createQuestions({regionId: this.#regionId});
+        this.#initQuizDataLoaderWorker();
 
         const wrapper = document.createElement("div");
         wrapper.classList.add("d-flex", "flex-row", "justify-content-center");
@@ -94,18 +124,22 @@ export default class Quiz {
         this.#wrapper = document.createElement("div");
         this.#wrapper.classList.add("d-flex", "flex-column", "justify-content-center", "inner-wrapper");
 
-        this.#showNextQuestion();
+        this.#wrapper.innerHTML = `
+<div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+        `.trim();
 
         wrapper.appendChild(this.#wrapper);
 
         parentElement.appendChild(wrapper);
-
-        messageBus.on("clickedNextQuestionButton", this.nextQuestionCallback);
     }
 
     cleanUp() {
-        for(const question of this.#questions) {
-            question.cleanUp();
+        this.#quizDataLoaderWorker.terminate();
+
+        if(this.#currentQuestion) {
+            this.#currentQuestion.cleanUp();
         }
 
         messageBus.off("clickedNextQuestionButton", this.nextQuestionCallback);

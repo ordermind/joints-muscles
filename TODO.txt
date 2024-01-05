@@ -7,7 +7,7 @@
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
 - Lägg till filter för lednamn på ledlistan
 - Lägg till filter för muskelnamn på muskellistan
-- Försök ev. korta ner tiden för laddning av en quiz. En möjlighet skulle kunna vara att göra letandet efter leder och muskler mer effektiv, särskilt musklerna där programmet går igenom stora arrayer gång på gång. Jag har experimenterat med att lägga till en spinner för att göra det trevligare att vänta, men den renderas inte när jag kör synkront, och med setTimeout eller web workers dyker det upp andra problem.
+- Försök ev. korta ner tiden för laddning av en quiz. En möjlighet skulle kunna vara att göra letandet efter leder och muskler mer effektiv, särskilt musklerna där programmet går igenom stora arrayer gång på gång.
 - Lägg till muskler för bovenste extremiteit
 - Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 X Lägg till notes för specialfunktioner för muskler så att jag kan standardisera dem bättre. Jag tänker på m_scalenus_anterior, m_scalenus_medius, m_scalenus_posterior, m_sternocleidomastoideus som kan förenklas om jag lägger fixeringskravet i notes i stället.

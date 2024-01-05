@@ -1,11 +1,11 @@
-import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { objMuscles } from "../../../data/muscles.js";
 import { arrJoints } from "../../../data/joints.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
 import { shuffle } from "../../utils.js";
 import { isJointPlural } from "./utils.js";
+import QuestionData from "../QuestionData.js";
 
-export default class JointFunctionsQuestionsFactory {
+export default class JointFunctionsQuestionsDataFactory {
     #passThroughMode;
 
     constructor({passThroughMode = false}) {
@@ -89,12 +89,12 @@ export default class JointFunctionsQuestionsFactory {
     }
 
     create({quizJoints}) {
-        let questions = {};
+        let questionsData = {};
 
         for(const joint of quizJoints) {
 
             const shuffledMovements = shuffle(joint.movements);
-            let jointQuestions = [];
+            let jointQuestionsData = [];
             for(const [movementIndex, movement] of shuffledMovements.entries()) {
                 const correctSolution = this.#createCorrectSolution(movement);
                 // Skip the question if there are no muscle functions defined for this movement.
@@ -104,8 +104,9 @@ export default class JointFunctionsQuestionsFactory {
 
                 const isFirstMovementWithinTheJoint = movementIndex === 0;
 
-                jointQuestions.push(new DraggableQuestion(
-                    {
+                jointQuestionsData.push(new QuestionData({
+                    className: "DraggableQuestion",
+                    data: {
                         question: `
 <h1 class="display-3 fs-3 mb-2">${joint.shortLabel}</h1>
 <div class="quiz-image-wrapper">
@@ -125,12 +126,12 @@ export default class JointFunctionsQuestionsFactory {
                         previousNextQuestionButtonText: isFirstMovementWithinTheJoint ? "Spierfuncties" : "Volgende spierfunctie",
                         passThroughMode: this.#passThroughMode,
                     }
-                ));
+                }));
 
-                questions[joint.id] = jointQuestions;
+                questionsData[joint.id] = jointQuestionsData;
             }
         }
 
-        return questions;
+        return questionsData;
     }
 }

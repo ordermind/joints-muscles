@@ -148,5 +148,5 @@ export const routes = {
                 done();
             }
         }
-    )
+    ),
 }

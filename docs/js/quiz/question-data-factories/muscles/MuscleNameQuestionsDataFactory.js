@@ -1,9 +1,9 @@
 import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
-import MultipleChoiceQuestionSingleAnswer from "../../questions/MultipleChoiceQuestionSingleAnswer.js";
 import { shuffle } from "../../utils.js";
+import QuestionData from "../QuestionData.js";
 import { getOtherMusclesWithSimilarFunctions, getOtherMusclesWithSimilarNames, isMusclePlural } from "./utils.js";
 
-export default class MuscleNameQuestionFactory {
+export default class MuscleNameQuestionsDataFactory {
     #passThroughMode;
 
     #maxWrongAnswers = 5;
@@ -13,7 +13,7 @@ export default class MuscleNameQuestionFactory {
     }
 
     create({quizMuscles}) {
-        const questions = {};
+        const questionsData = {};
 
         for(const correctMuscle of quizMuscles) {
             if(!correctMuscle.image) {
@@ -45,8 +45,9 @@ export default class MuscleNameQuestionFactory {
                     }
                 ));
 
-            questions[correctMuscle.id] = new MultipleChoiceQuestionSingleAnswer(
-                {
+            questionsData[correctMuscle.id] = new QuestionData({
+                className: "MultipleChoiceQuestionSingleAnswer",
+                data: {
                     correctAnswer,
                     wrongAnswers,
                     question: `
@@ -58,9 +59,9 @@ export default class MuscleNameQuestionFactory {
                     previousNextQuestionButtonText: "Volgende vraag",
                     passThroughMode: this.#passThroughMode,
                 }
-            );
+            });
         }
 
-        return questions;
+        return questionsData;
     }
 }

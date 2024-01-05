@@ -1,9 +1,9 @@
-import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { shuffle } from "../../utils.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import renderAnatomicStructureOrString from "../../../data-types/utils.js";
+import QuestionData from "../QuestionData.js";
 
-export default class MuscleAnatomyQuestionFactory {
+export default class MuscleAnatomyQuestionsDataFactory {
     #passThroughMode;
 
     #maxAnswers = 20;
@@ -70,13 +70,14 @@ export default class MuscleAnatomyQuestionFactory {
     }
 
     create({quizMuscles}) {
-        let questions = {};
+        let questionsData = {};
 
         for(const muscle of quizMuscles) {
             const correctSolution = this.#createCorrectSolution(muscle);
 
-            questions[muscle.id] = new DraggableQuestion(
-                {
+            questionsData[muscle.id] = new QuestionData({
+                className: "DraggableQuestion",
+                data: {
                     question: `
 <h1 class="display-3 fs-3 mb-2">${muscle.label}</h1>
 <div class="quiz-image-wrapper">
@@ -96,9 +97,9 @@ export default class MuscleAnatomyQuestionFactory {
                     previousNextQuestionButtonText: "Origo & Insertie",
                     passThroughMode: this.#passThroughMode,
                 }
-            );
+            });
         }
 
-        return questions;
+        return questionsData;
     }
 };

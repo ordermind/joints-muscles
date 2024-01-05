@@ -1,9 +1,9 @@
 import { shuffle } from "../../utils.js";
 import TextInputAnswer from "../../answers/TextInputAnswer.js";
-import MultipleTextInputQuestion from "../../questions/MultipleTextInputQuestion.js";
 import { isJointPlural } from "./utils.js";
+import QuestionData from "../QuestionData.js";
 
-export default class JointROMQuestionsFactory {
+export default class JointROMQuestionsDataFactory {
     #passThroughMode;
 
     constructor({passThroughMode = false}) {
@@ -11,7 +11,7 @@ export default class JointROMQuestionsFactory {
     }
 
     create({quizJoints}) {
-        const questions = {};
+        const questionsData = {};
 
         for(const joint of quizJoints) {
             if(!joint.movements.length) {
@@ -37,8 +37,9 @@ export default class JointROMQuestionsFactory {
                 }
             )
 
-            questions[joint.id] = new MultipleTextInputQuestion(
-                {
+            questionsData[joint.id] = new QuestionData({
+                className: "MultipleTextInputQuestion",
+                data: {
                     question: `
 <h1 class="display-3 fs-3 mb-2">${joint.shortLabel}</h1>
 <div class="quiz-image-wrapper">
@@ -51,9 +52,9 @@ export default class JointROMQuestionsFactory {
                     wrapperClasses: ["question-rom"],
                     passThroughMode: this.#passThroughMode,
                 }
-            );
+            });
         }
 
-        return questions;
+        return questionsData;
     }
 }

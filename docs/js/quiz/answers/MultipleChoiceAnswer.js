@@ -20,4 +20,12 @@ export default class MultipleChoiceAnswer {
     get isCorrect() {
         return this.#isCorrect;
     }
+
+    toJSON() {
+        return {
+            id: this.id,
+            label: this.label,
+            isCorrect: this.isCorrect,
+        };
+    }
 }

@@ -1,8 +1,8 @@
 import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
-import MultipleChoiceQuestionSingleAnswer from "../../questions/MultipleChoiceQuestionSingleAnswer.js";
+import QuestionData from "../QuestionData.js";
 import { getSimilarJoints, isJointPlural } from "./utils.js";
 
-export default class JointNameQuestionsFactory {
+export default class JointNameQuestionsDataFactory {
     #passThroughMode;
 
     #maxWrongAnswers = 5;
@@ -12,7 +12,7 @@ export default class JointNameQuestionsFactory {
     }
 
     create({quizJoints, allQuizJoints}) {
-        const questions = {};
+        const questionsData = {};
 
         for(const correctJoint of quizJoints) {
             if(!correctJoint.image) {
@@ -37,7 +37,9 @@ export default class JointNameQuestionsFactory {
                     }
                 ));
 
-            questions[correctJoint.id] = new MultipleChoiceQuestionSingleAnswer(
+            questionsData[correctJoint.id] = new QuestionData({
+                className: "MultipleChoiceQuestionSingleAnswer",
+                data:
                 {
                     correctAnswer,
                     wrongAnswers,
@@ -50,9 +52,9 @@ export default class JointNameQuestionsFactory {
                     previousNextQuestionButtonText: "Volgende vraag",
                     passThroughMode: this.#passThroughMode,
                 }
-            );
+            });
         }
 
-        return questions;
+        return questionsData;
     }
 }

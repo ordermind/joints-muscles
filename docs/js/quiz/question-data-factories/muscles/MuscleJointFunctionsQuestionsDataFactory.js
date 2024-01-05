@@ -1,8 +1,8 @@
-import DraggableQuestion from "../../questions/DraggableQuestion.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import { objJoints } from "../../../data/joints.js";
+import QuestionData from "../QuestionData.js";
 
-export default class MuscleJointFunctionsQuestionsFactory {
+export default class MuscleJointFunctionsQuestionsDataFactory {
     #passThroughMode;
 
     #maxAnswers = 20;
@@ -68,7 +68,7 @@ export default class MuscleJointFunctionsQuestionsFactory {
     }
 
     create({quizMuscles}) {
-        let questions = {};
+        let questionsData = {};
 
         for(const muscle of quizMuscles) {
             if(!muscle.functions.length) {
@@ -77,8 +77,9 @@ export default class MuscleJointFunctionsQuestionsFactory {
 
             const correctSolution = this.#createCorrectSolution(muscle);
 
-            questions[muscle.id] = new DraggableQuestion(
-                {
+            questionsData[muscle.id] = new QuestionData({
+                className: "DraggableQuestion",
+                data: {
                     question: `
 <h1 class="display-3 fs-3 mb-2">${muscle.label}</h1>
 <div class="quiz-image-wrapper">
@@ -97,9 +98,9 @@ export default class MuscleJointFunctionsQuestionsFactory {
                     previousNextQuestionButtonText: "Gewrichtsfuncties",
                     passThroughMode: this.#passThroughMode,
                 }
-            );
+            });
         }
 
-        return questions;
+        return questionsData;
     }
 };
