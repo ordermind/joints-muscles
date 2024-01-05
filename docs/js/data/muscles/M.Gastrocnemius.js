@@ -9,13 +9,13 @@ export default new Muscle(
         origos: [
             new AnatomicStructure(
                 {
-                    label: "condylus medialis femoris",
+                    label: "condylus medialis femoris (dorsaal)",
                     notes: ["caput mediale"],
                 }
             ),
             new AnatomicStructure(
                 {
-                    label: "condylus lateralis femoris",
+                    label: "condylus lateralis femoris (dorsaal)",
                     notes: ["caput laterale"],
                 }
             ),
