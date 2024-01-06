@@ -15,10 +15,10 @@ import MuscleListPage from "./pages/muscle-list.js";
 
 const pages = {
     home: new HomePage(),
-    jointsList: new JointsListPage(),
+    jointsList: new JointsListPage(({arrJoints, jointTypes})),
     jointPage: new JointPage(),
     jointTypePage: new JointTypePage(),
-    musclesList: new MuscleListPage(),
+    musclesList: new MuscleListPage({arrMuscles, objJoints}),
     musclePage: new MusclePage(),
     quizList: new QuizList(),
     quizPage: new QuizPage(),
@@ -44,7 +44,7 @@ export const routes = {
         {
             paths: ["/joints"],
             responseHandler: () => {
-                const content = pages.jointsList.render({arrJoints, jointTypes});
+                const content = pages.jointsList.render();
                 renderPage(content);
             },
             onLeaveHandler: (done) => {
@@ -96,7 +96,7 @@ export const routes = {
         {
             paths: ["/muscles"],
             responseHandler: () => {
-                const content = pages.musclesList.render({arrMuscles, objJoints});
+                const content = pages.musclesList.render();
                 renderPage(content);
             },
             onLeaveHandler: (done) => {
