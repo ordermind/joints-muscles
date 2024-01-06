@@ -4,7 +4,7 @@ import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import renderAnatomicStructureOrString from "../data-types/utils.js";
 import { replaceLinks } from "../renderer.js";
 import { debounce, getMuscleJointFunctionsForRendering, removeChildren, renderList, renderNotesTooltip } from "../utils.js";
-import { addLinkEventListeners, cleanUpLinkEventListeners } from "../router.js";
+import { addLinkEventListeners, cleanUpLinkEventListeners, router } from "../router.js";
 
 export default class MuscleListPage {
     #mainMenuBlock;
@@ -19,8 +19,18 @@ export default class MuscleListPage {
         this.onUpdateFilters = debounce(this.onUpdateFilters.bind(this));
     }
 
-    onUpdateFilters() {
+    onUpdateFilters(e) {
+        this.#updateBrowserHistory();
         this.#renderList();
+    }
+
+    #getFilterValuesFromQueryString() {
+        const currentLocation = router.getCurrentLocation();
+        if(!currentLocation) {
+            return {};
+        }
+
+        return new URLSearchParams(currentLocation.queryString);
     }
 
     #getFilters() {
@@ -35,6 +45,8 @@ export default class MuscleListPage {
     }
 
     #renderFilters() {
+        const filterValues = this.#getFilterValuesFromQueryString();
+
         const filterEventMapping = this.#getFilters();
 
         const formElement = document.createElement("form");
@@ -46,6 +58,7 @@ export default class MuscleListPage {
         labelFilterInput.setAttribute("type", "text");
         labelFilterInput.setAttribute("placeholder", "Naam spier");
         labelFilterInput.classList.add("form-control");
+        labelFilterInput.value = filterValues.get(filterEventMapping.label.name);
         labelFilterInput.addEventListener(filterEventMapping.label.event, this.onUpdateFilters);
 
         const labelFilterSpyglass = document.createElement("span");
@@ -64,6 +77,19 @@ export default class MuscleListPage {
         removeChildren(filterWrapper);
 
         filterWrapper.appendChild(formElement);
+    }
+
+    #updateBrowserHistory() {
+        const formElement = document.querySelector(`form[name="filters"]`);
+        if(!formElement) {
+            return;
+        }
+
+        const formData = new FormData(formElement);
+        const filterValues = new URLSearchParams(formData);
+
+        const newUrl = window.location.href.split("?")[0] + "?" + filterValues.toString();
+        history.pushState(null, "", newUrl);
     }
 
     #getPrimeMoverColumn(muscle) {
@@ -93,17 +119,13 @@ export default class MuscleListPage {
     }
 
     #getFilteredMuscleData() {
-        const formElement = document.querySelector(`form[name="filters"]`);
-        if(!formElement) {
-            return this.#arrMuscles;
-        }
-
-        const formData = new FormData(formElement);
         const filters = this.#getFilters();
+        const filterValues = this.#getFilterValuesFromQueryString();
+
         let filteredMuscles = [...this.#arrMuscles];
 
         for(const filter of Object.values(filters)) {
-            const filterValue = formData.get(filter.name);
+            const filterValue = filterValues.get(filter.name);
 
             if(filterValue && (!filter.hasOwnProperty("minCharacters") || filterValue.length >= filter.minCharacters)) {
                 filteredMuscles = filteredMuscles.filter(muscle => muscle[filter.name].includes(filterValue));

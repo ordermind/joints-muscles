@@ -19,9 +19,16 @@ router.hooks({
     },
 });
 
-for(const [_, route] of Object.entries(routes)) {
-    for(const path of route.paths) {
-        router.on(path, route.responseHandler, {leave: route.onLeaveHandler});
+for(const [routeName, route] of Object.entries(routes)) {
+    for(const [index, path] of route.paths.entries()) {
+        const multiplePathRouteName = route.paths.length > 1 ? routeName + index : routeName;
+        router.on({
+            [path]: {
+                as: multiplePathRouteName,
+                uses: route.responseHandler,
+                hooks: {leave: route.onLeaveHandler},
+            },
+        });
     }
 }
 
