@@ -12,7 +12,7 @@ export default new Muscle(
         ],
         insertions: [
             "cartilagines costales 5 - 7",
-            "processus xiphoideus sterni",
+            "facies lateralis processus xiphoidei",
         ],
         functions: [
             new JointMuscleFunction(
