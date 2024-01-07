@@ -59,7 +59,7 @@
 .draggable-element.gu-mirror {
     color: #6c757d;
     background-color: #fff;
-    width: 25rem;
+    width: 24rem;
     margin: 0.5rem;
     max-width: calc(100% - 1rem);
 }
