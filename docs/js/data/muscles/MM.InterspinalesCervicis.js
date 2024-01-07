@@ -6,10 +6,10 @@ export default new Muscle(
         id: "mm_interspinales_cervicis",
         label: "mm. interspinales cervicis",
         origos: [
-            "processi spinosi C3 - T2",
+            "processi spinosi C3&nbsp;-&nbsp;T2",
         ],
         insertions: [
-            "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (C2 - T1)",
+            "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (C2&nbsp;-&nbsp;T1)",
         ],
         functions: [
             new JointMuscleFunction(

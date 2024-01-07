@@ -10,7 +10,7 @@ export default new Muscle(
         ],
         insertions: [
             "margo inferior costae 12",
-            "processi costarum L1 - L4",
+            "processi costarum L1&nbsp;-&nbsp;L4",
         ],
         functions: [
             new JointMuscleFunction(

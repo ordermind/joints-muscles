@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_spinalis_capitis",
         label: "m. spinalis capitis",
         origos: [
-            "processi spinosi C7 - T1"
+            "processi spinosi C7&nbsp;-&nbsp;T1"
         ],
         insertions: [
             "os occipitale (mediaal)",

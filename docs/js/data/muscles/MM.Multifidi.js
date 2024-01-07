@@ -7,7 +7,7 @@ export default new Muscle(
         id: "mm_multifidi",
         label: "mm. multifidi",
         origos: [
-            "processi transversi C4 - L5",
+            "processi transversi C4&nbsp;-&nbsp;L5",
             "os sacrum",
             "spina iliaca posterior superior",
         ],

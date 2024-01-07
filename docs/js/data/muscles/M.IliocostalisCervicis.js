@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_iliocostalis_cervicis",
         label: "m. iliocostalis cervicis",
         origos: [
-            "anguli costarum 3 - 6",
+            "anguli costarum 3&nbsp;-&nbsp;6",
         ],
         insertions: [
-            "processi transversi C4 - C6",
+            "processi transversi C4&nbsp;-&nbsp;C6",
         ],
         functions: [
             new JointMuscleFunction(

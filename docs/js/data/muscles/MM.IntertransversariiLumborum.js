@@ -6,10 +6,10 @@ export default new Muscle(
         id: "mm_intertransversarii_lumborum",
         label: "mm. intertransversarii lumborum",
         origos: [
-            "processi costarum L2 - L5",
+            "processi costarum L2&nbsp;-&nbsp;L5",
         ],
         insertions: [
-            "processus costalis bij de <strong>eerstvolgende</strong> hoger gelegen wervel (L1 - L4)",
+            "processus costalis bij de <strong>eerstvolgende</strong> hoger gelegen wervel (L1&nbsp;-&nbsp;L4)",
         ],
         functions: [
             new JointMuscleFunction(

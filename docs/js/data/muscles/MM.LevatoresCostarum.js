@@ -7,10 +7,10 @@ export default new Muscle(
         id: "mm_levatores_costarum",
         label: "mm. levatores costarum",
         origos: [
-            "processi transversi C7 - T11",
+            "processi transversi C7&nbsp;-&nbsp;T11",
         ],
         insertions: [
-            "facies posterior costae bij de <strong>eerstvolgende</strong> lager gelegen wervel (T1 - T12)",
+            "facies posterior costae bij de <strong>eerstvolgende</strong> lager gelegen wervel (T1&nbsp;-&nbsp;T12)",
         ],
         functions: [
             new JointMuscleFunction(

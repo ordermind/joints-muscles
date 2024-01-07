@@ -11,7 +11,7 @@ export default new Muscle(
             "symphysis pubica",
         ],
         insertions: [
-            "cartilagines costales 5 - 7",
+            "cartilagines costales 5&nbsp;-&nbsp;7",
             "facies lateralis processus xiphoidei",
         ],
         functions: [

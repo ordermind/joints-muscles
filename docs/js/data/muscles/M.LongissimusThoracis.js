@@ -10,12 +10,12 @@ export default new Muscle(
             "facies dorsalis ossis sacri",
             "crista iliaca (mediaal)",
             "fascia thoracolumbalis",
-            "processi spinosi et costarum L1 - L5",
+            "processi spinosi et costarum L1&nbsp;-&nbsp;L5",
         ],
-        insertions: [           
-            "processi costarum L1 - L5",
-            "processi transversi T1 - T12",
-            "anguli costarum 7 - 12",
+        insertions: [
+            "processi costarum L1&nbsp;-&nbsp;L5",
+            "processi transversi T1&nbsp;-&nbsp;T12",
+            "anguli costarum 7&nbsp;-&nbsp;12",
         ],
         functions: [
             new JointMuscleFunction(

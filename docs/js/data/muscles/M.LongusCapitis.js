@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_longus_capitis",
         label: "m. longus capitis",
         origos: [
-            "processi transversi C3 - C6",
+            "processi transversi C3&nbsp;-&nbsp;C6",
         ],
         insertions: [
             "os occipitale, pars basilaris",

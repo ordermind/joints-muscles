@@ -11,7 +11,7 @@ export default new Muscle(
             "membrana interossea cruris",
         ],
         insertions: [
-            "phalanges distales II - V (dorsaal)",
+            "phalanges distales II&nbsp;-&nbsp;V (dorsaal)",
         ],
         functions: [
             new JointMuscleFunction(

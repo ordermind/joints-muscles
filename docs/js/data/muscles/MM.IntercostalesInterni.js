@@ -7,10 +7,10 @@ export default new Muscle(
         label: "mm. intercostales interni",
         regionIds: ["torso"],
         origos: [
-            "margines superiores costarum 2 - 12"
+            "margines superiores costarum 2&nbsp;-&nbsp;12"
         ],
         insertions: [
-            "margo inferior bij de <strong>eerstvolgende</strong> hoger gelegen rib (1 - 11)",
+            "margo inferior bij de <strong>eerstvolgende</strong> hoger gelegen rib (1&nbsp;-&nbsp;11)",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

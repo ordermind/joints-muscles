@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_longissimus_capitis",
         label: "m. longissimus capitis",
         origos: [
-            "processi transversi (C4)C5 - T4(T5)",
+            "processi transversi (C4)C5&nbsp;-&nbsp;T4(T5)",
         ],
         insertions: [
             "processus mastoideus",

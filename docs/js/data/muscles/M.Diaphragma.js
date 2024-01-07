@@ -16,7 +16,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "facies interna cartilaginum costarum et costarum 7 - 12",
+                    label: "facies interna cartilaginum costarum et costarum 7&nbsp;-&nbsp;12",
                     notes: ["pars costalis"],
                 }
             ),
@@ -28,7 +28,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "facies anterior corporum vertebrales L1 - L3",
+                    label: "facies anterior corporum vertebrales L1&nbsp;-&nbsp;L3",
                     notes: ["pars lumbalis"],
                 }
             ),

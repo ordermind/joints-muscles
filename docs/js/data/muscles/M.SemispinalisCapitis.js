@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_semispinalis_capitis",
         label: "m. semispinalis capitis",
         origos: [
-            "processi transversi C4 - T6(T7)",
+            "processi transversi C4&nbsp;-&nbsp;T6(T7)",
         ],
         insertions: [
             "os occipitale (tussen linea nuchae superior en linea nuchae inferior)",

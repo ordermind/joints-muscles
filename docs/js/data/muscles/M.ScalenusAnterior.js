@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_scalenus_anterior",
         label: "m. scalenus anterior",
         origos: [
-            "processi transversi C3 - C6",
+            "processi transversi C3&nbsp;-&nbsp;C6",
         ],
         insertions: [
             "tuberculum musculi scaleni anterioris",

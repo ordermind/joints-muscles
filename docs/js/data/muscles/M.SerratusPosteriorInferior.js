@@ -7,10 +7,10 @@ export default new Muscle(
         label: "m. serratus posterior inferior",
         regionIds: ["torso"],
         origos: [
-            "processi spinosi T11 - L2",
+            "processi spinosi T11&nbsp;-&nbsp;L2",
         ],
         insertions: [
-            "margines inferiores costarum 9 - 12",
+            "margines inferiores costarum 9&nbsp;-&nbsp;12",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

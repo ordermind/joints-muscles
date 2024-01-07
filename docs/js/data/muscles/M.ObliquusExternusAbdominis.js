@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_obliquus_externus_abdominis",
         label: "m. obliquus externus abdominis",
         origos: [
-            "facies externae costarum 5 - 12",
+            "facies externae costarum 5&nbsp;-&nbsp;12",
         ],
         insertions: [
             "linea alba",

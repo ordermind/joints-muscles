@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_splenius_cervicis",
         label: "m. splenius cervicis",
         origos: [
-            "processi spinosi T3 - T6",
+            "processi spinosi T3&nbsp;-&nbsp;T6",
         ],
         insertions: [
-            "processi transversi C1 - C3",
+            "processi transversi C1&nbsp;-&nbsp;C3",
         ],
         functions: [
             new JointMuscleFunction(

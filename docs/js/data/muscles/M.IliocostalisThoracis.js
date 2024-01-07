@@ -6,10 +6,10 @@ export default new Muscle(
         id: "m_iliocostalis_thoracis",
         label: "m. iliocostalis thoracis",
         origos: [
-            "anguli costarum 7 - 12",
+            "anguli costarum 7&nbsp;-&nbsp;12",
         ],
         insertions: [
-            "anguli costarum 1 - 6",
+            "anguli costarum 1&nbsp;-&nbsp;6",
             "processus transversus C7",
         ],
         functions: [

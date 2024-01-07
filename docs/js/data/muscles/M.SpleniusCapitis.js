@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_splenius_capitis",
         label: "m. splenius capitis",
         origos: [
-            "processi spinosi C7 - T3",
+            "processi spinosi C7&nbsp;-&nbsp;T3",
             "ligamentum nuchae",
         ],
         insertions: [

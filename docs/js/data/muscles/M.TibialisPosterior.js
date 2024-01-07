@@ -14,7 +14,7 @@ export default new Muscle(
             "tuberositas ossis navicularis",
             "ossa cuneiformia (plantair)",
             "os cuboideum",
-            "bases ossium metatarsalium II - IV",
+            "bases ossium metatarsalium II&nbsp;-&nbsp;IV",
         ],
         functions: [
             new JointMuscleFunction(

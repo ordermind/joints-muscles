@@ -9,10 +9,10 @@ export default new Muscle(
         origos: [
             "facies inferoposterior corporis sterni",
             "facies posterior processus xiphoidei",
-            "extremitates sternalis cartilaginum costarum 4 - 7",
+            "extremitates sternalis cartilaginum costarum 4&nbsp;-&nbsp;7",
         ],
         insertions: [
-            "facies interna cartilaginum costarum 2 - 6",
+            "facies interna cartilaginum costarum 2&nbsp;-&nbsp;6",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

@@ -8,7 +8,7 @@ export default new Muscle(
         regionIds: ["torso"],
         origos: [
             "crista iliaca (ventrale 2/3 deel)",
-            "cartilagines costales 7 - 12",
+            "cartilagines costales 7&nbsp;-&nbsp;12",
             "fascia thoracolumbalis",
         ],
         insertions: [

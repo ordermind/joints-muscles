@@ -12,7 +12,7 @@ export default new Muscle(
         ],
         insertions: [
             "linea alba",
-            "margines inferiores costarum (9)10 - 12",
+            "margines inferiores costarum (9)10&nbsp;-&nbsp;12",
             "crista pubica",
         ],
         functions: [

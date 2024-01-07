@@ -10,19 +10,19 @@ export default new Muscle(
         origos: [
             new AnatomicStructure(
                 {
-                    label: "facies anteriores corporum vertebralium C5 - T3",
+                    label: "facies anteriores corporum vertebralium C5&nbsp;-&nbsp;T3",
                     notes: ["pars recta/verticalis"],
                 }
             ),
             new AnatomicStructure(
                 {
-                    label: "processi transversi C3 - C5",
+                    label: "processi transversi C3&nbsp;-&nbsp;C5",
                     notes: ["pars obliqua superior"],
                 }
             ),
             new AnatomicStructure(
                 {
-                    label: "facies anteriores corporum vertebralium T1 - T3",
+                    label: "facies anteriores corporum vertebralium T1&nbsp;-&nbsp;T3",
                     notes: ["pars obliqua inferior"],
                 }
             ),
@@ -30,7 +30,7 @@ export default new Muscle(
         insertions: [
             new AnatomicStructure(
                 {
-                    label: "facies anteriores corporum vertebralium C2 - C4",
+                    label: "facies anteriores corporum vertebralium C2&nbsp;-&nbsp;C4",
                     notes: ["pars recta/verticalis"],
                 }
             ),
@@ -42,7 +42,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "processi transversi C5 - C6",
+                    label: "processi transversi C5&nbsp;-&nbsp;C6",
                     notes: ["pars obliqua inferior"],
                 }
             ),

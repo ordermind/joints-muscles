@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_scalenus_medius",
         label: "m. scalenus medius",
         origos: [
-            "processi transversi (C1)C2 - C7",
+            "processi transversi (C1)C2&nbsp;-&nbsp;C7",
         ],
         insertions: [
             "margo superior costae 1",

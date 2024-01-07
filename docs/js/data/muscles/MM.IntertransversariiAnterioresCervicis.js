@@ -6,10 +6,10 @@ export default new Muscle(
         id: "mm_intertransversarii_anteriores_cervicis",
         label: "mm. intertransversarii anteriores cervicis",
         origos: [
-            "processi transversi C3 - T1",
+            "processi transversi C3&nbsp;-&nbsp;T1",
         ],
         insertions: [
-            "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (C2 - C7)",
+            "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (C2&nbsp;-&nbsp;C7)",
         ],
         functions: [
             new JointMuscleFunction(
