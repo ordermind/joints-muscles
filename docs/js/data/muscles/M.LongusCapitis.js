@@ -33,6 +33,15 @@ export default new Muscle(
                     notes: ["ipsilaterale rotatie"],
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_longus_capitis__columna_vertebralis_cervicalis__flexion",
+                    jointId: "columna_vertebralis_cervicalis",
+                    muscleId: "m_longus_capitis",
+                    movementId: "columna_vertebralis_cervicalis__flexion",
+                    isPrimeMover: false,
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
