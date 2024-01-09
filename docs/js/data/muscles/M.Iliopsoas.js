@@ -16,7 +16,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "processi costarum L1&nbsp;-&nbsp;L5",
+                    label: "processi costales L1&nbsp;-&nbsp;L5",
                     notes: ["m. psoas major"],
                 }
             ),

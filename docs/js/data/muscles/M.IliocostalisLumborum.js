@@ -11,7 +11,7 @@ export default new Muscle(
             "fascia thoracolumbalis",
         ],
         insertions: [
-            "processi costarum L1&nbsp;-&nbsp;L4",
+            "processi costales L1&nbsp;-&nbsp;L4",
             "anguli costarum 7&nbsp;-&nbsp;12",
         ],
         functions: [
