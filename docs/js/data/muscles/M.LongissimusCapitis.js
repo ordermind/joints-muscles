@@ -70,6 +70,24 @@ export default new Muscle(
                     notes: ["ipsilaterale rotatie"],
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_longissimus_capitis__columna_vertebralis_thoracalis__extension",
+                    jointId: "columna_vertebralis_thoracalis",
+                    muscleId: "m_longissimus_capitis",
+                    movementId: "columna_vertebralis_thoracalis__extension",
+                    isPrimeMover: false,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_longissimus_capitis__columna_vertebralis_thoracalis__lateroflexion",
+                    jointId: "columna_vertebralis_thoracalis",
+                    muscleId: "m_longissimus_capitis",
+                    movementId: "columna_vertebralis_thoracalis__lateroflexion",
+                    isPrimeMover: false,
+                }
+            ),
         ],
         image: "./images/muscles/m_longissimus_capitis.jpeg",
         description: `

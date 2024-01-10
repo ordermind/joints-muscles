@@ -33,6 +33,15 @@ export default new Muscle(
                     notes: ["contralaterale rotatie"],
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_semispinalis_cervicis__columna_vertebralis_thoracalis__extension",
+                    jointId: "columna_vertebralis_thoracalis",
+                    muscleId: "m_semispinalis_cervicis",
+                    movementId: "columna_vertebralis_thoracalis__extension",
+                    isPrimeMover: false,
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

@@ -40,6 +40,15 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_semispinalis_capitis__columna_vertebralis_thoracalis__extension",
+                    jointId: "columna_vertebralis_thoracalis",
+                    muscleId: "m_semispinalis_capitis",
+                    movementId: "columna_vertebralis_thoracalis__extension",
+                    isPrimeMover: false,
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
