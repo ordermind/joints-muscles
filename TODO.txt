@@ -4,7 +4,7 @@
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
 - Lägg till eindgevoel för leder i tabell och/eller ledsida
 - Lägg till muskler för bovenste extremiteit
-- Lägg till TWK-funktioner för m. iliocostalis cervicis
+- Lägg till TWK-funktioner för m. iliocostalis cervicis, m. semispinalis cervicis
 X Lägg till filter för lednamn på ledlistan
 X Lägg till filter för muskelnamn på muskellistan
 X Lägg till stöd för att öppna länkar i en ny tabb utan att url:en gör att sidan i den nya tabben går sönder. Event listener för scrollhjulsklick och ctrl + click: https://stackoverflow.com/questions/1795734/triggering-onclick-event-using-middle-click https://stackoverflow.com/questions/16190455/how-to-detect-controlclick-in-javascript-from-an-onclick-div-attribute
