@@ -41,7 +41,7 @@ export default new Muscle(
                 {
                     id: "m_diaphragma__breathing",
                     muscleId: "m_diaphragma",
-                    functionDescription: "vergroot bij contractie de thorax en verlaagt de intrathoracale druk (inspiratie)",
+                    functionDescription: "inspiratie (door middel van verlagen van de intrathoracale druk)",
                 }
             ),
             new SpecialMuscleFunction(
