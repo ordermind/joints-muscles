@@ -38,9 +38,9 @@ export default new Muscle(
                     jointId: "columna_vertebralis_cervicalis",
                     muscleId: "m_scalenus_anterior",
                     movementId: "columna_vertebralis_cervicalis__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
+                    movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
-                    notes: ["ipsilaterale rotatie"],
+                    notes: ["contralaterale rotatie"],
                 }
             ),
         ],
@@ -50,7 +50,7 @@ export default new Muscle(
                     id: "m_scalenus_anterior__breathing",
                     muscleId: "m_scalenus_anterior",
                     functionDescription: "inspiratie (door middel van elevatie van de ribben)",
-                    notes: ["bij gefixeerde halswervelkolom de bovenste ribben fixeren / heffen"],
+                    notes: ["bij gefixeerde halswervelkolom de eerste rib heffen"],
                 }
             )
         ],

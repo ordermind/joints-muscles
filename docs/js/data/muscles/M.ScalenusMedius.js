@@ -31,17 +31,6 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
-            new JointMuscleFunction(
-                {
-                    id: "m_scalenus_medius__columna_vertebralis_cervicalis__rotation",
-                    jointId: "columna_vertebralis_cervicalis",
-                    muscleId: "m_scalenus_medius",
-                    movementId: "columna_vertebralis_cervicalis__rotation",
-                    movementLabelOverride: "ipsilaterale rotatie",
-                    isPrimeMover: false,
-                    notes: ["ipsilaterale rotatie"],
-                }
-            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
@@ -49,7 +38,7 @@ export default new Muscle(
                     id: "m_scalenus_medius__breathing",
                     muscleId: "m_scalenus_medius",
                     functionDescription: "inspiratie (door middel van elevatie van de ribben)",
-                    notes: ["bij gefixeerde halswervelkolom de bovenste ribben fixeren / heffen"],
+                    notes: ["bij gefixeerde halswervelkolom de eerste rib heffen"],
                 }
             )
         ],
