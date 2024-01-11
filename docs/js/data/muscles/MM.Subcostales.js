@@ -7,7 +7,7 @@ export default new Muscle(
         label: "mm. subcostales",
         regionIds: ["torso"],
         origos: [
-            "facies interna costarum"
+            "facies internae costarum"
         ],
         insertions: [
             "facies interna costae bij een ondergelegen rib (overspant 1-2 ribben)",
