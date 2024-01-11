@@ -10,7 +10,7 @@ export default new Muscle(
             "facies dorsalis ossis sacri",
             "crista iliaca (mediaal)",
             "fascia thoracolumbalis",
-            "processi spinosi et costarum L1&nbsp;-&nbsp;L5",
+            "processi spinosi et costales L1&nbsp;-&nbsp;L5",
         ],
         insertions: [
             "processi costales L1&nbsp;-&nbsp;L5",

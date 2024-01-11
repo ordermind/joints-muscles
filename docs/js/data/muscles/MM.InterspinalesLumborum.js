@@ -21,6 +21,15 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "mm_interspinales_lumborum__columna_vertebralis_thoracalis__extension",
+                    jointId: "columna_vertebralis_thoracalis",
+                    muscleId: "mm_interspinales_lumborum",
+                    movementId: "columna_vertebralis_thoracalis__extension",
+                    isPrimeMover: false,
+                }
+            ),
         ],
         image: "./images/muscles/mm_interspinales_lumborum.jpeg",
         description: `
