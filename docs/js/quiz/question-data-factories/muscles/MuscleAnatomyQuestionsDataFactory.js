@@ -83,9 +83,9 @@ export default class MuscleAnatomyQuestionsDataFactory {
 <div class="quiz-image-wrapper">
     <img class="quiz-image" src="${muscle.image}" />
 </div>
-<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat zijn de origo en insertie van ` + (isMusclePlural(muscle) ? "deze spieren" : "deze spier") + `? Sleep die anatomische structuren naar het juiste vak.</h2>
+<h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Wat zijn de origo(s) en insertie(s) van ` + (isMusclePlural(muscle) ? "deze spieren" : "deze spier") + `? Sleep die anatomische structuren naar het juiste vak.</h2>
                     `.trim(),
-                    regions: [{id: "origo", label: "Origo"}, {id: "insertion", label: "Insertie"}],
+                    regions: [{id: "origo", label: "Origo(s)"}, {id: "insertion", label: "Insertie(s)"}],
                     answers: shuffle(
                         Object.entries(
                             this.#createAnswers(muscle, correctSolution)
