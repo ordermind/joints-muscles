@@ -1,10 +1,16 @@
-import { shuffle } from "../../utils.js";
+import muscleFunctions from "../../../data/muscle-functions.js";
+import { intersects, shuffle } from "../../utils.js";
 
 export function isJointPlural(joint) {
     return joint.label.includes('artt.');
 }
 
 export function getSimilarJoints(correctJoint, quizJoints, maxLength = 5) {
+    function baseFilter(joint, ignoreJoints) {
+        return joint.id !== correctJoint.id
+        && !ignoreJoints.some(ignoreJoint => ignoreJoint.id === joint.id);
+    }
+
     function getOtherJointsWithSameNumberSuffix(ignoreJoints) {
         const regex = /\s[IVX]+$/;
         const numberSuffix = correctJoint.shortLabel.match(regex);
@@ -14,11 +20,7 @@ export function getSimilarJoints(correctJoint, quizJoints, maxLength = 5) {
 
         return shuffle(
             quizJoints.filter(joint => {
-                if(joint.id === correctJoint.id) {
-                    return false;
-                }
-
-                if(ignoreJoints.some(ignoreJoint => ignoreJoint.id === joint.id)) {
+                if(!baseFilter(joint, ignoreJoints)) {
                     return false;
                 }
 
@@ -33,19 +35,81 @@ export function getSimilarJoints(correctJoint, quizJoints, maxLength = 5) {
         );
     }
 
-    function getOtherJointsInTheSameRegion(ignoreJoints) {
-        return shuffle(
-            quizJoints.filter(joint =>
-                joint.id !== correctJoint.id
-                && !ignoreJoints.some(ignoreJoint => ignoreJoint.id === joint.id)
-                && joint.regionId === correctJoint.regionId
+    function getOtherJointsWithSameMuscles(correctJointMuscleFunctions, ignoreJoints) {
+        if(!correctJointMuscleFunctions.length) {
+            return [];
+        }
+
+        const correctJointMuscleIds = Array.from(
+            new Set(
+                correctJointMuscleFunctions.map(muscleFunction => muscleFunction.muscleId)
             )
+        );
+
+        const output = shuffle(
+            quizJoints.filter(joint => {
+                if(!baseFilter(joint, ignoreJoints)) {
+                    return false;
+                }
+
+                const jointMuscleIds = Array.from(
+                    new Set(
+                        muscleFunctions.filter(muscleFunction =>
+                            muscleFunction.jointId === joint.id
+                        )
+                        .map(muscleFunction => muscleFunction.muscleId)
+                    )
+                );
+
+                if(!jointMuscleIds.length) {
+                    return false;
+                }
+
+                return intersects(correctJointMuscleIds, jointMuscleIds);
+            })
+        );
+
+        return output;
+    }
+
+    function getOtherJointsInTheSameRegion(onlyWithoutMuscleFunctions, ignoreJoints) {
+        return shuffle(
+            quizJoints.filter(joint => {
+                if(!baseFilter(joint, ignoreJoints)) {
+                    return false;
+                }
+
+                if(joint.regionId !== correctJoint.regionId) {
+                    return false;
+                }
+
+                if(onlyWithoutMuscleFunctions) {
+                    if(!joint.movements.length) {
+                        return true;
+                    }
+
+                    const jointMuscleFunctions = muscleFunctions.filter(muscleFunction =>
+                        muscleFunction.jointId === joint.id
+                    );
+
+                    if(jointMuscleFunctions.length) {
+                        return false;
+                    }
+                }
+
+                return true;
+            })
         );
     }
 
+    const correctJointMuscleFunctions = correctJoint.movements.length ? muscleFunctions.filter(muscleFunction =>
+        muscleFunction.jointId === correctJoint.id
+    ) : [];
+
     const callbacks = [
         getOtherJointsWithSameNumberSuffix,
-        getOtherJointsInTheSameRegion,
+        // getOtherJointsWithSameMuscles.bind(this, correctJointMuscleFunctions),
+        correctJointMuscleFunctions.length ? getOtherJointsInTheSameRegion.bind(this, false) : getOtherJointsInTheSameRegion.bind(this, true),
     ];
 
     let similarJoints = [];
