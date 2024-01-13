@@ -83,11 +83,7 @@ export function getSimilarJoints(correctJoint, quizJoints, maxLength = 5) {
                     return false;
                 }
 
-                if(onlyWithoutMuscleFunctions) {
-                    if(!joint.movements.length) {
-                        return true;
-                    }
-
+                if(onlyWithoutMuscleFunctions && joint.movements.length) {
                     const jointMuscleFunctions = muscleFunctions.filter(muscleFunction =>
                         muscleFunction.jointId === joint.id
                     );
