@@ -35,6 +35,10 @@ export function getSimilarJoints(correctJoint, quizJoints, maxLength = 5) {
         );
     }
 
+    /**
+     * I'm on the fence on this one because it causes unfortunate results with some joints such as art. subtalaris
+     * where you just get a bunch of toe joints. For this reason I've chosen not to use it at this time.
+     */
     function getOtherJointsWithSameMuscles(correctJointMuscleFunctions, ignoreJoints) {
         if(!correctJointMuscleFunctions.length) {
             return [];
