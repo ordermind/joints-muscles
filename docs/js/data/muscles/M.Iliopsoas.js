@@ -40,6 +40,41 @@ export default new Muscle(
                     isPrimeMover: true,
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_iliopsoas__art_coxae__exorotation",
+                    jointId: "art_coxae",
+                    muscleId: "m_iliopsoas",
+                    movementId: "art_coxae__exorotation",
+                    isPrimeMover: false,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_iliopsoas__columna_vertebralis_lumbalis__flexion",
+                    jointId: "columna_vertebralis_lumbalis",
+                    muscleId: "m_iliopsoas",
+                    movementId: "columna_vertebralis_lumbalis__flexion",
+                    isPrimeMover: false,
+                    notes: [
+                        "alleen m. psoas major",
+                        "alleen bij gefixeerde insertie",
+                    ],
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_iliopsoas__columna_vertebralis_lumbalis__lateroflexion",
+                    jointId: "columna_vertebralis_lumbalis",
+                    muscleId: "m_iliopsoas",
+                    movementId: "columna_vertebralis_lumbalis__lateroflexion",
+                    isPrimeMover: false,
+                    notes: [
+                        "alleen m. psoas major",
+                        "alleen bij gefixeerde insertie",
+                    ],
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
