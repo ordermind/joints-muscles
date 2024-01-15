@@ -7,7 +7,6 @@ export default new Muscle(
         label: "m. fibularis brevis",
         origos: [
             "facies lateralis fibulae (distale 2/3 deel)",
-            "septa intermuscularia crurum anterius en posterius",
         ],
         insertions: [
             "tuberositas ossis metatarsalis V",

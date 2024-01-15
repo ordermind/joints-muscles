@@ -8,7 +8,6 @@ export default new Muscle(
         origos: [
             "caput fibulae",
             "facies lateralis fibulae (proximale 2/3 deel)",
-            "septa intermuscularia crurum anterius en posterius",
         ],
         insertions: [
             "os cuneiforme mediale (plantair)",
