@@ -39,11 +39,15 @@ export default class MultipleTextInputQuestion {
         element.classList.add("incorrect-answer");
     }
 
+    #checkAnswer(answer, correctAnswer) {
+        return answer.toLowerCase().replaceAll(/\s|&nbsp;+/g, "") === correctAnswer.toLowerCase().replaceAll(/\s|&nbsp;+/g, "");
+    }
+
     #checkCurrentSolution() {
         if(
             Array.from(
                 document.querySelectorAll(`.multiple-text-input-question .answers input[type="text"]`)
-            ).every(element => element.value === element.getAttribute("data-correct-answer"))
+            ).every(element => this.#checkAnswer(element.value, element.getAttribute("data-correct-answer")))
         ) {
             messageBus.emit("question-answered-correctly");
         } else {
@@ -58,9 +62,9 @@ export default class MultipleTextInputQuestion {
 
         this.#removeAnswerClasses(element);
 
-        if(element.value && element.value === element.getAttribute("data-correct-answer")) {
+        if(element.value && this.#checkAnswer(element.value, element.getAttribute("data-correct-answer"))) {
             this.#setCorrectAnswerClass(element);
-        } else if(element.value && element.value !== element.getAttribute("data-correct-answer")) {
+        } else if(element.value && this.#checkAnswer(element.value, element.getAttribute("data-correct-answer"))) {
             this.#setIncorrectAnswerClass(element);
         }
     }
