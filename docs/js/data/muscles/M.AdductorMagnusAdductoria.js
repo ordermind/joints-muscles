@@ -10,7 +10,7 @@ export default new Muscle(
             "ramus ossis ischii",
         ],
         insertions: [
-            "linea aspera femoris",
+            "linea aspera femoris (mediaal)",
         ],
         functions: [
             new JointMuscleFunction(

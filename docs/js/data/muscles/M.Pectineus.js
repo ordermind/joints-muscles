@@ -18,7 +18,7 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "linea pectinea femoris",
-                    notes: ["proximaal gedeelte van linea aspera femoris"],
+                    notes: ["proximale gedeelte van linea aspera femoris"],
                 }
             ),
         ],
