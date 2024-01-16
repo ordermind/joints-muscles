@@ -7,13 +7,21 @@ export default new Muscle(
         id: "m_adductor_longus",
         label: "m. adductor longus",
         origos: [
-            "facies inferior tuberculi pubis",
+            new AnatomicStructure(
+                {
+                    label: "facies anterior corporis ossis pubis",
+                    notes: [
+                        "inferior van de crista pubica",
+                        "lateraal van de symphysis pubica",
+                    ]
+                }
+            ),
         ],
         insertions: [
             new AnatomicStructure(
                 {
                     label: "linea aspera (middelste 1/3 deel)",
-                    notes: [`tussen de [Link type="Muscle" targetId="m_vastus_medialis" label="m. vastus medialis"] en de [Link type="Muscle" targetId="m_adductor_magnus" label="m. adductor magnus"]`]
+                    notes: [`tussen de m. vastus medialis en de m. adductor magnus`],
                 }
             ),
         ],
