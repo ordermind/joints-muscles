@@ -64,7 +64,7 @@ export default class MultipleTextInputQuestion {
 
         if(element.value && this.#checkAnswer(element.value, element.getAttribute("data-correct-answer"))) {
             this.#setCorrectAnswerClass(element);
-        } else if(element.value && this.#checkAnswer(element.value, element.getAttribute("data-correct-answer"))) {
+        } else if(element.value && !this.#checkAnswer(element.value, element.getAttribute("data-correct-answer"))) {
             this.#setIncorrectAnswerClass(element);
         }
     }
