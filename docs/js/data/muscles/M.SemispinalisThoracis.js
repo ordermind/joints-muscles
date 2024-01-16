@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_semispinalis_thoracis",
         label: "m. semispinalis thoracis",
         origos: [
-            "processi transversi T6&nbsp;-&nbsp;T10",
+            "processi transversi T6&nbsp;-&nbsp;T12",
         ],
         insertions: [
             "processi spinosi C6&nbsp;-&nbsp;T4",
@@ -65,15 +65,7 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_semispinalis_thoracis.jpeg",
         description: `
-Mapping van origos en inserties:
 
-- T6 -> C6
-- T7 -> C7
-- T8 -> T1
-- T9 -> T2
-- T10 -> T3
-- T11 -> T4
-- T12 -> T4
-        `
+        `.trim(),
     }
 );

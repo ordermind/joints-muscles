@@ -54,14 +54,7 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_semispinalis_cervicis.jpeg",
         description: `
-Mapping van origos en inserties:
 
-- T1 -> C2
-- T2 -> C3
-- T3 -> C4
-- T4 -> C5
-- T5 -> C6
-- T6 -> C7
-        `
+        `.trim(),
     }
 );
