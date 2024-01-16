@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_soleus",
         label: "m. soleus",
         origos: [
-            "caput fibulae (posterior)",
+            "caput fibulae (dorsaal)",
             "linea m. solei tibiae",
             "margo medialis tibiae",
         ],

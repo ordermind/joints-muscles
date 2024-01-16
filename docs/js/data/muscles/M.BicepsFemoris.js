@@ -27,7 +27,7 @@ export default new Muscle(
             ),
         ],
         insertions: [
-            "caput fibulae",
+            "caput fibulae (lateraal)",
         ],
         functions: [
             new JointMuscleFunction(

@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_fibularis_longus",
         label: "m. fibularis longus",
         origos: [
-            "caput fibulae",
+            "caput fibulae (lateraal)",
             "facies lateralis fibulae (proximale 2/3 deel)",
         ],
         insertions: [
