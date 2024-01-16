@@ -16,7 +16,7 @@ Bij costae I, VI en VII is de type verbinding [Link type="JointType" targetId="j
 
 Dit gewricht laat bewegingen van de ribben (ademhaling) toe, samen met de [Link type="Joint" targetId="artt_costovertebrales" label="artt. costovertebrales"].
 
-Het ribkraakbeen verbinding kan op oudere leeftijd geheel of gedeeltelijk verbenen. De art. sternocostalis kan dan ook straffer worden.
+De ribkraakbeen verbinding kan op oudere leeftijd geheel of gedeeltelijk verbenen. De art. sternocostalis kan dan ook straffer worden.
 
 De overgang van de rib naar het bijbehorende kraakbeen wordt de <strong>costochondrale overgang</strong> genoemd.
             `.trim(),
