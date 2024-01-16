@@ -13,7 +13,7 @@ export default new Muscle(
         insertions: [
             new AnatomicStructure(
                 {
-                    label: "facies medialis trochanteris majoris femoris",
+                    label: "trochanter major femoris (mediaal)",
                     notes: ["boven de fossa trochanterica femoris"],
                 }
             ),
