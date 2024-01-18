@@ -40,6 +40,15 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
+            new JointMuscleFunction(
+                {
+                    id: "m_plantaris__art_talotarsalis__inversion",
+                    jointId: "art_talotarsalis",
+                    muscleId: "m_plantaris",
+                    movementId: "art_talotarsalis__inversion",
+                    isPrimeMover: false,
+                }
+            ),
         ],
         image: "./images/muscles/m_plantaris.jpeg",
         description: `

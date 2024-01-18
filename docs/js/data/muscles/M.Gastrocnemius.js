@@ -34,7 +34,7 @@ export default new Muscle(
                     jointId: "art_genus",
                     muscleId: "m_gastrocnemius",
                     movementId: "art_genus__flexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
@@ -44,6 +44,15 @@ export default new Muscle(
                     muscleId: "m_gastrocnemius",
                     movementId: "art_talocruralis__plantar_flexion",
                     isPrimeMover: true,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_gastrocnemius__art_talotarsalis__inversion",
+                    jointId: "art_talotarsalis",
+                    muscleId: "m_gastrocnemius",
+                    movementId: "art_talotarsalis__inversion",
+                    isPrimeMover: false,
                 }
             ),
         ],
