@@ -1,3 +1,4 @@
+- Ändra ev. knappen för att gå vidare till nästa fråga så att den alltid visas men är disablead
 - Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 - Lägg ev. till quizfråga för mlpp (multiple choice single answer)
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
