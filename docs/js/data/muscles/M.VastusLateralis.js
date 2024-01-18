@@ -7,7 +7,7 @@ export default new Muscle(
         label: "m. vastus lateralis",
         origos: [
             "trochanter major femoris (ventraal)",
-            "laterale en dorsale zijde van het corpus femoris tot aan de linea aspera",
+            "laterale en dorsale zijde van het corpus femoris tot aan de linea aspera femoris",
         ],
         insertions: [
             "tuberositas tibiae (via de patella en het ligamentum patellae)",

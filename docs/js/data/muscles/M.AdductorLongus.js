@@ -20,7 +20,7 @@ export default new Muscle(
         insertions: [
             new AnatomicStructure(
                 {
-                    label: "linea aspera (middelste 1/3 deel)",
+                    label: "linea aspera femoris (middelste 1/3 deel)",
                     notes: [`tussen de m. vastus medialis en de m. adductor magnus`],
                 }
             ),

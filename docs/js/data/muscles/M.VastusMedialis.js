@@ -6,7 +6,7 @@ export default new Muscle(
         id: "m_vastus_medialis",
         label: "m. vastus medialis",
         origos: [
-            "mediale zijde van het corpus femoris tot aan de linea aspera",
+            "mediale zijde van het corpus femoris tot aan de linea aspera femoris",
         ],
         insertions: [
             "tuberositas tibiae (via de patella en het ligamentum patellae)",
