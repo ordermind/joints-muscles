@@ -6,8 +6,8 @@ export default new Muscle(
         id: "m_tibialis_posterior",
         label: "m. tibialis posterior",
         origos: [
-            "facies posterior tibiae",
-            "facies posterior fibulae",
+            "facies posterior tibiae (proximale 3/4 deel)",
+            "facies posterior fibulae (proximale 3/4 deel)",
             "membrana interossea cruris",
         ],
         insertions: [
