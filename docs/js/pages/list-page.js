@@ -35,7 +35,7 @@ export default class ListPage {
         throw new Error("Please implement this method in the subclass");
     }
 
-    onUpdateFilters(e) {
+    onUpdateFilters() {
         this.#updateBrowserHistory();
         this.#renderList();
     }
@@ -85,6 +85,7 @@ export default class ListPage {
         const formElement = document.createElement("form");
         formElement.name = "filters";
         formElement.classList.add("pt-2", "pb-2");
+        formElement.setAttribute("onsubmit", "event.preventDefault()");
 
         for(const filter of filters) {
             const filterElement = this.#renderFilter(filter, filterValues.get(filter.name));
