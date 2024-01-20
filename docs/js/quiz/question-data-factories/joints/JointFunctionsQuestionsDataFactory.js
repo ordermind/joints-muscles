@@ -1,7 +1,7 @@
 import { objMuscles } from "../../../data/muscles.js";
 import { arrJoints } from "../../../data/joints.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
-import { shuffle } from "../../utils.js";
+import { shuffle } from "../../../utils.js";
 import { isJointPlural } from "./utils.js";
 import QuestionData from "../QuestionData.js";
 

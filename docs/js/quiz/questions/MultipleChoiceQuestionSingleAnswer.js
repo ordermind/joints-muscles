@@ -1,4 +1,4 @@
-import { shuffle } from "../utils.js";
+import { shuffle } from "../../utils.js";
 import messageBus from "../message-bus.js";
 import NextQuestionButton from "../misc/NextQuestionButton.js";
 

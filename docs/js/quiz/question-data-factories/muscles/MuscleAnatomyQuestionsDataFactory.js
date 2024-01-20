@@ -1,4 +1,4 @@
-import { shuffle } from "../../utils.js";
+import { shuffle } from "../../../utils.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import renderAnatomicStructureOrString from "../../../data-types/utils.js";
 import QuestionData from "../QuestionData.js";

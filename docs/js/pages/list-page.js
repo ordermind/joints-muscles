@@ -2,7 +2,7 @@ import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-lin
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import { replaceLinks } from "../renderer.js";
-import { debounce, removeChildren } from "../utils.js";
+import { debounce, deepEqual, removeChildren } from "../utils.js";
 import { addLinkEventListeners, cleanUpLinkEventListeners, router } from "../router.js";
 
 export default class ListPage {
@@ -36,6 +36,10 @@ export default class ListPage {
     }
 
     onUpdateFilters() {
+        if(!this.#hasModifiedFilters()) {
+            return;
+        }
+
         this.#updateBrowserHistory();
         this.#renderList();
     }
@@ -98,6 +102,18 @@ export default class ListPage {
         removeChildren(filterWrapper);
 
         filterWrapper.appendChild(formElement);
+    }
+
+    #hasModifiedFilters() {
+        const formElement = document.querySelector(`form[name="filters"]`);
+        if(!formElement) {
+            return;
+        }
+
+        const newValues = Object.fromEntries(new FormData(formElement));
+        const oldValues = Object.fromEntries(this.#getFilterValuesFromQueryString());
+
+        return !deepEqual(newValues, oldValues);
     }
 
     #updateBrowserHistory() {

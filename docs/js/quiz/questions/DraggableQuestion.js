@@ -1,6 +1,6 @@
 import messageBus from "../message-bus.js";
 import dragula from "../../../vendor/dragula/js/dragula.min.js";
-import {deepEqual} from "../utils.js";
+import {deepEqual} from "../../utils.js";
 import NextQuestionButton from "../misc/NextQuestionButton.js";
 
 export default class DraggableQuestion {

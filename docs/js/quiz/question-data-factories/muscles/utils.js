@@ -1,6 +1,6 @@
 import { objMuscles, arrMuscles } from "../../../data/muscles.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
-import { shuffle, intersects } from "../../utils.js";
+import { shuffle, intersects } from "../../../utils.js";
 import { objJoints } from "../../../data/joints.js";
 
 export function isMusclePlural(muscle) {

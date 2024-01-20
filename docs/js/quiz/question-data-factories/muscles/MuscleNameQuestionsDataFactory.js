@@ -1,5 +1,5 @@
 import MultipleChoiceAnswer from "../../answers/MultipleChoiceAnswer.js";
-import { shuffle } from "../../utils.js";
+import { shuffle } from "../../../utils.js";
 import QuestionData from "../QuestionData.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 

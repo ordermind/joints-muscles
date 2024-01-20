@@ -8,7 +8,7 @@ import MuscleNameQuestionsDataFactory from "./muscles/MuscleNameQuestionsDataFac
 import MuscleSpecialFunctionsQuestionsDataFactory from "./muscles/MuscleSpecialFunctionsQuestionsDataFactory.js";
 import { arrJoints, objJoints } from "../../data/joints.js";
 import { arrMuscles } from "../../data/muscles.js";
-import { shuffle } from "../utils.js";
+import { shuffle } from "../../utils.js";
 
 export default class QuestionsDataFactory {
     #jointNameQuestionsDataFactory;

@@ -1,4 +1,4 @@
-import { shuffle } from "../../utils.js";
+import { shuffle } from "../../../utils.js";
 import TextInputAnswer from "../../answers/TextInputAnswer.js";
 import { isJointPlural } from "./utils.js";
 import QuestionData from "../QuestionData.js";
