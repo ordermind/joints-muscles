@@ -25,6 +25,7 @@ export default class JointPage {
 <tr>
     <td>${movement.label}${renderNotesTooltip(movement.labelNotes)}</td>
     <td class="${movement.rom ? "hideable" : ""}">${movement.rom ?? ""}${renderNotesTooltip(movement.romNotes)}</td>
+    <td class="${movement.endFeel ? "hideable" : ""}">${movement.endFeel ?? ""}</td>
     <td class="${primeMovers.length ? "hideable" : ""}">`;
             if(primeMovers.length) {
                 row += `<table class="table table-striped table-borderless">`;
@@ -130,6 +131,7 @@ export default class JointPage {
                 <tr>
                     <th>Beweging</th>
                     <th>ROM</th>
+                    <th>Eindgevoel</th>
                     <th>Prime movers</th>
                     <th>Overige spieren</th>
                 </tr>
