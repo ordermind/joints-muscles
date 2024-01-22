@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import AnatomicStructure from "../../data-types/AnatomicStructure.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -62,6 +63,16 @@ export default new Muscle(
                     muscleId: "m_gluteus_maximus",
                     movementId: "art_coxae__exorotation",
                     isPrimeMover: true,
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_gluteus_maximus__pelvis",
+                    muscleId: "m_gluteus_maximus",
+                    functionDescription: "achteroverkantelen bekken (met bijbehorend afvlakken van lendenlordose)",
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
         ],

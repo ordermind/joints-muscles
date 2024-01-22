@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import AnatomicStructure from "../../data-types/AnatomicStructure.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -46,6 +47,16 @@ export default new Muscle(
                     muscleId: "m_iliopsoas",
                     movementId: "art_coxae__exorotation",
                     isPrimeMover: false,
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_iliopsoas__pelvis",
+                    muscleId: "m_iliopsoas",
+                    functionDescription: "vooroverkantelen bekken (met bijbehorende toename van lendenlordose)",
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
         ],

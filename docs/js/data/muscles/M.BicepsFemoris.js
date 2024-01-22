@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import AnatomicStructure from "../../data-types/AnatomicStructure.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -56,6 +57,19 @@ export default new Muscle(
                     movementId: "art_coxae__retroflexion",
                     isPrimeMover: true,
                     notes: ["alleen caput longum"],
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_biceps_femoris__pelvis",
+                    muscleId: "m_biceps_femoris",
+                    functionDescription: "achteroverkantelen bekken (met bijbehorend afvlakken van lendenlordose)",
+                    notes: [
+                        "alleen caput longum",
+                        "alleen bij gefixeerde insertie",
+                    ],
                 }
             ),
         ],

@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -29,6 +30,16 @@ export default new Muscle(
                     muscleId: "m_quadratus_lumborum",
                     movementId: "columna_vertebralis_lumbalis__lateroflexion",
                     isPrimeMover: true,
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_quadratus_lumborum__pelvis",
+                    muscleId: "m_quadratus_lumborum",
+                    functionDescription: "vooroverkantelen bekken (met bijbehorende toename van lendenlordose)",
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
         ],

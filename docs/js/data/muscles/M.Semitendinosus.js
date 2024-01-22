@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -47,6 +48,16 @@ export default new Muscle(
                     movementId: "art_genus__endorotation",
                     isPrimeMover: true,
                     notes: ["alleen bij gebogen knie"],
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_semitendinosus__pelvis",
+                    muscleId: "m_semitendinosus",
+                    functionDescription: "achteroverkantelen bekken (met bijbehorend afvlakken van lendenlordose)",
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
         ],
