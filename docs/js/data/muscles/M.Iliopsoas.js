@@ -1,6 +1,5 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
-import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
@@ -49,41 +48,6 @@ export default new Muscle(
                     isPrimeMover: false,
                 }
             ),
-            new JointMuscleFunction(
-                {
-                    id: "m_iliopsoas__columna_vertebralis_lumbalis__flexion",
-                    jointId: "columna_vertebralis_lumbalis",
-                    muscleId: "m_iliopsoas",
-                    movementId: "columna_vertebralis_lumbalis__flexion",
-                    isPrimeMover: false,
-                    notes: [
-                        "alleen m. psoas major",
-                        "alleen bij gefixeerde insertie",
-                    ],
-                }
-            ),
-            new JointMuscleFunction(
-                {
-                    id: "m_iliopsoas__columna_vertebralis_lumbalis__lateroflexion",
-                    jointId: "columna_vertebralis_lumbalis",
-                    muscleId: "m_iliopsoas",
-                    movementId: "columna_vertebralis_lumbalis__lateroflexion",
-                    isPrimeMover: false,
-                    notes: [
-                        "alleen m. psoas major",
-                        "alleen bij gefixeerde insertie",
-                    ],
-                }
-            ),
-        ],
-        specialFunctions: [
-            new SpecialMuscleFunction(
-                {
-                    id: "m_iliopsoas__pelvis",
-                    muscleId: "m_iliopsoas",
-                    functionDescription: "achteroverkantelen bekken",
-                }
-            )
         ],
         image: "./images/muscles/m_iliopsoas.jpeg",
         description: `
