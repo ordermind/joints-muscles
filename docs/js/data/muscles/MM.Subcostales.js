@@ -10,7 +10,7 @@ export default new Muscle(
             "facies internae costarum"
         ],
         insertions: [
-            "facies interna costae bij een ondergelegen rib (overspant 1-2 ribben)",
+            "facies interna costae bij een bovengelegen rib (overspant 1-2 ribben)",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
