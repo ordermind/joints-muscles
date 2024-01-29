@@ -49,7 +49,7 @@ export function renderNotesTooltip(notes) {
     <div class="tooltip-content">
         <div class="tooltip-content-bg"></div>
         <${notesTag} class="tooltip-content-inner">
-`;
+`.trim();
     if(hasMultipleNotes) {
         for(const note of notes) {
             notesTooltip += `<li>${note}</li>`;
@@ -64,7 +64,7 @@ export function renderNotesTooltip(notes) {
 </div>
     `;
 
-    return notesTooltip;
+    return " " + notesTooltip;
 }
 
 export function renderJointType(joint, jointTypes, useShortLabel) {

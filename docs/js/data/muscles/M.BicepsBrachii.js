@@ -28,24 +28,6 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    id: "m_biceps_brachii__art_cubiti__flexion",
-                    jointId: "art_cubiti",
-                    muscleId: "m_biceps_brachii",
-                    movementId: "art_cubiti__flexion",
-                    isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
-                    id: "m_biceps_brachii__art_cubiti__supination",
-                    jointId: "art_cubiti",
-                    muscleId: "m_biceps_brachii",
-                    movementId: "art_cubiti__supination",
-                    isPrimeMover: true,
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "m_biceps_brachii__art_humeri__anteflexion",
                     jointId: "art_humeri",
                     muscleId: "m_biceps_brachii",
@@ -66,6 +48,16 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
+                    id: "m_biceps_brachii__art_humeri__adduction",
+                    jointId: "art_humeri",
+                    muscleId: "m_biceps_brachii",
+                    movementId: "art_humeri__adduction",
+                    isPrimeMover: false,
+                    notes: ["alleen caput breve"],
+                }
+            ),
+            new JointMuscleFunction(
+                {
                     id: "m_biceps_brachii__art_humeri__endorotation",
                     jointId: "art_humeri",
                     muscleId: "m_biceps_brachii",
@@ -76,12 +68,20 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_biceps_brachii__art_humeri__adduction",
-                    jointId: "art_humeri",
+                    id: "m_biceps_brachii__art_cubiti__flexion",
+                    jointId: "art_cubiti",
                     muscleId: "m_biceps_brachii",
-                    movementId: "art_humeri__adduction",
-                    isPrimeMover: false,
-                    notes: ["alleen caput breve"],
+                    movementId: "art_cubiti__flexion",
+                    isPrimeMover: true,
+                }
+            ),
+            new JointMuscleFunction(
+                {
+                    id: "m_biceps_brachii__art_cubiti__supination",
+                    jointId: "art_cubiti",
+                    muscleId: "m_biceps_brachii",
+                    movementId: "art_cubiti__supination",
+                    isPrimeMover: true,
                 }
             ),
         ],

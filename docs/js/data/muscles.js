@@ -11,6 +11,8 @@ import m_anconeus from "./muscles/M.Anconeus.js";
 import m_articularis_genus from "./muscles/M.ArticularisGenus.js";
 import m_biceps_brachii from "./muscles/M.BicepsBrachii.js";
 import m_biceps_femoris from "./muscles/M.BicepsFemoris.js";
+import m_brachialis from "./muscles/M.Brachialis.js";
+import m_brachioradialis from "./muscles/M.Brachioradialis.js";
 import m_diaphragma from "./muscles/M.Diaphragma.js";
 import m_extensor_digitorum_longus from "./muscles/M.ExtensorDigitorumLongus.js";
 import m_extensor_hallucis_longus from "./muscles/M.ExtensorHallucisLongus.js";
@@ -106,6 +108,8 @@ export const arrMuscles = [
     m_articularis_genus,
     m_biceps_brachii,
     m_biceps_femoris,
+    m_brachialis,
+    m_brachioradialis,
     m_diaphragma,
     m_extensor_digitorum_longus,
     m_extensor_hallucis_longus,

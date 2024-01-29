@@ -10,7 +10,7 @@ export default new Muscle(
             "epicondylus lateralis humeri (dorsaal)",
         ],
         insertions: [
-            "facies posterior ulnae (proximale 1/4 deel)",
+            "facies posterior ulnae (proximaal)",
             "facies lateralis olecrani",
         ],
         functions: [
@@ -35,9 +35,9 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_anconeus.jpeg",
         description: `
-Het is klein spiertje dat belangrijker is als kapselspanner dan als elleboogstrekker.
+Het is een klein spiertje dat belangrijker is als kapselspanner dan als elleboogstrekker.
 
-Wat betreft topografie sluit de spier ook aan bij de [Link type="Joint" targetId="m_extensor_carpi_ulnaris" label="m. extensor carpi ulnaris"].
+Wat betreft topografie sluit de spier ook aan bij de [Link type="Muscle" targetId="m_extensor_carpi_ulnaris" label="m. extensor carpi ulnaris"].
         `.trim(),
     }
 );

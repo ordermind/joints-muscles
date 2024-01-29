@@ -8,7 +8,7 @@ export default new Muscle(
         origos: [
             "facies posterior radii",
             "facies posterior ulnae",
-            "membrana interossea antebrachii (proximale 1/3 deel)",
+            "membrana interossea antebrachii",
         ],
         insertions: [
             "basis ossis metacarpalis I (radiaal)",
@@ -44,7 +44,7 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_abductor_pollicis_longus.jpeg",
         description: `
-De pees gaat samen met de pees van de m. extensor pollicis brevis door de eerste tunnel (loge) onder het retinaculum extensorum van de pols.
+De pees gaat samen met de pees van de [Link type="Muscle" targetId="m_extensor_pollicis_brevis" label="m. extensor pollicis brevis"] door de eerste tunnel (loge) onder het retinaculum extensorum van de pols.
         `.trim(),
     }
 );
