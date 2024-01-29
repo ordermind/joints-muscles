@@ -46,7 +46,7 @@ export function replaceLinks(html) {
             return `<a href="${path}" data-navigo>${internalLink.label}</a>`;
         }
 
-        return internalLink.label;
+        return `<em>${internalLink.label}</em>`;
     });
 }
 

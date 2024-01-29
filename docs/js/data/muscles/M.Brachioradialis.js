@@ -1,12 +1,18 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_brachioradialis",
         label: "m. brachioradialis",
         origos: [
-            "crista supracondylaris lateralis humeri",
+            new AnatomicStructure(
+                {
+                    label: "crista supracondylaris lateralis humeri",
+                    notes: ["proximaal van de <em>m. extensor carpi radialis longus</em>"],
+                }
+            ),
             "septum intermusculare laterale humeri",
         ],
         insertions: [

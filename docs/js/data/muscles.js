@@ -18,6 +18,11 @@ import m_deltoideus_acromialis from "./muscles/M.DeltoideusAcromialis.js";
 import m_deltoideus_clavicularis from "./muscles/M.DeltoideusClavicularis.js";
 import m_deltoideus_spinalis from "./muscles/M.DeltoideusSpinalis.js";
 import m_diaphragma from "./muscles/M.Diaphragma.js";
+import m_extensor_carpi_radialis_brevis from "./muscles/M.ExtensorCarpiRadialisBrevis.js";
+import m_extensor_carpi_radialis_longus from "./muscles/M.ExtensorCarpiRadialisLongus.js";
+import m_extensor_carpi_ulnaris from "./muscles/M.ExtensorCarpiUlnaris.js";
+import m_extensor_digiti_minimi from "./muscles/M.ExtensorDigitiMinimi.js";
+import m_extensor_digitorum from "./muscles/M.ExtensorDigitorum.js";
 import m_extensor_digitorum_longus from "./muscles/M.ExtensorDigitorumLongus.js";
 import m_extensor_hallucis_longus from "./muscles/M.ExtensorHallucisLongus.js";
 import m_fibularis_brevis from "./muscles/M.FibularisBrevis.js";
@@ -119,6 +124,11 @@ export const arrMuscles = [
     m_deltoideus_clavicularis,
     m_deltoideus_spinalis,
     m_diaphragma,
+    m_extensor_carpi_radialis_brevis,
+    m_extensor_carpi_radialis_longus,
+    m_extensor_carpi_ulnaris,
+    m_extensor_digiti_minimi,
+    m_extensor_digitorum,
     m_extensor_digitorum_longus,
     m_extensor_hallucis_longus,
     m_fibularis_brevis,
