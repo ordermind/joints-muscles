@@ -13,6 +13,10 @@ import m_biceps_brachii from "./muscles/M.BicepsBrachii.js";
 import m_biceps_femoris from "./muscles/M.BicepsFemoris.js";
 import m_brachialis from "./muscles/M.Brachialis.js";
 import m_brachioradialis from "./muscles/M.Brachioradialis.js";
+import m_coracobrachialis from "./muscles/M.Coracobrachialis.js";
+import m_deltoideus_acromialis from "./muscles/M.DeltoideusAcromialis.js";
+import m_deltoideus_clavicularis from "./muscles/M.DeltoideusClavicularis.js";
+import m_deltoideus_spinalis from "./muscles/M.DeltoideusSpinalis.js";
 import m_diaphragma from "./muscles/M.Diaphragma.js";
 import m_extensor_digitorum_longus from "./muscles/M.ExtensorDigitorumLongus.js";
 import m_extensor_hallucis_longus from "./muscles/M.ExtensorHallucisLongus.js";
@@ -110,6 +114,10 @@ export const arrMuscles = [
     m_biceps_femoris,
     m_brachialis,
     m_brachioradialis,
+    m_coracobrachialis,
+    m_deltoideus_acromialis,
+    m_deltoideus_clavicularis,
+    m_deltoideus_spinalis,
     m_diaphragma,
     m_extensor_digitorum_longus,
     m_extensor_hallucis_longus,
