@@ -53,10 +53,18 @@ export default [
                 ),
                 new Movement(
                     {
+                        id: "art_carpometacarpalis_1__circumduction",
+                        jointId: "art_carpometacarpalis_1",
+                        label: "circumductie",
+                        description: "bij de circumductie voert de duim een ronddraaiende beweging uit ten opzichte van de handwortel",
+                    }
+                ),
+                new Movement(
+                    {
                         id: "art_carpometacarpalis_1__opposition",
                         jointId: "art_carpometacarpalis_1",
                         label: "oppositie",
-                        description: "combinatiebeweging van flexie en abductie en bijbehorende adjunct rotation",
+                        description: "combinatiebeweging van flexie en abductie en bijbehorende rotatie",
                     }
                 ),
                 new Movement(
@@ -70,7 +78,12 @@ export default [
             ],
             image: "./images/joints/art_carpometacarpalis_1.jpeg",
             description: `
-De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijkheden) van de overige articulationes carpometacarpales. De homologe bewegingen van de vingers worden niet in de [Link type="Joint" targetId="artt_carpometacarpales" label="articulationes carpometacarpales uitgevoerd"] maar in de articulationes metacarpophalangeales.
+De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijkheden) van de overige articulationes carpometacarpales. De homologe bewegingen van de vingers worden niet in de [Link type="Joint" targetId="artt_carpometacarpales" label="artt. carpometacarpales uitgevoerd"] maar in de [Link type="Joint" targetId="artt_metacarpophalangeales" label="artt. metacarpophalangeales"].
+
+Hierbij een uitleg van de betekenis van de verschillende bewegingen van de duim:
+<img src="./images/misc/thumb_movements.jpg" />
+
+<em>Oppositie</em> en <em>repositie</em> zijn combinatiebewegingen. Bij <em>oppositie</em> wordt het topje van de duim samengebracht met het topje van een andere vinger van dezelfde hand. De tegengestelde beweging wordt <em>repositie</em> genoemd. Meestal wordt <em>oppositie</em> gezien als een combinatie van <strong>flexie</strong>, <strong>abductie</strong> en bijbehorende rotatie, terwijl <em>repositie</em> en combinatie is van <strong>extensie</strong>, <strong>adductie</strong> en bijbehorende rotatie.
             `.trim(),
         }
     ),

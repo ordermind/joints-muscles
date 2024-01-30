@@ -60,7 +60,7 @@ export default new Muscle(
         description: `
 De spier is anatomisch-topografisch wél, maar functioneel niet te onderscheiden van de component van de [Link type="Muscle" targetId="m_extensor_digitorum" label="m. extensor digitorum"] waarvan de pees eveneens naar de tweede vinger (index) gaat.
 
-De pees gaat samen met de pezen van de [Link type="Muscle" targetId="m_extensor_digitorum" label="m. extensor digitorum"] door de vierde tunnel (loge / peesschede) onder het <em>retinaculum extensorum</em> van de pols.
+De pees van de insertie gaat samen met de pezen van de [Link type="Muscle" targetId="m_extensor_digitorum" label="m. extensor digitorum"] door de vierde tunnel (loge / peesschede) onder het <em>retinaculum extensorum</em> van de pols.
         `.trim(),
     }
 );

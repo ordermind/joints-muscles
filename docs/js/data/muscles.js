@@ -26,9 +26,12 @@ import m_extensor_digitorum from "./muscles/M.ExtensorDigitorum.js";
 import m_extensor_digitorum_longus from "./muscles/M.ExtensorDigitorumLongus.js";
 import m_extensor_hallucis_longus from "./muscles/M.ExtensorHallucisLongus.js";
 import m_extensor_indicis from "./muscles/M.ExtensorIndicis.js";
+import m_extensor_pollicis_brevis from "./muscles/M.ExtensorPollicisBrevis.js";
+import m_extensor_pollicis_longus from "./muscles/M.ExtensorPollicisLongus.js";
 import m_fibularis_brevis from "./muscles/M.FibularisBrevis.js";
 import m_fibularis_longus from "./muscles/M.FibularisLongus.js";
 import m_fibularis_tertius from "./muscles/M.FibularisTertius.js";
+import m_flexor_carpi_radialis from "./muscles/M.FlexorCarpiRadialis.js";
 import m_flexor_digitorum_longus from "./muscles/M.FlexorDigitorumLongus.js";
 import m_flexor_hallucis_longus from "./muscles/M.FlexorHallucisLongus.js";
 import m_gastrocnemius from "./muscles/M.Gastrocnemius.js";
@@ -133,9 +136,12 @@ export const arrMuscles = [
     m_extensor_digitorum_longus,
     m_extensor_hallucis_longus,
     m_extensor_indicis,
+    m_extensor_pollicis_brevis,
+    m_extensor_pollicis_longus,
     m_fibularis_brevis,
     m_fibularis_longus,
     m_fibularis_tertius,
+    m_flexor_carpi_radialis,
     m_flexor_digitorum_longus,
     m_flexor_hallucis_longus,
     m_gastrocnemius,

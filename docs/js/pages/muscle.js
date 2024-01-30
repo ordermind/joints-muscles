@@ -19,8 +19,8 @@ export default class MusclePage {
             let row = `
 <tr class="hideable">
     <td>[Link type="Joint" targetId="${jointId}" label="${objJoints[jointId].shortLabel}"]</td>
-    <td>${renderList(jointFunctions.primeMovers, {fallbackToSingleString: true})}</td>
-    <td>${renderList(jointFunctions.otherMuscles, {fallbackToSingleString: true})}</td>
+    <td>${renderList(jointFunctions.primeMovers, {fallbackToSingleString: true, classes: ["clean"]})}</td>
+    <td>${renderList(jointFunctions.otherMuscles, {fallbackToSingleString: true, classes: ["clean"]})}</td>
 </tr>
             `.trim();
 

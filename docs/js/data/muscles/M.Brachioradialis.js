@@ -30,7 +30,7 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_brachioradialis__art_cubiti__pronationn",
+                    id: "m_brachioradialis__art_cubiti__pronation",
                     jointId: "art_cubiti",
                     muscleId: "m_brachioradialis",
                     movementId: "art_cubiti__pronation",

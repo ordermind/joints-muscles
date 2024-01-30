@@ -1,12 +1,18 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_abductor_pollicis_longus",
         label: "m. abductor pollicis longus",
         origos: [
-            "facies posterior radii",
+            new AnatomicStructure(
+                {
+                    label: "facies posterior radii",
+                    notes: ["proximaal van de <em>m. extensor pollicis brevis</em>"],
+                }
+            ),
             "facies posterior ulnae",
             "membrana interossea antebrachii",
         ],

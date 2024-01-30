@@ -59,7 +59,7 @@ export default new Muscle(
         description: `
 De pees van de origo wordt de "common extensor tendon" (CET) genoemd. Dit komt omdat dezelfde pees gebruikt wordt door zowel deze spier als de [Link type="Muscle" targetId="m_extensor_carpi_radialis_brevis" label="m. extensor carpi radialis brevis"], [Link type="Muscle" targetId="m_extensor_carpi_ulnaris" label="m. extensor carpi ulnaris"], en [Link type="Muscle" targetId="m_extensor_digiti_minimi" label="m. extensor digiti minimi"].
 
-De pezen gaan samen met de pees van de [Link type="Muscle" targetId="m_extensor_indicis" label="m. extensor indicis"] door de vierde tunnel (loge / peesschede) onder het <em>retinaculum extensorum</em> van de pols.
+De pezen van de insertie gaan samen met de pees van de [Link type="Muscle" targetId="m_extensor_indicis" label="m. extensor indicis"] door de vierde tunnel (loge / peesschede) onder het <em>retinaculum extensorum</em> van de pols.
         `.trim(),
     }
 );
