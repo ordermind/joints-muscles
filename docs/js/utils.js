@@ -10,7 +10,7 @@ export function capitalizeTitle(title) {
     return capitalizedTitle;
 }
 
-export function renderList(list, fallbackToSingleString) {
+export function renderList(list, {fallbackToSingleString = false, classes = []}) {
     if(!list.length) {
         return "";
     }
@@ -19,7 +19,7 @@ export function renderList(list, fallbackToSingleString) {
     const useSingleString = fallbackToSingleString && !hasMultipleItems;
     const tag = useSingleString ? "span" : "ul";
 
-    let output = `<${tag}>`;
+    let output = `<${tag}${classes.length ? ' class="' + classes.join(" ") + '"' : ""}>`;
 
     if(useSingleString) {
         output += list[0];

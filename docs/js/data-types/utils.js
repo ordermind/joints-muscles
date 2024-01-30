@@ -1,7 +1,7 @@
 import { renderNotesTooltip } from "../utils.js";
 import AnatomicStructure from "./AnatomicStructure.js";
 
-export default function renderAnatomicStructureOrString(anatomicStuctureOrString, includeNotes) {
+export default function renderAnatomicStructureOrString(anatomicStuctureOrString, {includeNotes = false}) {
     if (typeof anatomicStuctureOrString === 'string' || anatomicStuctureOrString instanceof String) {
         return anatomicStuctureOrString;
     }

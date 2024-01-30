@@ -2,7 +2,7 @@ import markdownParser from "../../js/markdown-parser.js";
 import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-links.js";
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
-import { capitalizeTitle, renderJointType, renderNotesTooltip } from "../utils.js";
+import { capitalizeTitle, renderJointType, renderList, renderNotesTooltip } from "../utils.js";
 
 export default class JointPage {
     #mainMenuBlock;
@@ -12,7 +12,7 @@ export default class JointPage {
     #renderMuscleFunction(objMuscles, muscleFunction) {
         const muscle = objMuscles[muscleFunction.muscleId];
 
-        return `<tr><td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}</td></tr>`
+        return `[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]${renderNotesTooltip(muscleFunction.notes)}`;
     }
 
     #createJointFunctionsRows(joint, objMuscles, muscleFunctions) {
@@ -28,21 +28,13 @@ export default class JointPage {
     <td class="${movement.endFeel ? "hideable" : ""}">${movement.endFeel ?? ""}</td>
     <td class="${primeMovers.length ? "hideable" : ""}">`;
             if(primeMovers.length) {
-                row += `<table class="table table-striped table-borderless">`;
-                    for(const primeMover of primeMovers) {
-                        row += this.#renderMuscleFunction(objMuscles, primeMover);
-                    }
-                row += `</table>`;
+                row += renderList(primeMovers.map(primeMover => this.#renderMuscleFunction(objMuscles, primeMover)), {classes: ["clean", "spaced"]});
             }
             row += `
     </td>
     <td class="${otherMuscles.length ? "hideable" : ""}">`;
             if(otherMuscles.length) {
-                row += `<table class="table table-striped table-borderless">`;
-                    for(const otherMuscle of otherMuscles) {
-                        row += this.#renderMuscleFunction(objMuscles, otherMuscle);
-                    }
-                row += `</table>`;
+                row += renderList(otherMuscles.map(otherMuscle => this.#renderMuscleFunction(objMuscles, otherMuscle)), {classes: ["clean", "spaced"]});
             }
             row += `
     </td>

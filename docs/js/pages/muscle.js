@@ -19,8 +19,8 @@ export default class MusclePage {
             let row = `
 <tr class="hideable">
     <td>[Link type="Joint" targetId="${jointId}" label="${objJoints[jointId].shortLabel}"]</td>
-    <td>${renderList(jointFunctions.primeMovers, true)}</td>
-    <td>${renderList(jointFunctions.otherMuscles, true)}</td>
+    <td>${renderList(jointFunctions.primeMovers, {fallbackToSingleString: true})}</td>
+    <td>${renderList(jointFunctions.otherMuscles, {fallbackToSingleString: true})}</td>
 </tr>
             `.trim();
 
@@ -58,11 +58,11 @@ export default class MusclePage {
             <table class="table table-borderless d-inline-block w-auto">
                 <tr>
                     <th>Origo(s)</th>
-                    <td class="${muscle.origos.length ? "hideable" : ""}">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo, true)), true)}</td>
+                    <td class="${muscle.origos.length ? "hideable" : ""}">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo, {includeNotes: true})), {fallbackToSingleString: true})}</td>
                 </tr>
                 <tr>
                     <th>Insertie(s)</th>
-                    <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, true)), true)}</td>
+                    <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, {includeNotes: true})), {fallbackToSingleString: true})}</td>
                 </tr>
             </table>
 
@@ -87,7 +87,7 @@ export default class MusclePage {
         if(muscle.specialFunctions.length) {
             content += `
             <h2 class="display-2 fs-2">Speciale functies</h2>
-            <div class="d-inline-block mb-3 | hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes)), true)}</div>
+            <div class="d-inline-block mb-3 | hideable">${renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes)), {fallbackToSingleString: true})}</div>
             `.trim();
         }
 

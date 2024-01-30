@@ -40,11 +40,11 @@ export default class MuscleListPage extends ListPage {
         return `
 <tr>
     <td>[Link type="Muscle" targetId="${muscle.id}" label="${muscle.label}"]</td>
-    <td class="${muscle.origos.length ? "hideable" : ""}">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo, true)), true)}</td>
-    <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, true)), true)}</td>
-    <td class="${muscle.hasPrimeMoverJointFunctions() ? "hideable" : ""}">` + renderList(this.#getPrimeMoverColumn(muscle), true) + `</td>
-    <td class="${muscle.hasAssistantJointFunctions() ? "hideable" : ""}">` + renderList(this.#getAssistantColumn(muscle), true) + `</td>
-    <td class="${muscle.specialFunctions.length ? "hideable" : ""}">` + renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes)), true) + `</td>
+    <td class="${muscle.origos.length ? "hideable" : ""}">${renderList(muscle.origos.map(origo => renderAnatomicStructureOrString(origo, {includeNotes: true})), {fallbackToSingleString: true})}</td>
+    <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, {includeNotes: true})), {fallbackToSingleString: true})}</td>
+    <td class="${muscle.hasPrimeMoverJointFunctions() ? "hideable" : ""}">` + renderList(this.#getPrimeMoverColumn(muscle), {fallbackToSingleString: true}) + `</td>
+    <td class="${muscle.hasAssistantJointFunctions() ? "hideable" : ""}">` + renderList(this.#getAssistantColumn(muscle), {fallbackToSingleString: true}) + `</td>
+    <td class="${muscle.specialFunctions.length ? "hideable" : ""}">` + renderList(muscle.specialFunctions.map(specialFunction => specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes)), {fallbackToSingleString: true}) + `</td>
 </tr>
         `.trim();
     }

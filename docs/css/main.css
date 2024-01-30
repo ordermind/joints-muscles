@@ -28,7 +28,18 @@ img.page-image {
 }
 
 ul {
+    margin: 0;
     padding-left: 1rem;
+    list-style-type: disc;
+}
+
+ul.clean {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul.spaced li:not(:first-child) {
+    margin-top: 1rem;
 }
 
 a {
