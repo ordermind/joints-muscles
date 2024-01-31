@@ -206,5 +206,5 @@ export function deepEqual(obj1, obj2) {
 export function massageStringForFlexibleComparison(string) {
     return string
         .toLowerCase()
-        .replaceAll(/\s|&nbsp;|m\.|mm\.|art\.|artt\.|,+/g, "");
+        .replaceAll(/(^(m(\.|_)|mm(\.|_)|art(\.|_)|artt(\.|_)))|\s|&nbsp;|\.|,|_+/g, "");
 }

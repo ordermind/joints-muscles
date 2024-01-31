@@ -32,8 +32,12 @@ import m_fibularis_brevis from "./muscles/M.FibularisBrevis.js";
 import m_fibularis_longus from "./muscles/M.FibularisLongus.js";
 import m_fibularis_tertius from "./muscles/M.FibularisTertius.js";
 import m_flexor_carpi_radialis from "./muscles/M.FlexorCarpiRadialis.js";
+import m_flexor_carpi_ulnaris from "./muscles/M.FlexorCarpiUlnaris.js";
 import m_flexor_digitorum_longus from "./muscles/M.FlexorDigitorumLongus.js";
+import m_flexor_digitorum_profundus from "./muscles/M.FlexorDigitorumProfundus.js";
+import m_flexor_digitorum_superficialis from "./muscles/M.FlexorDigitorumSuperficialis.js";
 import m_flexor_hallucis_longus from "./muscles/M.FlexorHallucisLongus.js";
+import m_flexor_pollicis_longus from "./muscles/M.FlexorPollicisLongus.js";
 import m_gastrocnemius from "./muscles/M.Gastrocnemius.js";
 import m_gemellus_inferior from "./muscles/M.GemellusInferior.js";
 import m_gemellus_superior from "./muscles/M.GemellusSuperior.js";
@@ -45,6 +49,7 @@ import m_iliocostalis_cervicis from "./muscles/M.IliocostalisCervicis.js";
 import m_iliocostalis_lumborum from "./muscles/M.IliocostalisLumborum.js";
 import m_iliocostalis_thoracis from "./muscles/M.IliocostalisThoracis.js";
 import m_iliopsoas from "./muscles/M.Iliopsoas.js";
+import m_infraspinatus from "./muscles/M.Infraspinatus.js";
 import m_levator_scapulae from "./muscles/M.LevatorScapulae.js";
 import m_longissimus_capitis from "./muscles/M.LongissimusCapitis.js";
 import m_longissimus_cervicis from "./muscles/M.LongissimusCervicis.js";
@@ -88,7 +93,10 @@ import m_spinalis_thoracis from "./muscles/M.SpinalisThoracis.js";
 import m_splenius_capitis from "./muscles/M.SpleniusCapitis.js";
 import m_splenius_cervicis from "./muscles/M.SpleniusCervicis.js";
 import m_sternocleidomastoideus from "./muscles/M.Sternocleidomastoideus.js";
+import m_subscapularis from "./muscles/M.Subscapularis.js";
+import m_supraspinatus from "./muscles/M.Supraspinatus.js";
 import m_tensor_fasciae_latae from "./muscles/M.TensorFasciaeLatae.js";
+import m_teres_minor from "./muscles/M.TeresMinor.js";
 import m_tibialis_anterior from "./muscles/M.TibialisAnterior.js";
 import m_tibialis_posterior from "./muscles/M.TibialisPosterior.js";
 import m_transversus_abdominis from "./muscles/M.TransversusAbdominis.js";
@@ -142,8 +150,12 @@ export const arrMuscles = [
     m_fibularis_longus,
     m_fibularis_tertius,
     m_flexor_carpi_radialis,
+    m_flexor_carpi_ulnaris,
     m_flexor_digitorum_longus,
+    m_flexor_digitorum_profundus,
+    m_flexor_digitorum_superficialis,
     m_flexor_hallucis_longus,
+    m_flexor_pollicis_longus,
     m_gastrocnemius,
     m_gemellus_inferior,
     m_gemellus_superior,
@@ -155,6 +167,7 @@ export const arrMuscles = [
     m_iliocostalis_lumborum,
     m_iliocostalis_thoracis,
     m_iliopsoas,
+    m_infraspinatus,
     m_levator_scapulae,
     m_longissimus_capitis,
     m_longissimus_cervicis,
@@ -198,7 +211,10 @@ export const arrMuscles = [
     m_splenius_capitis,
     m_splenius_cervicis,
     m_sternocleidomastoideus,
+    m_subscapularis,
+    m_supraspinatus,
     m_tensor_fasciae_latae,
+    m_teres_minor,
     m_tibialis_anterior,
     m_tibialis_posterior,
     m_transversus_abdominis,

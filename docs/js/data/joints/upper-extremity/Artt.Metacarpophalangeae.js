@@ -47,7 +47,8 @@ export default [
                         id: "artt_metacarpophalangeae_2_5__flexion",
                         jointId: "artt_metacarpophalangeae_2_5",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -56,7 +57,7 @@ export default [
                         jointId: "artt_metacarpophalangeae_2_5",
                         label: "extensie",
                         rom: "45°",
-                        endFeel: "hard capsulair",
+                        endFeel: "capsulair",
                     }
                 ),
                 new Movement(
@@ -95,7 +96,8 @@ export default [
                         id: "art_metacarpophalangea_2__flexion",
                         jointId: "art_metacarpophalangea_2",
                         label: "flexie",
-                        rom: "90°"
+                        rom: "90°",
+                        endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
@@ -104,7 +106,7 @@ export default [
                         jointId: "art_metacarpophalangea_2",
                         label: "extensie",
                         rom: "45°",
-                        endFeel: "hard capsulair",
+                        endFeel: "capsulair",
                     }
                 ),
                 new Movement(

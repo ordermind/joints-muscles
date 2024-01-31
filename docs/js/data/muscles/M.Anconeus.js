@@ -10,8 +10,8 @@ export default new Muscle(
             "epicondylus lateralis humeri (dorsaal)",
         ],
         insertions: [
+            "olecranon",
             "facies posterior ulnae (proximaal)",
-            "facies lateralis olecrani",
         ],
         functions: [
             new JointMuscleFunction(
