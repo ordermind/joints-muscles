@@ -202,3 +202,9 @@ export function deepEqual(obj1, obj2) {
     // If all checks pass, the objects are deep equal.
     return true;
 }
+
+export function massageStringForFlexibleComparison(string) {
+    return string
+        .toLowerCase()
+        .replaceAll(/\s|&nbsp;|m\.|mm\.|art\.|artt\.|,+/g, "");
+}

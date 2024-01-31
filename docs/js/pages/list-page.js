@@ -2,7 +2,7 @@ import KnowledgeBankPrimaryLinksBlock from "../blocks/knowledge-bank-primary-lin
 import MainMenuBlock from "../blocks/main-menu.js";
 import ShowHideElementsBlock from "../blocks/show-hide-elements.js";
 import { replaceLinks } from "../renderer.js";
-import { debounce, deepEqual, removeChildren } from "../utils.js";
+import { debounce, deepEqual, massageStringForFlexibleComparison, removeChildren } from "../utils.js";
 import { addLinkEventListeners, cleanUpLinkEventListeners, router } from "../router.js";
 
 export default class ListPage {
@@ -139,7 +139,9 @@ export default class ListPage {
             const filterValue = filterValues.get(filter.name);
 
             if(filterValue && (!filter.hasOwnProperty("minCharacters") || filterValue.length >= filter.minCharacters)) {
-                filteredItems = filteredItems.filter(item => item[filter.name].includes(filterValue));
+                filteredItems = filteredItems.filter(item =>
+                    massageStringForFlexibleComparison(item[filter.name]).includes(massageStringForFlexibleComparison(filterValue))
+                );
             }
         }
 

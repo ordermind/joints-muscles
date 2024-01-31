@@ -1,3 +1,4 @@
+import { massageStringForFlexibleComparison } from "../../utils.js";
 import messageBus from "../message-bus.js";
 import NextQuestionButton from "../misc/NextQuestionButton.js";
 
@@ -40,7 +41,7 @@ export default class MultipleTextInputQuestion {
     }
 
     #checkAnswer(answer, correctAnswer) {
-        return answer.toLowerCase().replaceAll(/\s|&nbsp;+/g, "") === correctAnswer.toLowerCase().replaceAll(/\s|&nbsp;+/g, "");
+        return massageStringForFlexibleComparison(answer) === massageStringForFlexibleComparison(correctAnswer);
     }
 
     #checkCurrentSolution() {
