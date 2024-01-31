@@ -16,7 +16,13 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "facies interna cartilaginum costarum et costarum 7&nbsp;-&nbsp;12",
+                    label: "facies internae cartilaginum costarum 7&nbsp;-&nbsp;12",
+                    notes: ["pars costalis"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "facies internae costarum 7&nbsp;-&nbsp;12",
                     notes: ["pars costalis"],
                 }
             ),

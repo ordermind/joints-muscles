@@ -50,6 +50,7 @@ import m_iliocostalis_lumborum from "./muscles/M.IliocostalisLumborum.js";
 import m_iliocostalis_thoracis from "./muscles/M.IliocostalisThoracis.js";
 import m_iliopsoas from "./muscles/M.Iliopsoas.js";
 import m_infraspinatus from "./muscles/M.Infraspinatus.js";
+import m_latissimus_dorsi from "./muscles/M.LatissimusDorsi.js";
 import m_levator_scapulae from "./muscles/M.LevatorScapulae.js";
 import m_longissimus_capitis from "./muscles/M.LongissimusCapitis.js";
 import m_longissimus_cervicis from "./muscles/M.LongissimusCervicis.js";
@@ -62,7 +63,9 @@ import m_obliquus_externus_abdominis from "./muscles/M.ObliquusExternusAbdominis
 import m_obliquus_internus_abdominis from "./muscles/M.ObliquusInternusAbdominis.js";
 import m_obturatorius_externus from "./muscles/M.ObturatoriusExternus.js";
 import m_obturatorius_internus from "./muscles/M.ObturatoriusInternus.js";
+import m_palmaris_longus from "./muscles/M.PalmarisLongus.js";
 import m_pectineus from "./muscles/M.Pectineus.js";
+import m_pectoralis_major from "./muscles/M.PectoralisMajor.js";
 import m_piriformis from "./muscles/M.Piriformis.js";
 import m_plantaris from "./muscles/M.Plantaris.js";
 import m_popliteus from "./muscles/M.Popliteus.js";
@@ -168,6 +171,7 @@ export const arrMuscles = [
     m_iliocostalis_thoracis,
     m_iliopsoas,
     m_infraspinatus,
+    m_latissimus_dorsi,
     m_levator_scapulae,
     m_longissimus_capitis,
     m_longissimus_cervicis,
@@ -180,7 +184,9 @@ export const arrMuscles = [
     m_obliquus_internus_abdominis,
     m_obturatorius_externus,
     m_obturatorius_internus,
+    m_palmaris_longus,
     m_pectineus,
+    m_pectoralis_major,
     m_piriformis,
     m_plantaris,
     m_popliteus,
