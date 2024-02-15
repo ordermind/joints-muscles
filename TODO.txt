@@ -7,7 +7,8 @@
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
 - Visa notes för draggable questions när man har placerat ett svar i rätt fack
-- Lägg till muskler för bovenste extremiteit
+- Lägg till quizfrågor för bovenste extremiteit
+X Lägg till muskler för bovenste extremiteit
 X Lägg till eindgevoel för leder i tabell och/eller ledsida
 X Lägg till TWK-funktioner för m. iliocostalis cervicis, m. semispinalis cervicis
 X Lägg till filter för lednamn på ledlistan
