@@ -2,23 +2,24 @@ import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
-const muscleId = "";
+const muscleId = "m_subclavius";
 
 export default new Muscle(
     {
         id: muscleId,
-        label: "",
+        label: "m. subclavius",
         origos: [
-
+            "facies superior costae 1 (mediaal)",
+            "cartilago costalis 1",
         ],
         insertions: [
-
+            "facies inferior extremitatis acromialis claviculae",
         ],
         functions: [
             new JointMuscleFunction(
                 {
                     muscleId: muscleId,
-                    movementId: "",
+                    movementId: "shoulder_girdle__depression",
                     isPrimeMover: false,
                 }
             ),
@@ -26,13 +27,13 @@ export default new Muscle(
         specialFunctions: [
             new SpecialMuscleFunction(
                 {
-                    id: muscleId + "__" + "",
+                    id: muscleId + "__" + "art_sternoclavicularis",
                     muscleId: muscleId,
-                    functionDescription: "",
+                    functionDescription: "stabilisatie van de <em>art. sternoclavicularis</em>",
                 }
             ),
         ],
-        image: "",
+        image: "./images/muscles/m_subclavius.jpeg",
         description: `
 
         `.trim(),

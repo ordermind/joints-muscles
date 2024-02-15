@@ -10,7 +10,7 @@ export default new Muscle(
         ],
         insertions: [
             "angulus superior scapulae",
-            "margo medialis scapulae (craniaal)",
+            "margo medialis scapulae (craniaal van het trigonum spinae scapulae)",
         ],
         functions: [
             new JointMuscleFunction(

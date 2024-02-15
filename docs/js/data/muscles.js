@@ -66,9 +66,12 @@ import m_obturatorius_internus from "./muscles/M.ObturatoriusInternus.js";
 import m_palmaris_longus from "./muscles/M.PalmarisLongus.js";
 import m_pectineus from "./muscles/M.Pectineus.js";
 import m_pectoralis_major from "./muscles/M.PectoralisMajor.js";
+import m_pectoralis_minor from "./muscles/M.PectoralisMinor.js";
 import m_piriformis from "./muscles/M.Piriformis.js";
 import m_plantaris from "./muscles/M.Plantaris.js";
 import m_popliteus from "./muscles/M.Popliteus.js";
+import m_pronator_quadratus from "./muscles/M.PronatorQuadratus.js";
+import m_pronator_teres from "./muscles/M.PronatorTeres.js";
 import m_pyramidalis from "./muscles/M.Pyramidalis.js";
 import m_quadratus_femoris from "./muscles/M.QuadratusFemoris.js";
 import m_quadratus_lumborum from "./muscles/M.QuadratusLumborum.js";
@@ -78,6 +81,8 @@ import m_rectus_capitis_lateralis from "./muscles/M.RectusCapitisLateralis.js";
 import m_rectus_capitis_posterior_major from "./muscles/M.RectusCapitisPosteriorMajor.js";
 import m_rectus_capitis_posterior_minor from "./muscles/M.RectusCapitisPosteriorMinor.js";
 import m_rectus_femoris from "./muscles/M.RectusFemoris.js";
+import m_rhomboideus_major from "./muscles/M.RhomboideusMajor.js";
+import m_rhomboideus_minor from "./muscles/M.RhomboideusMinor.js";
 import m_sartorius from "./muscles/M.Sartorius.js";
 import m_scalenus_anterior from "./muscles/M.ScalenusAnterior.js";
 import m_scalenus_medius from "./muscles/M.ScalenusMedius.js";
@@ -87,6 +92,7 @@ import m_semispinalis_capitis from "./muscles/M.SemispinalisCapitis.js";
 import m_semispinalis_cervicis from "./muscles/M.SemispinalisCervicis.js";
 import m_semispinalis_thoracis from "./muscles/M.SemispinalisThoracis.js";
 import m_semitendinosus from "./muscles/M.Semitendinosus.js";
+import m_serratus_anterior from "./muscles/M.SerratusAnterior.js";
 import m_serratus_posterior_inferior from "./muscles/M.SerratusPosteriorInferior.js";
 import m_serratus_posterior_superior from "./muscles/M.SerratusPosteriorSuperior.js";
 import m_soleus from "./muscles/M.Soleus.js";
@@ -96,6 +102,7 @@ import m_spinalis_thoracis from "./muscles/M.SpinalisThoracis.js";
 import m_splenius_capitis from "./muscles/M.SpleniusCapitis.js";
 import m_splenius_cervicis from "./muscles/M.SpleniusCervicis.js";
 import m_sternocleidomastoideus from "./muscles/M.Sternocleidomastoideus.js";
+import m_subclavius from "./muscles/M.Subclavius.js";
 import m_subscapularis from "./muscles/M.Subscapularis.js";
 import m_supraspinatus from "./muscles/M.Supraspinatus.js";
 import m_tensor_fasciae_latae from "./muscles/M.TensorFasciaeLatae.js";
@@ -187,9 +194,12 @@ export const arrMuscles = [
     m_palmaris_longus,
     m_pectineus,
     m_pectoralis_major,
+    m_pectoralis_minor,
     m_piriformis,
     m_plantaris,
     m_popliteus,
+    m_pronator_quadratus,
+    m_pronator_teres,
     m_pyramidalis,
     m_quadratus_femoris,
     m_quadratus_lumborum,
@@ -199,6 +209,8 @@ export const arrMuscles = [
     m_rectus_capitis_posterior_major,
     m_rectus_capitis_posterior_minor,
     m_rectus_femoris,
+    m_rhomboideus_major,
+    m_rhomboideus_minor,
     m_sartorius,
     m_scalenus_anterior,
     m_scalenus_medius,
@@ -208,6 +220,7 @@ export const arrMuscles = [
     m_semispinalis_cervicis,
     m_semispinalis_thoracis,
     m_semitendinosus,
+    m_serratus_anterior,
     m_serratus_posterior_inferior,
     m_serratus_posterior_superior,
     m_soleus,
@@ -217,6 +230,7 @@ export const arrMuscles = [
     m_splenius_capitis,
     m_splenius_cervicis,
     m_sternocleidomastoideus,
+    m_subclavius,
     m_subscapularis,
     m_supraspinatus,
     m_tensor_fasciae_latae,
