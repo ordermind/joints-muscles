@@ -104,14 +104,19 @@ import m_splenius_cervicis from "./muscles/M.SpleniusCervicis.js";
 import m_sternocleidomastoideus from "./muscles/M.Sternocleidomastoideus.js";
 import m_subclavius from "./muscles/M.Subclavius.js";
 import m_subscapularis from "./muscles/M.Subscapularis.js";
+import m_supinator from "./muscles/M.Supinator.js";
 import m_supraspinatus from "./muscles/M.Supraspinatus.js";
 import m_tensor_fasciae_latae from "./muscles/M.TensorFasciaeLatae.js";
+import m_teres_major from "./muscles/M.TeresMajor.js";
 import m_teres_minor from "./muscles/M.TeresMinor.js";
 import m_tibialis_anterior from "./muscles/M.TibialisAnterior.js";
 import m_tibialis_posterior from "./muscles/M.TibialisPosterior.js";
 import m_transversus_abdominis from "./muscles/M.TransversusAbdominis.js";
 import m_transversus_thoracis from "./muscles/M.TransversusThoracis.js";
+import m_trapezius_ascendens from "./muscles/M.TrapeziusAscendens.js";
 import m_trapezius_descendens from "./muscles/M.TrapeziusDescendens.js";
+import m_trapezius_transversa from "./muscles/M.TrapeziusTransversa.js";
+import m_triceps_brachii from "./muscles/M.TricepsBrachii.js";
 import m_vastus_intermedius from "./muscles/M.VastusIntermedius.js";
 import m_vastus_lateralis from "./muscles/M.VastusLateralis.js";
 import m_vastus_medialis from "./muscles/M.VastusMedialis.js";
@@ -232,14 +237,19 @@ export const arrMuscles = [
     m_sternocleidomastoideus,
     m_subclavius,
     m_subscapularis,
+    m_supinator,
     m_supraspinatus,
     m_tensor_fasciae_latae,
+    m_teres_major,
     m_teres_minor,
     m_tibialis_anterior,
     m_tibialis_posterior,
     m_transversus_abdominis,
     m_transversus_thoracis,
+    m_trapezius_ascendens,
     m_trapezius_descendens,
+    m_trapezius_transversa,
+    m_triceps_brachii,
     m_vastus_intermedius,
     m_vastus_lateralis,
     m_vastus_medialis,
