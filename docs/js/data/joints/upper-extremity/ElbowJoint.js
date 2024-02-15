@@ -167,7 +167,7 @@ Het ellebooggewricht bestaat uit drie gewrichten:
             ],
             image: "./images/joints/art_radioulnaris.jpeg",
             description: `
-De art. radioulnaris is een duplexgewricht en bestaat uit twee subgewrichten die met elkaar samenwerken: art. radioulnaris proximalis en art. radioulnaris distalis.
+De art. radioulnaris is een duplexgewricht en bestaat uit twee subgewrichten die met elkaar samenwerken: [Link type="Joint" targetId="art_radioulnaris_proximalis" label="art. radioulnaris proximalis"] en [Link type="Joint" targetId="art_radioulnaris_distalis" label="art. radioulnaris distalis"].
             `,
         }
     ),
