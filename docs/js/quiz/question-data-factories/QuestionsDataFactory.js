@@ -45,13 +45,11 @@ export default class QuestionsDataFactory {
 
         const filteredJoints = arrJoints.filter(joint => {
             return (regionId === 'all' || joint.regionId === regionId)
-            && !skipJoints.includes(joint.id)
-            && joint.regionId !== "upper_extremity"; //temporary workaround until all the muscles are there
+            && !skipJoints.includes(joint.id);
         });
 
         const filteredMuscles = arrMuscles.filter(muscle => {
-            return (regionId === 'all' || muscle.getRegionIds(objJoints).includes(regionId))
-            && !muscle.getRegionIds(objJoints).includes("upper_extremity"); //temporary workaround until all the muscles are there
+            return (regionId === 'all' || muscle.getRegionIds(objJoints).includes(regionId));
         });
 
         return {

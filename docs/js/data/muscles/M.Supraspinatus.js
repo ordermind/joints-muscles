@@ -28,7 +28,7 @@ export default new Muscle(
                 {
                     id: "m_supraspinatus__art_humeri",
                     muscleId: "m_supraspinatus",
-                    functionDescription: "stabilisatie van de art. humeri",
+                    functionDescription: "stabilisatie van de <em>art. humeri</em>",
                 }
             ),
         ],

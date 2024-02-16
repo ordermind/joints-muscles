@@ -18,14 +18,14 @@ export default new Muscle(
                 {
                     id: "m_articularis_genus__capsule",
                     muscleId: "m_articularis_genus",
-                    functionDescription: "het gewrichtskapsel van de art. genus spannen",
+                    functionDescription: "het gewrichtskapsel van de <em>art. genus</em> spannen",
                 }
             ),
             new SpecialMuscleFunction(
                 {
                     id: "m_articularis_genus__bursa",
                     muscleId: "m_articularis_genus",
-                    functionDescription: "bij extensie van de knie de bursa suprapatellaris naar boven trekken om impingement van de weke delen tussen de femur en de tibia te voorkomen",
+                    functionDescription: "bij extensie van de knie de <em>bursa suprapatellaris</em> naar boven trekken om impingement van de weke delen tussen de <em>femur</em> en de <em>tibia</em> te voorkomen",
                 }
             ),
         ],

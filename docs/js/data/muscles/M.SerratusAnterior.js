@@ -65,16 +65,23 @@ export default new Muscle(
         specialFunctions: [
             new SpecialMuscleFunction(
                 {
+                    id: muscleId + "__" + "fixate_scapula",
+                    muscleId: muscleId,
+                    functionDescription: "de <em>scapula</em> (en daarmee de schoudergordel) fixeren",
+                }
+            ),
+            new SpecialMuscleFunction(
+                {
                     id: muscleId + "__" + "breathing",
                     muscleId: muscleId,
                     functionDescription: "inspiratie (door middel van elevatie van de ribben)",
-                    notes: ["alleen bij fixatie van de scapula"],
+                    notes: ["alleen bij fixatie van de <em>scapula</em>"],
                 }
             ),
         ],
         image: "./images/muscles/m_serratus_anterior.jpeg",
         description: `
-Deze spier kan de scapula, en daarmee de schoudergordel, fixeren.
+
         `.trim(),
     }
 );

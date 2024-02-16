@@ -35,7 +35,7 @@ export default new Muscle(
                 {
                     id: muscleId + "__" + "fixate_scapula",
                     muscleId: muscleId,
-                    functionDescription: "de scapula (en daarmee de schoudergordel) fixeren",
+                    functionDescription: "de <em>scapula</em> (en daarmee de schoudergordel) fixeren",
                 }
             )
         ],

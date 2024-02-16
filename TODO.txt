@@ -1,3 +1,5 @@
+- Lägg till quizfråga om innervatie för muskler. Det kan finnas flera nerver för samma muskel så jag behöver använda drag/drop-frågor för detta, alternativt om jag vill skapa en ny frågetyp med flerval.
+- Lägg till information om innervatie för alla muskler
 - Förbättra prestandan på quizzen
   - I stället för att varje gång filtrera hela arrayen, gör en imperativ lösning där de återstående items returneras varje gång och sedan används som parameter till nästa filterfunktion
   - Gör inte en shuffle för varje filtergrupp, det borde räcka med att göra en enda shuffle i början.
@@ -7,7 +9,7 @@
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
 - Visa notes för draggable questions när man har placerat ett svar i rätt fack
-- Lägg till quizfrågor för bovenste extremiteit
+X Lägg till quizfrågor för bovenste extremiteit
 X Lägg till muskler för bovenste extremiteit
 X Lägg till eindgevoel för leder i tabell och/eller ledsida
 X Lägg till TWK-funktioner för m. iliocostalis cervicis, m. semispinalis cervicis

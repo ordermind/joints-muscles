@@ -62,6 +62,12 @@ export default [
                 ),
             ],
             image: "./images/joints/artt_metatarsophalangeae_2_5.jpeg",
+            childrenIds: [
+                "art_metatarsophalangea_2",
+                "art_metatarsophalangea_3",
+                "art_metatarsophalangea_4",
+                "art_metatarsophalangea_5",
+            ],
         }
     ),
     new Joint(

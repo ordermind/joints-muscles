@@ -44,7 +44,7 @@ export default new Muscle(
                     muscleId: muscleId,
                     functionDescription: "inspiratie (door middel van elevatie van de ribben)",
                     notes: [
-                        "alleen bij fixatie van de scapula",
+                        "alleen bij fixatie van de <em>scapula</em>",
                     ],
                 }
             ),

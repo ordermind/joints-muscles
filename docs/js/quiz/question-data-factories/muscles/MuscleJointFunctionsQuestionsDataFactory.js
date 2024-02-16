@@ -30,8 +30,17 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
             correctMuscle,
             priorityArea: 'jointFunctions',
         });
+
+        // Do not include joint functions of other muscles that are related to child joints of the joint functions of the correct muscle.
+        const correctJoints = Array.from(new Set(correctMuscle.functions.map(jointFunction => jointFunction.jointId)));
+        const skipJoints = correctJoints.flatMap(jointId => objJoints[jointId].childrenIds);
+
         for(const otherMuscle of otherMuscles) {
             for(const jointFunction of otherMuscle.functions) {
+                if(skipJoints.includes(jointFunction.jointId)) {
+                    continue;
+                }
+
                 const answerLabel = this.#createAnswerLabel(jointFunction);
 
                 if(!answers.hasOwnProperty(answerLabel)) {

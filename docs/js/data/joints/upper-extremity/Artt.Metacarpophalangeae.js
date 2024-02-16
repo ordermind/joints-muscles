@@ -80,6 +80,12 @@ export default [
                 ),
             ],
             image: "./images/joints/artt_metacarpophalangeae_2_5.jpeg",
+            childrenIds: [
+                "art_metacarpophalangea_2",
+                "art_metacarpophalangea_3",
+                "art_metacarpophalangea_4",
+                "art_metacarpophalangea_5",
+            ],
         }
     ),
     new Joint(
