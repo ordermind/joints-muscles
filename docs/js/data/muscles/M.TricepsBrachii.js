@@ -36,7 +36,7 @@ export default new Muscle(
                 {
                     muscleId: muscleId,
                     movementId: "art_humeri__retroflexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                     notes: ["alleen caput longum"],
                 }
             ),
