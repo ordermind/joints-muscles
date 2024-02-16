@@ -62,19 +62,6 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_pectoralis_major__art_humeri__retroflexion",
-                    jointId: "art_humeri",
-                    muscleId: "m_pectoralis_major",
-                    movementId: "art_humeri__retroflexion",
-                    isPrimeMover: false,
-                    notes: [
-                        "alleen vanuit anteflexiestand",
-                        "pars sternocostalis en pars abdominalis",
-                    ],
-                }
-            ),
-            new JointMuscleFunction(
-                {
                     id: "m_pectoralis_major__art_humeri__adduction",
                     jointId: "art_humeri",
                     muscleId: "m_pectoralis_major",
