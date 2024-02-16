@@ -255,6 +255,19 @@ In de cervicale wervelkolom zijn de zogenaamde uncovertebrale gewrichten (tussen
     ),
     new Joint(
         {
+            id: "artt_intervertebrales",
+            regionId: "torso",
+            label: "artt. intervertebrales",
+            image: "./images/joints/artt_intervertebrales.jpeg",
+            description: [
+                `
+De tussenwervelgewrichten verbinden direct aangrenzende wervels van de wervelkolom. Elk tussenwervelgewricht is een complex van drie afzonderlijke gewrichten: een tussenwervelschijfgewricht ([Link type="Joint" targetId="discus_intervertebralis" label="discus intervertebralis"]) en twee facetgewrichten ([Link type="Joint" targetId="artt_zygapophysiales" label="artt. zygapophysiales"]).
+                `.trim(),
+            ],
+        }
+    ),
+    new Joint(
+        {
             id: "discus_intervertebralis",
             regionId: "torso",
             label: "discus intervertebralis",

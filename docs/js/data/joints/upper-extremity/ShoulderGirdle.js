@@ -81,9 +81,8 @@ Het primaire scapulothoracale systeem bestaat uit:
 
 Het secundaire scapulothoracale systeem bestaande uit:
 
-- de [Link type="Joint" targetId="art_costovertebralis" label="art. costovertebralis"]
-- de [Link type="Joint" targetId="art_costotransversaria" label="art. costotransversaria"]
-- de [Link type="Joint" targetId="art_intervertebralis" label="art. intervertebralis"]
+- de [Link type="Joint" targetId="artt_costovertebrales" label="artt. costovertebrales"]
+- de [Link type="Joint" targetId="artt_intervertebrales" label="artt. intervertebrales"]
             `,
         }
     ),
