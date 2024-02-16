@@ -25,7 +25,7 @@ export default new Muscle(
         insertions: [
             new AnatomicStructure(
                 {
-                    label: "facies lateralis radii (midden)",
+                    label: "facies lateralis radii (in het midden)",
                     notes: ["distaal van de insertie van <em>m. supinator</em>"],
                 }
             ),
