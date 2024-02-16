@@ -25,7 +25,7 @@ export default new Muscle(
                 {
                     id: "m_articularis_genus__bursa",
                     muscleId: "m_articularis_genus",
-                    functionDescription: "bij extensie van de knie de bursa suprapatellaris naar boven trekken om impingement van de weke delen tussen de femur en de tibia te voorkomen",
+                    functionDescription: "bij extensie van de knie de <em>bursa suprapatellaris</em> naar boven trekken om impingement van de weke delen tussen de <em>femur</em> en de <em>tibia</em> te voorkomen",
                 }
             ),
         ],
