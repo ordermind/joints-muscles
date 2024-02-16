@@ -18,7 +18,7 @@ export default new Muscle(
                 {
                     id: "m_articularis_genus__capsule",
                     muscleId: "m_articularis_genus",
-                    functionDescription: "het gewrichtskapsel van de art. genus spannen",
+                    functionDescription: "het gewrichtskapsel van de <em>art. genus</em> spannen",
                 }
             ),
             new SpecialMuscleFunction(

@@ -90,7 +90,7 @@ export default new Muscle(
                 {
                     id: "m_biceps_brachii__art_humeri",
                     muscleId: "m_biceps_brachii",
-                    functionDescription: "stabilisatie van de art. humeri",
+                    functionDescription: "stabilisatie van de <em>art. humeri</em>",
                 }
             )
         ],

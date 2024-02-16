@@ -18,7 +18,7 @@ export default new Muscle(
                 {
                     id: "m_pyramidalis__linea_alba",
                     muscleId: "m_pyramidalis",
-                    functionDescription: "de linea alba spannen",
+                    functionDescription: "de <em>linea alba</em> spannen",
                 }
             )
         ],

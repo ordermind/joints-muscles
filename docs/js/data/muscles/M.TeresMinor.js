@@ -28,7 +28,7 @@ export default new Muscle(
                 {
                     id: "m_teres_minor__art_humeri",
                     muscleId: "m_teres_minor",
-                    functionDescription: "stabilisatie van de art. humeri",
+                    functionDescription: "stabilisatie van de <em>art. humeri</em>",
                 }
             ),
         ],

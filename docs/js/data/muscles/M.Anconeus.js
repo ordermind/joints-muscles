@@ -29,7 +29,7 @@ export default new Muscle(
                 {
                     id: "m_anconeus__capsule",
                     muscleId: "m_anconeus",
-                    functionDescription: "het gewrichtskapsel van de art. cubiti spannen",
+                    functionDescription: "het gewrichtskapsel van de <em>art. cubiti</em> spannen",
                 }
             ),
         ],
