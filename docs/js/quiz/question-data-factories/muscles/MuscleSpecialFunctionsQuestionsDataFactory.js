@@ -1,5 +1,5 @@
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
-import { shuffle } from "../../../utils.js";
+import { renderNotesTooltip, shuffle } from "../../../utils.js";
 import QuestionData from "../QuestionData.js";
 
 export default class MuscleSpecialFunctionsQuestionsDataFactory {
@@ -27,7 +27,9 @@ export default class MuscleSpecialFunctionsQuestionsDataFactory {
         for(const otherMuscle of otherMuscles) {
             for(const specialFunction of otherMuscle.specialFunctions) {
                 if(!answers.hasOwnProperty(specialFunction.functionDescription)) {
-                    answers[specialFunction.functionDescription] = specialFunction.functionDescription;
+                    const descriptionWithNotes = specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes);
+
+                    answers[specialFunction.functionDescription] = descriptionWithNotes;
                     totalAnswersCount++;
                 }
 
@@ -46,7 +48,9 @@ export default class MuscleSpecialFunctionsQuestionsDataFactory {
         };
 
         for(const specialFunction of correctMuscle.specialFunctions) {
-            correctSolution.specialFunctions[specialFunction.functionDescription] = specialFunction.functionDescription;
+            const descriptionWithNotes = specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes);
+
+            correctSolution.specialFunctions[specialFunction.functionDescription] = descriptionWithNotes;
         }
 
         return correctSolution;

@@ -1,4 +1,4 @@
-import { shuffle } from "../../../utils.js";
+import { renderNotesTooltip, shuffle } from "../../../utils.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import renderAnatomicStructureOrString from "../../../data-types/utils.js";
 import QuestionData from "../QuestionData.js";
@@ -25,9 +25,12 @@ export default class MuscleAnatomyQuestionsDataFactory {
             correctMuscle,
         });
         for(const otherMuscle of otherMuscles) {
-            for(const origoLabel of otherMuscle.origos.map(origo => renderAnatomicStructureOrString(origo))) {
-                if(!answers.hasOwnProperty(origoLabel)) {
-                    answers[origoLabel] = origoLabel;
+            for(const origo of otherMuscle.origos) {
+                const shortOrigoLabel = renderAnatomicStructureOrString(origo);
+                const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true});
+
+                if(!answers.hasOwnProperty(shortOrigoLabel)) {
+                    answers[shortOrigoLabel] = labelWithNotes;
                     totalAnswersCount++;
                 }
 
@@ -36,9 +39,12 @@ export default class MuscleAnatomyQuestionsDataFactory {
                 }
             }
 
-            for(const insertionLabel of otherMuscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion))) {
-                if(!answers.hasOwnProperty(insertionLabel)) {
-                    answers[insertionLabel] = insertionLabel;
+            for(const insertion of otherMuscle.insertions) {
+                const shortInsertionLabel = renderAnatomicStructureOrString(insertion);
+                const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true});
+
+                if(!answers.hasOwnProperty(shortInsertionLabel)) {
+                    answers[shortInsertionLabel] = labelWithNotes;
                     totalAnswersCount++;
                 }
 
@@ -58,12 +64,18 @@ export default class MuscleAnatomyQuestionsDataFactory {
             insertion: {},
         };
 
-        for(const origoLabel of correctMuscle.origos.map(origo => renderAnatomicStructureOrString(origo))) {
-            correctSolution.origo[origoLabel] = origoLabel;
+        for(const origo of correctMuscle.origos) {
+            const shortOrigoLabel = renderAnatomicStructureOrString(origo);
+            const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true});
+
+            correctSolution.origo[shortOrigoLabel] = labelWithNotes;
         }
 
-        for(const insertionLabel of correctMuscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion))) {
-            correctSolution.insertion[insertionLabel] = insertionLabel;
+        for(const insertion of correctMuscle.insertions) {
+            const shortInsertionLabel = renderAnatomicStructureOrString(insertion);
+            const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true});
+
+            correctSolution.insertion[shortInsertionLabel] = labelWithNotes;
         }
 
         return correctSolution;

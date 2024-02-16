@@ -1,7 +1,7 @@
 import { objMuscles } from "../../../data/muscles.js";
 import { arrJoints } from "../../../data/joints.js";
 import muscleFunctions from "../../../data/muscle-functions.js";
-import { shuffle } from "../../../utils.js";
+import { renderNotesTooltip, shuffle } from "../../../utils.js";
 import { isJointPlural } from "./utils.js";
 import QuestionData from "../QuestionData.js";
 
@@ -40,7 +40,7 @@ export default class JointFunctionsQuestionsDataFactory {
             )
         )) {
             if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
-                answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
+                answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
                 totalAnswersCount++;
             }
 
@@ -58,7 +58,7 @@ export default class JointFunctionsQuestionsDataFactory {
         for(const otherJoint of otherJointsInTheSameRegion) {
             for(const muscleFunction of shuffle(muscleFunctions.filter(muscleFunction => muscleFunction.jointId === otherJoint.id))) {
                 if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
-                    answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
+                    answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
                     totalAnswersCount++;
                 }
 
@@ -78,11 +78,11 @@ export default class JointFunctionsQuestionsDataFactory {
         };
 
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover)) {
-            correctSolution.primeMovers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
+            correctSolution.primeMovers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
         }
 
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && !muscleFunction.isPrimeMover)) {
-            correctSolution.otherMuscles[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label;
+            correctSolution.otherMuscles[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
         }
 
         return correctSolution;

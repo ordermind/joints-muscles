@@ -58,4 +58,5 @@
 ul.tooltip-content-inner {
     list-style: square;
     padding-left: 1rem;
+    text-align: left;
 }

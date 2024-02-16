@@ -83,6 +83,20 @@
     cursor: grabbing;
 }
 
+.page-quiz .draggable-question .draggable-container .draggable-element .tooltip-wrapper,
+.draggable-element.gu-mirror .tooltip-wrapper {
+    display: none;
+}
+.page-quiz .draggable-question .draggable-container .draggable-element.correct-placement .tooltip-wrapper {
+    display: inline-block;
+}
+.page-quiz .draggable-question .draggable-container .draggable-element.correct-placement .tooltip-content {
+    background-color: #a899d0;
+}
+.page-quiz .draggable-question .draggable-container .draggable-element.correct-placement .tooltip-content::after {
+    border-bottom-color: #a899d0;
+}
+
 /** Multiple text input question **/
 
 .page-quiz .multiple-text-input-question .correct-answer {

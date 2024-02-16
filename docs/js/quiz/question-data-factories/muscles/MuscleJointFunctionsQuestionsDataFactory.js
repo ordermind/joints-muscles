@@ -1,6 +1,7 @@
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import { objJoints } from "../../../data/joints.js";
 import QuestionData from "../QuestionData.js";
+import { renderNotesTooltip } from "../../../utils.js";
 
 export default class MuscleJointFunctionsQuestionsDataFactory {
     #passThroughMode;
@@ -11,7 +12,7 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
         this.#passThroughMode = passThroughMode;
     }
 
-    #createAnswerLabel(jointFunction) {
+    #createShortAnswerLabel(jointFunction) {
         const movementName = jointFunction.movementLabelOverride ?? objJoints[jointFunction.jointId].movements.find(movement => movement.id === jointFunction.movementId).label;
 
         return `<em>${objJoints[jointFunction.jointId].shortLabel}</em>: ${movementName}`;
@@ -41,10 +42,11 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
                     continue;
                 }
 
-                const answerLabel = this.#createAnswerLabel(jointFunction);
+                const shortAnswerLabel = this.#createShortAnswerLabel(jointFunction);
+                const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes);
 
-                if(!answers.hasOwnProperty(answerLabel)) {
-                    answers[answerLabel] = answerLabel;
+                if(!answers.hasOwnProperty(shortAnswerLabel)) {
+                    answers[shortAnswerLabel] = labelWithNotes;
                     totalAnswersCount++;
                 }
 
@@ -64,12 +66,13 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
         };
 
         for(const jointFunction of correctMuscle.functions) {
-            const answerLabel = this.#createAnswerLabel(jointFunction);
+            const shortAnswerLabel = this.#createShortAnswerLabel(jointFunction);
+            const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes);
 
             if(jointFunction.isPrimeMover) {
-                correctSolution.primeMover[answerLabel] = answerLabel;
+                correctSolution.primeMover[shortAnswerLabel] = labelWithNotes;
             } else {
-                correctSolution.assistant[answerLabel] = answerLabel;
+                correctSolution.assistant[shortAnswerLabel] = labelWithNotes;
             }
         }
 

@@ -19,7 +19,7 @@ export default class DraggableQuestion {
         this.#question = question;
         this.#regions = regions;
         this.#answers = answers;
-        this.#correctSolution = correctSolution;
+        this.#correctSolution = this.#stripTooltipWrappersFromCorrectSolutionRecursive(correctSolution);
         this.#previousNextQuestionButtonText = previousNextQuestionButtonText;
         this.#wrapperClasses = wrapperClasses;
         this.#passThroughMode = passThroughMode;
@@ -33,6 +33,22 @@ export default class DraggableQuestion {
 
     get previousNextQuestionButtonText() {
         return this.#previousNextQuestionButtonText;
+    }
+
+    #stripTooltipWrappersFromCorrectSolutionRecursive(correctSolution) {
+        if (typeof correctSolution !== 'object') {
+            return this.#stripTooltipWrapperFromLabel(correctSolution);
+        }
+
+        for(const key of Object.keys(correctSolution)) {
+            correctSolution[key] = this.#stripTooltipWrappersFromCorrectSolutionRecursive(correctSolution[key]);
+        }
+
+        return correctSolution;
+    }
+
+    #stripTooltipWrapperFromLabel(label) {
+        return label.split('<div class="tooltip-wrapper">')[0].trim();
     }
 
     #removePlacementClasses(element) {
@@ -59,7 +75,7 @@ export default class DraggableQuestion {
             currentSolution[regionId] = {};
 
             for(const draggableElement of draggableContainer.querySelectorAll(".draggable-element")) {
-                currentSolution[regionId][draggableElement.getAttribute("data-id")] = draggableElement.innerHTML;
+                currentSolution[regionId][draggableElement.getAttribute("data-id")] = this.#stripTooltipWrapperFromLabel(draggableElement.innerHTML);
             }
         }
 
