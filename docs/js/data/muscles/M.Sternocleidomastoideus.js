@@ -59,8 +59,8 @@ export default new Muscle(
                 {
                     id: "m_sternocleidomastoideus__breathing",
                     muscleId: "m_sternocleidomastoideus",
-                    functionDescription: "inspiratie (door middel van elevatie van het sternum en de clavicula)",
-                    notes: ["bij gefixeerde insertie het sternum en de clavicula fixeren / heffen"],
+                    functionDescription: "inspiratie (door middel van elevatie van het <em>sternum</em> en de <em>clavicula</em>)",
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             )
         ],

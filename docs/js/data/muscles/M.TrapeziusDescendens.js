@@ -96,7 +96,7 @@ export default new Muscle(
                 {
                     id: "m_trapezius_descendens__fixate_scapula",
                     muscleId: "m_trapezius_descendens",
-                    functionDescription: "de scapula (en daarmee de schoudergordel) fixeren",
+                    functionDescription: "de <em>scapula</em> (en daarmee de schoudergordel) fixeren",
                 }
             )
         ],
