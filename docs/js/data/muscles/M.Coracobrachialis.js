@@ -18,7 +18,7 @@ export default new Muscle(
                     jointId: "art_humeri",
                     muscleId: "m_coracobrachialis",
                     movementId: "art_humeri__anteflexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
@@ -27,7 +27,7 @@ export default new Muscle(
                     jointId: "art_humeri",
                     muscleId: "m_coracobrachialis",
                     movementId: "art_humeri__adduction",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
         ],
