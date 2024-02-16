@@ -62,6 +62,12 @@ export default [
                 ),
             ],
             image: "./images/joints/artt_interphalangeae_proximales_manuum_2_5.jpeg",
+            childrenIds: [
+                "art_interphalangea_proximalis_manus_2",
+                "art_interphalangea_proximalis_manus_3",
+                "art_interphalangea_proximalis_manus_4",
+                "art_interphalangea_proximalis_manus_5",
+            ],
         }
     ),
     new Joint(
@@ -217,6 +223,12 @@ export default [
                 ),
             ],
             image: "./images/joints/artt_interphalangeae_distales_manuum_2_5.jpeg",
+            childrenIds: [
+                "art_interphalangea_distalis_manus_2",
+                "art_interphalangea_distalis_manus_3",
+                "art_interphalangea_distalis_manus_4",
+                "art_interphalangea_distalis_manus_5",
+            ],
         }
     ),
     new Joint(

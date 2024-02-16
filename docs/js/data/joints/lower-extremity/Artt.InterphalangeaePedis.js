@@ -62,6 +62,12 @@ export default [
                 ),
             ],
             image: "./images/joints/artt_interphalangeae_proximales_pedum_2_5.jpeg",
+            childrenIds: [
+                "art_interphalangea_proximalis_pedis_2",
+                "art_interphalangea_proximalis_pedis_3",
+                "art_interphalangea_proximalis_pedis_4",
+                "art_interphalangea_proximalis_pedis_5",
+            ],
         }
     ),
     new Joint(
@@ -215,6 +221,12 @@ export default [
                 ),
             ],
             image: "./images/joints/artt_interphalangeae_distales_pedum_2_5.jpeg",
+            childrenIds: [
+                "art_interphalangea_distalis_pedis_2",
+                "art_interphalangea_distalis_pedis_3",
+                "art_interphalangea_distalis_pedis_4",
+                "art_interphalangea_distalis_pedis_5",
+            ]
         }
     ),
     new Joint(
