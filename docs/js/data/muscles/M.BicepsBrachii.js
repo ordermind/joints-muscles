@@ -88,9 +88,9 @@ export default new Muscle(
         specialFunctions: [
             new SpecialMuscleFunction(
                 {
-                    id: "m_biceps_brachii__caput_humeri",
+                    id: "m_biceps_brachii__art_humeri",
                     muscleId: "m_biceps_brachii",
-                    functionDescription: "caput humeri ondersteunen in art. humeri",
+                    functionDescription: "stabilisatie van de art. humeri",
                 }
             )
         ],
