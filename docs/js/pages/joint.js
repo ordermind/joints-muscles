@@ -108,13 +108,17 @@ export default class JointPage {
         `.trim();
 
         if(joint.firstDescription) {
-            content += markdownParser.parse(joint.firstDescription.trim());
+            content += `
+            <div class="description">${markdownParser.parse(joint.firstDescription.trim())}</div>
+            `.trim();
         }
 
         content += this.#getInfoTable(joint, jointTypes);
 
         if(joint.otherDescriptions.length) {
-            content += markdownParser.parse(joint.otherDescriptions.join("\n\n").trim());
+            content += `
+            <div class="description">${markdownParser.parse(joint.otherDescriptions.join("\n\n").trim())}</div>
+            `.trim();
         }
 
         if(joint.movements.length) {

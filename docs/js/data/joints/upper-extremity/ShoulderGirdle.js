@@ -60,6 +60,7 @@ export default [
             image: "./images/joints/shoulder_girdle.jpeg",
             description: `
 De schoudergordel bestaat uit een zeer mobiel en coördinatief hoogwaardig systeem, met vele onderdelen die perfect in elkaar grijpen.  Stoornissen in dit systeem kunnen leiden tot beperkingen in activiteiten, waardoor zelfs het participeren in de maatschappij kan worden belemmerd.
+
 De verbindingen tussen de botdelen van de schouderregio worden in twee hoofdgroepen verdeeld:
 
 - Het glenohumerale systeem
@@ -69,14 +70,14 @@ Het scapulothoracale systeem bestaat weer uit een primair- en een secundair gede
 Het glenohumerale systeem bestaat uit:
 
 - de [Link type="Joint" targetId="art_humeri" label="art. humeri"]
-- de junctura subacromialis (ook wel art. subacromialis of art. suprahumeralis genoemd)
-- het bicipitale glijmechanisme
+- de [Link type="Joint" targetId="junctura_subacromialis" label="junctura subacromialis"] (ook wel art. subacromialis of art. suprahumeralis genoemd)
+- het [Link type="Joint" targetId="bicipital_gliding_mechanism" label="bicipitale glijmechanisme"]
 
 Het primaire scapulothoracale systeem bestaat uit:
 
 - de [Link type="Joint" targetId="art_acromioclavicularis" label="art. acromioclavicularis"] ( = het AC- gewicht)
 - de [Link type="Joint" targetId="art_sternoclavicularis" label="art. sternoclavicularis"] (= het SC-gewricht)
-- de junctura scapulothoracalis (of junctura scapulocostalis genoemd)
+- de [Link type="Joint" targetId="junctura_scapulothoracalis" label="junctura scapulothoracalis"] (ook wel junctura scapulocostalis genoemd)
 
 Het secundaire scapulothoracale systeem bestaande uit:
 

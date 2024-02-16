@@ -51,7 +51,9 @@ export default class MusclePage {
         `.trim();
 
         if(muscle.description) {
-            content += markdownParser.parse(muscle.description.trim());
+            content += `
+            <div class="description">${markdownParser.parse(muscle.description.trim())}</div>
+            `.trim();
         }
 
         content += `
