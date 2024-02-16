@@ -37,6 +37,7 @@ export default new Muscle(
                     muscleId: muscleId,
                     movementId: "art_humeri__retroflexion",
                     isPrimeMover: true,
+                    notes: ["alleen caput longum"],
                 }
             ),
             new JointMuscleFunction(
@@ -44,6 +45,7 @@ export default new Muscle(
                     muscleId: muscleId,
                     movementId: "art_humeri__adduction",
                     isPrimeMover: false,
+                    notes: ["alleen caput longum"],
                 }
             ),
             new JointMuscleFunction(
