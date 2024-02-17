@@ -9,6 +9,7 @@
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
 - Lägg till filter för speciale functies i listan för muskler i kennisbanken
+- Fyll på information för m. rectus abdominis angående mitt val för origo och insertie
 X Visa notes för draggable questions när man har placerat ett svar i rätt fack
 X Lägg till quizfrågor för bovenste extremiteit
 X Lägg till muskler för bovenste extremiteit
