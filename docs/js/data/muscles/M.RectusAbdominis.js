@@ -68,6 +68,8 @@ De spier loopt in de rectusschede (<em>vagina musculi recti abdominis</em>). In 
 mm. recti in, wordt de <em>linea alba</em> gevormd door de kruisende vezels van de beide rectusscheden.
 
 De laterale begrenzing van de spier wordt de <em>linea semilunaris</em> genoemd.
+
+N.B. Bij Nederlandse bronnen zijn de origo en insertie vaak tegenovergesteld dus houd daar maar rekening mee. Bij Engelstalige bronnen heb je vaker dit en ik vind het logischer omdat bij contractie vanuit de anatomische positie de insertie dan naar de origo toe beweegt i.p.v. andersom.
         `.trim(),
     }
 );
