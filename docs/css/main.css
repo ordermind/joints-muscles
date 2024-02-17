@@ -103,6 +103,17 @@ body .hideable-cover {
 .page-list form[name="filters"] .form-control-wrapper {
     position: relative;
     display: inline-block;
+    margin: 0.5rem;
+}
+
+.page-list form[name="filters"] .form-control-wrapper:not(:first-child) {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .page-list form[name="filters"] .form-control-wrapper:not(:first-child) {
+        display: inline-block;
+    }
 }
 
 .page-list form[name="filters"] .search-wrapper input[type="text"] {

@@ -29,4 +29,8 @@ export default class SpecialMuscleFunction {
     get notes() {
         return this.#notes;
     }
+
+    get value() {
+        return this.functionDescription;
+    }
 }

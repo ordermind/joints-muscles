@@ -19,7 +19,14 @@ export default class MuscleListPage extends ListPage {
                 label: "Naam spier",
                 event: "keyup",
                 minCharacters: 3,
-            }
+            },
+            {
+                type: "textInput",
+                name: "specialFunctions",
+                label: "Speciale functie",
+                event: "keyup",
+                minCharacters: 3,
+            },
         ];
     }
 

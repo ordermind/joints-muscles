@@ -88,7 +88,7 @@ export default class ListPage {
 
         const formElement = document.createElement("form");
         formElement.name = "filters";
-        formElement.classList.add("pt-2", "pb-2");
+        formElement.classList.add("pt-2", "pb-2", "m-n2");
         formElement.setAttribute("onsubmit", "event.preventDefault()");
 
         for(const filter of filters) {
@@ -129,6 +129,24 @@ export default class ListPage {
         history.pushState(null, "", newUrl);
     }
 
+    #filterSingleItemValue(itemValue, filterValue) {
+        if(Array.isArray(itemValue)) {
+            itemValue = itemValue.map(part => {
+                if((typeof part === 'object' && part !== null)) {
+                    return part.value;
+                }
+
+                return part;
+            }).join("");
+        }
+
+        if (!(typeof itemValue === 'string' || itemValue instanceof String)) {
+            return false;
+        }
+
+        return massageStringForFlexibleComparison(itemValue).includes(massageStringForFlexibleComparison(filterValue));
+    }
+
     #getFilteredItems() {
         const filters = this.getFilters();
         const filterValues = this.#getFilterValuesFromQueryString();
@@ -139,9 +157,7 @@ export default class ListPage {
             const filterValue = filterValues.get(filter.name);
 
             if(filterValue && (!filter.hasOwnProperty("minCharacters") || filterValue.length >= filter.minCharacters)) {
-                filteredItems = filteredItems.filter(item =>
-                    massageStringForFlexibleComparison(item[filter.name]).includes(massageStringForFlexibleComparison(filterValue))
-                );
+                filteredItems = filteredItems.filter(item => this.#filterSingleItemValue(item[filter.name], filterValue));
             }
         }
 
