@@ -10,7 +10,6 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "facies posterior radii",
-                    notes: ["distaal van de <em>m. abductor pollicis longus</em>"],
                 }
             ),
             "membrana interossea antebrachii",

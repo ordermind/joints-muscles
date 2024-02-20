@@ -10,10 +10,14 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "facies posterior radii",
-                    notes: ["proximaal van de <em>m. extensor pollicis brevis</em>"],
                 }
             ),
-            "facies posterior ulnae",
+            new AnatomicStructure(
+                {
+                    label: "facies posterior ulnae (in het midden)",
+                    notes: ["proximaal van de <em>m. extensor pollicis longus</em>"],
+                }
+            ),
             "membrana interossea antebrachii",
         ],
         insertions: [

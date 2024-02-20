@@ -9,7 +9,7 @@ export default new Muscle(
         origos: [
             new AnatomicStructure(
                 {
-                    label: "facies posterior ulnae",
+                    label: "facies posterior ulnae (distaal)",
                     notes: ["distaal van de <em>m. extensor pollicis longus</em>"],
                 }
             ),
