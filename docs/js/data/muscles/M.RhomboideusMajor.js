@@ -17,7 +17,7 @@ export default new Muscle(
             ),
         ],
         insertions: [
-            "margo medialis scapulae (caudaal van het trigonum spinae scapulae)",
+            "margo medialis scapulae (caudaal van het <em>trigonum spinae scapulae</em>)",
         ],
         functions: [
             new JointMuscleFunction(

@@ -103,7 +103,7 @@ export default new Muscle(
         description: `
 De spier heeft 8 koppen die alterneren met de koppen van de [Link type="Muscle" targetId="m_serratus_anterior" label="m. serratus anterior"] en de [Link type="Muscle" targetId="m_latissimus_dorsi" label="m. latissimus dorsi"].
 
-De spier vormt de ventrale begrenzing van het trigonum lumbale (petiti). Dit is het driehoekje waar de [Link type="Muscle" targetId="m_obliquus_internus_abdominis" label="m. obliquus internus abdominis"] oppervlakkig ligt.
+De spier vormt de ventrale begrenzing van het <em>trigonum lumbale</em> (petit). Dit is het driehoekje waar de [Link type="Muscle" targetId="m_obliquus_internus_abdominis" label="m. obliquus internus abdominis"] oppervlakkig ligt.
 
 M. obliquus externus abdominis en m obliquus internus abdominis worden ook wel aangeduid als de <strong>schuine buikspieren</strong>.
 
