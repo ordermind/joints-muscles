@@ -12,7 +12,7 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "processi spinosi (T1)T2&nbsp;-&nbsp;T4(T5)",
-                    notes: ["De exacte wervels van de origo zijn volgens Nederlandse bronnen T1-T4 en volgens engelstalige bronnen T2-T5."],
+                    notes: ["De exacte wervels van de origo zijn volgens Nederlandse bronnen T1-T4 en volgens Engelstalige bronnen T2-T5."],
                 }
             ),
         ],
