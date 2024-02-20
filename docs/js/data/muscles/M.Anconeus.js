@@ -7,7 +7,7 @@ export default new Muscle(
         id: "m_anconeus",
         label: "m. anconeus",
         origos: [
-            "epicondylus lateralis humeri (dorsaal)",
+            "epicondylus lateralis humeri",
         ],
         insertions: [
             "olecranon",
