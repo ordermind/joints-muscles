@@ -45,7 +45,7 @@ export default new Muscle(
                     jointId: "art_radiocarpalis",
                     muscleId: "m_flexor_digitorum_superficialis",
                     movementId: "art_radiocarpalis__palmar_flexion",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
             new JointMuscleFunction(
