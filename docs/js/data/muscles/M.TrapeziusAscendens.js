@@ -18,7 +18,7 @@ export default new Muscle(
             ),
         ],
         insertions: [
-            "crista inferior spinae scapulae (mediale 2/3 deel)",
+            "crista inferior spinae scapulae (mediaal)",
         ],
         functions: [
             new JointMuscleFunction(

@@ -1,12 +1,18 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_deltoideus_spinalis",
         label: "m. deltoideus, pars spinalis",
         origos: [
-            "spina scapulae",
+            new AnatomicStructure(
+                {
+                    label: "spina scapulae",
+                    notes: ["inferior van de insertie van de <em>m. trapezius, pars transversa</em>"],
+                }
+            ),
         ],
         insertions: [
             "tuberositas deltoidea humeri",
