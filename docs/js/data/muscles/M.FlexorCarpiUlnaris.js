@@ -29,7 +29,7 @@ export default new Muscle(
         insertions: [
             "os pisiforme",
             "hamulus ossis hamati",
-            "basis ossis metacarpalis V",
+            "basis ossis metacarpalis V (palmair)",
         ],
         functions: [
             new JointMuscleFunction(
