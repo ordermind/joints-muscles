@@ -27,6 +27,18 @@ export default new Muscle(
                     notes: ["caput mediale"],
                 }
             ),
+            new AnatomicStructure(
+                {
+                    label: "septum intermusculare laterale humeri",
+                    notes: ["caput laterale", "caput mediale"],
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "septum intermusculare mediale humeri",
+                    notes: ["caput mediale"],
+                }
+            ),
         ],
         insertions: [
             "olecranon",

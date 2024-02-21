@@ -7,8 +7,8 @@ export default new Muscle(
         label: "m. brachialis",
         origos: [
             "facies anterior humeri (distale helft)",
-            "septum intermusculare mediale humeri",
             "septum intermusculare laterale humeri",
+            "septum intermusculare mediale humeri",
         ],
         insertions: [
             "processus coronoideus ulnae",
