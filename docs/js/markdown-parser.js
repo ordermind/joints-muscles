@@ -16,7 +16,7 @@ const renderer = {
     link(href, title, text) {
         const output = marked.Renderer.prototype.link(href, title, text);
 
-        return output.replace('<a ', '<a target="_blank" ');
+        return output.replaceAll('<a ', '<a target="_blank" ');
     }
 };
 
