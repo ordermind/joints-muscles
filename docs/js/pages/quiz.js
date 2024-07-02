@@ -5,8 +5,8 @@ export default class QuizPage {
     #quiz;
     #mainMenuBlock;
 
-    render({ regionId }) {
-        this.#quiz = new Quiz({regionId});
+    render({ regionId, questionsFilter }) {
+        this.#quiz = new Quiz({regionId, questionsFilter});
         this.#mainMenuBlock = new MainMenuBlock();
 
         const elements = document.createElement("div");

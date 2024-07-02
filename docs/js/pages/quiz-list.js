@@ -14,13 +14,13 @@ export default class QuizList {
 <div class="page page-quiz-list">
     <h1 class="display-1 fs-1 text-center">Quiz</h1>
     <div class="d-grid gap-3 m-auto | nav-buttons-wrapper">
-        <a href="/quiz/torso" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 d-flex align-items-center" data-navigo><img src="./images/misc/icon-xray.png" class="quiz-icon" /><span class="ms-3">Romp</span></a>
+        <a href="/quiz-questions-filter/torso" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 d-flex align-items-center" data-navigo><img src="./images/misc/icon-xray.png" class="quiz-icon" /><span class="ms-3">Romp</span></a>
 
-        <a href="/quiz/upper_extremity" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 text-start" data-navigo><span class="quiz-icon">💪</span><span class="ms-3">Bovenste extremiteit</span></a>
+        <a href="/quiz-questions-filter/upper_extremity" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 text-start" data-navigo><span class="quiz-icon">💪</span><span class="ms-3">Bovenste extremiteit</span></a>
 
-        <a href="/quiz/lower_extremity" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 text-start" data-navigo><span class="quiz-icon">🦵</span><span class="ms-3">Onderste extremiteit</span></a>
+        <a href="/quiz-questions-filter/lower_extremity" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 text-start" data-navigo><span class="quiz-icon">🦵</span><span class="ms-3">Onderste extremiteit</span></a>
 
-        <a href="/quiz/all" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 text-start" data-navigo><span class="quiz-icon">🤸</span><span class="ms-3">Het hele lichaam</span></a>
+        <a href="/quiz-questions-filter/all" class="btn btn-outline-primary btn-lg pt-3 pb-3 pe-5 fs-4 text-start" data-navigo><span class="quiz-icon">🤸</span><span class="ms-3">Het hele lichaam</span></a>
     </div>
 </div>
         `.trim(),

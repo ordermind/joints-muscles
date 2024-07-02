@@ -12,6 +12,7 @@ import muscleFunctions from "./data/muscle-functions.js";
 import QuizList from "./pages/quiz-list.js";
 import QuizPage from "./pages/quiz.js";
 import MuscleListPage from "./pages/muscle-list.js";
+import QuizQuestionsFilter from "./pages/quiz-questions-filter.js";
 
 const pages = {
     home: new HomePage(),
@@ -21,6 +22,7 @@ const pages = {
     musclesList: new MuscleListPage({arrMuscles, objJoints}),
     musclePage: new MusclePage(),
     quizList: new QuizList(),
+    quizQuestionsFilter: new QuizQuestionsFilter(),
     quizPage: new QuizPage(),
 }
 
@@ -135,11 +137,26 @@ export const routes = {
             }
         }
     ),
+    quizQuestionsFilter: new Route(
+        {
+            paths: ["quiz-questions-filter/:regionId"],
+            responseHandler: ({ data }) => {
+                const content = pages.quizQuestionsFilter.render({regionId: data.regionId});
+                renderPage(content);
+            },
+            onLeaveHandler: (done) => {
+                pages.quizQuestionsFilter.cleanUp();
+
+                done();
+            }
+        }
+    ),
     quizPage: new Route(
         {
             paths: ["quiz/:regionId"],
-            responseHandler: ({ data }) => {
-                const content = pages.quizPage.render({regionId: data.regionId});
+            responseHandler: ({ data, queryString }) => {
+                const searchParams = new URLSearchParams(queryString);
+                const content = pages.quizPage.render({regionId: data.regionId, questionsFilter: searchParams.get("questions")});
                 renderPage(content);
             },
             onLeaveHandler: (done) => {

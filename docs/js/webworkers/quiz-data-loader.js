@@ -8,7 +8,7 @@ self.onmessage = (e) => {
     }
 
     const questionsDataFactory = new QuestionsDataFactory({passThroughMode: data.passThroughMode ?? false});
-    const questionsData = questionsDataFactory.createQuestionsData({regionId: data.regionId});
+    const questionsData = questionsDataFactory.createQuestionsData({regionId: data.regionId, questionsFilter: data.questionsFilter});
 
     self.postMessage({type: "TYPE_FINISHED", data: JSON.stringify(questionsData)});
 }
