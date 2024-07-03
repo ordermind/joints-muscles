@@ -7,6 +7,7 @@ export default class Quiz {
     #passThroughMode = false;
 
     #regionId;
+    #questionsFilter;
 
     #quizDataLoaderWorker;
     #questionsData;
@@ -14,8 +15,9 @@ export default class Quiz {
     #currentQuestionIndex;
     #wrapper;
 
-    constructor({regionId}) {
+    constructor({regionId, questionsFilter}) {
         this.#regionId = regionId;
+        this.#questionsFilter = questionsFilter;
 
         this.nextQuestionCallback = this.nextQuestionCallback.bind(this);
         this.onClickRestartButton = this.onClickRestartButton.bind(this);
@@ -64,6 +66,7 @@ export default class Quiz {
             type: "TYPE_START",
             data: {
                 regionId: this.#regionId,
+                questionsFilter: this.#questionsFilter,
                 passThroughMode: this.#passThroughMode,
             },
         });
@@ -104,8 +107,9 @@ export default class Quiz {
     }
 
     #renderQuestion() {
-        const isLastQuestion = this.#currentQuestionIndex === this.#questionsData.length - 1;
-        const nextQuestionButtonText = isLastQuestion ? "Klaar!" : this.#questionsData[this.#currentQuestionIndex + 1].data.previousNextQuestionButtonText;
+        const isLastQuestionOfChain = this.#questionsData[this.#currentQuestionIndex].isLastQuestionOfChain;
+        const isLastQuestionOfQuiz = this.#currentQuestionIndex === this.#questionsData.length - 1;
+        const nextQuestionButtonText = isLastQuestionOfQuiz ? "Klaar!" : isLastQuestionOfChain ? "Volgende vraag" : this.#questionsData[this.#currentQuestionIndex + 1].data.previousNextQuestionButtonText;
         this.#currentQuestion = transformQuestionDataToQuestion(this.#questionsData[this.#currentQuestionIndex]);
 
         removeChildren(this.#wrapper);

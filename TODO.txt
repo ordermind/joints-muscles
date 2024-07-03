@@ -4,10 +4,10 @@
   - I stället för att varje gång filtrera hela arrayen, gör en imperativ lösning där de återstående items returneras varje gång och sedan används som parameter till nästa filterfunktion
   - Gör inte en shuffle för varje filtergrupp, det borde räcka med att göra en enda shuffle i början.
 - Ändra ev. knappen för att gå vidare till nästa fråga så att den alltid visas men är disablead
-- Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 - Lägg ev. till quizfråga för mlpp (multiple choice single answer)
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
+X Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 X Lägg till filter för speciale functies i listan för muskler i kennisbanken
 X Fyll på information för m. rectus abdominis angående mitt val för origo och insertie
 X Visa notes för draggable questions när man har placerat ett svar i rätt fack

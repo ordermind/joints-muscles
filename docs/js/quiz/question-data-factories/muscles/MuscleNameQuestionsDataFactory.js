@@ -55,7 +55,7 @@ export default class MuscleNameQuestionsDataFactory {
     <img class="quiz-image" src="${correctMuscle.image}" />
 </div>
                     `.trim(),
-                    previousNextQuestionButtonText: "Volgende vraag",
+                    previousNextQuestionButtonText: "Spier herkennen",
                     passThroughMode: this.#passThroughMode,
                 }
             });
