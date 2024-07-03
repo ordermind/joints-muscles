@@ -1,6 +1,7 @@
 export default class QuestionData {
     #className;
     #data;
+    isLastQuestionOfChain = false;
 
     constructor({className, data}) {
         this.#className = className;
@@ -19,6 +20,7 @@ export default class QuestionData {
         return {
             className: this.className,
             data: this.data,
+            isLastQuestionOfChain: this.isLastQuestionOfChain
         };
     }
 }

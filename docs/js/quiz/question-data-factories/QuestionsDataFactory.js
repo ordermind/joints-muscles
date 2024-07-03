@@ -80,6 +80,10 @@ export default class QuestionsDataFactory {
             }
         }
 
+        if(questions.length) {
+            questions[questions.length - 1].isLastQuestionOfChain = true;
+        }
+
         return questions;
     }
 
@@ -106,6 +110,10 @@ export default class QuestionsDataFactory {
 
         if(muscleSpecialFunctionsQuestionsData.hasOwnProperty(muscle.id)) {
             questions.push(muscleSpecialFunctionsQuestionsData[muscle.id]);
+        }
+
+        if(questions.length) {
+            questions[questions.length - 1].isLastQuestionOfChain = true;
         }
 
         return questions;

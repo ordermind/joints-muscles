@@ -107,8 +107,9 @@ export default class Quiz {
     }
 
     #renderQuestion() {
-        const isLastQuestion = this.#currentQuestionIndex === this.#questionsData.length - 1;
-        const nextQuestionButtonText = isLastQuestion ? "Klaar!" : this.#questionsData[this.#currentQuestionIndex + 1].data.previousNextQuestionButtonText;
+        const isLastQuestionOfChain = this.#questionsData[this.#currentQuestionIndex].isLastQuestionOfChain;
+        const isLastQuestionOfQuiz = this.#currentQuestionIndex === this.#questionsData.length - 1;
+        const nextQuestionButtonText = isLastQuestionOfQuiz ? "Klaar!" : isLastQuestionOfChain ? "Volgende vraag" : this.#questionsData[this.#currentQuestionIndex + 1].data.previousNextQuestionButtonText;
         this.#currentQuestion = transformQuestionDataToQuestion(this.#questionsData[this.#currentQuestionIndex]);
 
         removeChildren(this.#wrapper);

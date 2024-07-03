@@ -49,7 +49,7 @@ export default class JointNameQuestionsDataFactory {
     <img class="quiz-image" src="${correctJoint.image}" />
 </div>
                     `.trim(),
-                    previousNextQuestionButtonText: "Volgende vraag",
+                    previousNextQuestionButtonText: "Gewricht herkennen",
                     passThroughMode: this.#passThroughMode,
                 }
             });
