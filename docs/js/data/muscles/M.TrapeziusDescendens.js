@@ -23,6 +23,7 @@ export default new Muscle(
                     muscleId: "m_trapezius_descendens",
                     movementId: "juncturae_craniovertebrales__extension",
                     isPrimeMover: false,
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
             new JointMuscleFunction(
@@ -32,6 +33,7 @@ export default new Muscle(
                     muscleId: "m_trapezius_descendens",
                     movementId: "juncturae_craniovertebrales__lateroflexion",
                     isPrimeMover: false,
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
             new JointMuscleFunction(
@@ -43,6 +45,7 @@ export default new Muscle(
                     movementLabelOverride: "contralaterale rotatie",
                     isPrimeMover: false,
                     notes: ["contralaterale rotatie"],
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
             new JointMuscleFunction(
@@ -52,6 +55,7 @@ export default new Muscle(
                     muscleId: "m_trapezius_descendens",
                     movementId: "columna_vertebralis_cervicalis__extension",
                     isPrimeMover: false,
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
             new JointMuscleFunction(
@@ -61,6 +65,7 @@ export default new Muscle(
                     muscleId: "m_trapezius_descendens",
                     movementId: "columna_vertebralis_cervicalis__lateroflexion",
                     isPrimeMover: false,
+                    notes: ["alleen bij gefixeerde insertie"],
                 }
             ),
             new JointMuscleFunction(
