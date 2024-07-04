@@ -12,7 +12,7 @@ export default new Muscle(
             "extremitates sternalis cartilaginum costarum 4&nbsp;-&nbsp;7",
         ],
         insertions: [
-            "facies interna cartilaginum costarum 2&nbsp;-&nbsp;6",
+            "facies internae cartilaginum costarum 2&nbsp;-&nbsp;6",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
