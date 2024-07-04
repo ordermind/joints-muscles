@@ -22,7 +22,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "cartilagines costales 1&nbsp;-&nbsp;6",
+                    label: "facies externae cartilaginum costarum 1&nbsp;-&nbsp;6",
                     notes: ["pars sternocostalis"],
                 }
             ),
