@@ -10,7 +10,7 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "epicondylus medialis humeri",
-                    notes: ["caput humerale"],
+                    notes: ["via de common flexor tendon (CFT)", "caput humerale"],
                 }
             ),
             new AnatomicStructure(

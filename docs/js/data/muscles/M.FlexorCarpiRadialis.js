@@ -1,12 +1,18 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_flexor_carpi_radialis",
         label: "m. flexor carpi radialis",
         origos: [
-            "epicondylus medialis humeri",
+            new AnatomicStructure(
+                {
+                    label: "epicondylus medialis humeri",
+                    notes: ["via de common flexor tendon (CFT)"],
+                }
+            ),
         ],
         insertions: [
             "bases ossium metacarpalium II et III (palmair)",

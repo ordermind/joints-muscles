@@ -1,13 +1,19 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
         id: "m_palmaris_longus",
         label: "m. palmaris longus",
         origos: [
-            "epicondylus medialis humeri"
+            new AnatomicStructure(
+                {
+                    label: "epicondylus medialis humeri",
+                    notes: ["via de common flexor tendon (CFT)"],
+                }
+            ),
         ],
         insertions: [
             "aponeurosis palmaris",
