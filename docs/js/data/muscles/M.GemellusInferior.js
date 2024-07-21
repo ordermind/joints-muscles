@@ -17,8 +17,11 @@ export default new Muscle(
         insertions: [
             new AnatomicStructure(
                 {
-                    label: "fossa trochanterica femoris",
-                    notes: ["via de pees van de m. obturatorius internus"],
+                    label: "trochanter major femoris (mediaal)",
+                    notes: [
+                        "boven de fossa trochanterica femoris",
+                        "via de pees van de m. obturatorius internus"
+                    ],
                 }
             ),
         ],
