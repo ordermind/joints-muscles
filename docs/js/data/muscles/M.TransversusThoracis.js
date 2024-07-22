@@ -9,7 +9,7 @@ export default new Muscle(
         origos: [
             "facies inferoposterior corporis sterni",
             "facies posterior processus xiphoidei",
-            "extremitates sternalis cartilaginum costarum 4&nbsp;-&nbsp;7",
+            "extremitates sternales cartilaginum costarum 4&nbsp;-&nbsp;7",
         ],
         insertions: [
             "facies internae cartilaginum costarum 2&nbsp;-&nbsp;6",
