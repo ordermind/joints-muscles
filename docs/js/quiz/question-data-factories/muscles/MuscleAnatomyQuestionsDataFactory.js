@@ -27,7 +27,7 @@ export default class MuscleAnatomyQuestionsDataFactory {
         for(const otherMuscle of otherMuscles) {
             for(const origo of otherMuscle.origos) {
                 const shortOrigoLabel = renderAnatomicStructureOrString(origo);
-                const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true});
+                const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true, notesDirection: "nw"});
 
                 if(!answers.hasOwnProperty(shortOrigoLabel)) {
                     answers[shortOrigoLabel] = labelWithNotes;
@@ -41,7 +41,7 @@ export default class MuscleAnatomyQuestionsDataFactory {
 
             for(const insertion of otherMuscle.insertions) {
                 const shortInsertionLabel = renderAnatomicStructureOrString(insertion);
-                const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true});
+                const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true, notesDirection: "nw"});
 
                 if(!answers.hasOwnProperty(shortInsertionLabel)) {
                     answers[shortInsertionLabel] = labelWithNotes;
@@ -66,14 +66,14 @@ export default class MuscleAnatomyQuestionsDataFactory {
 
         for(const origo of correctMuscle.origos) {
             const shortOrigoLabel = renderAnatomicStructureOrString(origo);
-            const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true});
+            const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true, notesDirection: "nw"});
 
             correctSolution.origo[shortOrigoLabel] = labelWithNotes;
         }
 
         for(const insertion of correctMuscle.insertions) {
             const shortInsertionLabel = renderAnatomicStructureOrString(insertion);
-            const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true});
+            const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true, notesDirection: "nw"});
 
             correctSolution.insertion[shortInsertionLabel] = labelWithNotes;
         }

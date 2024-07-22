@@ -43,7 +43,7 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
                 }
 
                 const shortAnswerLabel = this.#createShortAnswerLabel(jointFunction);
-                const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)));
+                const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)), {direction: "nw"});
 
                 if(!answers.hasOwnProperty(shortAnswerLabel)) {
                     answers[shortAnswerLabel] = labelWithNotes;
@@ -67,7 +67,7 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
 
         for(const jointFunction of correctMuscle.functions) {
             const shortAnswerLabel = this.#createShortAnswerLabel(jointFunction);
-            const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)));
+            const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)), {direction: "nw"});
 
             if(jointFunction.isPrimeMover) {
                 correctSolution.primeMover[shortAnswerLabel] = labelWithNotes;

@@ -40,7 +40,7 @@ export default class JointFunctionsQuestionsDataFactory {
             )
         )) {
             if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
-                answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
+                answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes, {direction: "nw"});
                 totalAnswersCount++;
             }
 
@@ -58,7 +58,7 @@ export default class JointFunctionsQuestionsDataFactory {
         for(const otherJoint of otherJointsInTheSameRegion) {
             for(const muscleFunction of shuffle(muscleFunctions.filter(muscleFunction => muscleFunction.jointId === otherJoint.id))) {
                 if(!answers.hasOwnProperty(muscleFunction.muscleId)) {
-                    answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
+                    answers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes, {direction: "nw"});
                     totalAnswersCount++;
                 }
 
@@ -78,11 +78,11 @@ export default class JointFunctionsQuestionsDataFactory {
         };
 
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && muscleFunction.isPrimeMover)) {
-            correctSolution.primeMovers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
+            correctSolution.primeMovers[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes, {direction: "nw"});
         }
 
         for(const muscleFunction of muscleFunctions.filter(muscleFunction => muscleFunction.movementId === movement.id && !muscleFunction.isPrimeMover)) {
-            correctSolution.otherMuscles[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes);
+            correctSolution.otherMuscles[muscleFunction.muscleId] = objMuscles[muscleFunction.muscleId].label + renderNotesTooltip(muscleFunction.notes, {direction: "nw"});
         }
 
         return correctSolution;

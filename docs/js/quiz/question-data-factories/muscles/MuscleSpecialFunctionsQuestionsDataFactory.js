@@ -27,7 +27,7 @@ export default class MuscleSpecialFunctionsQuestionsDataFactory {
         for(const otherMuscle of otherMuscles) {
             for(const specialFunction of otherMuscle.specialFunctions) {
                 if(!answers.hasOwnProperty(specialFunction.functionDescription)) {
-                    const descriptionWithNotes = specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes);
+                    const descriptionWithNotes = specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes, {direction: "nw"});
 
                     answers[specialFunction.functionDescription] = descriptionWithNotes;
                     totalAnswersCount++;
@@ -48,7 +48,7 @@ export default class MuscleSpecialFunctionsQuestionsDataFactory {
         };
 
         for(const specialFunction of correctMuscle.specialFunctions) {
-            const descriptionWithNotes = specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes);
+            const descriptionWithNotes = specialFunction.functionDescription + renderNotesTooltip(specialFunction.notes, {direction: "nw"});
 
             correctSolution.specialFunctions[specialFunction.functionDescription] = descriptionWithNotes;
         }
