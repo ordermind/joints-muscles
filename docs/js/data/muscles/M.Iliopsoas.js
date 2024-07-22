@@ -10,7 +10,7 @@ export default new Muscle(
         origos: [
             new AnatomicStructure(
                 {
-                    label: "facies anterolaterales corporum vertebrae T12&nbsp;-&nbsp;L5",
+                    label: "facies anterolaterales corporum vertebralium T12&nbsp;-&nbsp;L5",
                     notes: ["m. psoas major"],
                 }
             ),

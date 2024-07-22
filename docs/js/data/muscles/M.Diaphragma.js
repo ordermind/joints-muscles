@@ -34,7 +34,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "facies anterior corporum vertebrales L1&nbsp;-&nbsp;L3",
+                    label: "facies anteriores corporum vertebralium L1&nbsp;-&nbsp;L3",
                     notes: ["pars lumbalis"],
                 }
             ),
