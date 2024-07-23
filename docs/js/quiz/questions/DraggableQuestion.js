@@ -48,7 +48,7 @@ export default class DraggableQuestion {
     }
 
     #stripTooltipWrapperFromLabel(label) {
-        return label.split('<div class="tooltip-wrapper">')[0].trim();
+        return label.split(/<div class="tooltip-wrapper"[^>]*>/)[0].trim();
     }
 
     #removePlacementClasses(element) {
