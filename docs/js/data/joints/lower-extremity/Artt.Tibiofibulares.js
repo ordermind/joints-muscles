@@ -13,7 +13,7 @@ export default [
             description: `
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie van de fibula naar proximaal bij dorsaalflexie van de voet.
 
-Dit gewricht vormt samen met de [Link type="Joint" targetId="membrana_interossea_cruris" label="membrana interossea cruris"] en de [Link type="Joint" targetId="art_tibiofibularis_distalis" label="art. tibiofibularis distalis"] een drietal verbindingen tussen fibula en tibia dat functioneel één geheel vormt.
+Dit gewricht vormt samen met de [Link type="Joint" targetId="membrana_interossea_cruris" label="membrana interossea cruris"] en de [Link type="Joint" targetId="art_tibiofibularis_distalis" label="art. tibiofibularis distalis (syndesmosis tibiofibularis)"] een drietal verbindingen tussen fibula en tibia dat functioneel één geheel vormt.
             `.trim(),
         }
     ),
@@ -25,7 +25,7 @@ Dit gewricht vormt samen met de [Link type="Joint" targetId="membrana_interossea
             typeIds: ["junctura_fibrosa"],
             image: "./images/joints/membrana_interossea_cruris.jpeg",
             description: `
-De membrana interossea cruris is een strak bindweefselvlies dat tussen de tibia en fibula is gespannen. Het vormt samen met [Link type="Joint" targetId="art_tibiofibularis_distalis" label="art. tibiofibularis distalis"] de <em>syndesmosis tibiofibularis</em>.
+De membrana interossea cruris is een strak bindweefselvlies dat tussen de tibia en fibula is gespannen.
 
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie tussen tibia en fibula.
             `.trim(),
@@ -35,17 +35,24 @@ Bewegingsmogelijkheden zijn beperkt tot een geringe translatie tussen tibia en f
         {
             id: "art_tibiofibularis_distalis",
             regionId: "lower_extremity",
-            label: "art. tibiofibularis distalis",
+            label: "art. tibiofibularis distalis (syndesmosis tibiofibularis)",
             typeIds: ["junctura_fibrosa"],
             cpp: "maximale dorsaalflexie enkel",
             mlpp: "10° plantairflexie enkel",
             image: "./images/joints/art_tibiofibularis_distalis.jpeg",
             description: `
-Art. tibiofibularis distalis vormt samen met de [Link type="Joint" targetId="membrana_interossea_cruris" label="membrana interossea cruris"] de <em>syndesmosis tibiofibularis</em>.
+Een andere naam voor de art. tibiofibularis distalis is <em>syndesmosis tibiofibularis</em>. Soms wordt als onderdeel van de <em>syndesmosis tibiofibularis</em> ook de hele [Link type="Joint" targetId="membrana_interossea_cruris" label="membrana interossea cruris"] meegerekend.
+
+Deze fibreuze verbinding bestaat uit:
+
+- lig. tibiofibulare anterius (inferius)
+- lig. tibiofibulare posterius (inferius)
+- lig. tibiofibulare transversum (inferius)
+- lig. interosseum
+
+<img src="./images/misc/syndesmosis_tibiofibularis_ligaments.webp" />
 
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie tussen tibia en fibula.
-
-Soms breidt de gewrichtsspleet van het bovenste spronggewricht zich uit tussen tibia en fibula; de verbinding wordt dan ook wel articulatio tibio-fibularis distalis genoemd. Tibia en fibula worden ter plaatse (zoals gebruikelijk bij een bandverbinding) door ligamenten bij elkaar gehouden.
             `.trim(),
         }
     ),

@@ -171,4 +171,20 @@ De art. radioulnaris is een duplexgewricht en bestaat uit twee subgewrichten die
             `,
         }
     ),
+    new Joint(
+        {
+            id: "membrana_interossea_antebrachii",
+            regionId: "upper_extremity",
+            label: "membrana interossea antebrachii",
+            typeIds: ["junctura_fibrosa"],
+            image: "./images/joints/membrana_interossea_antebrachii.jpeg",
+            description: `
+De membrana interossea antebrachii is een bindweefselvlies tussen de radius en ulna.
+
+Bewegingsmogelijkheden bevatten pronatie en supinatie (zie [Link type="Joint" targetId="art_radioulnaris" label="art. radioulnaris"]).
+
+Het bindweefselvlies staat alleen strak gespannen in de middenstand tussen pronatie en supinatie. Het is ook van belang als aanhechtingsareaal voor spieren en speelt een rol bij de overdracht van krachten van de radius op de ulna (en omgekeerd).
+            `.trim(),
+        }
+    ),
 ];
