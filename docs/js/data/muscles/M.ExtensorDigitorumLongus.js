@@ -11,7 +11,7 @@ export default new Muscle(
             "membrana interossea cruris",
         ],
         insertions: [
-            "phalanges mediae et distales II&nbsp;-&nbsp;V (dorsaal)",
+            "aponeuroses dorsales phalangium II&nbsp;-&nbsp;V",
         ],
         functions: [
             new JointMuscleFunction(
