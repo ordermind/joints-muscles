@@ -60,7 +60,7 @@ export default [
         {
             id: "artt_metatarsophalangeae_2_4",
             regionId: "lower_extremity",
-            label: "artt. metatarsophalangeae II - IV (MTP II - IV)",
+            label: "artt. metatarsophalangeae II&nbsp;-&nbsp;IV (MTP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
             mlpp: "lichte extensie",
@@ -83,6 +83,29 @@ export default [
                         endFeel: "capsulair",
                     }
                 ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_4__abduction",
+                        jointId: "artt_metatarsophalangeae_2_4",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_4__adduction",
+                        jointId: "artt_metatarsophalangeae_2_4",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_4__circumduction",
+                        jointId: "artt_metatarsophalangeae_2_4",
+                        label: "circumductie",
+                    }
+                ),
             ],
             image: "./images/joints/artt_metatarsophalangeae_2_4.jpeg",
             childrenIds: [
@@ -96,7 +119,7 @@ export default [
         {
             id: "artt_metatarsophalangeae_2_5",
             regionId: "lower_extremity",
-            label: "artt. metatarsophalangeae II - V (MTP II - V)",
+            label: "artt. metatarsophalangeae II&nbsp;-&nbsp;V (MTP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
             mlpp: "lichte extensie",
@@ -117,6 +140,29 @@ export default [
                         label: "extensie",
                         rom: "70°",
                         endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_5__abduction",
+                        jointId: "artt_metatarsophalangeae_2_5",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_5__adduction",
+                        jointId: "artt_metatarsophalangeae_2_5",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_2_5__circumduction",
+                        jointId: "artt_metatarsophalangeae_2_5",
+                        label: "circumductie",
                     }
                 ),
             ],
@@ -156,8 +202,90 @@ export default [
                         endFeel: "capsulair",
                     }
                 ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_2__abduction",
+                        jointId: "art_metatarsophalangea_2",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_2__adduction",
+                        jointId: "art_metatarsophalangea_2",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_2__circumduction",
+                        jointId: "art_metatarsophalangea_2",
+                        label: "circumductie",
+                    }
+                ),
             ],
             image: "./images/joints/art_metatarsophalangea_2.jpeg",
+        }
+    ),
+    new Joint(
+        {
+            id: "artt_metatarsophalangeae_3_5",
+            regionId: "lower_extremity",
+            label: "artt. metatarsophalangeae III&nbsp;-&nbsp;V (MTP III&nbsp;-&nbsp;V)",
+            typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
+            cpp: "maximale extensie",
+            mlpp: "lichte extensie",
+            movements: [
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_3_5__flexion",
+                        jointId: "artt_metatarsophalangeae_3_5",
+                        label: "flexie",
+                        rom: "45°",
+                        endFeel: "hard capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_3_5__extension",
+                        jointId: "artt_metatarsophalangeae_3_5",
+                        label: "extensie",
+                        rom: "70°",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_3_5__abduction",
+                        jointId: "artt_metatarsophalangeae_3_5",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_3_5__adduction",
+                        jointId: "artt_metatarsophalangeae_3_5",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metatarsophalangeae_3_5__circumduction",
+                        jointId: "artt_metatarsophalangeae_3_5",
+                        label: "circumductie",
+                    }
+                ),
+            ],
+            image: "./images/joints/artt_metatarsophalangeae_3_5.jpeg",
+            childrenIds: [
+                "art_metatarsophalangea_3",
+                "art_metatarsophalangea_4",
+                "art_metatarsophalangea_5",
+            ],
         }
     ),
     new Joint(
@@ -185,6 +313,29 @@ export default [
                         label: "extensie",
                         rom: "70°",
                         endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_3__abduction",
+                        jointId: "art_metatarsophalangea_3",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_3__adduction",
+                        jointId: "art_metatarsophalangea_3",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_3__circumduction",
+                        jointId: "art_metatarsophalangea_3",
+                        label: "circumductie",
                     }
                 ),
             ],
@@ -216,6 +367,29 @@ export default [
                         label: "extensie",
                         rom: "70°",
                         endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_4__abduction",
+                        jointId: "art_metatarsophalangea_4",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_4__adduction",
+                        jointId: "art_metatarsophalangea_4",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_4__circumduction",
+                        jointId: "art_metatarsophalangea_4",
+                        label: "circumductie",
                     }
                 ),
             ],

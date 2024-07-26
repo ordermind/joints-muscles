@@ -91,7 +91,7 @@ Hierbij een uitleg van de betekenis van de verschillende bewegingen van de duim:
         {
             id: "artt_carpometacarpales_2_5",
             regionId: "upper_extremity",
-            label: "artt. carpometacarpales II - V (CMC II - V)",
+            label: "artt. carpometacarpales II&nbsp;-&nbsp;V (CMC II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_plana"],
             image: "./images/joints/artt_carpometacarpales_2_5.jpeg",
             description: `

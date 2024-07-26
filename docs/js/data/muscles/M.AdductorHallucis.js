@@ -12,7 +12,7 @@ export default new Muscle(
         origos: [
             new AnatomicStructure(
                 {
-                    label: "bases ossium metatarsalium II - IV (plantair)",
+                    label: "bases ossium metatarsalium II&nbsp;-&nbsp;IV (plantair)",
                     notes: ["caput obliquum"]
                 }
             ),
@@ -24,7 +24,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "ligg. metatarsophalangealia plantaria digitorum III - V",
+                    label: "ligg. metatarsophalangealia plantaria digitorum III&nbsp;-&nbsp;V",
                     notes: ["caput transversum"]
                 }
             ),

@@ -37,7 +37,7 @@ export default [
         {
             id: "artt_metacarpophalangeae_2_5",
             regionId: "upper_extremity",
-            label: "artt. metacarpophalangeae II - V (MCP II - V)",
+            label: "artt. metacarpophalangeae II&nbsp;-&nbsp;V (MCP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",
             mlpp: "lichte flexie met lichte adductie",

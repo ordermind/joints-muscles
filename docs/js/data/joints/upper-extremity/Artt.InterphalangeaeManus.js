@@ -37,7 +37,7 @@ export default [
         {
             id: "artt_interphalangeae_proximales_manus_2_5",
             regionId: "upper_extremity",
-            label: "artt. interphalangeae proximales manus II - V (PIP II - V)",
+            label: "artt. interphalangeae proximales manus II&nbsp;-&nbsp;V (PIP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
@@ -198,7 +198,7 @@ export default [
         {
             id: "artt_interphalangeae_distales_manus_2_5",
             regionId: "upper_extremity",
-            label: "artt. interphalangeae distales manus II - V (DIP II - V)",
+            label: "artt. interphalangeae distales manus II&nbsp;-&nbsp;V (DIP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",

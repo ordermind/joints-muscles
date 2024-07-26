@@ -17,7 +17,7 @@ export default new Muscle(
         functions: [
             new JointMuscleFunction(
                 {
-                    muscleId: muscleId,
+                    muscleId,
                     movementId: "",
                     isPrimeMover: false,
                 }
@@ -27,7 +27,7 @@ export default new Muscle(
             new SpecialMuscleFunction(
                 {
                     id: muscleId + "__" + "",
-                    muscleId: muscleId,
+                    muscleId,
                     functionDescription: "",
                 }
             ),

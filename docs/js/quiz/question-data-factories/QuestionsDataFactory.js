@@ -40,10 +40,13 @@ export default class QuestionsDataFactory {
             "artt_interphalangeae_distales_manus_2_5",
             "artt_metatarsophalangeae_2_4",
             "artt_metatarsophalangeae_2_5",
+            "artt_metatarsophalangeae_3_5",
             "artt_interphalangeae_proximales_pedis_2_4",
             "artt_interphalangeae_proximales_pedis_2_5",
+            "artt_interphalangeae_proximales_pedis_3_5",
             "artt_interphalangeae_distales_pedis_2_4",
             "artt_interphalangeae_distales_pedis_2_5",
+            "artt_interphalangeae_distales_pedis_3_5",
         ];
 
         const filteredJoints = arrJoints.filter(joint => {
