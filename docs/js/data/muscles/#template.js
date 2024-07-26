@@ -32,7 +32,7 @@ export default new Muscle(
                 }
             ),
         ],
-        image: "",
+        image: `./images/muscles/${muscleId}.jpeg`,
         description: `
 
         `.trim(),

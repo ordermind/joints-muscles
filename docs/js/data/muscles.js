@@ -72,6 +72,7 @@ import m_plantaris from "./muscles/M.Plantaris.js";
 import m_popliteus from "./muscles/M.Popliteus.js";
 import m_pronator_quadratus from "./muscles/M.PronatorQuadratus.js";
 import m_pronator_teres from "./muscles/M.PronatorTeres.js";
+import m_psoas_minor from "./muscles/M.PsoasMinor.js";
 import m_pyramidalis from "./muscles/M.Pyramidalis.js";
 import m_quadratus_femoris from "./muscles/M.QuadratusFemoris.js";
 import m_quadratus_lumborum from "./muscles/M.QuadratusLumborum.js";
@@ -205,6 +206,7 @@ export const arrMuscles = [
     m_popliteus,
     m_pronator_quadratus,
     m_pronator_teres,
+    m_psoas_minor,
     m_pyramidalis,
     m_quadratus_femoris,
     m_quadratus_lumborum,
@@ -267,6 +269,7 @@ export const arrMuscles = [
     mm_rotatores_longi,
     mm_subcostales,
 ]
+.flat()
 .sort((a, b) => a.label.localeCompare(b.label));
 
 export const objMuscles = arrMuscles.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {});
