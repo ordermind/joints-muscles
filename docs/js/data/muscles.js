@@ -2,6 +2,7 @@
  * We have to use static imports rather than dynamic imports in order to be able to load data in a web worker.
  */
 
+import m_abductor_hallucis from "./muscles/M.AbductorHallucis.js";
 import m_adductor_brevis from "./muscles/M.AdductorBrevis.js";
 import m_adductor_longus from "./muscles/M.AdductorLongus.js";
 import m_adductor_magnus_adductoria from "./muscles/M.AdductorMagnusAdductoria.js";
@@ -138,6 +139,7 @@ import mm_rotatores_longi from "./muscles/MM.RotatoresLongi.js";
 import mm_subcostales from "./muscles/MM.Subcostales.js";
 
 export const arrMuscles = [
+    m_abductor_hallucis,
     m_adductor_brevis,
     m_adductor_longus,
     m_adductor_magnus_adductoria,

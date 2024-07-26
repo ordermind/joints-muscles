@@ -43,19 +43,19 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_extensor_digitorum_longus__artt_interphalangeae_proximales_pedum_2_5__extension",
-                    jointId: "artt_interphalangeae_proximales_pedum_2_5",
+                    id: "m_extensor_digitorum_longus__artt_interphalangeae_proximales_pedis_2_5__extension",
+                    jointId: "artt_interphalangeae_proximales_pedis_2_5",
                     muscleId: "m_extensor_digitorum_longus",
-                    movementId: "artt_interphalangeae_proximales_pedum_2_5__extension",
+                    movementId: "artt_interphalangeae_proximales_pedis_2_5__extension",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_extensor_digitorum_longus__artt_interphalangeae_distales_pedum_2_5__extension",
-                    jointId: "artt_interphalangeae_distales_pedum_2_5",
+                    id: "m_extensor_digitorum_longus__artt_interphalangeae_distales_pedis_2_5__extension",
+                    jointId: "artt_interphalangeae_distales_pedis_2_5",
                     muscleId: "m_extensor_digitorum_longus",
-                    movementId: "artt_interphalangeae_distales_pedum_2_5__extension",
+                    movementId: "artt_interphalangeae_distales_pedis_2_5__extension",
                     isPrimeMover: true,
                 }
             ),

@@ -35,17 +35,17 @@ export default [
     ),
     new Joint(
         {
-            id: "artt_interphalangeae_proximales_pedum_2_4",
+            id: "artt_interphalangeae_proximales_pedis_2_4",
             regionId: "lower_extremity",
-            label: "artt. interphalangeae proximales pedum II - IV (PIP II - IV)",
+            label: "artt. interphalangeae proximales pedis II - IV (PIP II - IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
             movements: [
                 new Movement(
                     {
-                        id: "artt_interphalangeae_proximales_pedum_2_4__flexion",
-                        jointId: "artt_interphalangeae_proximales_pedum_2_4",
+                        id: "artt_interphalangeae_proximales_pedis_2_4__flexion",
+                        jointId: "artt_interphalangeae_proximales_pedis_2_4",
                         label: "flexie",
                         rom: "80°",
                         endFeel: "hard capsulair",
@@ -53,15 +53,15 @@ export default [
                 ),
                 new Movement(
                     {
-                        id: "artt_interphalangeae_proximales_pedum_2_4__extension",
-                        jointId: "artt_interphalangeae_proximales_pedum_2_4",
+                        id: "artt_interphalangeae_proximales_pedis_2_4__extension",
+                        jointId: "artt_interphalangeae_proximales_pedis_2_4",
                         label: "extensie",
                         rom: "0°",
                         endFeel: "capsulair",
                     }
                 ),
             ],
-            image: "./images/joints/artt_interphalangeae_proximales_pedum_2_4.jpeg",
+            image: "./images/joints/artt_interphalangeae_proximales_pedis_2_4.jpeg",
             childrenIds: [
                 "art_interphalangea_proximalis_pedis_2",
                 "art_interphalangea_proximalis_pedis_3",
@@ -71,17 +71,17 @@ export default [
     ),
     new Joint(
         {
-            id: "artt_interphalangeae_proximales_pedum_2_5",
+            id: "artt_interphalangeae_proximales_pedis_2_5",
             regionId: "lower_extremity",
-            label: "artt. interphalangeae proximales pedum II - V (PIP II - V)",
+            label: "artt. interphalangeae proximales pedis II - V (PIP II - V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
             movements: [
                 new Movement(
                     {
-                        id: "artt_interphalangeae_proximales_pedum_2_5__flexion",
-                        jointId: "artt_interphalangeae_proximales_pedum_2_5",
+                        id: "artt_interphalangeae_proximales_pedis_2_5__flexion",
+                        jointId: "artt_interphalangeae_proximales_pedis_2_5",
                         label: "flexie",
                         rom: "80°",
                         endFeel: "hard capsulair",
@@ -89,15 +89,15 @@ export default [
                 ),
                 new Movement(
                     {
-                        id: "artt_interphalangeae_proximales_pedum_2_5__extension",
-                        jointId: "artt_interphalangeae_proximales_pedum_2_5",
+                        id: "artt_interphalangeae_proximales_pedis_2_5__extension",
+                        jointId: "artt_interphalangeae_proximales_pedis_2_5",
                         label: "extensie",
                         rom: "0°",
                         endFeel: "capsulair",
                     }
                 ),
             ],
-            image: "./images/joints/artt_interphalangeae_proximales_pedum_2_5.jpeg",
+            image: "./images/joints/artt_interphalangeae_proximales_pedis_2_5.jpeg",
             childrenIds: [
                 "art_interphalangea_proximalis_pedis_2",
                 "art_interphalangea_proximalis_pedis_3",
@@ -232,31 +232,31 @@ export default [
     ),
     new Joint(
         {
-            id: "artt_interphalangeae_distales_pedum_2_4",
+            id: "artt_interphalangeae_distales_pedis_2_4",
             regionId: "lower_extremity",
-            label: "artt. interphalangeae distales pedum II - IV (DIP II - IV)",
+            label: "artt. interphalangeae distales pedis II - IV (DIP II - IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
             movements: [
                 new Movement(
                     {
-                        id: "artt_interphalangeae_distales_pedum_2_4__flexion",
-                        jointId: "artt_interphalangeae_distales_pedum_2_4",
+                        id: "artt_interphalangeae_distales_pedis_2_4__flexion",
+                        jointId: "artt_interphalangeae_distales_pedis_2_4",
                         label: "flexie",
                         endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
                     {
-                        id: "artt_interphalangeae_distales_pedum_2_4__extension",
-                        jointId: "artt_interphalangeae_distales_pedum_2_4",
+                        id: "artt_interphalangeae_distales_pedis_2_4__extension",
+                        jointId: "artt_interphalangeae_distales_pedis_2_4",
                         label: "extensie",
                         endFeel: "capsulair",
                     }
                 ),
             ],
-            image: "./images/joints/artt_interphalangeae_distales_pedum_2_4.jpeg",
+            image: "./images/joints/artt_interphalangeae_distales_pedis_2_4.jpeg",
             childrenIds: [
                 "art_interphalangea_distalis_pedis_2",
                 "art_interphalangea_distalis_pedis_3",
@@ -266,31 +266,31 @@ export default [
     ),
     new Joint(
         {
-            id: "artt_interphalangeae_distales_pedum_2_5",
+            id: "artt_interphalangeae_distales_pedis_2_5",
             regionId: "lower_extremity",
-            label: "artt. interphalangeae distales pedum II - V (DIP II - V)",
+            label: "artt. interphalangeae distales pedis II - V (DIP II - V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
             mlpp: "lichte flexie",
             movements: [
                 new Movement(
                     {
-                        id: "artt_interphalangeae_distales_pedum_2_5__flexion",
-                        jointId: "artt_interphalangeae_distales_pedum_2_5",
+                        id: "artt_interphalangeae_distales_pedis_2_5__flexion",
+                        jointId: "artt_interphalangeae_distales_pedis_2_5",
                         label: "flexie",
                         endFeel: "hard capsulair",
                     }
                 ),
                 new Movement(
                     {
-                        id: "artt_interphalangeae_distales_pedum_2_5__extension",
-                        jointId: "artt_interphalangeae_distales_pedum_2_5",
+                        id: "artt_interphalangeae_distales_pedis_2_5__extension",
+                        jointId: "artt_interphalangeae_distales_pedis_2_5",
                         label: "extensie",
                         endFeel: "capsulair",
                     }
                 ),
             ],
-            image: "./images/joints/artt_interphalangeae_distales_pedum_2_5.jpeg",
+            image: "./images/joints/artt_interphalangeae_distales_pedis_2_5.jpeg",
             childrenIds: [
                 "art_interphalangea_distalis_pedis_2",
                 "art_interphalangea_distalis_pedis_3",

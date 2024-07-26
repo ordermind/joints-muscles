@@ -36,14 +36,14 @@ export default class QuestionsDataFactory {
             "columna_vertebralis",
             "artt_costovertebrales",
             "artt_metacarpophalangeae_2_5",
-            "artt_interphalangeae_proximales_manuum_2_5",
-            "artt_interphalangeae_distales_manuum_2_5",
+            "artt_interphalangeae_proximales_manus_2_5",
+            "artt_interphalangeae_distales_manus_2_5",
             "artt_metatarsophalangeae_2_4",
             "artt_metatarsophalangeae_2_5",
-            "artt_interphalangeae_proximales_pedum_2_4",
-            "artt_interphalangeae_proximales_pedum_2_5",
-            "artt_interphalangeae_distales_pedum_2_4",
-            "artt_interphalangeae_distales_pedum_2_5",
+            "artt_interphalangeae_proximales_pedis_2_4",
+            "artt_interphalangeae_proximales_pedis_2_5",
+            "artt_interphalangeae_distales_pedis_2_4",
+            "artt_interphalangeae_distales_pedis_2_5",
         ];
 
         const filteredJoints = arrJoints.filter(joint => {

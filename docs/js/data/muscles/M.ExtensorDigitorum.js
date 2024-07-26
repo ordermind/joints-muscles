@@ -38,19 +38,19 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_extensor_digitorum__artt_interphalangeae_proximales_manuum_2_5__extension",
-                    jointId: "artt_interphalangeae_proximales_manuum_2_5",
+                    id: "m_extensor_digitorum__artt_interphalangeae_proximales_manus_2_5__extension",
+                    jointId: "artt_interphalangeae_proximales_manus_2_5",
                     muscleId: "m_extensor_digitorum",
-                    movementId: "artt_interphalangeae_proximales_manuum_2_5__extension",
+                    movementId: "artt_interphalangeae_proximales_manus_2_5__extension",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_extensor_digitorum__artt_interphalangeae_distales_manuum_2_5__extension",
-                    jointId: "artt_interphalangeae_distales_manuum_2_5",
+                    id: "m_extensor_digitorum__artt_interphalangeae_distales_manus_2_5__extension",
+                    jointId: "artt_interphalangeae_distales_manus_2_5",
                     muscleId: "m_extensor_digitorum",
-                    movementId: "artt_interphalangeae_distales_manuum_2_5__extension",
+                    movementId: "artt_interphalangeae_distales_manus_2_5__extension",
                     isPrimeMover: true,
                 }
             ),

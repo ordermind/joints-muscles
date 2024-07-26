@@ -30,14 +30,14 @@ export default new Muscle(
             new JointMuscleFunction(
                 {
                     muscleId: muscleId,
-                    movementId: "artt_interphalangeae_proximales_pedum_2_4__extension",
+                    movementId: "artt_interphalangeae_proximales_pedis_2_4__extension",
                     isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
                     muscleId: muscleId,
-                    movementId: "artt_interphalangeae_distales_pedum_2_4__extension",
+                    movementId: "artt_interphalangeae_distales_pedis_2_4__extension",
                     isPrimeMover: true,
                 }
             ),

@@ -59,10 +59,10 @@ export default new Muscle(
             ),
             new JointMuscleFunction(
                 {
-                    id: "m_flexor_digitorum_superficialis__artt_interphalangeae_proximales_manuum_2_5__flexion",
-                    jointId: "artt_interphalangeae_proximales_manuum_2_5",
+                    id: "m_flexor_digitorum_superficialis__artt_interphalangeae_proximales_manus_2_5__flexion",
+                    jointId: "artt_interphalangeae_proximales_manus_2_5",
                     muscleId: "m_flexor_digitorum_superficialis",
-                    movementId: "artt_interphalangeae_proximales_manuum_2_5__flexion",
+                    movementId: "artt_interphalangeae_proximales_manus_2_5__flexion",
                     isPrimeMover: true,
                 }
             ),
