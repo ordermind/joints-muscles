@@ -2,6 +2,7 @@
  * We have to use static imports rather than dynamic imports in order to be able to load data in a web worker.
  */
 
+import m_abductor_digiti_minimi_pedis from "./muscles/M.AbductorDigitiMinimiPedis.js";
 import m_abductor_hallucis from "./muscles/M.AbductorHallucis.js";
 import m_adductor_brevis from "./muscles/M.AdductorBrevis.js";
 import m_adductor_hallucis from "./muscles/M.AdductorHallucis.js";
@@ -37,6 +38,7 @@ import m_fibularis_longus from "./muscles/M.FibularisLongus.js";
 import m_fibularis_tertius from "./muscles/M.FibularisTertius.js";
 import m_flexor_carpi_radialis from "./muscles/M.FlexorCarpiRadialis.js";
 import m_flexor_carpi_ulnaris from "./muscles/M.FlexorCarpiUlnaris.js";
+import m_flexor_digiti_minimi_brevis_pedis from "./muscles/M.FlexorDigitiMinimiBrevisPedis.js";
 import m_flexor_digitorum_longus from "./muscles/M.FlexorDigitorumLongus.js";
 import m_flexor_digitorum_profundus from "./muscles/M.FlexorDigitorumProfundus.js";
 import m_flexor_digitorum_superficialis from "./muscles/M.FlexorDigitorumSuperficialis.js";
@@ -141,6 +143,7 @@ import mm_rotatores_longi from "./muscles/MM.RotatoresLongi.js";
 import mm_subcostales from "./muscles/MM.Subcostales.js";
 
 export const arrMuscles = [
+    m_abductor_digiti_minimi_pedis,
     m_abductor_hallucis,
     m_adductor_brevis,
     m_adductor_hallucis,
@@ -176,6 +179,7 @@ export const arrMuscles = [
     m_fibularis_tertius,
     m_flexor_carpi_radialis,
     m_flexor_carpi_ulnaris,
+    m_flexor_digiti_minimi_brevis_pedis,
     m_flexor_digitorum_longus,
     m_flexor_digitorum_profundus,
     m_flexor_digitorum_superficialis,

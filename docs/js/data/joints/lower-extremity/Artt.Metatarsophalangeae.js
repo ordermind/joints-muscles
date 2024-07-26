@@ -249,6 +249,29 @@ export default [
                         endFeel: "capsulair",
                     }
                 ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_5__abduction",
+                        jointId: "art_metatarsophalangea_5",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_5__adduction",
+                        jointId: "art_metatarsophalangea_5",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_metatarsophalangea_5__circumduction",
+                        jointId: "art_metatarsophalangea_5",
+                        label: "circumductie",
+                    }
+                ),
             ],
             image: "./images/joints/art_metatarsophalangea_5.jpeg",
         }
