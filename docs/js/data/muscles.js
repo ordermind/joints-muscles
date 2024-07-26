@@ -39,6 +39,7 @@ import m_flexor_carpi_ulnaris from "./muscles/M.FlexorCarpiUlnaris.js";
 import m_flexor_digitorum_longus from "./muscles/M.FlexorDigitorumLongus.js";
 import m_flexor_digitorum_profundus from "./muscles/M.FlexorDigitorumProfundus.js";
 import m_flexor_digitorum_superficialis from "./muscles/M.FlexorDigitorumSuperficialis.js";
+import m_flexor_hallucis_brevis from "./muscles/M.FlexorHallucisBrevis.js";
 import m_flexor_hallucis_longus from "./muscles/M.FlexorHallucisLongus.js";
 import m_flexor_pollicis_longus from "./muscles/M.FlexorPollicisLongus.js";
 import m_gastrocnemius from "./muscles/M.Gastrocnemius.js";
@@ -176,6 +177,7 @@ export const arrMuscles = [
     m_flexor_digitorum_longus,
     m_flexor_digitorum_profundus,
     m_flexor_digitorum_superficialis,
+    m_flexor_hallucis_brevis,
     m_flexor_hallucis_longus,
     m_flexor_pollicis_longus,
     m_gastrocnemius,

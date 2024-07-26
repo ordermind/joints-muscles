@@ -24,7 +24,7 @@ export default new Muscle(
                 {
                     muscleId: muscleId,
                     movementId: "art_metatarsophalangea_1__extension",
-                    isPrimeMover: true,
+                    isPrimeMover: false,
                 }
             ),
         ],
