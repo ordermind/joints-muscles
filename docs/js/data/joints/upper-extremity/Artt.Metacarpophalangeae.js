@@ -86,6 +86,8 @@ export default [
                 "art_metacarpophalangea_4",
                 "art_metacarpophalangea_5",
             ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(

@@ -113,6 +113,8 @@ export default [
                 "art_metatarsophalangea_3",
                 "art_metatarsophalangea_4",
             ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(
@@ -173,6 +175,8 @@ export default [
                 "art_metatarsophalangea_4",
                 "art_metatarsophalangea_5",
             ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(
@@ -286,6 +290,8 @@ export default [
                 "art_metatarsophalangea_4",
                 "art_metatarsophalangea_5",
             ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(

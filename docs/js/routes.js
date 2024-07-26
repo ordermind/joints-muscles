@@ -16,7 +16,10 @@ import QuizQuestionsFilter from "./pages/quiz-questions-filter.js";
 
 const pages = {
     home: new HomePage(),
-    jointsList: new JointsListPage(({arrJoints, jointTypes})),
+    jointsList: new JointsListPage(({
+        arrJoints: arrJoints.filter(joint => !joint.hideInList),
+        jointTypes
+    })),
     jointPage: new JointPage(),
     jointTypePage: new JointTypePage(),
     musclesList: new MuscleListPage({arrMuscles, objJoints}),

@@ -16,5 +16,6 @@ Caudaal in de thorax leidt de 'emmerhengselbeweging' tot vergroting van de links
 
 Bij rotaties van de romp als geheel zullen in genoemde gewrichten ook (passief of indirect) bewegingen optreden.
         `.trim(),
+        hideInQuiz: true,
     }
 );

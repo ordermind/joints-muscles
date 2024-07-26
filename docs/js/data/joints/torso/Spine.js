@@ -60,6 +60,7 @@ In de [Link type="Joint" targetId="columna_vertebralis_cervicalis" label="cervic
                 `.trim(),
             ],
             image: "./images/joints/columna_vertebralis.png",
+            hideInQuiz: true,
         }
     ),
     new Joint(

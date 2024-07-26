@@ -9,8 +9,10 @@ export default class Joint {
     #movements;
     #description;
     #image;
+    #hideInList;
+    #hideInQuiz;
 
-    constructor({id, childrenIds = [], regionId, label, typeIds = [], cpp = '', mlpp = '', movements = [], description = '', image = ''}) {
+    constructor({id, childrenIds = [], regionId, label, typeIds = [], cpp = '', mlpp = '', movements = [], description = '', image = '', hideInList = false, hideInQuiz = false}) {
         this.#id = id;
         this.#childrenIds = childrenIds;
         this.#regionId = regionId;
@@ -21,6 +23,8 @@ export default class Joint {
         this.#description = description;
         this.#movements = movements;
         this.#image = image;
+        this.#hideInList = hideInList;
+        this.#hideInQuiz = hideInQuiz;
     }
 
     get id() {
@@ -81,5 +85,13 @@ export default class Joint {
 
     get image() {
         return this.#image;
+    }
+
+    get hideInList() {
+        return this.#hideInList;
+    }
+
+    get hideInQuiz() {
+        return this.#hideInQuiz;
     }
 }

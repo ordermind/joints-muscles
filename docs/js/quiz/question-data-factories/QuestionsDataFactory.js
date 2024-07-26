@@ -32,26 +32,9 @@ export default class QuestionsDataFactory {
     }
 
     #createQuizDataForRegion(regionId) {
-        const skipJoints = [
-            "columna_vertebralis",
-            "artt_costovertebrales",
-            "artt_metacarpophalangeae_2_5",
-            "artt_interphalangeae_proximales_manus_2_5",
-            "artt_interphalangeae_distales_manus_2_5",
-            "artt_metatarsophalangeae_2_4",
-            "artt_metatarsophalangeae_2_5",
-            "artt_metatarsophalangeae_3_5",
-            "artt_interphalangeae_proximales_pedis_2_4",
-            "artt_interphalangeae_proximales_pedis_2_5",
-            "artt_interphalangeae_proximales_pedis_3_5",
-            "artt_interphalangeae_distales_pedis_2_4",
-            "artt_interphalangeae_distales_pedis_2_5",
-            "artt_interphalangeae_distales_pedis_3_5",
-        ];
-
         const filteredJoints = arrJoints.filter(joint => {
             return (regionId === 'all' || joint.regionId === regionId)
-            && !skipJoints.includes(joint.id);
+            && !joint.hideInQuiz
         });
 
         const filteredMuscles = arrMuscles.filter(muscle => {

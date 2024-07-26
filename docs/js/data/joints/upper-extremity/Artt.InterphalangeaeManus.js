@@ -68,6 +68,8 @@ export default [
                 "art_interphalangea_proximalis_manus_4",
                 "art_interphalangea_proximalis_manus_5",
             ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(
@@ -229,6 +231,8 @@ export default [
                 "art_interphalangea_distalis_manus_4",
                 "art_interphalangea_distalis_manus_5",
             ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(
