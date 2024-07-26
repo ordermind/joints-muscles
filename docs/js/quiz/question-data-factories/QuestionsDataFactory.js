@@ -42,6 +42,7 @@ export default class QuestionsDataFactory {
             "artt_metatarsophalangeae_2_5",
             "artt_interphalangeae_proximales_pedum_2_4",
             "artt_interphalangeae_proximales_pedum_2_5",
+            "artt_interphalangeae_distales_pedum_2_4",
             "artt_interphalangeae_distales_pedum_2_5",
         ];
 

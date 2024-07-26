@@ -25,6 +25,7 @@ import m_extensor_digiti_minimi from "./muscles/M.ExtensorDigitiMinimi.js";
 import m_extensor_digitorum from "./muscles/M.ExtensorDigitorum.js";
 import m_extensor_digitorum_brevis from "./muscles/M.ExtensorDigitorumBrevis.js";
 import m_extensor_digitorum_longus from "./muscles/M.ExtensorDigitorumLongus.js";
+import m_extensor_hallucis_brevis from "./muscles/M.ExtensorHallucisBrevis.js";
 import m_extensor_hallucis_longus from "./muscles/M.ExtensorHallucisLongus.js";
 import m_extensor_indicis from "./muscles/M.ExtensorIndicis.js";
 import m_extensor_pollicis_brevis from "./muscles/M.ExtensorPollicisBrevis.js";
@@ -160,6 +161,7 @@ export const arrMuscles = [
     m_extensor_digitorum,
     m_extensor_digitorum_brevis,
     m_extensor_digitorum_longus,
+    m_extensor_hallucis_brevis,
     m_extensor_hallucis_longus,
     m_extensor_indicis,
     m_extensor_pollicis_brevis,
