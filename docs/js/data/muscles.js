@@ -4,6 +4,7 @@
 
 import m_abductor_hallucis from "./muscles/M.AbductorHallucis.js";
 import m_adductor_brevis from "./muscles/M.AdductorBrevis.js";
+import m_adductor_hallucis from "./muscles/M.AdductorHallucis.js";
 import m_adductor_longus from "./muscles/M.AdductorLongus.js";
 import m_adductor_magnus_adductoria from "./muscles/M.AdductorMagnusAdductoria.js";
 import m_adductor_magnus_ischiadica from "./muscles/M.AdductorMagnusIschiadica.js";
@@ -142,6 +143,7 @@ import mm_subcostales from "./muscles/MM.Subcostales.js";
 export const arrMuscles = [
     m_abductor_hallucis,
     m_adductor_brevis,
+    m_adductor_hallucis,
     m_adductor_longus,
     m_adductor_magnus_adductoria,
     m_adductor_magnus_ischiadica,

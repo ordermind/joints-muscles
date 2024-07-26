@@ -18,7 +18,10 @@ export default new Muscle(
                 label: "basis phalangis proximalis I (mediaal)",
                 notes: ["plantair van de insertie van <em>m. abductor hallucis</em>"],
             }),
-            "basis phalangis proximalis I (lateraal)",
+            new AnatomicStructure({
+                label: "basis phalangis proximalis I (lateraal)",
+                notes: ["plantair van de insertie van <em>m. adductor hallucis</em>"],
+            })
         ],
         functions: [
             new JointMuscleFunction(
