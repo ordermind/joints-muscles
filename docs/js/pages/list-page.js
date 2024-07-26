@@ -10,11 +10,13 @@ export default class ListPage {
     #primaryLinksBlock;
     #showHideElementsBlock;
     #pageWrapper;
+    #stickyHeader;
 
     #items;
 
-    constructor(items) {
+    constructor(items, {stickyHeader = true} = {}) {
         this.#items = items;
+        this.#stickyHeader = stickyHeader;
 
         this.onUpdateFilters = debounce(this.onUpdateFilters.bind(this));
     }
@@ -169,10 +171,15 @@ export default class ListPage {
     }
 
     #renderList() {
+        const headerClasses = this.#stickyHeader ? ` class="sticky-top"` : "";
         const content = `
 <table class="table">
-    ${this.createHeaderRow()}
-    ${this.#createDataRows().join("")}
+    <thead${headerClasses}>
+        ${this.createHeaderRow()}
+    </thead>
+    <tbody>
+        ${this.#createDataRows().join("")}
+    </tbody>
 </table>
         `.trim();
 
