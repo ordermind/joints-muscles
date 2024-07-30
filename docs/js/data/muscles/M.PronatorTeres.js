@@ -48,7 +48,7 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_pronator_teres.jpeg",
         description: `
-
+De pees van de origo wordt de "common flexor tendon" (CFT) genoemd. Dit komt omdat dezelfde pees gebruikt wordt door zowel deze spier als de [Link type="Muscle" targetId="m_flexor_carpi_radialis" label="m. flexor carpi radialis"], [Link type="Muscle" targetId="m_flexor_carpi_ulnaris" label="m. flexor carpi ulnaris"], [Link type="Muscle" targetId="m_flexor_digitorum_superficialis" label="m. flexor digitorum superficialis"], en [Link type="Muscle" targetId="m_palmaris_longus" label="m. palmaris longus"].
         `.trim(),
     }
 );

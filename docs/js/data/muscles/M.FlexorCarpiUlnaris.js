@@ -62,6 +62,8 @@ export default new Muscle(
         ],
         image: "./images/muscles/m_flexor_carpi_ulnaris.jpeg",
         description: `
+De pees van de origo wordt de "common flexor tendon" (CFT) genoemd. Dit komt omdat dezelfde pees gebruikt wordt door zowel deze spier als de [Link type="Muscle" targetId="m_flexor_carpi_radialis" label="m. flexor carpi radialis"], [Link type="Muscle" targetId="m_pronator_teres" label="m. pronator teres"], [Link type="Muscle" targetId="m_flexor_digitorum_superficialis" label="m. flexor digitorum superficialis"], en [Link type="Muscle" targetId="m_palmaris_longus" label="m. palmaris longus"].
+
 Het <em>ligamentum pisohamatum</em> en het <em>ligamentum pisometacarpi</em> zijn te beschouwen als de voortzetting van de pees van deze spier, die hiermee via het <em>os pisiforme</em> aanhecht aan <em>os hamatum</em> en <em>os metacarpi V</em>.
         `.trim(),
     }

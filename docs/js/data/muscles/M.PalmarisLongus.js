@@ -51,6 +51,8 @@ export default new Muscle(
         image: "./images/muscles/m_palmaris_longus.jpeg",
         description: `
 Deze spier ontbreekt soms. De palmairaponeurose is dan echter wel aanwezig.
+
+De pees van de origo wordt de "common flexor tendon" (CFT) genoemd. Dit komt omdat dezelfde pees gebruikt wordt door zowel deze spier als de [Link type="Muscle" targetId="m_flexor_carpi_radialis" label="m. flexor carpi radialis"], [Link type="Muscle" targetId="m_flexor_carpi_ulnaris" label="m. flexor carpi ulnaris"], [Link type="Muscle" targetId="m_pronator_teres" label="m. pronator teres"], en [Link type="Muscle" targetId="m_flexor_digitorum_superficialis" label="m. flexor digitorum superficialis"].
         `.trim(),
     }
 );
