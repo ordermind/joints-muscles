@@ -36,6 +36,27 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
         const correctJoints = Array.from(new Set(correctMuscle.functions.map(jointFunction => jointFunction.jointId)));
         const skipJoints = correctJoints.flatMap(jointId => objJoints[jointId].childrenIds);
 
+        // Add the other functions of the correct joints so that it becomes more of a challenge
+        for(const jointId of correctJoints) {
+            for(const movement of objJoints[jointId].movements) {
+                if(movement.id.endsWith("__rotation")) {
+                    continue;
+                }
+
+                const shortLabel = `<em>${objJoints[jointId].shortLabel}</em>: ${movement.label}`;
+
+                if(!answers.hasOwnProperty(shortLabel)) {
+                    answers[shortLabel] = shortLabel;
+                    totalAnswersCount++;
+                }
+
+                if(totalAnswersCount >= this.#maxAnswers) {
+                    return answers;
+                }
+            }
+        }
+
+        // Fill up with random joint functions of related muscles
         for(const otherMuscle of otherMuscles) {
             for(const jointFunction of otherMuscle.functions) {
                 if(skipJoints.includes(jointFunction.jointId)) {
