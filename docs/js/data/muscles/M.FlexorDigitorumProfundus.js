@@ -10,7 +10,7 @@ export default new Muscle(
             "membrana interossea antebrachii",
         ],
         insertions: [
-            "bases phalangium distalium II&nbsp;-&nbsp;V (palmair)"
+            "bases phalangum distalium II&nbsp;-&nbsp;V (palmair)"
         ],
         functions: [
             new JointMuscleFunction(

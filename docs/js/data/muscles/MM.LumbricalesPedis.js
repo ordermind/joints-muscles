@@ -12,7 +12,7 @@ export default new Muscle(
         ],
         insertions: [
             "bases phalanges proximales II&nbsp;-&nbsp;V",
-            "aponeuroses dorsales phalangium II&nbsp;-&nbsp;V",
+            "aponeuroses dorsales phalangum II&nbsp;-&nbsp;V",
         ],
         functions: [
             new JointMuscleFunction(

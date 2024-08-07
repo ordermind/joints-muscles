@@ -14,7 +14,7 @@ export default new Muscle(
         insertions: [
             new AnatomicStructure(
                 {
-                    label: "aponeuroses dorsales phalangium II&nbsp;-&nbsp;IV",
+                    label: "aponeuroses dorsales phalangum II&nbsp;-&nbsp;IV",
                     notes: ["via de pezen van de <em>m. extensor digitorum longus</em>"],
                 }
             ),

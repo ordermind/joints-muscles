@@ -13,7 +13,7 @@ export default new Muscle(
             "aponeurosis plantaris"
         ],
         insertions: [
-            "latera phalangium mediarum II&nbsp;-&nbsp;V",
+            "latera phalangum mediarum II&nbsp;-&nbsp;V",
         ],
         functions: [
             new JointMuscleFunction(

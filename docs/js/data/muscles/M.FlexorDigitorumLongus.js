@@ -9,7 +9,7 @@ export default new Muscle(
             "facies posterior tibiae (distaal van de linea m. solei)",
         ],
         insertions: [
-            "bases phalangium distalium II&nbsp;-&nbsp;V (plantair)",
+            "bases phalangum distalium II&nbsp;-&nbsp;V (plantair)",
         ],
         functions: [
             new JointMuscleFunction(
