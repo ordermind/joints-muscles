@@ -27,7 +27,7 @@ export default new Muscle(
             ),
         ],
         insertions: [
-            "latera phalangium mediae II&nbsp;-&nbsp;V",
+            "latera phalangium mediarum II&nbsp;-&nbsp;V",
         ],
         functions: [
             new JointMuscleFunction(
