@@ -25,6 +25,17 @@ export default new Muscle(
                 ]
             }),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. medianus",
+                    notes: [
+                        "ramus recurrens",
+                        "C8,&nbsp;T1"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

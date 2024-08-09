@@ -30,6 +30,16 @@ export default new Muscle(
         insertions: [
             "caput fibulae (lateraal)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. ischiadicus",
+                    notes: [
+                        "L5&nbsp;-&nbsp;S2"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

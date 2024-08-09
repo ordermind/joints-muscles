@@ -32,6 +32,14 @@ export default new Muscle(
         insertions: [
             "basis phalangis proximalis I (lateraal)"
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. plantaris lateralis",
+                    notes: ["S2,&nbsp;S3"]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

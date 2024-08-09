@@ -18,6 +18,16 @@ export default new Muscle(
         insertions: [
             "basis phalangis distalis I (dorsaal)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. interosseus posterior",
+                    notes: [
+                        "C7,&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

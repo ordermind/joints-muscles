@@ -25,6 +25,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. obturatorius",
+                    notes: [
+                        "L2&nbsp;-&nbsp;L4"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

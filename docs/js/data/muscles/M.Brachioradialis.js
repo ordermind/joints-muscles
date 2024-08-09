@@ -18,6 +18,16 @@ export default new Muscle(
         insertions: [
             "processus styloideus radii (proximolateraal)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. radialis",
+                    notes: [
+                        "C5,&nbsp;C6"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

@@ -23,6 +23,16 @@ export default new Muscle(
         insertions: [
             "basis ossis metacarpalis I (radiaal)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. interosseus posterior",
+                    notes: [
+                        "C7,&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

@@ -66,6 +66,10 @@ export default class MusclePage {
                     <th>Insertie(s)</th>
                     <td class="${muscle.insertions.length ? "hideable" : ""}">${renderList(muscle.insertions.map(insertion => renderAnatomicStructureOrString(insertion, {includeNotes: true})), {fallbackToSingleString: true})}</td>
                 </tr>
+                <tr>
+                    <th>Innervatie</th>
+                    <td class="${muscle.innervation.length ? "hideable" : ""}">${renderList(muscle.innervation.map(innervation => renderAnatomicStructureOrString(innervation, {includeNotes: true})), {fallbackToSingleString: true})}</td>
+                </tr>
             </table>
 
             <h2 class="display-2 fs-2">Gewrichtsfuncties</h2>
