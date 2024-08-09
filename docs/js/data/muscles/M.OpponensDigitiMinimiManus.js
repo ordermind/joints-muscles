@@ -12,7 +12,7 @@ export default new Muscle(
             "retinaculum musculorum flexorum manus"
         ],
         insertions: [
-            "os metacarpi V (ulnair)"
+            "facies ulnaris ossis metacarpalis V"
         ],
         functions: [
             new JointMuscleFunction(

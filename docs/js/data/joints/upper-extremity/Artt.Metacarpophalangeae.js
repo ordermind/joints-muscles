@@ -35,6 +35,62 @@ export default [
     ),
     new Joint(
         {
+            id: "artt_metacarpophalangeae_2_4",
+            regionId: "upper_extremity",
+            label: "artt. metacarpophalangeae II&nbsp;-&nbsp;IV (MCP II&nbsp;-&nbsp;IV)",
+            typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
+            cpp: "maximale flexie",
+            mlpp: "lichte flexie met lichte adductie",
+            movements: [
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_4__flexion",
+                        jointId: "artt_metacarpophalangeae_2_4",
+                        label: "flexie",
+                        rom: "90°",
+                        endFeel: "hard capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_4__extension",
+                        jointId: "artt_metacarpophalangeae_2_4",
+                        label: "extensie",
+                        rom: "45°",
+                        endFeel: "capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_4__abduction",
+                        jointId: "artt_metacarpophalangeae_2_4",
+                        label: "abductie",
+                        endFeel: "capsulair",
+                        description: `ten opzichte van 3e vingerstraal`,
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_metacarpophalangeae_2_4__adduction",
+                        jointId: "artt_metacarpophalangeae_2_4",
+                        label: "adductie",
+                        endFeel: "capsulair",
+                        description: `ten opzichte van 3e vingerstraal`,
+                    }
+                ),
+            ],
+            image: "./images/joints/artt_metacarpophalangeae_2_4.jpeg",
+            childrenIds: [
+                "art_metacarpophalangea_2",
+                "art_metacarpophalangea_3",
+                "art_metacarpophalangea_4",
+            ],
+            hideInList: true,
+            hideInQuiz: true,
+        }
+    ),
+    new Joint(
+        {
             id: "artt_metacarpophalangeae_2_5",
             regionId: "upper_extremity",
             label: "artt. metacarpophalangeae II&nbsp;-&nbsp;V (MCP II&nbsp;-&nbsp;V)",

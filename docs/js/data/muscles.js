@@ -77,7 +77,9 @@ import m_obliquus_internus_abdominis from "./muscles/M.ObliquusInternusAbdominis
 import m_obturatorius_externus from "./muscles/M.ObturatoriusExternus.js";
 import m_obturatorius_internus from "./muscles/M.ObturatoriusInternus.js";
 import m_opponens_digiti_minimi_manus from "./muscles/M.OpponensDigitiMinimiManus.js";
+import m_opponens_digiti_minimi_pedis from "./muscles/M.OpponensDigitiMinimiPedis.js";
 import m_opponens_pollicis from "./muscles/M.OpponensPollicis.js";
+import m_palmaris_brevis from "./muscles/M.PalmarisBrevis.js";
 import m_palmaris_longus from "./muscles/M.PalmarisLongus.js";
 import m_pectineus from "./muscles/M.Pectineus.js";
 import m_pectoralis_major from "./muscles/M.PectoralisMajor.js";
@@ -140,7 +142,9 @@ import m_vastus_medialis from "./muscles/M.VastusMedialis.js";
 import mm_intercostales_externi from "./muscles/MM.IntercostalesExterni.js";
 import mm_intercostales_interni from "./muscles/MM.IntercostalesInterni.js";
 import mm_intercostales_intimi from "./muscles/MM.IntercostalesIntimi.js";
+import mm_interossei_dorsales_manus from "./muscles/MM.InterosseiDorsalesManus.js";
 import mm_interossei_dorsales_pedis from "./muscles/MM.InterosseiDorsalesPedis.js";
+import mm_interossei_palmares from "./muscles/MM.InterosseiPalmares.js";
 import mm_interossei_plantares from "./muscles/MM.InterosseiPlantares.js";
 import mm_interspinales_cervicis from "./muscles/MM.InterspinalesCervicis.js";
 import mm_interspinales_lumborum from "./muscles/MM.InterspinalesLumborum.js";
@@ -148,6 +152,7 @@ import mm_intertransversarii_anteriores_cervicis from "./muscles/MM.Intertransve
 import mm_intertransversarii_lumborum from "./muscles/MM.IntertransversariiLumborum.js";
 import mm_intertransversarii_posteriores_cervicis from "./muscles/MM.IntertransversariiPosterioresCervicis.js";
 import mm_levatores_costarum from "./muscles/MM.LevatoresCostarum.js";
+import mm_lumbricales_manus from "./muscles/MM.LumbricalesManus.js";
 import mm_lumbricales_pedis from "./muscles/MM.LumbricalesPedis.js";
 import mm_multifidi from "./muscles/MM.Multifidi.js";
 import mm_rotatores_breves from "./muscles/MM.RotatoresBreves.js";
@@ -230,7 +235,9 @@ export const arrMuscles = [
     m_obturatorius_externus,
     m_obturatorius_internus,
     m_opponens_digiti_minimi_manus,
+    m_opponens_digiti_minimi_pedis,
     m_opponens_pollicis,
+    m_palmaris_brevis,
     m_palmaris_longus,
     m_pectineus,
     m_pectoralis_major,
@@ -293,7 +300,9 @@ export const arrMuscles = [
     mm_intercostales_externi,
     mm_intercostales_interni,
     mm_intercostales_intimi,
+    mm_interossei_dorsales_manus,
     mm_interossei_dorsales_pedis,
+    mm_interossei_palmares,
     mm_interossei_plantares,
     mm_interspinales_cervicis,
     mm_interspinales_lumborum,
@@ -301,6 +310,7 @@ export const arrMuscles = [
     mm_intertransversarii_lumborum,
     mm_intertransversarii_posteriores_cervicis,
     mm_levatores_costarum,
+    mm_lumbricales_manus,
     mm_lumbricales_pedis,
     mm_multifidi,
     mm_rotatores_breves,
