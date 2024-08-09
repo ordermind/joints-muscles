@@ -80,10 +80,10 @@ export default [
             description: `
 De art. carpometacarpalis I wijkt fundamenteel af (qua bouw en bewegingsmogelijkheden) van de overige articulationes carpometacarpales. De homologe bewegingen van de vingers worden niet in de [Link type="Joint" targetId="artt_carpometacarpales" label="artt. carpometacarpales uitgevoerd"] maar in de [Link type="Joint" targetId="artt_metacarpophalangeales" label="artt. metacarpophalangeales"].
 
-Hierbij een uitleg van de betekenis van de verschillende bewegingen van de duim:
+Hierbij een illustratie van de verschillende bewegingen van de duim:
 <img src="./images/misc/thumb_movements.jpg" />
 
-<em>Oppositie</em> en <em>repositie</em> zijn combinatiebewegingen. Bij <em>oppositie</em> wordt het topje van de duim samengebracht met het topje van een andere vinger van dezelfde hand. De tegengestelde beweging wordt <em>repositie</em> genoemd. Meestal wordt <em>oppositie</em> gezien als een combinatie van <strong>flexie</strong>, <strong>abductie</strong> en bijbehorende rotatie, terwijl <em>repositie</em> en combinatie is van <strong>extensie</strong>, <strong>adductie</strong> en bijbehorende rotatie.
+<em>Oppositie</em> en <em>repositie</em> zijn combinatiebewegingen. Bij <em>oppositie</em> wordt het topje van de duim samengebracht met het topje van een andere vinger (vaak de pink) van dezelfde hand. De tegengestelde beweging wordt <em>repositie</em> genoemd. Meestal wordt <em>oppositie</em> gezien als een combinatie van <strong>flexie</strong>, <strong>abductie</strong> en bijbehorende rotatie, terwijl <em>repositie</em> en combinatie is van <strong>extensie</strong>, <strong>adductie</strong> en bijbehorende rotatie.
             `.trim(),
         }
     ),
@@ -102,4 +102,33 @@ Bewegingsmogelijkheden zijn beperkt tot een klein beetje translatie. De articula
             `.trim(),
         }
     ),
+    new Joint(
+        {
+            id: "art_carpometacarpalis_5",
+            regionId: "upper_extremity",
+            label: "art. carpometacarpalis V (art. carpometacarpalis digiti minimi, CMC V)",
+            typeIds: ["junctura_synovialis", "art_plana"],
+            movements: [
+                new Movement(
+                    {
+                        id: "art_carpometacarpalis_5__flexion",
+                        jointId: "art_carpometacarpalis_5",
+                        label: "flexie",
+                        rom: "20°",
+                        description: "ROM waarde komt uit https://www.kenhub.com/en/library/anatomy/carpometacarpal-cmc-joints",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "art_carpometacarpalis_5__extension",
+                        jointId: "art_carpometacarpalis_5",
+                        label: "extensie",
+                        rom: "0°",
+                        description: "ROM waarde komt uit https://www.kenhub.com/en/library/anatomy/carpometacarpal-cmc-joints",
+                    }
+                ),
+            ],
+            image: "./images/joints/art_carpometacarpalis_5.jpeg"
+        }
+    )
 ];

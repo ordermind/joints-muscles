@@ -35,6 +35,44 @@ export default [
     ),
     new Joint(
         {
+            id: "artt_interphalangeae_proximales_manus_2_4",
+            regionId: "upper_extremity",
+            label: "artt. interphalangeae proximales manus II&nbsp;-&nbsp;IV (PIP II&nbsp;-&nbsp;IV)",
+            typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
+            cpp: "maximale extensie",
+            mlpp: "lichte flexie",
+            movements: [
+                new Movement(
+                    {
+                        id: "artt_interphalangeae_proximales_manus_2_4__flexion",
+                        jointId: "artt_interphalangeae_proximales_manus_2_4",
+                        label: "flexie",
+                        rom: "90°",
+                        endFeel: "hard capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_interphalangeae_proximales_manus_2_4__extension",
+                        jointId: "artt_interphalangeae_proximales_manus_2_4",
+                        label: "extensie",
+                        rom: "0°",
+                        endFeel: "capsulair",
+                    }
+                ),
+            ],
+            image: "./images/joints/artt_interphalangeae_proximales_manus_2_4.jpeg",
+            childrenIds: [
+                "art_interphalangea_proximalis_manus_2",
+                "art_interphalangea_proximalis_manus_3",
+                "art_interphalangea_proximalis_manus_4",
+            ],
+            hideInList: true,
+            hideInQuiz: true,
+        }
+    ),
+    new Joint(
+        {
             id: "artt_interphalangeae_proximales_manus_2_5",
             regionId: "upper_extremity",
             label: "artt. interphalangeae proximales manus II&nbsp;-&nbsp;V (PIP II&nbsp;-&nbsp;V)",
@@ -194,6 +232,44 @@ export default [
                 ),
             ],
             image: "./images/joints/art_interphalangea_proximalis_manus_5.jpeg",
+        }
+    ),
+    new Joint(
+        {
+            id: "artt_interphalangeae_distales_manus_2_4",
+            regionId: "upper_extremity",
+            label: "artt. interphalangeae distales manus II&nbsp;-&nbsp;IV (DIP II&nbsp;-&nbsp;IV)",
+            typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
+            cpp: "maximale extensie",
+            mlpp: "lichte flexie",
+            movements: [
+                new Movement(
+                    {
+                        id: "artt_interphalangeae_distales_manus_2_4__flexion",
+                        jointId: "artt_interphalangeae_distales_manus_2_4",
+                        label: "flexie",
+                        rom: "90°",
+                        endFeel: "hard capsulair",
+                    }
+                ),
+                new Movement(
+                    {
+                        id: "artt_interphalangeae_distales_manus_2_4__extension",
+                        jointId: "artt_interphalangeae_distales_manus_2_4",
+                        label: "extensie",
+                        rom: "10°",
+                        endFeel: "capsulair",
+                    }
+                ),
+            ],
+            image: "./images/joints/artt_interphalangeae_distales_manus_2_4.jpeg",
+            childrenIds: [
+                "art_interphalangea_distalis_manus_2",
+                "art_interphalangea_distalis_manus_3",
+                "art_interphalangea_distalis_manus_4",
+            ],
+            hideInList: true,
+            hideInQuiz: true,
         }
     ),
     new Joint(
