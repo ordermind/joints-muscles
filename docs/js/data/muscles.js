@@ -2,13 +2,16 @@
  * We have to use static imports rather than dynamic imports in order to be able to load data in a web worker.
  */
 
+import m_abductor_digiti_minimi_manus from "./muscles/M.AbductorDigitiMinimiManus.js";
 import m_abductor_digiti_minimi_pedis from "./muscles/M.AbductorDigitiMinimiPedis.js";
 import m_abductor_hallucis from "./muscles/M.AbductorHallucis.js";
 import m_adductor_brevis from "./muscles/M.AdductorBrevis.js";
 import m_adductor_hallucis from "./muscles/M.AdductorHallucis.js";
+import m_abductor_pollicis_brevis from "./muscles/M.AbductorPollicisBrevis.js";
 import m_adductor_longus from "./muscles/M.AdductorLongus.js";
 import m_adductor_magnus_adductoria from "./muscles/M.AdductorMagnusAdductoria.js";
 import m_adductor_magnus_ischiadica from "./muscles/M.AdductorMagnusIschiadica.js";
+import m_adductor_pollicis from "./muscles/M.AdductorPollicis.js";
 import m_abductor_pollicis_longus from "./muscles/M.AbductorPollicisLongus.js";
 import m_anconeus from "./muscles/M.Anconeus.js";
 import m_articularis_genus from "./muscles/M.ArticularisGenus.js";
@@ -38,6 +41,7 @@ import m_fibularis_longus from "./muscles/M.FibularisLongus.js";
 import m_fibularis_tertius from "./muscles/M.FibularisTertius.js";
 import m_flexor_carpi_radialis from "./muscles/M.FlexorCarpiRadialis.js";
 import m_flexor_carpi_ulnaris from "./muscles/M.FlexorCarpiUlnaris.js";
+import m_flexor_digiti_minimi_brevis_manus from "./muscles/M.FlexorDigitiMinimiBrevisManus.js";
 import m_flexor_digiti_minimi_brevis_pedis from "./muscles/M.FlexorDigitiMinimiBrevisPedis.js";
 import m_flexor_digitorum_brevis from "./muscles/M.FlexorDigitorumBrevis.js";
 import m_flexor_digitorum_longus from "./muscles/M.FlexorDigitorumLongus.js";
@@ -45,6 +49,7 @@ import m_flexor_digitorum_profundus from "./muscles/M.FlexorDigitorumProfundus.j
 import m_flexor_digitorum_superficialis from "./muscles/M.FlexorDigitorumSuperficialis.js";
 import m_flexor_hallucis_brevis from "./muscles/M.FlexorHallucisBrevis.js";
 import m_flexor_hallucis_longus from "./muscles/M.FlexorHallucisLongus.js";
+import m_flexor_pollicis_brevis from "./muscles/M.FlexorPollicisBrevis.js";
 import m_flexor_pollicis_longus from "./muscles/M.FlexorPollicisLongus.js";
 import m_gastrocnemius from "./muscles/M.Gastrocnemius.js";
 import m_gemellus_inferior from "./muscles/M.GemellusInferior.js";
@@ -71,6 +76,8 @@ import m_obliquus_externus_abdominis from "./muscles/M.ObliquusExternusAbdominis
 import m_obliquus_internus_abdominis from "./muscles/M.ObliquusInternusAbdominis.js";
 import m_obturatorius_externus from "./muscles/M.ObturatoriusExternus.js";
 import m_obturatorius_internus from "./muscles/M.ObturatoriusInternus.js";
+import m_opponens_digiti_minimi_manus from "./muscles/M.OpponensDigitiMinimiManus.js";
+import m_opponens_pollicis from "./muscles/M.OpponensPollicis.js";
 import m_palmaris_longus from "./muscles/M.PalmarisLongus.js";
 import m_pectineus from "./muscles/M.Pectineus.js";
 import m_pectoralis_major from "./muscles/M.PectoralisMajor.js";
@@ -148,13 +155,16 @@ import mm_rotatores_longi from "./muscles/MM.RotatoresLongi.js";
 import mm_subcostales from "./muscles/MM.Subcostales.js";
 
 export const arrMuscles = [
+    m_abductor_digiti_minimi_manus,
     m_abductor_digiti_minimi_pedis,
     m_abductor_hallucis,
     m_adductor_brevis,
     m_adductor_hallucis,
+    m_abductor_pollicis_brevis,
     m_adductor_longus,
     m_adductor_magnus_adductoria,
     m_adductor_magnus_ischiadica,
+    m_adductor_pollicis,
     m_abductor_pollicis_longus,
     m_anconeus,
     m_articularis_genus,
@@ -184,6 +194,7 @@ export const arrMuscles = [
     m_fibularis_tertius,
     m_flexor_carpi_radialis,
     m_flexor_carpi_ulnaris,
+    m_flexor_digiti_minimi_brevis_manus,
     m_flexor_digiti_minimi_brevis_pedis,
     m_flexor_digitorum_brevis,
     m_flexor_digitorum_longus,
@@ -191,6 +202,7 @@ export const arrMuscles = [
     m_flexor_digitorum_superficialis,
     m_flexor_hallucis_brevis,
     m_flexor_hallucis_longus,
+    m_flexor_pollicis_brevis,
     m_flexor_pollicis_longus,
     m_gastrocnemius,
     m_gemellus_inferior,
@@ -217,6 +229,8 @@ export const arrMuscles = [
     m_obliquus_internus_abdominis,
     m_obturatorius_externus,
     m_obturatorius_internus,
+    m_opponens_digiti_minimi_manus,
+    m_opponens_pollicis,
     m_palmaris_longus,
     m_pectineus,
     m_pectoralis_major,
