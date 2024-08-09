@@ -18,6 +18,16 @@ export default new Muscle(
         insertions: [
             "basis ossis metacarpalis V (ulnair)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. interosseus posterior",
+                    notes: [
+                        "C7,&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

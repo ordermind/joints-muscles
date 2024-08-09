@@ -17,6 +17,16 @@ export default new Muscle(
                 }
             )
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. ischiadicus",
+                    notes: [
+                        "L4"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

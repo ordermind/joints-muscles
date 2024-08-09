@@ -36,6 +36,17 @@ export default new Muscle(
                 ]
             }),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. ulnaris",
+                    notes: [
+                        "Diepe tak",
+                        "C8,&nbsp;T1"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

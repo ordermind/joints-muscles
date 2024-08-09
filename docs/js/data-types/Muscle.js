@@ -4,17 +4,19 @@ export default class Muscle {
     #regionIdsOverride;
     #origos;
     #insertions;
+    #innervation;
     #functions;
     #specialFunctions;
     #image;
     #description;
 
-    constructor({id, label, regionIds = [], description = '', origos = [], insertions = [], functions = [], specialFunctions = [], image = ''}) {
+    constructor({id, label, regionIds = [], description = '', origos = [], insertions = [], innervation = [], functions = [], specialFunctions = [], image = ''}) {
         this.#id = id;
         this.#label = label;
         this.#regionIdsOverride = regionIds;
         this.#origos = origos;
         this.#insertions = insertions;
+        this.#innervation = innervation;
         this.#functions = functions;
         this.#specialFunctions = specialFunctions;
         this.#image = image;
@@ -35,6 +37,10 @@ export default class Muscle {
 
     get insertions() {
         return this.#insertions;
+    }
+
+    get innervation() {
+        return this.#innervation;
     }
 
     get functions() {

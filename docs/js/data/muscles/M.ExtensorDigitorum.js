@@ -17,6 +17,16 @@ export default new Muscle(
         insertions: [
             "aponeuroses dorsales phalangum II&nbsp;-&nbsp;V",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. interosseus posterior",
+                    notes: [
+                        "C7,&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

@@ -17,6 +17,16 @@ export default new Muscle(
         insertions: [
             "basis ossis metacarpalis II (dorsaal)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. radialis",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {
