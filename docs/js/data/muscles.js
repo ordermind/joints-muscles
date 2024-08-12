@@ -317,7 +317,7 @@ export const arrMuscles = [
     mm_rotatores_longi,
     mm_subcostales,
 ]
-.flat()
-.sort((a, b) => a.label.localeCompare(b.label));
+    .flat()
+    .sort((a, b) => a.label.localeCompare(b.label));
 
-export const objMuscles = arrMuscles.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {});
+export const objMuscles = arrMuscles.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue }), {});

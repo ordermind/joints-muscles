@@ -7,6 +7,7 @@ export default new Muscle(
     {
         id: muscleId,
         label: "m. palmaris brevis",
+        regionIds: ["upper_extremity"],
         origos: [
             "aponeurosis palmaris",
             "retinaculum musculorum flexorum manus"
