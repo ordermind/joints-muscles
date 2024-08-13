@@ -13,14 +13,14 @@ export default new Muscle(
             "retinaculum musculorum flexorum manus"
         ],
         insertions: [
-            "Cutis lateris ulnaris manus",
+            "cutis lateris ulnaris manus",
         ],
         specialFunctions: [
             new SpecialMuscleFunction(
                 {
                     id: muscleId + "__" + "skin",
                     muscleId,
-                    functionDescription: "Spant de huid van de pinkmuis",
+                    functionDescription: "spant de huid van de pinkmuis",
                 }
             ),
         ],
