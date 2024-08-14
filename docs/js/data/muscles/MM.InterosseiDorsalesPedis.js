@@ -11,7 +11,7 @@ export default new Muscle(
             "facies adjacentes ossium metatarsalium I&nbsp;-&nbsp;V"
         ],
         insertions: [
-            "bases phalanges proximales II&nbsp;-&nbsp;IV",
+            "bases phalangum proximalium II&nbsp;-&nbsp;IV",
             "aponeuroses dorsales phalangum II&nbsp;-&nbsp;IV",
         ],
         functions: [

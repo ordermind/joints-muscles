@@ -11,7 +11,7 @@ export default new Muscle(
             "facies mediales ossium metatarsalium III&nbsp;-&nbsp;V"
         ],
         insertions: [
-            "bases phalanges proximales III&nbsp;-&nbsp;V (mediaal)",
+            "bases phalangum proximalium III&nbsp;-&nbsp;V (mediaal)",
             "aponeuroses dorsales phalangum III&nbsp;-&nbsp;V",
         ],
         functions: [

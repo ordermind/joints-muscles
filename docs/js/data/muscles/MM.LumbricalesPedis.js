@@ -11,7 +11,7 @@ export default new Muscle(
             "tendines terminales m. flexoris digitorum longi"
         ],
         insertions: [
-            "bases phalanges proximales II&nbsp;-&nbsp;V",
+            "bases phalangum proximalium II&nbsp;-&nbsp;V",
             "aponeuroses dorsales phalangum II&nbsp;-&nbsp;V",
         ],
         functions: [
