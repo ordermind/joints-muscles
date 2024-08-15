@@ -18,7 +18,7 @@ export default new Muscle(
                 {
                     muscleId: muscleId,
                     movementId: "art_metatarsophalangea_5__flexion",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
         ],
