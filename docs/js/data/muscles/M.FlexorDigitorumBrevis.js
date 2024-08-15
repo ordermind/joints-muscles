@@ -20,14 +20,14 @@ export default new Muscle(
                 {
                     muscleId: muscleId,
                     movementId: "artt_metatarsophalangeae_2_5__flexion",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
                     muscleId: muscleId,
                     movementId: "artt_interphalangeae_proximales_pedis_2_5__flexion",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
         ],

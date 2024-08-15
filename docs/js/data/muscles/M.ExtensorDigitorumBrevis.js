@@ -24,21 +24,21 @@ export default new Muscle(
                 {
                     muscleId: muscleId,
                     movementId: "artt_metatarsophalangeae_2_4__extension",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
                     muscleId: muscleId,
                     movementId: "artt_interphalangeae_proximales_pedis_2_4__extension",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
             new JointMuscleFunction(
                 {
                     muscleId: muscleId,
                     movementId: "artt_interphalangeae_distales_pedis_2_4__extension",
-                    isPrimeMover: false,
+                    isPrimeMover: true,
                 }
             ),
         ],
