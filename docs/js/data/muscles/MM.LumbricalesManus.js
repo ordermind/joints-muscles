@@ -24,9 +24,9 @@ export default new Muscle(
             new JointMuscleFunction(
                 {
                     muscleId,
-                    movementId: "artt_metacarpophalangeae_2_5__abduction",
+                    movementId: "artt_metacarpophalangeae_2_5__adduction",
                     isPrimeMover: true,
-                    notes: ["alleen radiaalabductie - de vingers bewegen naar de duim toe"]
+                    notes: ["radiaaladductie - de vingers bewegen naar de duim toe"]
                 }
             ),
             new JointMuscleFunction(
