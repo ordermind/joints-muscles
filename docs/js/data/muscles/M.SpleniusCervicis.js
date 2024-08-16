@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,16 @@ export default new Muscle(
         ],
         insertions: [
             "processi transversi C1&nbsp;-&nbsp;C3",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium cervicalium",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C8"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

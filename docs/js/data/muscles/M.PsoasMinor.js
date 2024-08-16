@@ -26,6 +26,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus anterior n. spinalis lumbalis",
+                    notes: [
+                        "L1",
+                    ]
+                }
+            ),
+        ],
         functions: [
             new JointMuscleFunction(
                 {

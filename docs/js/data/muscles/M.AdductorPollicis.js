@@ -39,10 +39,9 @@ export default new Muscle(
         innervation: [
             new AnatomicStructure(
                 {
-                    label: "n. ulnaris",
+                    label: "ramus profundus n. ulnaris",
                     notes: [
-                        "Diepe tak",
-                        "C8,&nbsp;T1"
+                        "C8&nbsp;-&nbsp;T1"
                     ]
                 }
             )

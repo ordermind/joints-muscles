@@ -19,7 +19,7 @@ export default new Muscle(
                 {
                     label: "n. radialis",
                     notes: [
-                        "C7,&nbsp;C8"
+                        "C7&nbsp;-&nbsp;C8"
                     ]
                 }
             )

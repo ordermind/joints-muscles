@@ -20,9 +20,10 @@ export default new Muscle(
         innervation: [
             new AnatomicStructure(
                 {
-                    label: "n. interosseus posterior",
+                    label: "n. interosseus antebrachii posterior",
                     notes: [
-                        "C7,&nbsp;C8"
+                        "voortzetting van de <em>n. radialis</em>",
+                        "C7&nbsp;-&nbsp;C8"
                     ]
                 }
             )

@@ -47,6 +47,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium cervicalium",
+                    notes: [
+                        "C2&nbsp;-&nbsp;C6"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,24 @@ export default new Muscle(
         insertions: [
             "angulus superior scapulae",
             "margo medialis scapulae (craniaal van het <em>trigonum spinae scapulae</em>)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. cervicalis",
+                    notes: [
+                        "C3&nbsp;-&nbsp;C4"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. scapularis dorsalis",
+                    notes: [
+                        "C5"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

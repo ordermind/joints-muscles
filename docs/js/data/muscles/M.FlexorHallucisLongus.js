@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,14 @@ export default new Muscle(
         ],
         insertions: [
             "basis phalangis distalis I (plantair)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. tibialis",
+                    notes: ["S2&nbsp;-&nbsp;S3"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -13,6 +14,32 @@ export default new Muscle(
             "linea alba",
             "crista iliaca (ventrale 2/3 deel)",
             "tuberculum pubicum",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T7&nbsp;-&nbsp;T11",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. subcostalis",
+                    notes: [
+                        "T12",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. iliohypogastricus",
+                    notes: [
+                        "L1",
+                    ]
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(

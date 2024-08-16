@@ -25,6 +25,14 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. m. quadrati femoris",
+                    notes: ["L4&nbsp;-&nbsp;S1"]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

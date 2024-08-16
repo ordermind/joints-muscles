@@ -22,6 +22,25 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. femoralis",
+                    notes: [
+                        "L2&nbsp;-&nbsp;L3",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. obturatorius",
+                    notes: [
+                        "L2&nbsp;-&nbsp;L3",
+                        "alleen soms"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

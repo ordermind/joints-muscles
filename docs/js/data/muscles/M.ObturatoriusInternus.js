@@ -18,6 +18,14 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. m. obturatorii interni",
+                    notes: ["L5&nbsp;-&nbsp;S1"]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

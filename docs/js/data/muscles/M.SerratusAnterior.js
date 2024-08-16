@@ -37,6 +37,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. thoracicus longus",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C7"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

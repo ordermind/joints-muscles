@@ -30,6 +30,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. medianus",
+                    notes: [
+                        "C6&nbsp;-&nbsp;C7",
+                    ]
+                }
+            ),
+        ],
         functions: [
             new JointMuscleFunction(
                 {

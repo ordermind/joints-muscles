@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,13 @@ export default new Muscle(
         ],
         insertions: [
             "processus spinosus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (T10&nbsp;-&nbsp;L4)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium thoracicorum et lumborum",
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,16 @@ export default new Muscle(
         ],
         insertions: [
             "processus jugularis ossis occipitalis",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium cervicalium",
+                    notes: [
+                        "C1&nbsp;-&nbsp;C2"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

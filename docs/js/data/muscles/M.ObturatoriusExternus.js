@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,16 @@ export default new Muscle(
         ],
         insertions: [
             "fossa trochanterica femoris",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. obturatorius",
+                    notes: [
+                        "L3&nbsp;-&nbsp;L4"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

@@ -17,6 +17,16 @@ export default new Muscle(
         insertions: [
             "bases ossium metacarpalium II et III (palmair)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. medianus",
+                    notes: [
+                        "C6&nbsp;-&nbsp;C7"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

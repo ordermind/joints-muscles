@@ -23,6 +23,14 @@ export default new Muscle(
                 notes: ["plantair van de insertie van <em>m. adductor hallucis</em>"],
             })
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. plantaris medialis",
+                    notes: ["S1&nbsp;-&nbsp;S2",]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

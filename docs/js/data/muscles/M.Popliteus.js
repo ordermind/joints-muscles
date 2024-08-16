@@ -1,6 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
-import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +11,16 @@ export default new Muscle(
         ],
         insertions: [
             "facies posterior tibiae (proximaal van de linea m. solei)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. tibialis",
+                    notes: [
+                        "L4&nbsp;-&nbsp;S1"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

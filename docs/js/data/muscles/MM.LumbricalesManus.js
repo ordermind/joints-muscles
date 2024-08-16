@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "mm_lumbricales_manus";
 
@@ -12,6 +13,26 @@ export default new Muscle(
         ],
         insertions: [
             "aponeuroses dorsales phalangum II&nbsp;-&nbsp;V"
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. medianus",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1",
+                        "spier 1&nbsp;-&nbsp;2"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. ulnaris",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1",
+                        "spier 3&nbsp;-&nbsp;4"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

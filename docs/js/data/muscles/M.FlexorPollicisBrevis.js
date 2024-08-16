@@ -42,6 +42,26 @@ export default new Muscle(
                 ]
             }),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus recurrens n. medianus",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1",
+                        "caput superficiale"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "ramus profundus n. ulnaris",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1",
+                        "caput profundum"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

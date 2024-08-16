@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -12,6 +13,16 @@ export default new Muscle(
         insertions: [
             "tuberculum musculi scaleni anterioris",
             "margo superior costae 1",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium cervicalium",
+                    notes: [
+                        "C4&nbsp;-&nbsp;C6"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

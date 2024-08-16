@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,16 @@ export default new Muscle(
         ],
         insertions: [
             "trochanter major femoris (apex)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. m. piriformis",
+                    notes: [
+                        "S1&nbsp;-&nbsp;S2"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

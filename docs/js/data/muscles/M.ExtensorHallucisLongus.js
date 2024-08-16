@@ -18,7 +18,7 @@ export default new Muscle(
                 {
                     label: "n. fibularis profundus",
                     notes: [
-                        "L5,&nbsp;S1"
+                        "L5&nbsp;-&nbsp;S1"
                     ]
                 }
             )

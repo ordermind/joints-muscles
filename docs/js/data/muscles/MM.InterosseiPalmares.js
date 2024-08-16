@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "mm_interossei_palmares";
 
@@ -13,7 +14,17 @@ export default new Muscle(
             "facies radialis ossis metacarpalis V",
         ],
         insertions: [
-            "aponeuroses dorsales phalangum II,&nbsp;IV&nbsp;et&nbsp;V"
+            "aponeuroses dorsales phalangum II&nbsp;-&nbsp;IV&nbsp;et&nbsp;V"
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus profundus n. ulnaris",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

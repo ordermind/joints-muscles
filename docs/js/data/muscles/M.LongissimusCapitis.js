@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,16 @@ export default new Muscle(
         ],
         insertions: [
             "processus mastoideus",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium cervicalium et thoracicorum",
+                    notes: [
+                        "C6&nbsp;-&nbsp;T4"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

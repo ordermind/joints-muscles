@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -12,6 +13,16 @@ export default new Muscle(
         ],
         insertions: [
             "margines superiores costarum 2&nbsp;-&nbsp;5",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T2&nbsp;-&nbsp;T5",
+                    ]
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

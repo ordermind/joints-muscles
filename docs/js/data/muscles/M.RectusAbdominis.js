@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -13,6 +14,24 @@ export default new Muscle(
         insertions: [
             "facies externae cartilaginum costarum 5&nbsp;-&nbsp;7",
             "facies lateralis processus xiphoidei",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T7&nbsp;-&nbsp;T11",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. subcostalis",
+                    notes: [
+                        "T12",
+                    ]
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(

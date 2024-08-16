@@ -22,7 +22,7 @@ export default new Muscle(
                 {
                     label: "n. axillaris",
                     notes: [
-                        "C5,&nbsp;C6"
+                        "C5&nbsp;-&nbsp;C6"
                     ]
                 }
             )

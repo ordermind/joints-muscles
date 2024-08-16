@@ -36,6 +36,16 @@ export default new Muscle(
         insertions: [
             "crista tuberculi majoris humeri",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. pectorales laterales et mediales",
+                    notes: [
+                        "C5&nbsp;-&nbsp;T1"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

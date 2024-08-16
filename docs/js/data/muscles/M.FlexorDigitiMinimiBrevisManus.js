@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "m_flexor_digiti_minimi_brevis_manus";
 
@@ -13,6 +14,16 @@ export default new Muscle(
         ],
         insertions: [
             "basis phalangis proximalis V (ulnair)"
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus profundus n. ulnaris",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

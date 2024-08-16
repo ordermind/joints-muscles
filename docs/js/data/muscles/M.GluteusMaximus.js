@@ -26,6 +26,14 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. gluteus inferior",
+                    notes: ["L5&nbsp;-&nbsp;S2"]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

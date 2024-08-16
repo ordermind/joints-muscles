@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,17 @@ export default new Muscle(
         ],
         insertions: [
             "basis phalangis distalis I (palmair)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. interosseus antebrachii anterior",
+                    notes: [
+                        "een tak van de <em>n. medianus</em>",
+                        "C7&nbsp;-&nbsp;C8"
+                    ]
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(

@@ -36,7 +36,7 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "n. plantaris lateralis",
-                    notes: ["S2,&nbsp;S3"]
+                    notes: ["S2&nbsp;-&nbsp;S3"]
                 }
             )
         ],

@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "m_pectoralis_minor";
 
@@ -13,6 +14,16 @@ export default new Muscle(
         ],
         insertions: [
             "processus coracoideus scapulae",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. pectorales laterales et mediales",
+                    notes: [
+                        "C5&nbsp;-&nbsp;T1"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

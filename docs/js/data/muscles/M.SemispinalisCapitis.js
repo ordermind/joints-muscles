@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,24 @@ export default new Muscle(
         ],
         insertions: [
             "os occipitale (tussen linea nuchae superior en linea nuchae inferior)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. occipitalis major",
+                    notes: [
+                        "C2"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. spinalis cervicalis",
+                    notes: [
+                        "C3"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(
