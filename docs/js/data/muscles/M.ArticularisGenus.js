@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -12,6 +13,16 @@ export default new Muscle(
         insertions: [
             "bursa suprapatellaris",
             "capsula articularis genus",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. femoralis",
+                    notes: [
+                        "L2&nbsp;-&nbsp;L4"
+                    ]
+                }
+            )
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

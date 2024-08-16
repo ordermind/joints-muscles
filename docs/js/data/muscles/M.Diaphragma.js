@@ -50,6 +50,14 @@ export default new Muscle(
                         "C3&nbsp;-&nbsp;C5"
                     ]
                 }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T6&nbsp;-&nbsp;T11"
+                    ]
+                }
             )
         ],
         specialFunctions: [
