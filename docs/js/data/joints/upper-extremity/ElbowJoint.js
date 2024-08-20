@@ -54,7 +54,34 @@ Het ellebooggewricht bestaat uit drie gewrichten:
 - [Link type="Joint" targetId="art_humeroradialis" label="art. humeroradialis"] (flexie, extensie, pronatie, supinatie)
 - [Link type="Joint" targetId="art_humeroulnaris" label="art. humeroulnaris"] (flexie, extensie)
 - [Link type="Joint" targetId="art_radioulnaris" label="art. radioulnaris"] (pronatie, supinatie)
-            `,
+
+<h2 class="display-2 fs-2">Ligamenten</h2>
+<div class="row d-inline-flex">
+    <div class="col">
+        <img src="./images/misc/elbow_ligaments_medial.jpg" />
+    </div>
+    <div class="col">
+        <img src="./images/misc/elbow_ligaments_lateral.jpg" />
+    </div>
+</div>
+<div class="row d-inline-flex pt-2">
+    <div class="col">
+        <h3 class="display-3 fs-3">Mediaal</h3>
+        <ul>
+            <li>lig. collaterale mediale anterior (aMCL)</li>
+            <li>lig. collaterale mediale posterior (pMCL)</li>
+        </ul>
+    </div>
+    <div class="col">
+        <h3 class="display-3 fs-3">Lateraal</h3>
+        <ul>
+            <li>lig. collaterale laterale (LCL), ook bekend als lig. collaterale ulnare of lig. collaterale ulnare laterale (LuCL)</li>
+            <li>lig. collaterale radiale (RCL)</li>
+            <li>lig. anulare radii (AL)</li>
+        </ul>
+    </div>
+</div>
+`,
         }
     ),
     new Joint(
