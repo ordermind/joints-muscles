@@ -7,7 +7,6 @@
 - Lägg ev. till quizfråga för mlpp (multiple choice single answer)
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
-- Fixa bugg när man öppnar valet på första sidan i en ny tabb (Kennisbank / quiz), då blir pathen #null.
 X Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 X Lägg till filter för speciale functies i listan för muskler i kennisbanken
 X Fyll på information för m. rectus abdominis angående mitt val för origo och insertie
