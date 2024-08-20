@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
 export default new Muscle(
     {
@@ -33,6 +34,15 @@ export default new Muscle(
                     muscleId: "m_tibialis_posterior",
                     movementId: "art_talotarsalis__inversion",
                     isPrimeMover: true,
+                }
+            ),
+        ],
+        specialFunctions: [
+            new SpecialMuscleFunction(
+                {
+                    id: "m_tibialis_posterior" + "__" + "arch",
+                    muscleId: "m_tibialis_posterior",
+                    functionDescription: "Ondersteunt de arcus pedis longitudinalis",
                 }
             ),
         ],
