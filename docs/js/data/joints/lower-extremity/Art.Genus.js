@@ -63,6 +63,16 @@ De volgende bursae liggen rond het gewricht:
 Van deze bursae hebben de bursa suprapatellaris en bursa subpoplitea altijd een verbinding met het cavum articulare. Bij de bursa subcutanea infrapatellaris kan dat voorkomen. Tenslotte is er het vetlichaam van Hoffa (of: corpus adiposum infrapatellare).
 
 De endorotatie en exorotatie van articulatio genus is beperkt. De grootste bewegingsuitslag is te behalen bij circa 90° flexie.
+
+<h2 class="display-2 fs-2">Ligamenten</h2>
+<img src="./images/misc/knee_ligaments.jpeg" />
+
+- lig. patellae
+- lig. collaterale laterale (LCL), ook bekend als lig. collaterale fibulare
+- lig. collaterale mediale (MCL), ook bekend als lig. collaterale tibiale
+- lig. cruciatum anterius (ACL) - beperkt het <strong>voorwaarts</strong> schuiven van de tibia ten opzichte van de femur
+- lig. cruciatum posterius (PCL) - beperkt het <strong>achterwaarts</strong> schuiven van de tibia ten opzichte van de femur
+
             `.trim(),
         }
     ),
