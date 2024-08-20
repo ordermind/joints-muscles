@@ -48,7 +48,7 @@ Deze fibreuze verbinding bestaat uit:
 - lig. tibiofibulare anterius (inferius)
 - lig. tibiofibulare posterius (inferius)
 - lig. tibiofibulare transversum (inferius)
-- lig. interosseum
+- lig. interosseum tibiofibulare
 
 <img src="./images/misc/syndesmosis_tibiofibularis_ligaments.webp" />
 

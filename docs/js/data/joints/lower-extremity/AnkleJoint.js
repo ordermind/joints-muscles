@@ -52,6 +52,49 @@ Het enkelgewricht bestaat uit drie gewrichten:
 - [Link type="Joint" targetId="art_talocruralis" label="art. talocruralis"] (plantairflexie, dorsaalflexie)
 - [Link type="Joint" targetId="art_talotarsalis" label="art. talotarsalis"] (inversie, eversie)
 - [Link type="Joint" targetId="art_tibiofibularis_distalis" label="art. tibiofibularis distalis"]
+
+<h2 class="display-2 fs-2">Ligamenten</h2>
+<div class="row d-inline-flex">
+    <div class="col-6">
+        <img src="./images/misc/ankle_ligaments_medial.jpg" />
+    </div>
+    <div class="col-6">
+        <img src="./images/misc/ankle_ligaments_lateral.jpg" />
+    </div>
+    <div class="col-6">
+        <h3 class="display-3 fs-3">Mediaal</h3>
+        <ul>
+            <li>
+                lig. deltoideum
+                <ul>
+                    <li>pars tibiotalaris anterior</li>
+                    <li>pars tibionavicularis</li>
+                    <li>pars tibiocalcanea</li>
+                    <li>pars tibiotalaris posterior</li>
+                </ul>
+            </li>
+            <li>lig. calcaneonaviculare plantare</li>
+        </ul>
+    </div>
+    <div class="col-6">
+        <h3 class="display-3 fs-3">Lateraal</h3>
+        <ul>
+            <li>lig. talofibulare anterius</li>
+            <li>lig. talofibulare posterius</li>
+            <li>lig. calcaneofibulare</li>
+        </ul>
+    </div>
+</div>
+<div class="row d-inline-flex pt-2">
+
+</div>
+<h3 class="display-3 fs-3">Syndesmosis (zie [Link type="Joint" targetId="art_tibiofibularis_distalis" label="art. tibiofibularis distalis"])</h3>
+<ul>
+    <li>lig. tibiofibulare anterius (inferius)</li>
+    <li>lig. tibiofibulare posterius (inferius)</li>
+    <li>lig. tibiofibulare transversum (inferius)</li>
+    <li>lig. interosseum tibiofibulare</li>
+</ul>
             `,
         }
     ),
