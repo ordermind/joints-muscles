@@ -53,6 +53,8 @@ Deze fibreuze verbinding bestaat uit:
 <img src="./images/misc/syndesmosis_tibiofibularis_ligaments.webp" />
 
 Bewegingsmogelijkheden zijn beperkt tot een geringe translatie tussen tibia en fibula.
+
+Het gewricht vormt samen met de [Link type="Joint" targetId="art_talocruralis" label="art. talocruralis (bovenste spronggewricht)"] en [Link type="Joint" targetId="art_talotarsalis" label="art. talotarsalis (onderste spronggewricht)"] het [Link type="Joint" targetId="tarsus" label="enkelgewricht"].
             `.trim(),
         }
     ),
