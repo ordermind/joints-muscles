@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -11,6 +12,13 @@ export default new Muscle(
         ],
         insertions: [
             "facies interna costae bij een bovengelegen rib (overspant 1-2 ribben)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

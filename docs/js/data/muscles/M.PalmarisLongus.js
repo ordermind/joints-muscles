@@ -19,6 +19,16 @@ export default new Muscle(
             "aponeurosis palmaris",
             "retinaculum musculorum flexorum manus",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. medianus",
+                    notes: [
+                        "C7&nbsp;-&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

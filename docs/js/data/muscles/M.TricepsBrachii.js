@@ -43,6 +43,16 @@ export default new Muscle(
         insertions: [
             "olecranon",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. radialis",
+                    notes: [
+                        "C6&nbsp;-&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

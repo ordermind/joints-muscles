@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -11,6 +12,16 @@ export default new Muscle(
         ],
         insertions: [
             "margo inferior bij de <strong>eerstvolgende</strong> hoger gelegen rib (1&nbsp;-&nbsp;11)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T1&nbsp;-&nbsp;T11",
+                    ]
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

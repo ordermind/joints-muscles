@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,16 @@ export default new Muscle(
         ],
         insertions: [
             "tuberculum majus humeri (onderste facet)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. axillaris",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C6"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

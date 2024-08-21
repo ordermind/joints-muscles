@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,14 @@ export default new Muscle(
         ],
         insertions: [
             "trochanter major femoris (lateraal)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. gluteus superior",
+                    notes: ["L4&nbsp;-&nbsp;S1"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

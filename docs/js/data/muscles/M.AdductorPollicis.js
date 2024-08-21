@@ -36,6 +36,16 @@ export default new Muscle(
                 ]
             }),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus profundus n. ulnaris",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

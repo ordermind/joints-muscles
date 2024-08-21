@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -13,6 +14,24 @@ export default new Muscle(
         insertions: [
             "processus coronoideus ulnae",
             "tuberositas ulnae",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. musculocutaneus",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C6"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. radialis",
+                    notes: [
+                        "C7"
+                    ]
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(

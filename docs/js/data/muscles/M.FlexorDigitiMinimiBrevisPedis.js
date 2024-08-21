@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "m_flexor_digiti_minimi_brevis_pedis";
 
@@ -12,6 +13,14 @@ export default new Muscle(
         ],
         insertions: [
             "basis phalangis proximalis V (lateraal)"
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. plantaris lateralis",
+                    notes: ["S2&nbsp;-&nbsp;S3"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

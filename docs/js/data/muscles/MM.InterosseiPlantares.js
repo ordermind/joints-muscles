@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "mm_interossei_plantares";
 
@@ -13,6 +14,14 @@ export default new Muscle(
         insertions: [
             "bases phalangum proximalium III&nbsp;-&nbsp;V (mediaal)",
             "aponeuroses dorsales phalangum III&nbsp;-&nbsp;V",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. plantaris lateralis",
+                    notes: ["S2&nbsp;-&nbsp;S3"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

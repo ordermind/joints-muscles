@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -17,6 +18,24 @@ export default new Muscle(
             "processi costales L1&nbsp;-&nbsp;L5",
             "processi transversi T1&nbsp;-&nbsp;T12",
             "anguli costarum 7&nbsp;-&nbsp;12",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium thoracicorum",
+                    notes: [
+                        "T7&nbsp;-&nbsp;T12"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium lumborum",
+                    notes: [
+                        "L1&nbsp;-&nbsp;L5"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

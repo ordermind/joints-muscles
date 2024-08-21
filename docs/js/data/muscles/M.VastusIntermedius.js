@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,16 @@ export default new Muscle(
         ],
         insertions: [
             "tuberositas tibiae (via de patella en het ligamentum patellae)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. femoralis",
+                    notes: [
+                        "L2&nbsp;-&nbsp;L4"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

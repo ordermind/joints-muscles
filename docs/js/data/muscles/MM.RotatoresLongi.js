@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,13 @@ export default new Muscle(
         ],
         insertions: [
             "processus spinosus bij de <strong>2 niveaus</strong> hoger gelegen wervel (C7&nbsp;-&nbsp;T10)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium thoracicorum",
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

@@ -46,6 +46,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. thoracodorsalis",
+                    notes: [
+                        "C6&nbsp;-&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

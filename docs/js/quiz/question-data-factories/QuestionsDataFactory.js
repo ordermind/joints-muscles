@@ -9,6 +9,7 @@ import MuscleSpecialFunctionsQuestionsDataFactory from "./muscles/MuscleSpecialF
 import { arrJoints, objJoints } from "../../data/joints.js";
 import { arrMuscles } from "../../data/muscles.js";
 import { shuffle } from "../../utils.js";
+import MuscleInnervationQuestionsDataFactory from "./muscles/MuscleInnervationQuestionsDataFactory.js";
 
 export default class QuestionsDataFactory {
     #jointNameQuestionsDataFactory;
@@ -17,6 +18,7 @@ export default class QuestionsDataFactory {
 
     #muscleNameQuestionsDataFactory;
     #muscleAnatomyQuestionsDataFactory;
+    #muscleInnervationQuestionsDataFactory;
     #muscleJointFunctionsQuestionsDataFactory;
     #muscleSpecialFunctionsQuestionsDataFactory;
 
@@ -27,6 +29,7 @@ export default class QuestionsDataFactory {
 
         this.#muscleNameQuestionsDataFactory = new MuscleNameQuestionsDataFactory({passThroughMode});
         this.#muscleAnatomyQuestionsDataFactory = new MuscleAnatomyQuestionsDataFactory({passThroughMode});
+        this.#muscleInnervationQuestionsDataFactory = new MuscleInnervationQuestionsDataFactory({passThroughMode});
         this.#muscleJointFunctionsQuestionsDataFactory = new MuscleJointFunctionsQuestionsDataFactory({passThroughMode});
         this.#muscleSpecialFunctionsQuestionsDataFactory = new MuscleSpecialFunctionsQuestionsDataFactory({passThroughMode});
     }
@@ -80,6 +83,7 @@ export default class QuestionsDataFactory {
         muscle,
         muscleNameQuestionsData,
         muscleAnatomyQuestionsData,
+        muscleInnervationQuestionsData,
         muscleJointFunctionsQuestionsData,
         muscleSpecialFunctionsQuestionsData
     }) {
@@ -91,6 +95,11 @@ export default class QuestionsDataFactory {
 
         if(muscleAnatomyQuestionsData.hasOwnProperty(muscle.id)) {
             questions.push(muscleAnatomyQuestionsData[muscle.id]);
+        }
+
+
+        if(muscleInnervationQuestionsData.hasOwnProperty(muscle.id)) {
+            questions.push(muscleInnervationQuestionsData[muscle.id]);
         }
 
         if(muscleJointFunctionsQuestionsData.hasOwnProperty(muscle.id)) {
@@ -113,14 +122,15 @@ export default class QuestionsDataFactory {
         const quizData = this.#createQuizDataForRegion(regionId);
         const allQuizData = regionId === 'all' ? quizData : this.#createQuizDataForRegion('all');
 
-        const jointNameQuestionsData = questionsFilter?.joint_name ? this.#jointNameQuestionsDataFactory.create({quizJoints: quizData.joints, allQuizJoints: allQuizData.joints}) : {};
-        const jointROMQuestionsData = questionsFilter?.joint_rom ? this.#jointROMQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
-        const jointFunctionsQuestionsData = questionsFilter?.joint_functions ? this.#jointFunctionsQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
+        const jointNameQuestionsData = questionsFilter.includes("joint_name") ? this.#jointNameQuestionsDataFactory.create({quizJoints: quizData.joints, allQuizJoints: allQuizData.joints}) : {};
+        const jointROMQuestionsData = questionsFilter.includes("joint_rom") ? this.#jointROMQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
+        const jointFunctionsQuestionsData = questionsFilter.includes("joint_functions") ? this.#jointFunctionsQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
 
-        const muscleNameQuestionsData = questionsFilter?.muscle_name ? this.#muscleNameQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleAnatomyQuestionsData = questionsFilter?.muscle_anatomy ? this.#muscleAnatomyQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleJointFunctionsQuestionsData = questionsFilter?.muscle_joint_functions ? this.#muscleJointFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleSpecialFunctionsQuestionsData = questionsFilter?.muscle_special_functions ? this.#muscleSpecialFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleNameQuestionsData = questionsFilter.includes("muscle_name") ? this.#muscleNameQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleAnatomyQuestionsData = questionsFilter.includes("muscle_anatomy") ? this.#muscleAnatomyQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleInnervationQuestionsData = questionsFilter.includes("muscle_innervation") ? this.#muscleInnervationQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleJointFunctionsQuestionsData = questionsFilter.includes("muscle_joint_functions") ? this.#muscleJointFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleSpecialFunctionsQuestionsData = questionsFilter.includes("muscle_special_functions") ? this.#muscleSpecialFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
 
         const shuffledJointsAndMusclesList = shuffle([
             ...quizData.joints,
@@ -141,6 +151,7 @@ export default class QuestionsDataFactory {
                 muscle: item,
                 muscleNameQuestionsData: muscleNameQuestionsData,
                 muscleAnatomyQuestionsData: muscleAnatomyQuestionsData,
+                muscleInnervationQuestionsData: muscleInnervationQuestionsData,
                 muscleJointFunctionsQuestionsData: muscleJointFunctionsQuestionsData,
                 muscleSpecialFunctionsQuestionsData: muscleSpecialFunctionsQuestionsData
             });

@@ -19,6 +19,16 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. fibularis profundus",
+                    notes: [
+                        "L5&nbsp;-&nbsp;S1"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

@@ -31,6 +31,16 @@ export default new Muscle(
             "hamulus ossis hamati",
             "basis ossis metacarpalis V (palmair)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. ulnaris",
+                    notes: [
+                        "C7&nbsp;-&nbsp;T1"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

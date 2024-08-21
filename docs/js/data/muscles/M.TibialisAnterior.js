@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -13,6 +14,16 @@ export default new Muscle(
         insertions: [
             "os cuneiforme mediale (mediaal)",
             "basis ossis metatarsalis I (mediaal)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. fibularis profundus",
+                    notes: [
+                        "L4&nbsp;-&nbsp;L5"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

@@ -31,6 +31,26 @@ export default [
             insertions: [
                 "trochanter minor femoris",
             ],
+            innervation: [
+                new AnatomicStructure(
+                    {
+                        label: "n. femoralis",
+                        notes: [
+                            "L2&nbsp;-&nbsp;L4",
+                            "m. iliacus"
+                        ]
+                    }
+                ),
+                new AnatomicStructure(
+                    {
+                        label: "rami anteriores nervorum spinalium lumborum",
+                        notes: [
+                            "L1&nbsp;-&nbsp;L3",
+                            "m. psoas major"
+                        ]
+                    }
+                )
+            ],
             functions: [
                 new JointMuscleFunction(
                     {

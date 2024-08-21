@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -16,6 +17,16 @@ export default new Muscle(
             "ossa cuneiformia (plantair)",
             "os cuboideum",
             "bases ossium metatarsalium II&nbsp;-&nbsp;IV",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. tibialis",
+                    notes: [
+                        "L4&nbsp;-&nbsp;L5"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

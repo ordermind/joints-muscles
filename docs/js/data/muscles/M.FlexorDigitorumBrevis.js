@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "m_flexor_digitorum_brevis";
 
@@ -14,6 +15,14 @@ export default new Muscle(
         ],
         insertions: [
             "latera phalangum mediarum II&nbsp;-&nbsp;V",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. plantaris medialis",
+                    notes: ["S1&nbsp;-&nbsp;S3"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

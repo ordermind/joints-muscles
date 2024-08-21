@@ -29,6 +29,16 @@ export default new Muscle(
         insertions: [
             "latera phalangum mediarum II&nbsp;-&nbsp;V",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. medianus",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1",
+                    ]
+                }
+            ),
+        ],
         functions: [
             new JointMuscleFunction(
                 {

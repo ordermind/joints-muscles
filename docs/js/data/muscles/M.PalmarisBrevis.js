@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -14,6 +15,16 @@ export default new Muscle(
         ],
         insertions: [
             "cutis lateris ulnaris manus",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus superficialis n. ulnaris",
+                    notes: [
+                        "C8&nbsp;-&nbsp;T1",
+                    ]
+                }
+            )
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

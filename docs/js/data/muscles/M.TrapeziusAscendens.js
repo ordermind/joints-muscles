@@ -20,6 +20,21 @@ export default new Muscle(
         insertions: [
             "crista inferior spinae scapulae (mediaal)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. accessorius",
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium cervicalium",
+                    notes: [
+                        "C3&nbsp;-&nbsp;C4"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

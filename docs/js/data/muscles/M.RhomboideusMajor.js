@@ -19,6 +19,16 @@ export default new Muscle(
         insertions: [
             "margo medialis scapulae (caudaal van het <em>trigonum spinae scapulae</em>)",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. dorsalis scapulae",
+                    notes: [
+                        "C4&nbsp;-&nbsp;C5"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

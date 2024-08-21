@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -12,6 +13,16 @@ export default new Muscle(
         ],
         insertions: [
             "linea alba",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. subcostalis",
+                    notes: [
+                        "T12",
+                    ]
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

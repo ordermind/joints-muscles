@@ -17,6 +17,16 @@ export default new Muscle(
         insertions: [
             "tuberositas deltoidea humeri",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. axillaris",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C6"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,16 @@ export default new Muscle(
         ],
         insertions: [
             "facies medialis tibiae (via de pes anserinus superficialis)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. femoralis",
+                    notes: [
+                        "L2&nbsp;-&nbsp;L3"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -14,6 +15,40 @@ export default new Muscle(
             "linea alba",
             "margines inferiores costarum (9)10&nbsp;-&nbsp;12",
             "crista pubica",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T7&nbsp;-&nbsp;T11",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. subcostalis",
+                    notes: [
+                        "T12",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. iliohypogastricus",
+                    notes: [
+                        "L1",
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "n. ilioinguinalis",
+                    notes: [
+                        "L1",
+                    ]
+                }
+            ),
         ],
         functions: [
             new JointMuscleFunction(

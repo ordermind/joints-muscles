@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "m_teres_major";
 
@@ -13,6 +14,16 @@ export default new Muscle(
         ],
         insertions: [
             "crista tuberculi minoris humeri",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. subscapularis inferior",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C7"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

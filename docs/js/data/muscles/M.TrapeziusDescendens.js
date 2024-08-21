@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -14,6 +15,21 @@ export default new Muscle(
         insertions: [
             "extremitas acromialis claviculae",
             "acromion",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. accessorius",
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium cervicalium",
+                    notes: [
+                        "C3&nbsp;-&nbsp;C4"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

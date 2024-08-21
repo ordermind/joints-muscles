@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,18 @@ export default new Muscle(
         ],
         insertions: [
             "processus transversus bij de <strong>eerstvolgende</strong> hoger gelegen wervel (C1&nbsp;-&nbsp;C7)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium cervicalium",
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium cervicalium",
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

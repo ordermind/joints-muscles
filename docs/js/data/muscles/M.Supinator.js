@@ -22,6 +22,17 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. interosseus antebrachii posterior",
+                    notes: [
+                        "voortzetting van de <em>n. radialis</em>",
+                        "C7&nbsp;-&nbsp;C8"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

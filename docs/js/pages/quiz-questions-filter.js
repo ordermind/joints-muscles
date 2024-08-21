@@ -50,6 +50,10 @@ export default class QuizQuestionsFilter {
                     <label class="form-check-label" for="muscle_anatomy">Origo & insertie</label>
                 </div>
                 <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" name="muscle_innervation" id="muscle_innervation" checked />
+                    <label class="form-check-label" for="muscle_innervation">Innervatie</label>
+                </div>
+                <div class="form-check mt-2">
                     <input class="form-check-input" type="checkbox" name="muscle_joint_functions" id="muscle_joint_functions" checked />
                     <label class="form-check-label" for="muscle_joint_functions">Gewrichtsfuncties</label>
                 </div>
@@ -106,12 +110,13 @@ export default class QuizQuestionsFilter {
         e.preventDefault();
 
         const submittedData = Object.fromEntries(new FormData(document.forms.questions_filter));
-        const filteredQuestions = Object.fromEntries(Object.entries(submittedData).filter(([key]) => {
+        const objFilteredQuestions = Object.fromEntries(Object.entries(submittedData).filter(([key]) => {
             return (Object.hasOwn(submittedData, "joints") && key.startsWith("joint_"))
              || Object.hasOwn(submittedData, "muscles") && key.startsWith("muscle_");
         }));
+        const arrFilteredQuestions = Object.keys(objFilteredQuestions);
 
-        router.navigate(`/quiz/${this.#regionId}?questions=${JSON.stringify(filteredQuestions)}`)
+        router.navigate(`/quiz/${this.#regionId}?questions=${JSON.stringify(arrFilteredQuestions)}`)
     }
 
     render({ regionId }) {

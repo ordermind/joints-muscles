@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,13 @@ export default new Muscle(
         ],
         insertions: [
             "processus costalis bij de <strong>eerstvolgende</strong> hoger gelegen wervel (L1&nbsp;-&nbsp;L4)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami anteriores nervorum spinalium lumborum",
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

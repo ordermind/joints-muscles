@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -10,6 +11,24 @@ export default new Muscle(
         ],
         insertions: [
             "processi spinosi T2&nbsp;-&nbsp;T8",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium thoracicorum",
+                    notes: [
+                        "T4&nbsp;-&nbsp;T12"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "ramus dorsalis n. spinalis lumbi",
+                    notes: [
+                        "L1"
+                    ]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

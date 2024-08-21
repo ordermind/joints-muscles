@@ -19,6 +19,16 @@ export default new Muscle(
         insertions: [
             "basis phalangis proximalis I (dorsaal)"
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. fibularis profundus",
+                    notes: [
+                        "S1&nbsp;-&nbsp;S2"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

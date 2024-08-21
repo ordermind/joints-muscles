@@ -25,6 +25,16 @@ export default new Muscle(
             "tuberositas radii",
             "fascia antebrachii",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. musculocutaneus",
+                    notes: [
+                        "C5&nbsp;-&nbsp;C6"
+                    ]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

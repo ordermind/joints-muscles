@@ -1,6 +1,7 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 export default new Muscle(
     {
@@ -11,6 +12,20 @@ export default new Muscle(
         ],
         insertions: [
             "facies posterior costae bij de <strong>eerstvolgende</strong> lager gelegen wervel (T1&nbsp;-&nbsp;T12)",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "ramus dorsalis n. spinalis cervicalis",
+                    notes: ["C8"]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium thoracicorum",
+                    notes: ["T1&nbsp;-&nbsp;T11"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

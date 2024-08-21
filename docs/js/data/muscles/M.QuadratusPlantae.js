@@ -1,5 +1,6 @@
 import Muscle from "../../data-types/Muscle.js";
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 
 const muscleId = "m_quadratus_plantae";
 
@@ -13,6 +14,14 @@ export default new Muscle(
         ],
         insertions: [
             "tendines terminales m. flexoris digitorum longi"
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. plantaris lateralis",
+                    notes: ["S1&nbsp;-&nbsp;S3"]
+                }
+            )
         ],
         functions: [
             new JointMuscleFunction(

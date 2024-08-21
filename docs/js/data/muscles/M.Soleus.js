@@ -18,6 +18,14 @@ export default new Muscle(
                 }
             ),
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. tibialis",
+                    notes: ["S1&nbsp;-&nbsp;S2"]
+                }
+            )
+        ],
         functions: [
             new JointMuscleFunction(
                 {

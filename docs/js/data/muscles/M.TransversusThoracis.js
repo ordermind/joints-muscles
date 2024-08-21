@@ -1,3 +1,4 @@
+import AnatomicStructure from "../../data-types/AnatomicStructure.js";
 import Muscle from "../../data-types/Muscle.js";
 import SpecialMuscleFunction from "../../data-types/SpecialMuscleFunction.js";
 
@@ -13,6 +14,13 @@ export default new Muscle(
         ],
         insertions: [
             "facies internae cartilaginum costarum 2&nbsp;-&nbsp;6",
+        ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                }
+            ),
         ],
         specialFunctions: [
             new SpecialMuscleFunction(

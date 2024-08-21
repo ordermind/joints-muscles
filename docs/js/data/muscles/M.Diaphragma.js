@@ -42,6 +42,24 @@ export default new Muscle(
         insertions: [
             "centrum tendineum",
         ],
+        innervation: [
+            new AnatomicStructure(
+                {
+                    label: "n. phrenicus",
+                    notes: [
+                        "C3&nbsp;-&nbsp;C5"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "nn. intercostales",
+                    notes: [
+                        "T6&nbsp;-&nbsp;T11"
+                    ]
+                }
+            )
+        ],
         specialFunctions: [
             new SpecialMuscleFunction(
                 {
