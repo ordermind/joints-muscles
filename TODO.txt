@@ -1,5 +1,3 @@
-- Lägg till quizfråga om innervatie för muskler. Det kan finnas flera nerver för samma muskel så jag behöver använda drag/drop-frågor för detta, alternativt om jag vill skapa en ny frågetyp med flerval.
-- Lägg till information om innervatie för alla muskler
 - Förbättra prestandan på quizzen
   - I stället för att varje gång filtrera hela arrayen, gör en imperativ lösning där de återstående items returneras varje gång och sedan används som parameter till nästa filterfunktion
   - Gör inte en shuffle för varje filtergrupp, det borde räcka med att göra en enda shuffle i början.
@@ -7,6 +5,8 @@
 - Lägg ev. till quizfråga för mlpp (multiple choice single answer)
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
+X Lägg till quizfråga om innervatie för muskler. Det kan finnas flera nerver för samma muskel så jag behöver använda drag/drop-frågor för detta, alternativt om jag vill skapa en ny frågetyp med flerval.
+X Lägg till information om innervatie för alla muskler
 X Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
 X Lägg till filter för speciale functies i listan för muskler i kennisbanken
 X Fyll på information för m. rectus abdominis angående mitt val för origo och insertie
