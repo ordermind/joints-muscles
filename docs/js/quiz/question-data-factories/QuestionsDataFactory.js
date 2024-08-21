@@ -122,15 +122,15 @@ export default class QuestionsDataFactory {
         const quizData = this.#createQuizDataForRegion(regionId);
         const allQuizData = regionId === 'all' ? quizData : this.#createQuizDataForRegion('all');
 
-        const jointNameQuestionsData = questionsFilter?.joint_name ? this.#jointNameQuestionsDataFactory.create({quizJoints: quizData.joints, allQuizJoints: allQuizData.joints}) : {};
-        const jointROMQuestionsData = questionsFilter?.joint_rom ? this.#jointROMQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
-        const jointFunctionsQuestionsData = questionsFilter?.joint_functions ? this.#jointFunctionsQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
+        const jointNameQuestionsData = questionsFilter.includes("joint_name") ? this.#jointNameQuestionsDataFactory.create({quizJoints: quizData.joints, allQuizJoints: allQuizData.joints}) : {};
+        const jointROMQuestionsData = questionsFilter.includes("joint_rom") ? this.#jointROMQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
+        const jointFunctionsQuestionsData = questionsFilter.includes("joint_functions") ? this.#jointFunctionsQuestionsDataFactory.create({quizJoints: quizData.joints}) : {};
 
-        const muscleNameQuestionsData = questionsFilter?.muscle_name ? this.#muscleNameQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleAnatomyQuestionsData = questionsFilter?.muscle_anatomy ? this.#muscleAnatomyQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleInnervationQuestionsData = questionsFilter?.muscle_innervation ? this.#muscleInnervationQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleJointFunctionsQuestionsData = questionsFilter?.muscle_joint_functions ? this.#muscleJointFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
-        const muscleSpecialFunctionsQuestionsData = questionsFilter?.muscle_special_functions ? this.#muscleSpecialFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleNameQuestionsData = questionsFilter.includes("muscle_name") ? this.#muscleNameQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleAnatomyQuestionsData = questionsFilter.includes("muscle_anatomy") ? this.#muscleAnatomyQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleInnervationQuestionsData = questionsFilter.includes("muscle_innervation") ? this.#muscleInnervationQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleJointFunctionsQuestionsData = questionsFilter.includes("muscle_joint_functions") ? this.#muscleJointFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
+        const muscleSpecialFunctionsQuestionsData = questionsFilter.includes("muscle_special_functions") ? this.#muscleSpecialFunctionsQuestionsDataFactory.create({quizMuscles: quizData.muscles}) : {};
 
         const shuffledJointsAndMusclesList = shuffle([
             ...quizData.joints,
