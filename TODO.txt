@@ -5,6 +5,8 @@
 - Lägg ev. till quizfråga för mlpp (multiple choice single answer)
 - Lägg ev. till quizfråga för cpp (multiple choice single answer)
 - Lägg till quizfråga för eindgevoel (multiple choice single answer)
+- Lägg till quizfråga om arterier för alla muskler. Utgå antagligen från att det kan finnas flera arterier för samma muskel så använd antagligen drag/drop-frågor för detta.
+- Lägg till information om arterier för alla muskler
 X Lägg till quizfråga om innervatie för muskler. Det kan finnas flera nerver för samma muskel så jag behöver använda drag/drop-frågor för detta, alternativt om jag vill skapa en ny frågetyp med flerval.
 X Lägg till information om innervatie för alla muskler
 X Lägg till möjlighet att välja vilka sorters frågor man vill ha i quizzen, antingen på en ny sida eller i en accordion eller nåt sånt när man klickar på regionen.
