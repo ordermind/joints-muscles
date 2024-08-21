@@ -50,6 +50,10 @@ export default class QuizQuestionsFilter {
                     <label class="form-check-label" for="muscle_anatomy">Origo & insertie</label>
                 </div>
                 <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" name="muscle_innervation" id="muscle_innervation" checked />
+                    <label class="form-check-label" for="muscle_innervation">Innervatie</label>
+                </div>
+                <div class="form-check mt-2">
                     <input class="form-check-input" type="checkbox" name="muscle_joint_functions" id="muscle_joint_functions" checked />
                     <label class="form-check-label" for="muscle_joint_functions">Gewrichtsfuncties</label>
                 </div>
