@@ -18,7 +18,6 @@ export default new Muscle(
                 {
                     label: "n. suprascapularis",
                     notes: [
-                        "voortzetting van de <em>n. radialis</em>",
                         "C5&nbsp;-&nbsp;C6"
                     ]
                 }

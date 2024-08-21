@@ -16,7 +16,7 @@ export default new Muscle(
         innervation: [
             new AnatomicStructure(
                 {
-                    label: "n. cervicalis",
+                    label: "rami anteriores nervorum spinalium cervicalium",
                     notes: [
                         "C3&nbsp;-&nbsp;C4"
                     ]

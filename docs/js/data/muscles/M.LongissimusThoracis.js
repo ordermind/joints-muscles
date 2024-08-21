@@ -22,9 +22,17 @@ export default new Muscle(
         innervation: [
             new AnatomicStructure(
                 {
-                    label: "rami dorsales nervorum spinalium thoracicorum et lumborum",
+                    label: "rami dorsales nervorum spinalium thoracicorum",
                     notes: [
-                        "T7&nbsp;-&nbsp;L5"
+                        "T7&nbsp;-&nbsp;T12"
+                    ]
+                }
+            ),
+            new AnatomicStructure(
+                {
+                    label: "rami dorsales nervorum spinalium lumborum",
+                    notes: [
+                        "L1&nbsp;-&nbsp;L5"
                     ]
                 }
             )

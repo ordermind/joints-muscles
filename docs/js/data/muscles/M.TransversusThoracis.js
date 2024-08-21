@@ -19,9 +19,6 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "nn. intercostales",
-                    notes: [
-                        "T1&nbsp;-&nbsp;T11",
-                    ]
                 }
             ),
         ],
