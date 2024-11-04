@@ -27,16 +27,8 @@ export default class Region {
         return this.#childrenIds;
     }
 
-    get idOfSelfAndChildren() {
-        return [this.id, ...this.childrenIds];
-    }
-
     get idOfSelfAndParent() {
         return [this.id, this.parentId].filter(id => id !== null);
-    }
-
-    get idOfSelfAndRelatives() {
-        return [this.id, this.parentId, ...this.childrenIds].filter(id => id !== null);
     }
 
     toJSON() {
