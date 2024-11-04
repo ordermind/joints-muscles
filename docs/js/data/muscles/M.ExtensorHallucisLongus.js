@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_extensor_hallucis_longus",
         label: "m. extensor hallucis longus",
+        regionIds: ["lower_extremity"],
         origos: [
             "facies medialis fibulae (middelste helft)",
             "membrana interossea cruris",

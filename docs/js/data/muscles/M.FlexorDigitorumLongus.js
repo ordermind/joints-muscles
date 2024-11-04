@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_flexor_digitorum_longus",
         label: "m. flexor digitorum longus",
+        regionIds: ["lower_extremity"],
         origos: [
             "facies posterior tibiae (distaal van de linea m. solei)",
         ],
