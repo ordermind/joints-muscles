@@ -4,7 +4,7 @@ export default [
     new Joint(
         {
             id: "art_tarsi_transversa",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. tarsi transversa (gewrichtslijn van Chopart)",
             typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
             cpp: "supinatie subtalair gewricht",
@@ -21,7 +21,7 @@ Vanuit de klinische praktijk van de voetamputaties is de notitie gegroeid dat í
     new Joint(
         {
             id: "art_talonavicularis",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. talonavicularis",
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
@@ -37,7 +37,7 @@ Dit gewricht is onderdeel van [Link type="Joint" targetId="art_talocalcaneonavic
     new Joint(
         {
             id: "art_calcaneocuboidea",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. calcaneocuboidea",
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
@@ -53,7 +53,7 @@ Dit gewricht is onderdeel van het [Link type="Joint" targetId="art_tarsi_transve
     new Joint(
         {
             id: "art_cuneonavicularis",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. cuneonavicularis",
             typeIds: ["junctura_synovialis", "art_composita", "art_plana"],
             cpp: "supinatie subtalair gewricht",
@@ -67,7 +67,7 @@ Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. inte
     new Joint(
         {
             id: "art_cuneocuboidea",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. cuneocuboidea",
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
@@ -81,7 +81,7 @@ Dit gewricht valt onder de gewrichten tussen de ossa tarsi onderling (artt. inte
     new Joint(
         {
             id: "artt_intercuneiformes",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. intercuneiformes",
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",
@@ -95,7 +95,7 @@ Deze gewrichten vallen onder de gewrichten tussen de ossa tarsi onderling (artt.
     new Joint(
         {
             id: "art_cuboideonavicularis",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. cuboideonavicularis",
             typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
             cpp: "supinatie subtalair gewricht",

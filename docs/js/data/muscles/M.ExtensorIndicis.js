@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_extensor_indicis",
         label: "m. extensor indicis",
+        regionIds: ["upper_extremity"],
         origos: [
             new AnatomicStructure(
                 {

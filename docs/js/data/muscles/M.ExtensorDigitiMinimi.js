@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_extensor_digiti_minimi",
         label: "m. extensor digiti minimi",
+        regionIds: ["upper_extremity"],
         origos: [
             new AnatomicStructure(
                 {

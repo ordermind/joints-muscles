@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_flexor_digitorum_superficialis",
         label: "m. flexor digitorum superficialis",
+        regionIds: ["upper_extremity"],
         origos: [
             new AnatomicStructure(
                 {

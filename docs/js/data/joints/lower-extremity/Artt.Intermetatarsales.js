@@ -3,7 +3,7 @@ import Joint from "../../../data-types/Joint.js";
 export default new Joint(
     {
         id: "artt_intermetatarsales",
-        regionId: "lower_extremity",
+        regionId: "foot",
         label: "artt. intermetatarsales",
         typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
         image: "./images/joints/artt_intermetatarsales.jpeg",

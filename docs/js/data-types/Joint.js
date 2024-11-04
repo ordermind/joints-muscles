@@ -12,7 +12,7 @@ export default class Joint {
     #hideInList;
     #hideInQuiz;
 
-    constructor({id, childrenIds = [], regionId, label, typeIds = [], cpp = '', mlpp = '', movements = [], description = '', image = '', hideInList = false, hideInQuiz = false}) {
+    constructor({ id, childrenIds = [], regionId, label, typeIds = [], cpp = '', mlpp = '', movements = [], description = '', image = '', hideInList = false, hideInQuiz = false }) {
         this.#id = id;
         this.#childrenIds = childrenIds;
         this.#regionId = regionId;
@@ -68,7 +68,7 @@ export default class Joint {
     }
 
     get firstDescription() {
-        if(!Array.isArray(this.description)) {
+        if (!Array.isArray(this.description)) {
             return this.description;
         }
 
@@ -76,7 +76,7 @@ export default class Joint {
     }
 
     get otherDescriptions() {
-        if(!Array.isArray(this.description)) {
+        if (!Array.isArray(this.description)) {
             return [];
         }
 

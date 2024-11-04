@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_abductor_pollicis_longus",
         label: "m. abductor pollicis longus",
+        regionIds: ["upper_extremity"],
         origos: [
             new AnatomicStructure(
                 {

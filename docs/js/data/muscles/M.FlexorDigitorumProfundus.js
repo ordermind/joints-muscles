@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_flexor_digitorum_profundus",
         label: "m. flexor digitorum profundus",
+        regionIds: ["upper_extremity"],
         origos: [
             "facies anterior et medialis ulnae (proximale 2/3 deel)",
             "membrana interossea antebrachii",

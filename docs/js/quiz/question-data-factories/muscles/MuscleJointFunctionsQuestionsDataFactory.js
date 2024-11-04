@@ -1,14 +1,14 @@
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import { objJoints } from "../../../data/joints.js";
 import QuestionData from "../QuestionData.js";
-import { renderNotesTooltip } from "../../../utils.js";
+import { renderNotesTooltip, uniqueArray } from "../../../utils.js";
 
 export default class MuscleJointFunctionsQuestionsDataFactory {
     #passThroughMode;
 
     #maxAnswers = 20;
 
-    constructor({passThroughMode = false}) {
+    constructor({ passThroughMode = false }) {
         this.#passThroughMode = passThroughMode;
     }
 
@@ -19,11 +19,11 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
     }
 
     #createAnswers(correctMuscle, correctSolution) {
-        let answers = {...correctSolution.primeMover, ...correctSolution.assistant};
+        let answers = { ...correctSolution.primeMover, ...correctSolution.assistant };
 
         let totalAnswersCount = Object.keys(answers).length;
 
-        if(totalAnswersCount >= this.#maxAnswers) {
+        if (totalAnswersCount >= this.#maxAnswers) {
             return answers;
         }
 
@@ -33,45 +33,45 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
         });
 
         // Do not include joint functions of other muscles that are related to child joints of the joint functions of the correct muscle.
-        const correctJoints = Array.from(new Set(correctMuscle.functions.map(jointFunction => jointFunction.jointId)));
+        const correctJoints = uniqueArray(correctMuscle.functions.map(jointFunction => jointFunction.jointId));
         const skipJoints = correctJoints.flatMap(jointId => objJoints[jointId].childrenIds);
 
         // Add the other functions of the correct joints so that it becomes more of a challenge
-        for(const jointId of correctJoints) {
-            for(const movement of objJoints[jointId].movements) {
-                if(movement.id.endsWith("__rotation")) {
+        for (const jointId of correctJoints) {
+            for (const movement of objJoints[jointId].movements) {
+                if (movement.id.endsWith("__rotation")) {
                     continue;
                 }
 
                 const shortLabel = `<em>${objJoints[jointId].shortLabel}</em>: ${movement.label}`;
 
-                if(!answers.hasOwnProperty(shortLabel)) {
+                if (!answers.hasOwnProperty(shortLabel)) {
                     answers[shortLabel] = shortLabel;
                     totalAnswersCount++;
                 }
 
-                if(totalAnswersCount >= this.#maxAnswers) {
+                if (totalAnswersCount >= this.#maxAnswers) {
                     return answers;
                 }
             }
         }
 
         // Fill up with random joint functions of related muscles
-        for(const otherMuscle of otherMuscles) {
-            for(const jointFunction of otherMuscle.functions) {
-                if(skipJoints.includes(jointFunction.jointId)) {
+        for (const otherMuscle of otherMuscles) {
+            for (const jointFunction of otherMuscle.functions) {
+                if (skipJoints.includes(jointFunction.jointId)) {
                     continue;
                 }
 
                 const shortAnswerLabel = this.#createShortAnswerLabel(jointFunction);
-                const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)), {direction: "nw"});
+                const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)), { direction: "nw" });
 
-                if(!answers.hasOwnProperty(shortAnswerLabel)) {
+                if (!answers.hasOwnProperty(shortAnswerLabel)) {
                     answers[shortAnswerLabel] = labelWithNotes;
                     totalAnswersCount++;
                 }
 
-                if(totalAnswersCount >= this.#maxAnswers) {
+                if (totalAnswersCount >= this.#maxAnswers) {
                     return answers;
                 }
             }
@@ -86,11 +86,11 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
             assistant: {},
         };
 
-        for(const jointFunction of correctMuscle.functions) {
+        for (const jointFunction of correctMuscle.functions) {
             const shortAnswerLabel = this.#createShortAnswerLabel(jointFunction);
-            const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)), {direction: "nw"});
+            const labelWithNotes = shortAnswerLabel + renderNotesTooltip(jointFunction.notes.filter(note => !shortAnswerLabel.includes(note)), { direction: "nw" });
 
-            if(jointFunction.isPrimeMover) {
+            if (jointFunction.isPrimeMover) {
                 correctSolution.primeMover[shortAnswerLabel] = labelWithNotes;
             } else {
                 correctSolution.assistant[shortAnswerLabel] = labelWithNotes;
@@ -100,11 +100,11 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
         return correctSolution;
     }
 
-    create({quizMuscles}) {
+    create({ quizMuscles }) {
         let questionsData = {};
 
-        for(const muscle of quizMuscles) {
-            if(!muscle.functions.length) {
+        for (const muscle of quizMuscles) {
+            if (!muscle.functions.length) {
                 continue;
             }
 
@@ -120,13 +120,13 @@ export default class MuscleJointFunctionsQuestionsDataFactory {
 </div>
 <h2 id="question-text" class="display-4 fs-4 pt-4 mb-4">Welke gewrichtsfuncties ` + (isMusclePlural(muscle) ? "hebben deze spieren" : "heeft deze spier") + `? Sleep die functies naar het juiste vak.</h2>
                     `.trim(),
-                    regions: [{id: "primeMover", label: "Prime mover"}, {id: "assistant", label: "Assisteert"}],
+                    regions: [{ id: "primeMover", label: "Prime mover" }, { id: "assistant", label: "Assisteert" }],
                     answers: Object.entries(
                         this.#createAnswers(muscle, correctSolution)
                     ).map(([id, label]) => {
-                        return {id, label};
+                        return { id, label };
                     })
-                    .sort((a, b) => a.label.localeCompare(b.label)),
+                        .sort((a, b) => a.label.localeCompare(b.label)),
                     correctSolution: correctSolution,
                     previousNextQuestionButtonText: "Gewrichtsfuncties",
                     passThroughMode: this.#passThroughMode,

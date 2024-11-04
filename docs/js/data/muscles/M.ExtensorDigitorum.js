@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_extensor_digitorum",
         label: "m. extensor digitorum",
+        regionIds: ["upper_extremity"],
         origos: [
             new AnatomicStructure(
                 {

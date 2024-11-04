@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_extensor_digitorum_longus",
         label: "m. extensor digitorum longus",
+        regionIds: ["lower_extremity"],
         origos: [
             "condylus lateralis tibiae",
             "facies medialis fibulae (proximale 3/4 deel)",

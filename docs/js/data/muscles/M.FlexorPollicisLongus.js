@@ -6,6 +6,7 @@ export default new Muscle(
     {
         id: "m_flexor_pollicis_longus",
         label: "m. flexor pollicis longus",
+        regionIds: ["upper_extremity"],
         origos: [
             "facies anterior radii",
             "membrana interossea antebrachii",

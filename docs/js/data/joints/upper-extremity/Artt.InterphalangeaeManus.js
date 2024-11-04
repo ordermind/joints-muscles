@@ -5,7 +5,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_manus_1",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea manus I (IP I)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -36,7 +36,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_proximales_manus_2_4",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. interphalangeae proximales manus II&nbsp;-&nbsp;IV (PIP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -74,7 +74,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_proximales_manus_2_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. interphalangeae proximales manus II&nbsp;-&nbsp;V (PIP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -113,7 +113,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_manus_2",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea proximalis manus II (PIP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -144,7 +144,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_manus_3",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea proximalis manus III (PIP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -175,7 +175,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_manus_4",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea proximalis manus IV (PIP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -206,7 +206,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_manus_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea proximalis manus V (PIP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -237,7 +237,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_distales_manus_2_4",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. interphalangeae distales manus II&nbsp;-&nbsp;IV (DIP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -275,7 +275,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_distales_manus_2_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. interphalangeae distales manus II&nbsp;-&nbsp;V (DIP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -314,7 +314,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_manus_2",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea distalis manus II (DIP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -345,7 +345,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_manus_3",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea distalis manus III (DIP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -376,7 +376,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_manus_4",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea distalis manus IV (DIP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -407,7 +407,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_manus_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. interphalangea distalis manus V (DIP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",

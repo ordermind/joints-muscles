@@ -57,7 +57,7 @@ export const arrJoints = [
     shoulder_girdle,
     wrist_joint,
 ]
-.flat()
-.sort((a, b) => a.shortLabel.localeCompare(b.shortLabel));
+    .flat()
+    .sort((a, b) => a.shortLabel.localeCompare(b.shortLabel));
 
-export const objJoints = arrJoints.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue}), {});
+export const objJoints = arrJoints.reduce((previousValue, currentValue) => ({ ...previousValue, [currentValue.id]: currentValue }), {});

@@ -5,7 +5,7 @@ export default [
     new Joint(
         {
             id: "art_metatarsophalangea_1",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. metatarsophalangea I (MTP I)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -59,7 +59,7 @@ export default [
     new Joint(
         {
             id: "artt_metatarsophalangeae_2_4",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. metatarsophalangeae II&nbsp;-&nbsp;IV (MTP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -120,7 +120,7 @@ export default [
     new Joint(
         {
             id: "artt_metatarsophalangeae_2_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. metatarsophalangeae II&nbsp;-&nbsp;V (MTP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -182,7 +182,7 @@ export default [
     new Joint(
         {
             id: "art_metatarsophalangea_2",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. metatarsophalangea II (MTP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -236,7 +236,7 @@ export default [
     new Joint(
         {
             id: "artt_metatarsophalangeae_3_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. metatarsophalangeae III&nbsp;-&nbsp;V (MTP III&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -297,7 +297,7 @@ export default [
     new Joint(
         {
             id: "art_metatarsophalangea_3",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. metatarsophalangea III (MTP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -351,7 +351,7 @@ export default [
     new Joint(
         {
             id: "art_metatarsophalangea_4",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. metatarsophalangea IV (MTP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -405,7 +405,7 @@ export default [
     new Joint(
         {
             id: "art_metatarsophalangea_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. metatarsophalangea V (MTP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",

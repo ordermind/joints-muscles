@@ -3,7 +3,7 @@ import Joint from "../../../data-types/Joint.js";
 export default new Joint(
     {
         id: "artt_tarsometatarsales",
-        regionId: "lower_extremity",
+        regionId: "foot",
         label: "artt. tarsometatarsales (TMT, gewrichtslijn van Lisfranc)",
         typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
         cpp: "maximale plantairflexie van de enkel",
