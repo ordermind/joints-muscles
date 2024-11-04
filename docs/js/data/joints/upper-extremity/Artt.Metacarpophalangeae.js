@@ -5,7 +5,7 @@ export default [
     new Joint(
         {
             id: "art_metacarpophalangea_1",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. metacarpophalangea I (MCP I)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale extensie",
@@ -36,7 +36,7 @@ export default [
     new Joint(
         {
             id: "artt_metacarpophalangeae_2_4",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. metacarpophalangeae II&nbsp;-&nbsp;IV (MCP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",
@@ -92,7 +92,7 @@ export default [
     new Joint(
         {
             id: "artt_metacarpophalangeae_2_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. metacarpophalangeae II&nbsp;-&nbsp;V (MCP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",
@@ -149,7 +149,7 @@ export default [
     new Joint(
         {
             id: "art_metacarpophalangea_2",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. metacarpophalangea II (MCP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",
@@ -198,7 +198,7 @@ export default [
     new Joint(
         {
             id: "art_metacarpophalangea_3",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. metacarpophalangea III (MCP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",
@@ -247,7 +247,7 @@ export default [
     new Joint(
         {
             id: "art_metacarpophalangea_4",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. metacarpophalangea IV (MCP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",
@@ -296,7 +296,7 @@ export default [
     new Joint(
         {
             id: "art_metacarpophalangea_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. metacarpophalangea V (MCP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sphaeroidea"],
             cpp: "maximale flexie",

@@ -5,7 +5,7 @@ export default [
     new Joint(
         {
             id: "art_carpometacarpalis_1",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. carpometacarpalis I (art. carpometacarpalis pollicis, CMC I)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_sellaris"],
             cpp: "maximale oppositie",
@@ -90,7 +90,7 @@ Hierbij een illustratie van de verschillende bewegingen van de duim:
     new Joint(
         {
             id: "artt_carpometacarpales_2_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "artt. carpometacarpales II&nbsp;-&nbsp;V (CMC II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_plana"],
             image: "./images/joints/artt_carpometacarpales_2_5.jpeg",
@@ -105,7 +105,7 @@ Bewegingsmogelijkheden zijn beperkt tot een klein beetje translatie. De articula
     new Joint(
         {
             id: "art_carpometacarpalis_5",
-            regionId: "upper_extremity",
+            regionId: "hand",
             label: "art. carpometacarpalis V (art. carpometacarpalis digiti minimi, CMC V)",
             typeIds: ["junctura_synovialis", "art_plana"],
             movements: [

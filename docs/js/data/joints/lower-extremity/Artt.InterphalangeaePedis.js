@@ -5,7 +5,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_pedis_1",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea pedis I (IP I)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -36,7 +36,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_proximales_pedis_2_4",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. interphalangeae proximales pedis II&nbsp;-&nbsp;IV (PIP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -74,7 +74,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_proximales_pedis_2_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. interphalangeae proximales pedis II&nbsp;-&nbsp;V (PIP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -113,7 +113,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_pedis_2",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea proximalis pedis II (PIP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -144,7 +144,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_proximales_pedis_3_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. interphalangeae proximales pedis III&nbsp;-&nbsp;V (PIP III&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -182,7 +182,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_pedis_3",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea proximalis pedis III (PIP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -213,7 +213,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_pedis_4",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea proximalis pedis IV (PIP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -244,7 +244,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_proximalis_pedis_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea proximalis pedis V (PIP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -275,7 +275,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_distales_pedis_2_4",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. interphalangeae distales pedis II&nbsp;-&nbsp;IV (DIP II&nbsp;-&nbsp;IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -311,7 +311,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_distales_pedis_2_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. interphalangeae distales pedis II&nbsp;-&nbsp;V (DIP II&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -348,7 +348,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_pedis_2",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea distalis pedis II (DIP II)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -377,7 +377,7 @@ export default [
     new Joint(
         {
             id: "artt_interphalangeae_distales_pedis_3_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "artt. interphalangeae distales pedis III&nbsp;-&nbsp;V (DIP III&nbsp;-&nbsp;V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -413,7 +413,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_pedis_3",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea distalis pedis III (DIP III)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -442,7 +442,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_pedis_4",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea distalis pedis IV (DIP IV)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",
@@ -471,7 +471,7 @@ export default [
     new Joint(
         {
             id: "art_interphalangea_distalis_pedis_5",
-            regionId: "lower_extremity",
+            regionId: "foot",
             label: "art. interphalangea distalis pedis V (DIP V)",
             typeIds: ["junctura_synovialis", "art_simplex", "art_ginglymus"],
             cpp: "maximale extensie",

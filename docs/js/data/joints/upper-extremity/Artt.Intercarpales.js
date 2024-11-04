@@ -3,7 +3,7 @@ import Joint from "../../../data-types/Joint.js";
 export default new Joint(
     {
         id: "artt_intercarpales",
-        regionId: "upper_extremity",
+        regionId: "hand",
         label: "artt. intercarpales",
         typeIds: ["junctura_synovialis", "art_simplex", "art_plana"],
         image: "./images/joints/artt_intercarpales.jpeg",
