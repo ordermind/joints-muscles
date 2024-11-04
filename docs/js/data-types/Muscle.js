@@ -1,3 +1,6 @@
+import { objRegions } from "../data/regions.js";
+import { uniqueArray } from "../utils.js";
+
 export default class Muscle {
     #id;
     #label;
@@ -10,7 +13,7 @@ export default class Muscle {
     #image;
     #description;
 
-    constructor({id, label, regionIds = [], description = '', origos = [], insertions = [], innervation = [], functions = [], specialFunctions = [], image = ''}) {
+    constructor({ id, label, regionIds = [], description = '', origos = [], insertions = [], innervation = [], functions = [], specialFunctions = [], image = '' }) {
         this.#id = id;
         this.#label = label;
         this.#regionIdsOverride = regionIds;
@@ -59,18 +62,26 @@ export default class Muscle {
         return this.#description;
     }
 
-    getRegionIds(objJoints) {
-        if(this.#regionIdsOverride.length) {
+    #getRegionIds(objJoints) {
+        if (this.#regionIdsOverride.length) {
             return this.#regionIdsOverride;
         }
 
-        if(this.functions.length) {
-            return Array.from(
-                new Set(this.functions.map(jointFunction => objJoints[jointFunction.jointId].regionId))
-            );
+        if (this.functions.length) {
+            return uniqueArray(this.functions.map(jointFunction => objJoints[jointFunction.jointId].regionId));
         }
 
         throw new Error(`The muscle ${this.label} does not have any joint functions. Please set the region ids manually.`);
+    }
+
+    getRegionIds(objJoints, includeParent = false) {
+        const regionIds = this.#getRegionIds(objJoints);
+
+        if (!includeParent) {
+            return regionIds;
+        }
+
+        return uniqueArray(regionIds.flatMap(regionId => objRegions[regionId].idOfSelfAndParent));
     }
 
     hasPrimeMoverJointFunctions() {

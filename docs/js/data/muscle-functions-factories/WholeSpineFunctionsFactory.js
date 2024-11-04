@@ -1,4 +1,5 @@
 import JointMuscleFunction from "../../data-types/JointMuscleFunction.js";
+import { uniqueArray } from "../../utils.js";
 
 /**
  * Get muscle functions for the spine globally based on muscle functions for parts of the spine.
@@ -12,7 +13,7 @@ export default class WholeSpineFunctionsFactory {
     ];
 
     createElement(muscleFunction) {
-        if(!this.#torsoJoints.includes(muscleFunction.jointId)) {
+        if (!this.#torsoJoints.includes(muscleFunction.jointId)) {
             return null;
         }
 
@@ -31,14 +32,11 @@ export default class WholeSpineFunctionsFactory {
     }
 
     /**
-     *  We use a Set in combination with JSON stringify and parse to remove duplicates that occur when a muscle has identical function for multiple parts of the torso.
+     *  We use uniqueArray in combination with JSON stringify and parse to remove duplicates that occur when a muscle has identical function for multiple parts of the torso.
      */
     processArray(createdMuscleFunctions) {
-        return Array.from(
-            new Set(
-                createdMuscleFunctions
-                .map(element => JSON.stringify(element))
-            )
+        return uniqueArray(
+            createdMuscleFunctions.map(element => JSON.stringify(element))
         ).map(element => JointMuscleFunction.fromJSON(element));
     }
 }

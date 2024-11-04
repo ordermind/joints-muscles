@@ -10,8 +10,8 @@ export function capitalizeTitle(title) {
     return capitalizedTitle;
 }
 
-export function renderList(list, {fallbackToSingleString = false, classes = []}) {
-    if(!list.length) {
+export function renderList(list, { fallbackToSingleString = false, classes = [] }) {
+    if (!list.length) {
         return "";
     }
 
@@ -21,10 +21,10 @@ export function renderList(list, {fallbackToSingleString = false, classes = []})
 
     let output = `<${tag}${classes.length ? ' class="' + classes.join(" ") + '"' : ""}>`;
 
-    if(useSingleString) {
+    if (useSingleString) {
         output += list[0];
     } else {
-        for(const item of list) {
+        for (const item of list) {
             output += `<li>${item}</li>`;
         }
     }
@@ -34,8 +34,8 @@ export function renderList(list, {fallbackToSingleString = false, classes = []})
     return output;
 }
 
-export function renderNotesTooltip(notes, options = {direction: "n"}) {
-    if(!notes.length) {
+export function renderNotesTooltip(notes, options = { direction: "n" }) {
+    if (!notes.length) {
         return "";
     }
 
@@ -50,8 +50,8 @@ export function renderNotesTooltip(notes, options = {direction: "n"}) {
         <div class="tooltip-content-bg"></div>
         <${notesTag} class="tooltip-content-inner">
 `.trim();
-    if(hasMultipleNotes) {
-        for(const note of notes) {
+    if (hasMultipleNotes) {
+        for (const note of notes) {
             notesTooltip += `<li>${note}</li>`;
         }
     } else {
@@ -68,15 +68,15 @@ export function renderNotesTooltip(notes, options = {direction: "n"}) {
 }
 
 export function renderJointType(joint, jointTypes, useShortLabel) {
-    if(!joint.typeIds.length) {
+    if (!joint.typeIds.length) {
         return "";
     }
 
     const hasMultipleJointTypes = joint.typeIds.length > 1;
     const jointTypeTag = hasMultipleJointTypes ? "ul" : "span";
     let jointTypeOutput = `<${jointTypeTag}>`;
-    if(hasMultipleJointTypes) {
-        for(const jointTypeId of joint.typeIds) {
+    if (hasMultipleJointTypes) {
+        for (const jointTypeId of joint.typeIds) {
             const jointLabel = useShortLabel ? jointTypes[jointTypeId].shortLabel : jointTypes[jointTypeId].label;
 
             jointTypeOutput += `<li>[Link type="JointType" targetId="${jointTypeId}" label="${jointLabel}"]</li>`;
@@ -94,8 +94,8 @@ export function renderJointType(joint, jointTypes, useShortLabel) {
 export function getMuscleJointFunctionsForRendering(muscle, objJoints) {
     const allJointFunctions = {};
 
-    for(const muscleFunction of muscle.functions.filter(muscleFunction => muscleFunction.muscleId === muscle.id)) {
-        if(!allJointFunctions.hasOwnProperty(muscleFunction.jointId)) {
+    for (const muscleFunction of muscle.functions.filter(muscleFunction => muscleFunction.muscleId === muscle.id)) {
+        if (!allJointFunctions.hasOwnProperty(muscleFunction.jointId)) {
             allJointFunctions[muscleFunction.jointId] = {
                 primeMovers: [],
                 otherMuscles: [],
@@ -105,9 +105,9 @@ export function getMuscleJointFunctionsForRendering(muscle, objJoints) {
         const functionLevel = muscleFunction.isPrimeMover ? allJointFunctions[muscleFunction.jointId].primeMovers : allJointFunctions[muscleFunction.jointId].otherMuscles;
 
         const notes = [...muscleFunction.notes];
-        if(muscleFunction.movementLabelOverride) {
+        if (muscleFunction.movementLabelOverride) {
             const movementLabelIndex = notes.indexOf(muscleFunction.movementLabelOverride);
-            if(movementLabelIndex > -1) {
+            if (movementLabelIndex > -1) {
                 notes.splice(movementLabelIndex, 1);
             }
         }
@@ -124,7 +124,7 @@ export function removeChildren(element) {
     }
 }
 
-export function debounce(func, timeout = 250){
+export function debounce(func, timeout = 250) {
     let timer;
 
     return (...args) => {
@@ -196,7 +196,7 @@ export function deepEqual(obj1, obj2) {
     // Iterate through the keys and compare their values recursively.
     for (const key of keys1) {
         if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) {
-        return false;
+            return false;
         }
     }
     // If all checks pass, the objects are deep equal.
@@ -207,4 +207,8 @@ export function massageStringForFlexibleComparison(string) {
     return string
         .toLowerCase()
         .replaceAll(/(^(m(\.|_)|mm(\.|_)|art(\.|_)|artt(\.|_)))|\s|&nbsp;|\.|,|_+/g, "");
+}
+
+export function uniqueArray(array) {
+    return Array.from(new Set(array));
 }
