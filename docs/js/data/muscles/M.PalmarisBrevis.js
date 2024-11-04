@@ -8,7 +8,7 @@ export default new Muscle(
     {
         id: muscleId,
         label: "m. palmaris brevis",
-        regionIds: ["upper_extremity"],
+        regionIds: ["hand"],
         origos: [
             "aponeurosis palmaris",
             "retinaculum musculorum flexorum manus"
@@ -22,7 +22,8 @@ export default new Muscle(
                     label: "ramus superficialis n. ulnaris",
                     notes: [
                         "C8&nbsp;-&nbsp;T1",
-                    ]
+                    ],
+                    conflictingWith: ["n. ulnaris"],
                 }
             )
         ],

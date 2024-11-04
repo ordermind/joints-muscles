@@ -25,7 +25,11 @@ export default new Muscle(
                     label: "n. medianus",
                     notes: [
                         "C7&nbsp;-&nbsp;C8"
-                    ]
+                    ],
+                    conflictingWith: [
+                        "n. interosseus antebrachii anterior",
+                        "ramus recurrens n. mediani",
+                    ],
                 }
             )
         ],

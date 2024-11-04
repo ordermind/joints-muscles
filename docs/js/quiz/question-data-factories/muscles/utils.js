@@ -115,6 +115,20 @@ export function getOtherMusclesWithSimilarFunctions({ correctMuscle, customCallb
     }
 
     function createCallbackChain() {
+        // Focus on innervation
+        if (priorityArea === 'innervation') {
+            return [
+                ...customCallbacks,
+                getOtherMusclesWithinTheSameRegionAndWithJointFunctions,
+                getOtherMusclesWithinTheSameRegionAndWithSpecialFunctions,
+                getOtherMusclesRelatedToSameJoints,
+                getOtherMusclesWithSameJointFunctions,
+                getOtherMusclesWithJointFunctions,
+                getOtherMusclesWithSameSpecialFunctions,
+                getOtherMusclesWithSpecialFunctions,
+            ];
+        }
+
         // Focus on special functions, either because the correct muscle has no joint functions or because of the priority area.
         if (!correctMuscle.functions.length || priorityArea === 'specialFunctions') {
             return [

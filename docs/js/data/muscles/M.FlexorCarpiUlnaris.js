@@ -37,7 +37,8 @@ export default new Muscle(
                     label: "n. ulnaris",
                     notes: [
                         "C7&nbsp;-&nbsp;T1"
-                    ]
+                    ],
+                    conflictingWith: ["ramus superficialis n. ulnaris", "ramus profundus n. ulnaris"],
                 }
             )
         ],

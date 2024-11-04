@@ -28,10 +28,11 @@ export default new Muscle(
         innervation: [
             new AnatomicStructure(
                 {
-                    label: "ramus recurrens n. medianus",
+                    label: "ramus recurrens n. mediani",
                     notes: [
                         "C8&nbsp;-&nbsp;T1"
-                    ]
+                    ],
+                    conflictingWith: ["n. medianus"],
                 }
             )
         ],

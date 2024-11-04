@@ -22,7 +22,8 @@ export default new Muscle(
                         "een tak van de <em>n. medianus</em>",
                         "C8&nbsp;-&nbsp;T1",
                         "digiti II et III"
-                    ]
+                    ],
+                    conflictingWith: ["n. medianus"],
                 }
             ),
             new AnatomicStructure(
@@ -31,7 +32,8 @@ export default new Muscle(
                     notes: [
                         "C8&nbsp;-&nbsp;T1",
                         "digiti IV et V"
-                    ]
+                    ],
+                    conflictingWith: ["ramus superficialis n. ulnaris", "ramus profundus n. ulnaris"],
                 }
             )
         ],

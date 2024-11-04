@@ -23,7 +23,10 @@ export default new Muscle(
                     label: "n. radialis",
                     notes: [
                         "C5&nbsp;-&nbsp;C6"
-                    ]
+                    ],
+                    conflictingWith: [
+                        "n. interosseus antebrachii posterior",
+                    ],
                 }
             )
         ],

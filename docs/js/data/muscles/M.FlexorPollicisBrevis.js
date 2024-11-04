@@ -45,11 +45,12 @@ export default new Muscle(
         innervation: [
             new AnatomicStructure(
                 {
-                    label: "ramus recurrens n. medianus",
+                    label: "ramus recurrens n. mediani",
                     notes: [
                         "C8&nbsp;-&nbsp;T1",
                         "caput superficiale"
-                    ]
+                    ],
+                    conflictingWith: ["n. medianus"],
                 }
             ),
             new AnatomicStructure(
@@ -58,7 +59,8 @@ export default new Muscle(
                     notes: [
                         "C8&nbsp;-&nbsp;T1",
                         "caput profundum"
-                    ]
+                    ],
+                    conflictingWith: ["n. ulnaris"],
                 }
             )
         ],

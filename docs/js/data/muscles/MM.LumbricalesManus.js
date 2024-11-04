@@ -21,7 +21,11 @@ export default new Muscle(
                     notes: [
                         "C8&nbsp;-&nbsp;T1",
                         "spier 1&nbsp;-&nbsp;2"
-                    ]
+                    ],
+                    conflictingWith: [
+                        "n. interosseus antebrachii anterior",
+                        "ramus recurrens n. mediani",
+                    ],
                 }
             ),
             new AnatomicStructure(
@@ -30,7 +34,8 @@ export default new Muscle(
                     notes: [
                         "C8&nbsp;-&nbsp;T1",
                         "spier 3&nbsp;-&nbsp;4"
-                    ]
+                    ],
+                    conflictingWith: ["ramus superficialis n. ulnaris", "ramus profundus n. ulnaris"],
                 }
             )
         ],

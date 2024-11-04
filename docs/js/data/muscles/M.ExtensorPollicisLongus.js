@@ -26,7 +26,8 @@ export default new Muscle(
                     notes: [
                         "voortzetting van de <em>n. radialis</em>",
                         "C7&nbsp;-&nbsp;C8"
-                    ]
+                    ],
+                    conflictingWith: ["n. radialis"],
                 }
             )
         ],

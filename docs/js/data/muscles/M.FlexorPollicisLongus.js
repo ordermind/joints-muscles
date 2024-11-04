@@ -21,7 +21,8 @@ export default new Muscle(
                     notes: [
                         "een tak van de <em>n. medianus</em>",
                         "C7&nbsp;-&nbsp;C8"
-                    ]
+                    ],
+                    conflictingWith: ["n. medianus"],
                 }
             ),
         ],

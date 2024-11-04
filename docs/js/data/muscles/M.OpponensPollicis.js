@@ -21,7 +21,8 @@ export default new Muscle(
                     label: "ramus recurrens n. mediani",
                     notes: [
                         "C8&nbsp;-&nbsp;T1"
-                    ]
+                    ],
+                    conflictingWith: ["n. medianus"],
                 }
             )
         ],
