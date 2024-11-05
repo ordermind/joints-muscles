@@ -16,7 +16,7 @@ export default new Muscle(
             "tuberositas ossis navicularis",
             "ossa cuneiformia (plantair)",
             "os cuboideum (plantair)",
-            "bases ossium metatarsalium II&nbsp;-&nbsp;IV",
+            "bases ossium metatarsalium II&nbsp;-&nbsp;IV (plantair)",
         ],
         innervation: [
             new AnatomicStructure(
