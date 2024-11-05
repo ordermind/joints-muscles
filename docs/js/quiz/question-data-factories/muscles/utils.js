@@ -136,6 +136,7 @@ export function getOtherMusclesWithSimilarFunctions({ correctMuscle, customCallb
                 getOtherMusclesWithSameSpecialFunctions,
                 getOtherMusclesWithinTheSameRegionAndWithSpecialFunctions,
                 getOtherMusclesWithinTheSameRegion.bind(this, false, false),
+                getOtherMusclesWithSpecialFunctions,
             ];
         }
 
