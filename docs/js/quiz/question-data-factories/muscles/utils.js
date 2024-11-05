@@ -121,10 +121,10 @@ export function getOtherMusclesWithSimilarFunctions({ correctMuscle, customCallb
                 ...customCallbacks,
                 getOtherMusclesWithinTheSameRegionAndWithJointFunctions,
                 getOtherMusclesWithinTheSameRegionAndWithSpecialFunctions,
-                getOtherMusclesRelatedToSameJoints,
                 getOtherMusclesWithSameJointFunctions,
-                getOtherMusclesWithJointFunctions,
+                getOtherMusclesRelatedToSameJoints,
                 getOtherMusclesWithSameSpecialFunctions,
+                getOtherMusclesWithJointFunctions,
                 getOtherMusclesWithSpecialFunctions,
             ];
         }
@@ -135,7 +135,7 @@ export function getOtherMusclesWithSimilarFunctions({ correctMuscle, customCallb
                 ...customCallbacks,
                 getOtherMusclesWithSameSpecialFunctions,
                 getOtherMusclesWithinTheSameRegionAndWithSpecialFunctions,
-                getOtherMusclesWithSpecialFunctions,
+                getOtherMusclesWithinTheSameRegion.bind(this, false, false),
             ];
         }
 
@@ -146,6 +146,7 @@ export function getOtherMusclesWithSimilarFunctions({ correctMuscle, customCallb
                 getOtherMusclesWithSameJointFunctions,
                 getOtherMusclesRelatedToSameJoints,
                 getOtherMusclesWithinTheSameRegionAndWithJointFunctions,
+                getOtherMusclesWithinTheSameRegion.bind(this, false, false),
                 getOtherMusclesWithJointFunctions,
             ];
         }
