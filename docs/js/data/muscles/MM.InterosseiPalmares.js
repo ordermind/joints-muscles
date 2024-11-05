@@ -14,7 +14,7 @@ export default new Muscle(
             "facies radialis ossis metacarpalis V",
         ],
         insertions: [
-            "aponeuroses dorsales phalangum II&nbsp;-&nbsp;IV&nbsp;et&nbsp;V"
+            "aponeuroses dorsales phalangum II,&nbsp;IV&nbsp;et&nbsp;V"
         ],
         innervation: [
             new AnatomicStructure(
