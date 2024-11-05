@@ -15,7 +15,7 @@ export default new Muscle(
         insertions: [
             "tuberositas ossis navicularis",
             "ossa cuneiformia (plantair)",
-            "os cuboideum",
+            "os cuboideum (plantair)",
             "bases ossium metatarsalium II&nbsp;-&nbsp;IV",
         ],
         innervation: [
