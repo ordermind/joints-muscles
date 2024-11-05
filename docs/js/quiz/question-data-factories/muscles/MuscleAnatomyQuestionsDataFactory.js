@@ -1,4 +1,4 @@
-import { shuffle } from "../../../utils.js";
+import { shuffle, uniqueArray } from "../../../utils.js";
 import { getOtherMusclesWithSimilarFunctions, isMusclePlural } from "./utils.js";
 import renderAnatomicStructureOrString from "../../../data-types/utils.js";
 import QuestionData from "../QuestionData.js";
@@ -13,6 +13,22 @@ export default class MuscleAnatomyQuestionsDataFactory {
     }
 
     #createAnswers(correctMuscle, correctSolution) {
+        const conflictingOrigos = uniqueArray(correctMuscle.origos.flatMap(origo => {
+            if (typeof origo === 'string' || origo instanceof String) {
+                return null;
+            }
+
+            return origo.conflictingWith;
+        }).filter(origo => origo !== null));
+
+        const conflictingInsertions = uniqueArray(correctMuscle.insertions.flatMap(insertion => {
+            if (typeof insertion === 'string' || insertion instanceof String) {
+                return null;
+            }
+
+            return insertion.conflictingWith;
+        }).filter(insertion => insertion !== null));
+
         let answers = {...correctSolution.origo, ...correctSolution.insertion};
 
         let totalAnswersCount = Object.keys(answers).length;
@@ -27,6 +43,10 @@ export default class MuscleAnatomyQuestionsDataFactory {
         for(const otherMuscle of otherMuscles) {
             for(const origo of otherMuscle.origos) {
                 const shortOrigoLabel = renderAnatomicStructureOrString(origo);
+                if (conflictingOrigos.includes(shortOrigoLabel)) {
+                    continue;
+                }
+
                 const labelWithNotes = renderAnatomicStructureOrString(origo, {includeNotes: true, notesDirection: "nw"});
 
                 if(!answers.hasOwnProperty(shortOrigoLabel)) {
@@ -41,6 +61,10 @@ export default class MuscleAnatomyQuestionsDataFactory {
 
             for(const insertion of otherMuscle.insertions) {
                 const shortInsertionLabel = renderAnatomicStructureOrString(insertion);
+                if (conflictingInsertions.includes(shortInsertionLabel)) {
+                    continue;
+                }
+
                 const labelWithNotes = renderAnatomicStructureOrString(insertion, {includeNotes: true, notesDirection: "nw"});
 
                 if(!answers.hasOwnProperty(shortInsertionLabel)) {
