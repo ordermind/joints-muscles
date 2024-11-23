@@ -34,7 +34,7 @@ export default new Joint(
                     id: "art_humeri__abduction",
                     jointId: "art_humeri",
                     label: "abductie",
-                    rom: "90°",
+                    rom: "105°",
                     romNotes: ["180° incl. schoudergordel"],
                     endFeel: "capsulair",
                 }
