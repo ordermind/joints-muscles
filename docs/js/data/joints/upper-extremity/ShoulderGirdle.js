@@ -148,7 +148,18 @@ Het secundaire scapulothoracale systeem bestaande uit:
                 ),
             ],
             image: "./images/joints/art_acromioclavicularis.jpeg",
-            description: "De bewegingen van dit gewricht zijn geringe translatie en rotatie rond de lengte-as van de clavicula."
+            description: `
+De bewegingen van dit gewricht zijn geringe translatie en rotatie rond de lengte-as van de clavicula.
+
+<h2 class="display-2 fs-2">Ligamenten</h2>
+<img src="./images/misc/ac_ligaments.jpg" />
+
+- lig. acromioclaviculare superius en inferius
+- lig. coracoclaviculare
+    - lig. conoideum
+    - lig. trapezoideum
+- lig. coracoacromiale (minder vaak aangedaan)
+            `
         }
     ),
     new Joint(
