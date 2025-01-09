@@ -53,7 +53,7 @@ export default new Muscle(
                 {
                     id: "m_tibialis_posterior" + "__" + "arch",
                     muscleId: "m_tibialis_posterior",
-                    functionDescription: "Ondersteunt de arcus pedis longitudinalis",
+                    functionDescription: "ondersteunt de arcus pedis longitudinalis",
                 }
             ),
         ],
