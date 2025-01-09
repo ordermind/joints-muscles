@@ -61,14 +61,14 @@ export default new Muscle(
                 {
                     id: muscleId + "__" + "longitudinal_arch",
                     muscleId: muscleId,
-                    functionDescription: "ondersteunt de arcus pedis longitudinalis",
+                    functionDescription: "ondersteunt de <strong>arcus pedis longitudinalis</strong>",
                 }
             ),
             new SpecialMuscleFunction(
                 {
                     id: muscleId + "__" + "transverse_arch",
                     muscleId: muscleId,
-                    functionDescription: "ondersteunt de arcus pedis transversus",
+                    functionDescription: "ondersteunt de <strong>arcus pedis transversus</strong>",
                 }
             ),
         ],
