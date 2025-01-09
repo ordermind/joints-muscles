@@ -10,8 +10,12 @@ export default new Muscle(
         id: muscleId,
         label: "m. flexor digitorum brevis",
         origos: [
-            "processus medialis tuberis calcanei",
-            "aponeurosis plantaris"
+            new AnatomicStructure(
+                {
+                    label: "processus medialis tuberis calcanei",
+                    notes: ["Via de <em>aponeurosis plantaris</em>"]
+                }
+            )
         ],
         insertions: [
             "latera phalangum mediarum II&nbsp;-&nbsp;V",
