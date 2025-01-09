@@ -23,10 +23,13 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "ramus dorsalis n. spinalis lumbi",
+                    label: "ramus dorsalis n. spinalis lumbalis",
                     notes: [
                         "L1"
-                    ]
+                    ],
+                    conflictingWith: [
+                        "rami dorsales nervorum spinalium lumborum",
+                    ],
                 }
             )
         ],

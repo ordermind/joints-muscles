@@ -27,7 +27,10 @@ export default new Muscle(
                     label: "ramus dorsalis n. spinalis thoracici",
                     notes: [
                         "T1"
-                    ]
+                    ],
+                    conflictingWith: [
+                        "rami dorsales nervorum spinalium thoracicorum",
+                    ],
                 }
             )
         ],

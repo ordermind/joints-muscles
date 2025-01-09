@@ -27,7 +27,13 @@ export default new Muscle(
                     label: "n. spinalis cervicalis",
                     notes: [
                         "C3"
-                    ]
+                    ],
+                    conflictingWith: [
+                        "ramus anterior n. spinalis cervicalis",
+                        "ramus dorsalis n. spinalis cervicalis",
+                        "rami anteriores nervorum spinalium cervicalium",
+                        "rami dorsales nervorum spinalium cervicalium"
+                    ],
                 }
             )
         ],

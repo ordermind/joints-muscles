@@ -17,7 +17,11 @@ export default new Muscle(
             new AnatomicStructure(
                 {
                     label: "ramus dorsalis n. spinalis cervicalis",
-                    notes: ["C8"]
+                    notes: ["C8"],
+                    conflictingWith: [
+                        "n. spinalis cervicalis",
+                        "rami dorsales nervorum spinalium cervicalium"
+                    ],
                 }
             ),
             new AnatomicStructure(

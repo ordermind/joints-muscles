@@ -32,7 +32,10 @@ export default new Muscle(
                     label: "ramus anterior n. spinalis lumbalis",
                     notes: [
                         "L1",
-                    ]
+                    ],
+                    conflictingWith: [
+                        "rami anteriores nervorum spinalium lumborum",
+                    ],
                 }
             ),
         ],

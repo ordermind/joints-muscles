@@ -24,7 +24,7 @@ export default new Muscle(
             ),
             new AnatomicStructure(
                 {
-                    label: "n. scapularis dorsalis",
+                    label: "n. dorsalis scapulae",
                     notes: [
                         "C5"
                     ]
