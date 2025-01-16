@@ -66,5 +66,8 @@ export default new Joint(
             ),
         ],
         image: "./images/joints/art_coxae.jpeg",
+        description: `
+<img src="./images/misc/art_coxae_details.jpg" class="width-608" />
+        `.trim()
     }
 );
