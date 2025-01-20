@@ -44,7 +44,8 @@ export default new Joint(
                     id: "art_humeri__adduction",
                     jointId: "art_humeri",
                     label: "adductie",
-                    rom: "20-40°",
+                    rom: "0°",
+                    romNotes: ["20-40° incl. schoudergordel"],
                     endFeel: "hard capsulair / interpositie weke delen",
                 }
             ),
